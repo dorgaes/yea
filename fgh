@@ -25,7 +25,7 @@ function autoReset()
                 wait(7.5)
                 workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 repeat
-                    wait(6.9)
+                    wait(6.1)
                     if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value <= 0 then break
                     end
                     workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
