@@ -23,9 +23,15 @@ function autoReset()
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(10)
+		while workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton == nil do
+                    wait(7)
+                end
                 workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 repeat
                     wait(6.2)
+		    while workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton == nil do
+                        wait(7)
+                    end
                     if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value <= 0 then break
                     end
                     workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -746,12 +752,6 @@ function autoReset()
             end
             
             if _G.autoReset == false then break
-            end
-            
-            if game.Players.LocalPlayer.Backpack.Doombringer.Parent == Backpack then
-	    repeat
-	        wait(0.05)
-            until game.Players.LocalPlayers.Backpack.Doombringer == nil
             end
     end
 end
