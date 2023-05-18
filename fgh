@@ -28,14 +28,20 @@ function autoReset()
                 end
                 workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 repeat
+		    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
+		    end
                     wait(6.2)
+		    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
+		    end
 		    while workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton == nil do
                         wait(7)
                     end
-                    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value <= 0 then break
+                    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
                     end
                     workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value <= 0
+		    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
+		    end
+                until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0
                 wait(10)
                 if _G.autoReset == false then break
                 end
