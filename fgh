@@ -22,25 +22,8 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(10)
-		while workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton == nil do
-                    wait(10)
-                end
-                workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 repeat
-		    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
-		    end
-                    wait(10)
-		    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
-		    end
-		    while workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton == nil do
-                        wait(10)
-                    end
-                    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
-                    end
-                    workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-		    if workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0 then break
-		    end
+		    wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0
                 wait(10)
                 if _G.autoReset == false then break
@@ -874,6 +857,13 @@ FarmTab:AddToggle({
         _G.autoKromer = Value
         autoKromer()
     end
+})
+
+FarmTab:AddButton({
+	Name = "GrillbyButton!",
+	Callback = function()
+      		workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+  	end    
 })
 
 --Local
