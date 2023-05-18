@@ -142,6 +142,7 @@ function autoReset()
 
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 4900)
             do
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
                 wait(3)
                 repeat
 		    if workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Enemy.Health == 0 then break
@@ -170,11 +171,15 @@ function autoReset()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
-                wait(5)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2990.01196, 3026.68311, 3007.26733, -0.0130072022, 0.234809443, -0.971954405, 6.83645274e-09, 0.9720366, 0.234829307, 0.999915421, 0.00305446563, -0.0126434788)
-                wait(22)
+                wait(3)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2991.47241, 3061.57007, 2988.47827, 0.998470843, 0.0132402815, -0.053671591, 1.95531458e-09, 0.9708938, 0.239510477, 0.0552806035, -0.239144236, 0.969409168)
+                repeat
+		    wait(0.05)
+		until workspace.ActiveBosses.Slot1.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
                 if _G.autoReset == false then break
                 end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+                wait(5)
             end
             
             if _G.autoReset == false then break
