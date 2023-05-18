@@ -217,7 +217,6 @@ function autoReset()
             if _G.autoReset == false then break
             end
             
-            wait(5)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.13379, 279.970581, 131.539795, 1, 0, 0, 0, 1, 0, 0, 0, 1)
             wait(6)
             while game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health > 0 
@@ -225,49 +224,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health <= 0 then break
                 end
             end
@@ -282,49 +281,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health <= 0 then break
                 end
             end
@@ -339,49 +338,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health <= 0 then break
                 end
             end
@@ -396,49 +395,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health <= 0 then break
                 end
             end
@@ -453,49 +452,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health <= 0 then break
                 end
             end
@@ -510,49 +509,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health <= 0 then break
                 end
             end
@@ -567,49 +566,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health <= 0 then break
                 end
             end
@@ -624,67 +623,67 @@ function autoReset()
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484) 
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.CFrame
-                wait(1)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
-                wait(1)
+                wait(0.75)
             end
             
             if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health <= 0 then
@@ -697,49 +696,49 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2994.33423, 3032.93188, 3033.76733, -0.0189543087, 0.41878736, -0.907886505, -1.23362236e-08, 0.908049643, 0.418862611, 0.999820352, 0.00793926232, -0.0172114484)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end 
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.39575, 3034.24561, 3031.54346, 0.999513805, -0.00492975442, 0.0307876132, -2.28493291e-09, 0.98742193, 0.158107415, -0.031179795, -0.15803054, 0.986941814)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.85498, 3035.84644, 3000.75024, 0.00612418167, 0.397250265, -0.91768986, -3.82682064e-09, 0.917707086, 0.397257715, 0.999981225, -0.00243287487, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2970.70728, 3035.84644, 2975.55176, 0.00612418167, 0.397250265, -0.91768986, -3.6710972e-09, 0.917707086, 0.397257715, 0.999981225, -0.0024328751, 0.00562020624)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.04346, 3037.06128, 2977.97485, -0.998729229, -0.0146741029, 0.0482140929, -1.12067591e-08, 0.956672549, 0.291165918, -0.0503976978, 0.290795922, -0.955456853)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3030.16113, 3038.22168, 2978.91797, -0.999680281, -0.00713406922, 0.024258716, 1.24929942e-08, 0.959374428, 0.282135963, -0.0252859686, 0.282045752, -0.959067702)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.91675, 3039.40601, 3000.9231, 0.0253304187, -0.245687306, 0.969018102, 1.16202425e-08, 0.969329119, 0.245766163, -0.999679148, -0.00622534845, 0.024553515)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3028.41553, 3040.56689, 3019.6709, 0.00647997484, -0.254889458, 0.966948509, 6.46570797e-09, 0.966968775, 0.254894793, -0.999979019, -0.00165170559, 0.00626593502)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
-                wait(1.25)
+                wait(0.75)
                 if game.workspace.ActiveBosses.Slot1.Bosses["1"].Boss9.Enemy.Health <= 0 then break
                 end
             end
