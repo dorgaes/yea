@@ -17,7 +17,7 @@ _G.rollskill = true
 --Functions
 function autoReset()
     while _G.autoReset == true do
-        while (game.Players.LocalPlayer.leaderstats.LV.Value < 300)
+        while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
@@ -25,7 +25,7 @@ function autoReset()
                 repeat
 		    wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.Enemy.Health == 0
-                wait(10)
+                wait(5)
                 if _G.autoReset == false then break
                 end
             end
