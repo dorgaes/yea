@@ -24,8 +24,8 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 repeat
 		    wait(0.05)
-                until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.HP.Value == 0
-                wait(10)
+                until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.Enemy.Health == 0
+                wait(5)
                 if _G.autoReset == false then break
                 end
             end
