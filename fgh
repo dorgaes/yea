@@ -7,9 +7,8 @@ _G.autoLv = true
 _G.autoTP = true
 _G.autoKromer = true
 _G.rollskill = true
-_G.wsjp = true
-speeeeeeeeed == 16
-jummmmmmmp == 50
+_G.wspeed == 16
+_G.jpower == 50
 
 
 
@@ -862,19 +861,11 @@ function rollskill()
     end
 end    
 
-function wsjp()
-    while _G.wsjp == true do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == speeeeeeeeed
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower == jummmmmmmp
-    end 
-end
-
-function wsjp()
-    while _G.wsjp == false do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 16
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower == 50
-    end
-end
+function wspeed()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == _G.wspeed
+    
+function jpower()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower == _G.jpower
     
 --Auto Farm
 local FarmTab = Window:MakeTab({
@@ -1015,9 +1006,9 @@ PlayerTab:AddSlider({
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "speeeeeeeeed",
+	ValueName = "_G.wspeed",
 	Callback = function(Value)
-		speeeeeeeeed = Value
+		_G.wspeed = Value
 	end    
 })
 
@@ -1028,21 +1019,11 @@ PlayerTab:AddSlider({
 	Default = 50,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "jummmmmmmp",
+	ValueName = "_G.jpower",
 	Callback = function(Value)
-		jummmmmmmp = Value
+		_G.jpower = Value
 	end    
 })
-
-PlayerTab:AddToggle({
-	Name = "Change Walk Speed and JumpPower",
-	Default = false,
-	Callback = function(Value)
-		_G.wsjp = Value
-	end    
-})
-
-
 
 --Shop Reroll
 local ShopTab = Window:MakeTab({
