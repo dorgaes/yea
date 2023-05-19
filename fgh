@@ -864,7 +864,16 @@ end
 
 function wsjp()
     while _G.wsjp == true do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == speeeeeeeeed
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower == jummmmmmmp
     end 
+end
+
+function wsjp()
+    while _G.wsjp == false do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 16
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower == 50
+    end
 end
     
 --Auto Farm
@@ -1006,9 +1015,9 @@ PlayerTab:AddSlider({
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "speed",
+	ValueName = "speeeeeeeeed",
 	Callback = function(Value)
-		speed = Value
+		speeeeeeeeed = Value
 	end    
 })
 
@@ -1019,9 +1028,9 @@ PlayerTab:AddSlider({
 	Default = 50,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "jump",
+	ValueName = "jummmmmmmp",
 	Callback = function(Value)
-		print(Value)
+		jummmmmmmp = Value
 	end    
 })
 
