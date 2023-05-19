@@ -864,7 +864,8 @@ end
 
 function wsjp()
     while _G.wsjp == true do
-        
+    end 
+end
     
 --Auto Farm
 local FarmTab = Window:MakeTab({
