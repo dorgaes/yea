@@ -771,7 +771,7 @@ function autoReset()
 	    
 	    repeat
 	        wait(0.05)
-            until game:GetService("Players").LocalPlayer.leaderstats.LV.Value = 1
+            until game:GetService("Players").LocalPlayer.leaderstats.LV.Value == 1
 	    end
 	    wait(10)
             
