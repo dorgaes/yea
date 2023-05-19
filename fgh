@@ -864,11 +864,11 @@ function autoKromer()
     while _G.autoKromer == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+	    wait(3)
             repeat
 	        wait(0.05)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Rudinn.Enemy.Health == 0
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-            wait(5)
+	    wait(5)
 	    if _G.autoKromer == false then break
 	    end
 	until _G.autoKromer == false
