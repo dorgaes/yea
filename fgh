@@ -1009,6 +1009,7 @@ PlayerTab:AddSlider({
 	ValueName = "_G.wspeed",
 	Callback = function(Value)
 		_G.wspeed = Value
+		wspeed()
 	end    
 })
 
@@ -1022,6 +1023,7 @@ PlayerTab:AddSlider({
 	ValueName = "_G.jpower",
 	Callback = function(Value)
 		_G.jpower = Value
+		jpower()
 	end    
 })
 
