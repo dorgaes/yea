@@ -82,7 +82,7 @@ function autoReset()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
-		wait(3)
+		wait(2)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2982.01538, 3024.68652, 2926.02832, 0.193615794, 0.258345902, -0.946451426, 5.23876764e-09, 0.964706182, 0.263328761, 0.981077433, -0.0509846136, 0.186782345)
 		repeat
 		    wait(0.05)
