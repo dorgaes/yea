@@ -862,10 +862,12 @@ function rollskill()
 end    
 
 function wspeed()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == _G.wspeed
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = _G.wspeed
+end
     
 function jpower()
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower == _G.jpower
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = _G.jpower
+end
     
 --Auto Farm
 local FarmTab = Window:MakeTab({
