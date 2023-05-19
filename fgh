@@ -17,7 +17,7 @@ _G.rollskill = true
 --Functions
 function autoReset()
     while _G.autoReset == true do
-        while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
+        while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
@@ -33,7 +33,21 @@ function autoReset()
             if _G.autoReset == false then break
             end
                 
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
+	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
+            do
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	        wait(3)
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3002.5354, 3059.59766, 2990.7063, 0.963732004, 0.0654202104, -0.258729219, 4.94880414e-10, 0.969488442, 0.245137125, 0.266871899, -0.236246482, 0.934327006)
+	        repeat
+		    wait(0.05)
+		until workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Enemy.Health == 0
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(5)
+		if _G.autoReset == false then break
+                end
+	    end
+	    
+            while (game.Players.LocalPlayer.leaderstats.LV.Value < 1250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
                 wait(3)
@@ -41,15 +55,47 @@ function autoReset()
                 repeat
                     wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Enemy.Health == 0
-                if _G.autoReset == false then break
-                end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(5)
+		if _G.autoReset == false then break
+                end
             end
             
             if _G.autoReset == false then break
             end
-            
+	    
+	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1500)
+            do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		wait(3)
+		repeat
+		    wait(0.05)
+		until workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(5)
+		if _G.autoReset == false then break
+                end
+	    end
+	    
+	    if _G.autoReset == false then break
+            end
+	    
+	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
+            do
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
+		wait(3)
+		repeat
+		    wait(0.05)
+		until workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Enemy.Health == 0
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(5)
+		if _G.autoReset == false then break
+                end
+	    end
+	    
+	    if _G.autoReset == false then break
+            end
+		
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3045)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
