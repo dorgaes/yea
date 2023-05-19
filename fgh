@@ -7,8 +7,8 @@ _G.autoLv = true
 _G.autoTP = true
 _G.autoKromer = true
 _G.rollskill = true
-_G.wspeed = 16
-_G.jpower = 50
+_G.wspeed = 35
+_G.jpower = 80
 
 
 
@@ -1003,12 +1003,12 @@ local Section = PlayerTab:AddSection({
 
 PlayerTab:AddSlider({
 	Name = "Walk Speed",
-	Min = 16,
+	Min = 35,
 	Max = 500,
-	Default = 16,
+	Default = 35,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "_G.wspeed",
+	ValueName = "Walk Speed",
 	Callback = function(Value)
 		_G.wspeed = Value
 		wspeed()
@@ -1017,12 +1017,12 @@ PlayerTab:AddSlider({
 
 PlayerTab:AddSlider({
 	Name = "JumpPower",
-	Min = 50,
+	Min = 80,
 	Max = 500,
-	Default = 50,
+	Default = 80,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "_G.jpower",
+	ValueName = "Jump Power",
 	Callback = function(Value)
 		_G.jpower = Value
 		jpower()
