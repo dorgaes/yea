@@ -772,8 +772,8 @@ function autoReset()
 	    repeat
 	        wait(0.05)
             until game:GetService("Players").LocalPlayer.leaderstats.LV.Value = 1
-	    wait(10)
 	    end
+	    wait(10)
             
             if _G.autoReset == false then break
             end
