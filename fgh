@@ -829,43 +829,49 @@ end
 
 function autoLv()
     while _G.autoLv == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-	wait(3)
         repeat
-	    wait(0.05)
-	until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-        wait(5)
-	if _G.autoLv == false then break
-	end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
+	    wait(3)
+            repeat
+	        wait(0.05)
+	    until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+            wait(5)
+	    if _G.autoLv == false then break
+	    end
+	until _G.autoLv == false
     end
 end
 
 function autoTP()
     while _G.autoTP == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-        wait(3)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3009.64087, 3026.23608, 3008.10864, -0.0121655725, -0.476063699, 0.879326642, -4.61649119e-09, 0.87939173, 0.476098925, -0.999925971, 0.00579201197, -0.0106983064)
         repeat
-	    wait(0.05)
-	until workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Enemy.Health == 0
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-        wait(5)
-	if _G.autoTP == false then break
-	end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            wait(3)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3009.64087, 3026.23608, 3008.10864, -0.0121655725, -0.476063699, 0.879326642, -4.61649119e-09, 0.87939173, 0.476098925, -0.999925971, 0.00579201197, -0.0106983064)
+            repeat
+	        wait(0.05)
+	    until workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Enemy.Health == 0
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+            wait(5)
+	    if _G.autoTP == false then break
+	    end
+	until _G.autoTP == false
     end
 end
 
 function autoKromer()
     while _G.autoKromer == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
         repeat
-	    wait(0.05)
-	until workspace.ActiveBosses.Slot1.Bosses["1"].Rudinn.Enemy.Health == 0
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-        wait(5)
-	if _G.autoKromer == false then break
-	end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+            repeat
+	        wait(0.05)
+	    until workspace.ActiveBosses.Slot1.Bosses["1"].Rudinn.Enemy.Health == 0
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+            wait(5)
+	    if _G.autoKromer == false then break
+	    end
+	until _G.autoKromer == false
     end
 end
 
