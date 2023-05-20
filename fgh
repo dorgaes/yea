@@ -969,7 +969,6 @@ function rollskill()
 	
 	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
         end
-	
     end
 end    
 
@@ -988,7 +987,7 @@ function autoTPKromerHard()
 	repeat
 	    wait(0.05)
 	until workspace.ActiveBosses.Slot1.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.3747387, 1822.42871, -748.831726, 0.999980211, -0.000718277064, 0.00624538353, -9.56197876e-09, 0.993451178, 0.114257634, -0.00628655218, -0.114255376, 0.993431509)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56.4186401, 853.099304, -567.983398, 0.85621655, 0.0161091387, 0.516365647, 0.00722124428, 0.999042928, -0.0431412607, -0.516566396, 0.0406671017, 0.855280757)
 	wait(5)
     end
 end
