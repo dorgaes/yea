@@ -883,7 +883,7 @@ function rollskill()
         wait(1)
         game:GetService("ReplicatedStorage").SkillSpin:FireServer()
         wait(2)
-	if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= (1,2,11,12,21,33) then break
+	if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= (1 and 2 and 11 and 12 and 21 and 33) then break
 	end
     end
 end    
