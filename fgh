@@ -9,7 +9,7 @@ _G.autoKromer = true
 _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
-_G.autoTPHard = true
+_G.autoTPKromerHard = true
 
 
 
@@ -963,8 +963,8 @@ function jpower()
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = _G.jpower
 end
     
-function autoTPHard()
-    while _G.autoTPHard == true do
+function autoTPKromerHard()
+    while _G.autoTPKromerHard == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2385.57349, 534.416504, -744.736328, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
 	wait(3)
 	repeat
@@ -1030,11 +1030,11 @@ FarmTab:AddButton({
 })
 
 FarmTab:AddToggle({
-	Name = "TP Farm (Hard  lv 6600+)",
+	Name = "TP and Kromer Farm lv 6000+ (Hard!)",
 	Default = false,
 	Callback = function(Value)
-        _G.autoTPHard = Value
-        autoTPHard()
+        _G.autoTPKromerHard = Value
+        autoTPKromerHard()
     end
 })
 
