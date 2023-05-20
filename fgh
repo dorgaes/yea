@@ -877,6 +877,9 @@ end
 
 function rollskill()
     while _G.rollskill == true do 
+        if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
+	
         while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 do
             if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
             end
@@ -885,6 +888,9 @@ function rollskill()
             game:GetService("ReplicatedStorage").SkillSpin:FireServer()
             wait(2)
 	end
+	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
 	
 	while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 2 do
             if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
@@ -895,6 +901,9 @@ function rollskill()
             wait(2)
 	end
 	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
+	
 	while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 11 do
             if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
             end
@@ -903,6 +912,9 @@ function rollskill()
             game:GetService("ReplicatedStorage").SkillSpin:FireServer()
             wait(2)
 	end
+	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
 	
 	while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 do
             if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
@@ -913,6 +925,9 @@ function rollskill()
             wait(2)
 	end
 	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
+	
 	while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 do
             if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
             end
@@ -922,6 +937,9 @@ function rollskill()
             wait(2)
 	end
 	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
+	
 	while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 33 do
             if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
             end
@@ -930,6 +948,10 @@ function rollskill()
             game:GetService("ReplicatedStorage").SkillSpin:FireServer()
             wait(2)
 	end
+	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
+	
     end
 end    
 
