@@ -877,6 +877,8 @@ end
 
 function rollskill()
     while _G.rollskill == true do 
+        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= (1 and 2 and 11 and 12 and 21 and 33) then break
+	end
         if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
         end
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
