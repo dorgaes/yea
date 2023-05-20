@@ -9,7 +9,7 @@ _G.autoKromer = true
 _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
-
+_G.autoTPHard = true
 
 
 
@@ -963,6 +963,18 @@ function jpower()
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = _G.jpower
 end
     
+function autoTPHard()
+    while _G.autoTPHard == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2385.57349, 534.416504, -744.736328, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
+	wait(3)
+	repeat
+	    wait(0.05)
+	until workspace.ActiveBosses.Slot1.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	wait(5)
+    end
+end
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1015,6 +1027,15 @@ FarmTab:AddButton({
 	Callback = function()
       		workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
   	end    
+})
+
+FarmTab:AddToggle({
+	Name = "TP Farm (Hard  lv 6600+)",
+	Default = false,
+	Callback = function(Value)
+        _G.autoTPHard = Value
+        autoTPHard()
+    end
 })
 
 --Local
