@@ -952,6 +952,21 @@ function rollskill()
 	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
         end
 	
+	while game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 22 do
+            if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+            end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            wait(0.5)
+            game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+            wait(1)
+	end
+	
+	if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 1 then break
+	end
+	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
+        end
+	
     end
 end    
 
