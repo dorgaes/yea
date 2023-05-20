@@ -970,7 +970,7 @@ function autoTPHard()
 	repeat
 	    wait(0.05)
 	until workspace.ActiveBosses.Slot1.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.3747387, 1822.42871, -748.831726, 0.999980211, -0.000718277064, 0.00624538353, -9.56197876e-09, 0.993451178, 0.114257634, -0.00628655218, -0.114255376, 0.993431509)
 	wait(5)
     end
 end
