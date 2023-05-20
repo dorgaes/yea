@@ -988,7 +988,7 @@ function autoTPKromerHard()
 	    repeat
 	        wait(0.05)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
-	    wait(5)
+	    wait(6)
 	until _G.autoTPKromerHard == false
     end
 end
