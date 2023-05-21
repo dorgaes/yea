@@ -906,7 +906,7 @@ function autoTPKromerHard()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2385.57349, 534.416504, -744.736328, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
 	    wait(2)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3000.45581, 3021.23267, 3002.3208, 0.996040642, -0.084694922, 0.0270138253, 0.0869124532, 0.863863766, -0.496170819, 0.0186868981, 0.496554196, 0.867804527)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.ActiveBosses.Slot1.Bosses["1"]["FS Emerald Papyrus"].Part.CFrame
 	    repeat
 	        wait(0.05)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
