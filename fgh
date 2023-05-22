@@ -1133,7 +1133,7 @@ MiscTab:AddToggle({
 	Name = "auto clicker",
 	Default = false,
 	Callback = function(Value)
-		_G.atclik = Value
+		_G.atclick = Value
 		atclick()
 	end    
 })
