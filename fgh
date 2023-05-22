@@ -10,6 +10,15 @@ _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
+m = game.Players.LocalPlayer:GetMouse()
+
+--local
+local time = 0.01
+
+
+
+
+
 
 
 
@@ -1103,3 +1112,34 @@ ShopTab:AddToggle({
 		rollskill()
 	end    
 })
+
+--Misc
+local MiscTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = MiscTab:AddSection({
+	Name = "auto click"
+})
+
+MiscTab:AddBind({
+	Name = "auto click",
+	Default = Enum.KeyCode.f,
+	Hold = false,
+	Callback = function()
+		print("press")
+	end    
+})
+
+
+
+
+
+
+
+
+
+
+
