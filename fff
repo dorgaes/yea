@@ -250,7 +250,7 @@ function autoReset()
             if _G.autoReset == false then break
             end
 
-            while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000)
+            while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000 and gameplayers.LocalPlayer.leaderstat.TP.Value < 75)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
