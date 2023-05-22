@@ -1131,7 +1131,7 @@ local MiscTab = Window:MakeTab({
 })
 
 local Section = MiscTab:AddSection({
-	Name = "auto click"
+	Name = "auto click/press"
 })
 
 MiscTab:AddBind({
@@ -1145,10 +1145,6 @@ MiscTab:AddBind({
         	end
         	autoclick()
 	end    
-})
-
-local Section = MiscTab:AddSection({
-	Name = "auto press"
 })
 
 MiscTab:AddBind({
@@ -1200,6 +1196,7 @@ SettingTab:AddSlider({
 		_G.presstime = Value
 	end    
 })
+
 
 
 
