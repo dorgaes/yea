@@ -10,22 +10,6 @@ _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
-m = game.Players.LocalPlayer:GetMouse()
-click = false
-
-
-
-
-
-
-
-
-
-
-
-
---local
-local time = 0.01
 
 
 
@@ -936,6 +920,13 @@ function autoTPKromerHard()
     end
 end
 
+function autoclick()
+    while _G.click == true do 
+        wait(0.01)
+        mouse1click()
+    end
+end
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1137,11 +1128,13 @@ local Section = MiscTab:AddSection({
 })
 
 MiscTab:AddBind({
-	Name = "Bind",
-	Default = Enum.KeyCode.F,
+	Name = "Auto click",
+	Default = Enum.KeyCode.E,
 	Hold = false,
 	Callback = function()
-		print("press")
+		if _G.click = true then _G.click = false
+		elseif
+		if _G.click = false then _G.click = true
 	end    
 })
 
