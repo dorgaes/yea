@@ -937,57 +937,97 @@ function autopress()
         while _G.hotbar1 == true do
             wait(_G.presstime)
 	    keypress(0x31)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar2 == true do
             wait(_G.presstime)
 	    keypress(0x32)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar1 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar3 == true do
             wait(_G.presstime)
 	    keypress(0x33)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar1 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar4 == true do
             wait(_G.presstime)
 	    keypress(0x34)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar1 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar5 == true do
             wait(_G.presstime)
 	    keypress(0x35)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar1 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar6 == true do
             wait(_G.presstime)
 	    keypress(0x36)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar1 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+	
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar7 == true do
             wait(_G.presstime)
 	    keypress(0x37)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar1 or _G.hotbar8 == true then break
 	    end
+	end
+	
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar8 == true do
             wait(_G.presstime)
 	    keypress(0x38)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar1 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
     end
 end
