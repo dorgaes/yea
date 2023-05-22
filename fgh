@@ -1193,7 +1193,7 @@ local Section = MiscTab:AddSection({
 	Name = "auto click/press"
 })
 
-Tab:AddLabel("Rember To Chose Your Wepaon Hotbar")
+MiscTab:AddLabel("Rember To Chose Your Wepaon Hotbar")
 
 MiscTab:AddBind({
 	Name = "Auto Clicker",
