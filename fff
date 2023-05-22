@@ -1090,13 +1090,6 @@ FarmTab:AddToggle({
     end
 })
 
-FarmTab:AddButton({
-	Name = "GrillbyButton!",
-	Callback = function()
-      		workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
-  	end    
-})
-
 FarmTab:AddToggle({
 	Name = "TP and Kromer Farm lv 6000+ (Hard!)",
 	Default = false,
