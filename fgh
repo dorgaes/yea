@@ -10,7 +10,7 @@ _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
-
+_G.click = true
 
 
 
