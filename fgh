@@ -10,7 +10,6 @@ _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
-_G.click = true
 
 
 
@@ -921,10 +920,23 @@ function autoTPKromerHard()
 end
 
 function autoclick()
-    while _G.click == true do 
-        wait(0.01)
-        mouse1click()
+    local time = 0.01
+
+    click = false
+    m = game.Players.LocalPlayer:GetMouse()
+    m.KeyDown:connect(function(key)
+    if key == "v" then
+    if click == true then click = false
+    elseif
+    click == false then click = true
+
+    while click == true do 
+    wait(time)
+    mouse1click()
     end
+    end
+    end
+    end)
 end
 
 --Auto Farm
@@ -1131,11 +1143,8 @@ MiscTab:AddBind({
 	Name = "Auto click",
 	Default = Enum.KeyCode.E,
 	Hold = false,
-	Callback = function()
-		if _G.click = true then _G.click = false
-		elseif
-		if _G.click = false then _G.click = true
-		end
+	Callback = function() 
+		autoclick()
 	end    
 })
 
