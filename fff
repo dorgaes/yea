@@ -1277,6 +1277,7 @@ MiscTab:AddBind({
 
 local Section = MiscTab:AddSection({
 	Name = "Grillby Button"
+})
 	
 MiscTab:AddToggle({
 	Name = "Auto Grillby Buton",
