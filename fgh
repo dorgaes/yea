@@ -1135,7 +1135,7 @@ MiscTab:AddBind({
         	elseif
         	_G.autoclick == false then _G.autoclick = true
         	end
-        	atclick()
+        	autoclick()
 	end    
 })
 
