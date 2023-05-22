@@ -11,6 +11,18 @@ _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
 m = game.Players.LocalPlayer:GetMouse()
+click = false
+
+
+
+
+
+
+
+
+
+
+
 
 --local
 local time = 0.01
@@ -1125,8 +1137,8 @@ local Section = MiscTab:AddSection({
 })
 
 MiscTab:AddBind({
-	Name = "auto click",
-	Default = Enum.KeyCode.F,
+	Name = "Bind",
+	Default = Enum.KeyCode.E,
 	Hold = false,
 	Callback = function()
 		print("press")
