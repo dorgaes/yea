@@ -919,26 +919,6 @@ function autoTPKromerHard()
     end
 end
 
-function autoclick()
-    local time = 0.01
-
-    click = false
-    m = game.Players.LocalPlayer:GetMouse()
-    m.KeyDown:connect(function(key)
-    if key == "e" then
-    if click == true then click = false
-    elseif
-    click == false then click = true
-
-    while click == true do 
-    wait(time)
-    mouse1click()
-    end
-    end
-    end
-    end)
-end
-
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1144,8 +1124,23 @@ MiscTab:AddBind({
 	Default = Enum.KeyCode.E,
 	Hold = false,
 	Callback = function() 
-		autoclick()
-	end    
+		local time = 0.01
+
+		click = false
+		m = game.Players.LocalPlayer:GetMouse()
+		m.KeyDown:connect(function(key)
+		if key == "e" then
+		if click == true then click = false
+		elseif
+		click == false then click = true
+
+		while click == true do 
+		wait(time)
+		mouse1click()
+		end
+		end
+		end
+		end)   
 })
 
 
