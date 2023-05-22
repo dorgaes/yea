@@ -13,7 +13,7 @@ _G.autoTPKromerHard = true
 _G.autoclick = false
 _G.clcktime = 0.5
 _G.presstime = 0.5
-
+_G.autopress = false
 
 
 
