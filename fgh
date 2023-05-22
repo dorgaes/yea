@@ -1126,7 +1126,7 @@ local Section = MiscTab:AddSection({
 
 MiscTab:AddBind({
 	Name = "auto click",
-	Default = Enum.KeyCode.f,
+	Default = Enum.KeyCode.F,
 	Hold = false,
 	Callback = function()
 		print("press")
