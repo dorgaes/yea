@@ -1037,12 +1037,12 @@ end
 function grillbybutton()
     while _G.grillbybutton == true do
         wait(0.5)
-	keypress(0xBB)
+	keypress(0x70)
     end
 end
 
 _G.button1.KeyDown:connect(function(key)
-    if key == "+" then
+    if key == "F1" then
         workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
     end
 end)
