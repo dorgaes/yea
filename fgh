@@ -1135,6 +1135,7 @@ MiscTab:AddBind({
 		if _G.click = true then _G.click = false
 		elseif
 		if _G.click = false then _G.click = true
+		end
 	end    
 })
 
