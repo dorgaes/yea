@@ -1,0 +1,6 @@
+m = game.Players.LocalPlayer:GetMouse()
+m.KeyDown:connect(function(key)
+if key == "x" then
+workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
+end
+end)
