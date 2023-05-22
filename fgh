@@ -1127,7 +1127,7 @@ local Section = MiscTab:AddSection({
 })
 
 MiscTab:AddBind({
-	Name = "auto clicker",
+	Name = "Auto Clicker",
 	Default = Enum.KeyCode.F,
 	Hold = false,
 	Callback = function()
