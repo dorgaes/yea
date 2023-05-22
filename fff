@@ -1026,7 +1026,7 @@ function autopress()
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar1 == true then break
 	    end
 	end
-		
+	
 	if _G.autopress == false then break
 	end
     end
@@ -1266,7 +1266,7 @@ local Section = MiscTab:AddSection({
 
 MiscTab:AddToggle({
 	Name = "Hotbar 1",
-	Default = true,
+	Default = false,
 	Callback = function(Value)
 		_G.hotbar1 = Value
 	end    
