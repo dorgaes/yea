@@ -1038,7 +1038,7 @@ end
 
 function grillbybutton()
     while _G.grillbybutton == true do
-        wait(0.5)
+        wait(0.1)
 	keypress(0x58)
     end
 end
