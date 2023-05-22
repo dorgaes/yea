@@ -11,7 +11,8 @@ _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
 _G.autoclick = false
-
+_G.clcktime = 0.5
+_G.presstime = 0.5
 
 
 
@@ -921,8 +922,15 @@ end
 
 function autoclick()
     while _G.autoclick == true do
-        wait(0.01)
+        wait(_G.clcktime)
         mouse1click()
+    end
+end
+
+functtion autopress()
+    while _G.autopress == true do
+        wait(_G.presstime)
+	keypress(0x37)
     end
 end
 
@@ -1055,7 +1063,7 @@ LocalTab:AddButton({
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2474.2854, 255.795334, 133.112946, -0.0236631054, 0.0919846743, -0.995479226, 8.62032667e-09, 0.995758057, 0.0920104384, 0.999719977, 0.00217724429, -0.0235627294)
     end    
 })
-
+   
 --Player 
 local PlayerTab = Window:MakeTab({
 	Name = "Player",
@@ -1139,10 +1147,59 @@ MiscTab:AddBind({
 	end    
 })
 
+local Section = MiscTab:AddSection({
+	Name = "auto press"
+})
 
+MiscTab:AddBind({
+	Name = "Auto Use Weapon",
+	Default = Enum.KeyCode.G,
+	Hold = false,
+	Callback = function()
+		if _G.autopress == true then _G.autopress = false
+        	elseif
+        	_G.autopress == false then _G.autopress = true
+        	end
+        	autopress()
+	end    
+})
 
+--Settings
+local SettingTab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+local Section = SettingTab:AddSection({
+	Name = "Settings"
+})
 
+SettingTab:AddSlider({
+	Name = "Change Delay Time For Auto Click",
+	Min = 0.1,
+	Max = 2,
+	Default = 0.5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.1,
+	ValueName = "delay every click",
+	Callback = function(Value)
+		_G.clcktime = Value
+	end    
+})
+
+SettingTab:AddSlider({
+	Name = "Change Delay Time For Auto Press",
+	Min = 0.1,
+	Max = 2,
+	Default = 0.5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.1,
+	ValueName = "delay every press",
+	Callback = function(Value)
+		_G.presstime = Value
+	end    
+})
 
 
 
