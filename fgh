@@ -11,8 +11,8 @@ _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
 _G.autoclick = false
-clcktime = 0.5
-presstime = 0.5
+_G.clcktime = 0.5
+_G.presstime = 0.5
 _G.autopress = false
 
 
@@ -922,14 +922,14 @@ end
 
 function autoclick()
     while _G.autoclick == true do
-        wait(clcktime)
+        wait(_G.clcktime)
         mouse1click()
     end
 end
 
-functtion autopress()
+function autopress()
     while _G.autopress == true do
-        wait(presstime)
+        wait(_G.presstime)
 	keypress(0x37)
     end
 end
@@ -1184,7 +1184,7 @@ SettingTab:AddSlider({
 	Increment = 0.1,
 	ValueName = "delay every click",
 	Callback = function(Value)
-		clcktime = Value
+		_G.clcktime = Value
 	end    
 })
 
@@ -1197,7 +1197,7 @@ SettingTab:AddSlider({
 	Increment = 0.1,
 	ValueName = "delay every press",
 	Callback = function(Value)
-		presstime = Value
+		_G.presstime = Value
 	end    
 })
 
