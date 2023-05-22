@@ -1138,7 +1138,7 @@ local Section = MiscTab:AddSection({
 
 MiscTab:AddBind({
 	Name = "Bind",
-	Default = Enum.KeyCode.E,
+	Default = Enum.KeyCode.F,
 	Hold = false,
 	Callback = function()
 		print("press")
