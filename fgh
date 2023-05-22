@@ -10,7 +10,7 @@ _G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
 _G.autoTPKromerHard = true
-_G.atclick = true
+_G.atclick = false
 
 
 
@@ -921,11 +921,8 @@ end
 
 function atclick()
     while _G.atclick == true do
-        wait(10)
-	repeat
-	    wait(0.01)
-            mouse1click()
-	until _G.atclick == false
+        wait(0.01)
+        mouse1click()
     end
 end
 
@@ -1129,14 +1126,17 @@ local Section = MiscTab:AddSection({
 	Name = "auto click"
 })
 
-MiscTab:AddToggle({
+MiscTab:AddBind({
 	Name = "auto clicker",
-	Default = false,
-	Callback = function(Value)
-		_G.atclick = Value
-		atclick()
-	end    
-})
+	Default = Enum.KeyCode.F,
+	Hold = false,
+	Callback = function()
+		if _G.atclick == true then _G.atclick = false
+                elseif
+                _G.atclick == false then _G.atclick = true
+                end
+                atclick()
+	end
 
 
 
