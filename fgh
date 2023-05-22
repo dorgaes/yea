@@ -14,8 +14,14 @@ _G.autoclick = false
 _G.clcktime = 0.5
 _G.presstime = 0.5
 _G.autopress = false
-
-
+_G.hotbar1 = true
+_G.hotbar2 = true
+_G.hotbar3 = true
+_G.hotbar4 = true
+_G.hotbar5 = true
+_G.hotbar6 = true
+_G.hotbar7 = true
+_G.hotbar8 = true
 
 
 --Functions
@@ -929,8 +935,61 @@ end
 
 function autopress()
     while _G.autopress == true do
-        wait(_G.presstime)
-	keypress(0x37)
+        while _G.hotbar1 == true do
+            wait(_G.presstime)
+	    keypress(0x31)
+	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar2 == true do
+            wait(_G.presstime)
+	    keypress(0x32)
+	    if _G.hotbar1 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar3 == true do
+            wait(_G.presstime)
+	    keypress(0x33)
+	    if _G.hotbar2 or _G.hotbar1 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar4 == true do
+            wait(_G.presstime)
+	    keypress(0x34)
+	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar1 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar5 == true do
+            wait(_G.presstime)
+	    keypress(0x35)
+	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar1 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar6 == true do
+            wait(_G.presstime)
+	    keypress(0x36)
+	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar1 or _G.hotbar7 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar7 == true do
+            wait(_G.presstime)
+	    keypress(0x37)
+	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar1 or _G.hotbar8 == true then break
+	    end
+	end
+	
+	while _G.hotbar8 == true do
+            wait(_G.presstime)
+	    keypress(0x38)
+	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar1 == true then break
+	    end
+	end
     end
 end
 
@@ -1134,6 +1193,8 @@ local Section = MiscTab:AddSection({
 	Name = "auto click/press"
 })
 
+Tab:AddLabel("Rember To Chose Your Wepaon Hotbar")
+
 MiscTab:AddBind({
 	Name = "Auto Clicker",
 	Default = Enum.KeyCode.F,
@@ -1157,6 +1218,74 @@ MiscTab:AddBind({
         	_G.autopress == false then _G.autopress = true
         	end
         	autopress()
+	end    
+})
+
+local Section = MiscTab:AddSection({
+	Name = "Hotbar Chose"
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 1",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar1 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 2",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar2 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 3",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar3 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 4",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar4 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 5",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar5 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 6",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar6 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 7",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar7 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 8",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar8 = Value
 	end    
 })
 
