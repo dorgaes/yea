@@ -1434,8 +1434,8 @@ SettingTab:AddTextbox({
 	end	  
 })
 
-Tab:AddToggle({
-	Name = "Send Webhook",
+SettingTab:AddToggle({
+	Name = "Reset Webhook",
 	Default = false,
 	Callback = function(Value)
 		_G.webhook = Value
