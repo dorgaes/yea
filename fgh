@@ -1428,7 +1428,7 @@ local Section = SettingTab:AddSection({
 SettingTab:AddTextbox({
 	Name = "Webhook",
 	Default = "",
-	TextDisappear = true,
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.webhookid = Value
 	end	  
@@ -1445,11 +1445,29 @@ SettingTab:AddToggle({
 SettingTab:AddButton({
 	Name = "Webhook test",
 	Callback = function()
-      		loadstring(game.HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook", true))()
+      		HttpService = game:GetService("HttpService")
+Webhook_URL = _G.webhookid
+
+local responce = request(
+{
+    Url = Webhook_URL,
+    Method = "POST",
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "",
+        ["embeds"] = {{
+            ["title"] = "**Your Webhook Working!**",
+            ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
+            ["type"] = "rich",
+            ["color"] = tonumber(0xff0000)
+        }}
+    })
+}   
+)
   	end    
 })
-
-
 
 
 
