@@ -1,0 +1,21 @@
+HttpService = game:GetService("HttpService")
+Webhook_URL = "https://discord.com/api/webhooks/1109097425383194634/Z4ndH7yvgEBw-Kt3H2IJx8uZucDUKF6UEP10kWbNERCB2e92gkFIB6xmvtr6CWOhj17M"
+
+local responce = request(
+{
+    Url = Webhook_URL,
+    Method = "POST",
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "",
+        ["embeds"] = {{
+            ["title"] = "**You got a reset!**",
+            ["description"] = game.Players.LocalPlayer.DisplayName .." your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+            ["type"] = "rich",
+            ["color"] = tonumber(0xff0000)
+        }}
+    })
+}   
+)
