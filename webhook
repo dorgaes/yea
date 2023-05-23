@@ -1,3 +1,5 @@
+_G.webhookid = 
+
 HttpService = game:GetService("HttpService")
 Webhook_URL = "_G.webhookid"
 
