@@ -40,7 +40,7 @@ function autoReset()
                 repeat
 		    wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.Enemy.Health == 0
-                wait(5)
+                wait(5.5)
                 if _G.autoReset == false then break
                 end
             end
@@ -57,7 +57,7 @@ function autoReset()
 		    wait(0.05)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-		wait(5)
+		wait(5.5)
 		if _G.autoReset == false then break
                 end
 	    end
@@ -71,7 +71,7 @@ function autoReset()
                     wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 		if _G.autoReset == false then break
                 end
             end
@@ -87,7 +87,7 @@ function autoReset()
 		    wait(0.05)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-		wait(5)
+		wait(5.5)
 		if _G.autoReset == false then break
                 end
 	    end
@@ -104,7 +104,7 @@ function autoReset()
 		    wait(0.05)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-		wait(5)
+		wait(5.5)
 		if _G.autoReset == false then break
                 end
 	    end
@@ -121,7 +121,7 @@ function autoReset()
                     wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].UndyneULTRA.Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 		if _G.autoReset == false then break
                 end
             end
@@ -152,7 +152,7 @@ function autoReset()
 		    wait(0.15)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 		if _G.autoReset == false then break
                 end
             end
@@ -183,7 +183,7 @@ function autoReset()
 		    wait(0.15)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["BARK BOSS"].Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 		if _G.autoReset == false then break
                 end
             end
@@ -214,7 +214,7 @@ function autoReset()
 		    wait(0.15)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 		if _G.autoReset == false then break
                 end
             end
@@ -248,7 +248,7 @@ function autoReset()
                 if _G.autoReset == false then break
                 end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 		if _G.autoReset == false then break
                 end
             end
@@ -295,7 +295,7 @@ function autoReset()
 		    wait(0.5)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Enemy.Health == 0
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(5)
+                wait(5.5)
 	        if _G.autoReset == false then break
                 end
             end
