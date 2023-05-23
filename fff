@@ -853,8 +853,8 @@ function autoReset()
     	        Body = HttpService:JSONEncode({
        	         ["content"] = "",
        	         ["embeds"] = {{
-            	        ["title"] = **game.Players.LocalPlayer.DisplayName**.."** you got a reset!**"..,
-           	         ["description"] = .."your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	         ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
            	         ["type"] = "rich",
            	         ["color"] = tonumber(0xff0000)
        	         }}
