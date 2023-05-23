@@ -1428,7 +1428,7 @@ local Section = SettingTab:AddSection({
 SettingTab:AddTextbox({
 	Name = "Webhook",
 	Default = "",
-	TextDisappear = true,
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.webhookid = Value
 	end	  
