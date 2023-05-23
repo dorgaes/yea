@@ -1459,7 +1459,7 @@ SettingTab:AddButton({
              		 ["content"] = "",
               		["embeds"] = {{
                  		 ["title"] = "**From Dorgaes Hub**",
-                 		 ["description"] = Your Webhook Is Working,
+                 		 ["description"] = "Your Webhook Is Working",
                  		 ["type"] = "rich",
                  		 ["color"] = tonumber(0xff0000)
            		   }}
