@@ -1459,7 +1459,7 @@ local responce = request(
         ["content"] = "",
         ["embeds"] = {{
             ["title"] = "**Your Webhook Working!**",
-            ["description"] = game.Players.LocalPlayer.DisplayName .." your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+            ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
             ["type"] = "rich",
             ["color"] = tonumber(0xff0000)
         }}
