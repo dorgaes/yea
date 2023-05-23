@@ -1442,3 +1442,40 @@ SettingTab:AddToggle({
 	end    
 })
 
+SettingTab:AddButton({
+	Name = "Webhook Test",
+	Callback = function()
+      		HttpService = game:GetService("HttpService")
+      		Webhook_URL = "_G.webhookid"
+
+      		local responce = request(
+      		{
+          		Url = Webhook_URL,
+          		Method = "POST",
+          		Headers = {
+              		['Content-Type'] = 'application/json'
+          		},
+          		Body = HttpService:JSONEncode({
+             		 ["content"] = "",
+              		["embeds"] = {{
+                 		 ["title"] = "**From Dorgaes Hub**",
+                 		 ["description"] = Your Webhook Is Working,
+                 		 ["type"] = "rich",
+                 		 ["color"] = tonumber(0xff0000)
+           		   }}
+         		 })
+      		}   
+      		)
+  	end    
+})
+
+
+
+
+
+
+
+
+
+
+
