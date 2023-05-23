@@ -1,6 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 
+--script
+loadstring(game.HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/1", true))()
+
 --Values
 _G.autoReset = true
 _G.autoLv = true
@@ -22,11 +25,14 @@ _G.hotbar5 = true
 _G.hotbar6 = true
 _G.hotbar7 = true
 _G.hotbar8 = true
+_G.grillbybutton = true
+_G.webhookid = 0
+_G.webhook = true
 
 --Functions
 function autoReset()
     while _G.autoReset == true do
-        while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
+            while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
@@ -823,14 +829,50 @@ function autoReset()
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 	        wait(5)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                if _G.autoReset == false then break
-                end
+	    end
 	    
 	    repeat
 	        wait(0.05)
-            until game:GetService("Players").LocalPlayer.leaderstats.LV.Value < 3000
+	    until game:GetService("Players").LocalPlayer.leaderstats.LV.Value < 500
+	    
+	    while _G.webhook == true do
+	        HttpService = game:GetService("HttpService")
+	        Webhook_URL = "_G.webhookid"
+
+	        local responce = request(
+	        {
+   	         Url = Webhook_URL,
+   	         Method = "POST",
+    	        Headers = {
+       	         ['Content-Type'] = 'application/json'
+   	         },
+    	        Body = HttpService:JSONEncode({
+       	         ["content"] = "",
+       	         ["embeds"] = {{
+            	        ["title"] = "**You got a reset!**",
+           	         ["description"] = game.Players.LocalPlayer.DisplayName .." your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	         ["type"] = "rich",
+           	         ["color"] = tonumber(0xff0000)
+       	         }}
+   	         })
+	        }   
+	        )
+	        if _G.webhook == true then break
+		end
 	    end
-	    wait(10)
+		
+            
+	    if _G.autoReset == false then break
+            end
+		
+	    wait(8)
+	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
+	    wait(0.1)
+            game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Devils Knife",2)
+	    wait(0.1)
+	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
+	    wait(0.1)
+	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Rose",2)
             
             if _G.autoReset == false then break
             end
@@ -937,58 +979,105 @@ function autopress()
         while _G.hotbar1 == true do
             wait(_G.presstime)
 	    keypress(0x31)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar2 == true do
             wait(_G.presstime)
 	    keypress(0x32)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar1 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar3 == true do
             wait(_G.presstime)
 	    keypress(0x33)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar1 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar4 == true do
             wait(_G.presstime)
 	    keypress(0x34)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar1 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar5 == true do
             wait(_G.presstime)
 	    keypress(0x35)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar1 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+		
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar6 == true do
             wait(_G.presstime)
 	    keypress(0x36)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar1 or _G.hotbar7 or _G.hotbar8 == true then break
 	    end
+	end
+	
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar7 == true do
             wait(_G.presstime)
 	    keypress(0x37)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar1 or _G.hotbar8 == true then break
 	    end
+	end
+	
+	if _G.autopress == false then break
 	end
 	
 	while _G.hotbar8 == true do
             wait(_G.presstime)
 	    keypress(0x38)
+	    if _G.autopress == false then break
+	    end
 	    if _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar1 == true then break
 	    end
 	end
+	
+	if _G.autopress == false then break
+	end
+    end
+end
+
+function grillbybutton()
+    while _G.grillbybutton == true do
+        wait(0.1)
+	keypress(0x58)
     end
 end
 
@@ -1037,13 +1126,6 @@ FarmTab:AddToggle({
         _G.autoKromer = Value
         autoKromer()
     end
-})
-
-FarmTab:AddButton({
-	Name = "GrillbyButton!",
-	Callback = function()
-      		workspace.ActiveBosses.Slot1.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
-  	end    
 })
 
 FarmTab:AddToggle({
@@ -1192,7 +1274,7 @@ local Section = MiscTab:AddSection({
 	Name = "auto click/press"
 })
 
-MiscTab:AddLabel("Rember To Chose Your Wepaon Hotbar")
+MiscTab:AddLabel("Make Sure To Chose At Least One Hotbar")
 
 MiscTab:AddBind({
 	Name = "Auto Clicker",
@@ -1220,6 +1302,20 @@ MiscTab:AddBind({
 	end    
 })
 
+local Section = MiscTab:AddSection({
+	Name = "Grillby Button"
+})
+	
+MiscTab:AddToggle({
+	Name = "Auto Grillby Buton",
+	Default = false,
+	Callback = function(Value)
+		_G.grillbybutton = Value
+		grillbybutton()
+	end    
+})
+
+	
 local Section = MiscTab:AddSection({
 	Name = "Hotbar Chose"
 })
@@ -1325,8 +1421,24 @@ SettingTab:AddSlider({
 	end    
 })
 
+local Section = SettingTab:AddSection({
+	Name = "Webhook"
+})
 
+SettingTab:AddTextbox({
+	Name = "Webhook",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.webhookid = Value
+	end	  
+})
 
-
-
+SettingTab:AddToggle({
+	Name = "Reset Webhook",
+	Default = false,
+	Callback = function(Value)
+		_G.webhook = Value
+	end    
+})
 
