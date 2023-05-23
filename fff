@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --script
 loadstring(game.HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/1", true))()
@@ -26,7 +26,7 @@ _G.hotbar6 = true
 _G.hotbar7 = true
 _G.hotbar8 = true
 _G.grillbybutton = true
-_G.webhookid = 0
+_G.webhookid = true
 _G.webhook = true
 
 --Functions
@@ -1441,5 +1441,19 @@ SettingTab:AddToggle({
 		_G.webhook = Value
 	end    
 })
+
+SettingTab:AddButton({
+	Name = "Webhook test",
+	Callback = function()
+      		loadstring(game.HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook", true))()
+  	end    
+})
+
+
+
+
+
+
+
 
 
