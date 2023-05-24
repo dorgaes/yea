@@ -293,9 +293,9 @@ function autoReset()
             
             wait(6)
             
-            workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    repeat
 		wait(0.5)
+		workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health == 0
             
             wait(6)
