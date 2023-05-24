@@ -53,9 +53,10 @@ function autoReset()
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	        wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	        repeat
+	        wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -67,9 +68,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
                     wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -84,9 +86,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 		wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -101,10 +104,11 @@ function autoReset()
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
 		wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		until workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Enemy.Health == 0
+    		until workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
                 end
@@ -118,9 +122,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
                     wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].UndyneULTRA.Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -135,9 +140,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -152,9 +158,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8423.3291, 1245.69019, -640.939819, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"]["BARK BOSS"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"]["BARK BOSS"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["BARK BOSS"].Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -169,9 +176,10 @@ function autoReset()
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -183,9 +191,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
 		wait(6)
 		if _G.autoReset == false then break
@@ -200,9 +209,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
                 wait(6)
 		if _G.autoReset == false then break
@@ -217,9 +227,10 @@ function autoReset()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                repeat
+                wait(3)
+		workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		repeat
 		    wait(0.05)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Enemy.Health == 0
                 wait(6)
 		if _G.autoReset == false then break
@@ -233,58 +244,58 @@ function autoReset()
             wait(4)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.1213703, 1046.93433, -41.2096214, -0.125311747, -0.207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
             wait(2)
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health == 0
             
             wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss2.Enemy.Health == 0
             
-            wait(5.5)
+            wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health == 0
                         
             wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health == 0
                         
             wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health == 0
                         
             wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health == 0
                         
             wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health == 0
             
             wait(6)
             
-            repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    repeat
 		wait(0.5)
-		workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health == 0
             
             wait(6)
