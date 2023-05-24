@@ -865,18 +865,39 @@ function autoReset()
 		end
 	    end
 		
-            
-	    if _G.autoReset == false then break
-            end
-		
-	    wait(8)
-	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
-	    wait(0.1)
-            game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Devils Knife",2)
-	    wait(0.1)
-	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
-	    wait(0.1)
-	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Rose",2)
+	    if _G.autopress == true then 
+	        if _G.autoclick == true then 
+		    _G.autoclick = false
+		    _G.autopress = false
+		    wait(8)
+		    _G.autoclick = true
+		    _G.autopress = true
+		    autopress()
+		    autoclick()
+		else
+		    _G.autopress = false
+		    wait(8)
+		    _G.autopress = true
+		    autopress()
+		end
+	    end
+	    
+            if _G.autoclick == true then 
+	        if _G.autopress == true then 
+		    _G.autoclick = false
+		    _G.autopress = false
+		    wait(8)
+		    _G.autoclick = true
+		    _G.autopress = true
+		    autopress()
+		    autoclick()
+		else
+		    _G.autoclick = false
+		    wait(8)
+		    _G.autoclick = true
+		    autoclick()
+		end
+	    end
             
             if _G.autoReset == false then break
             end
