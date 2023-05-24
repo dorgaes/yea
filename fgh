@@ -40,7 +40,7 @@ function autoReset()
                 repeat
 		    wait(0.05)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Grillby.Enemy.Health == 0
-                wait(5.5)
+                wait(6)
                 if _G.autoReset == false then break
                 end
             end
@@ -57,7 +57,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["error sans"].Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
 	    end
@@ -71,7 +71,7 @@ function autoReset()
                     wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].Imposter.Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -88,7 +88,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
 	    end
@@ -105,7 +105,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].SANESSS.Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
 	    end
@@ -122,7 +122,7 @@ function autoReset()
                     wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
                 until workspace.ActiveBosses.Slot1.Bosses["1"].UndyneULTRA.Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -139,7 +139,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -156,7 +156,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"]["BARK BOSS"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["BARK BOSS"].Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -173,7 +173,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].BOB.Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -187,7 +187,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
-		wait(5.5)
+		wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -204,7 +204,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
-                wait(5.5)
+                wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -221,7 +221,7 @@ function autoReset()
 		    wait(0.05)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		until workspace.ActiveBosses.Slot1.Bosses["1"].SansStrong.Enemy.Health == 0
-                wait(5.5)
+                wait(6)
 		if _G.autoReset == false then break
                 end
             end
@@ -238,7 +238,7 @@ function autoReset()
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss1.Enemy.Health == 0
             
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
@@ -252,42 +252,42 @@ function autoReset()
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss3.Enemy.Health == 0
                         
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss4.Enemy.Health == 0
                         
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss5.Enemy.Health == 0
                         
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss6.Enemy.Health == 0
                         
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss7.Enemy.Health == 0
             
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
 		workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    until workspace.ActiveBosses.Slot1.Bosses["1"].Boss8.Enemy.Health == 0
             
-            wait(5.5)
+            wait(6)
             
             repeat
 		wait(0.5)
