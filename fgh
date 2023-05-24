@@ -475,6 +475,7 @@ function autoReset()
 		end
 	    end
 		
+	    wait(8)
             game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Stick",2)
 	    wait(0.1)
 	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
