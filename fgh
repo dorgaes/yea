@@ -331,11 +331,11 @@ function autoReset()
 	    wait(8)
 	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
 	    wait(0.1)
-            game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Devils Knife",2)
+            game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Stick",2)
 	    wait(0.1)
-	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
+	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Devils Knife",1)
 	    wait(0.1)
-	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Rose",2)
+	    game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
             
             if _G.autoReset == false then break
             end
