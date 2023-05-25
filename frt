@@ -618,7 +618,10 @@ end
 
 function autopress()
     while _G.autopress == true do
-        if _G.hotbar1 and _G.hotbar2 and _G.hotbar3 and _G.hotbar4 and _G.hotbar5 and _G.hotbar6 and _G.hotbar7 and _G.hotbar8 == false then return
+        if _G.hotbar1 and _G.hotbar2 and _G.hotbar3 and _G.hotbar4 and _G.hotbar5 and _G.hotbar6 and _G.hotbar7 and _G.hotbar8 == false then 
+	    repeat
+	        wait(0.5)
+	    until _G.hotbar1 or _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true
 	end
 	
         while _G.hotbar1 == true do
