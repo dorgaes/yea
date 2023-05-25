@@ -481,22 +481,54 @@ function autoLv()
 	    
 	    while _G.autoReset == false 
 	    do 
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(2)
-		workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	        while _G.webhook == true do
+	            HttpService = game:GetService("HttpService")
+	            Webhook_URL = _G.webhookid
+
+	            local responce = request(
+	            {
+   	             Url = Webhook_URL,
+   	             Method = "POST",
+    	            Headers = {
+       	             ['Content-Type'] = 'application/json'
+   	             },
+    	            Body = HttpService:JSONEncode({
+       	             ["content"] = "",
+       	             ["embeds"] = {{
+            	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
+           	             ["description"] = "if you want to auto reset turn on Enable Reset",
+           	             ["type"] = "rich",
+           	             ["color"] = tonumber(0xff0000)
+       	             }}
+   	             })
+	            }   
+	            )
+	            if _G.webhook == true then break
+		    end
+	        end
 		repeat
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
+		    wait(4)
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+                    wait(2)
 		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
-		until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
-                wait(6)
+		    repeat
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        wait(0.2)
+		    until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
+                    wait(6)
+		    if _G.autoLv == false then break
+                    end
+		    if _G.autoReset == true then break
+                    end
+		until _G.autoLv == false or _G.autoReset == true
+		
 		if _G.autoLv == false then break
                 end
 		if _G.autoReset == true then break
