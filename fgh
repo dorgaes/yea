@@ -243,6 +243,9 @@ function autoReset()
 		if _G.autoReset == false then break
                 end
             end
+	    
+	    if _G.autoReset == false then break
+            end
 
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
             do
