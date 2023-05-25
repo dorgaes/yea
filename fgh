@@ -708,7 +708,7 @@ FarmTab:AddToggle({
 	Name = "Lv Farm (Reset 7+)",
 	Default = false,
 	Callback = function(Value)
-        _G.autoReset = Value
+        _G.autoLv = Value
         autoLv()
     end
 })
