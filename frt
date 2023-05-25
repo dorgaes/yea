@@ -611,7 +611,7 @@ end
 
 function autoclick()
     while _G.autoclick == true do
-        wait(_G.clcktime)
+        wait(_G.clicktime)
         mouse1click()
     end
 end
