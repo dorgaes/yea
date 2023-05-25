@@ -702,6 +702,14 @@ local Section = FarmTab:AddSection({
 	Name = "Auto Farm"
 })
 
+FarmTab:AddToggle({
+	Name = "Enable Reset",
+	Default = false,
+	Callback = function(Value)
+	_G.autoReset = Value	
+	end    
+})
+
 FarmTab:AddLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
 
 FarmTab:AddToggle({
@@ -711,14 +719,6 @@ FarmTab:AddToggle({
         _G.autoLv = Value
         autoLv()
     end
-})
-
-FarmTab:AddToggle({
-	Name = "Enable Reset",
-	Default = false,
-	Callback = function(Value)
-	_G.autoReset = Value	
-	end    
 })
 
 FarmTab:AddToggle({
