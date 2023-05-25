@@ -618,6 +618,9 @@ end
 
 function autopress()
     while _G.autopress == true do
+        if _G.hotbar1 and _G.hotbar2 and _G.hotbar3 and _G.hotbar4 and _G.hotbar5 and _G.hotbar6 and _G.hotbar7 and _G.hotbar8 == false then return
+	end
+	
         while _G.hotbar1 == true do
             wait(_G.presstime)
 	    keypress(0x31)
