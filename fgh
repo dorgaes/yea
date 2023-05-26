@@ -810,23 +810,23 @@ function autodt()
 	
 	wait(20)
 	
-	if _G.dtlv == true do
-	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue do
+	if _G.dtlv == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
 	    end
 	end
 	
-	if _G.dttp == true do
-	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue do
+	if _G.dttp == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3001.50049, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then break
 	    end
 	end
 	
-	if _G.dtgold == true do
+	if _G.dtgold == true then
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	end
 	
