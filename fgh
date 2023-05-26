@@ -317,63 +317,53 @@ function autoLv()
             if _G.autoLv == false then break
             end
 	    
-	    while _G.autoReset == false 
-	    do 
-	        while _G.webhook == true do
-	            HttpService = game:GetService("HttpService")
-	            Webhook_URL = _G.webhookid
+	    if _G.autoReset == false then 
+	        if _G.autoLv == true then
+	            if _G.webhook == true then
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
 
-	            local responce = request(
-	            {
-   	             Url = Webhook_URL,
-   	             Method = "POST",
-    	            Headers = {
-       	             ['Content-Type'] = 'application/json'
-   	             },
-    	            Body = HttpService:JSONEncode({
-       	             ["content"] = "",
-       	             ["embeds"] = {{
-            	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
-           	             ["description"] = "if you want to auto reset turn on Enable Reset",
-           	             ["type"] = "rich",
-           	             ["color"] = tonumber(0xff0000)
-       	             }}
-   	             })
-	            }   
-	            )
-	            if _G.webhook == true then break
-		    end
-	        end
-		repeat
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		    wait(4)
-	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(2)
-		    workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    repeat
+	                local responce = request(
+	                {
+   	                 Url = Webhook_URL,
+   	                 Method = "POST",
+    	                Headers = {
+       	                 ['Content-Type'] = 'application/json'
+   	                 },
+    	                Body = HttpService:JSONEncode({
+       	                 ["content"] = "",
+       	                 ["embeds"] = {{
+        	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
+                             ["description"] = "if you want to auto reset turn on Enable Reset",
+                             ["type"] = "rich",
+                             ["color"] = tonumber(0xFFFF00)
+       	                 }}
+   	                 })
+	                }   
+	                )
+	            end
+	            repeat
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
+		        wait(4)
+	                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+                        wait(2)
 		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        wait(0.2)
-		    until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
-                    wait(6)
-		    if _G.autoLv == false then break
-                    end
-		    if _G.autoReset == true then break
-                    end
-		until _G.autoLv == false or _G.autoReset == true
-		
-		if _G.autoLv == false then break
-                end
-		if _G.autoReset == true then break
-                end
-	    end
+		        repeat
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		            wait(0.2)
+		        until workspace.ActiveBosses.Slot1.Bosses["1"].OuterSans.Enemy.Health == 0
+                        wait(6)
+		    until _G.autoLv == false or _G.autoReset == true
+	        end
+            end
             
-	    while _G.autoReset == true do
+	    if _G.autoReset == true then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.13379, 279.970581, 131.539795, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
@@ -497,7 +487,7 @@ function autoLv()
 	            wait(0.05)
 	        until game:GetService("Players").LocalPlayer.leaderstats.LV.Value < 500
 	    
-	        while _G.webhook == true do
+	        if _G.webhook == true then
 	            HttpService = game:GetService("HttpService")
 	            Webhook_URL = _G.webhookid
 
@@ -514,13 +504,11 @@ function autoLv()
             	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
            	             ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
            	             ["type"] = "rich",
-           	             ["color"] = tonumber(0xff0000)
+           	             ["color"] = tonumber(0x00FF00)
        	             }}
    	             })
 	            }   
 	            )
-	            if _G.webhook == true then break
-		    end
 	        end
 		
 	        wait(8)
@@ -531,12 +519,6 @@ function autoLv()
 	        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
 	        wait(0.1)
 	        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
-	    
-                if _G.autoLv == false then break
-                end
-	    
-	        if _G.autoReset == true then break
-                end
 	    end
     end
 end
@@ -622,10 +604,22 @@ end
 
 function autopress()
     while _G.autopress == true do
-        if _G.hotbar1 and _G.hotbar2 and _G.hotbar3 and _G.hotbar4 and _G.hotbar5 and _G.hotbar6 and _G.hotbar7 and _G.hotbar8 == false then 
-	    repeat
-	        wait(0.5)
-	    until _G.hotbar1 or _G.hotbar2 or _G.hotbar3 or _G.hotbar4 or _G.hotbar5 or _G.hotbar6 or _G.hotbar7 or _G.hotbar8 == true
+        if _G.hotbar1 == false then
+	    if _G.hotbar2 == false then
+	        if _G.hotbar3 == false then
+		    if _G.hotbar4 == false then
+		        if _G.hotbar5 == false then
+			    if _G.hotbar6 == false then
+			        if _G.hotbar7 == false then
+				    if _G.hotbar8 == false then
+				        wait(99999999)
+				    end
+				end
+			    end
+			end
+		    end
+		end
+	    end
 	end
 	
         while _G.hotbar1 == true do
@@ -810,23 +804,27 @@ function autodt()
 	
 	wait(20)
 	
-	if _G.dtgold == true then
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
+	    if _G.dtlv == true then
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    end
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
+	    end
 	end
 	
-	if _G.dttp == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
+	if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
+	    if _G.dttp == true then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3001.50049, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then break
 	    end
 	end
 	
-	if _G.dtlv == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	    end
-	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
+	if _G.dtgold == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
+	        if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		end
 	    end
 	end
 	
@@ -863,49 +861,49 @@ function autodt()
 	end
 	
 	repeat
-            wait(0.1)
+            wait(0.05)
 	    mousemoveabs(957,586)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(957,632)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(957,675)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(957,722)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,722)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,675)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,632)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,586)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,542)
 	    keypress(0x31)
-            wait(0.1)
+            wait(0.05)
             mousemoveabs(957,542)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,542)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,586)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,632)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,675)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,722)
 	    keypress(0x31)
         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
@@ -918,8 +916,6 @@ function autodt()
         game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
         wait(0.1)
         game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
-	
-	
     end
 end
 	
@@ -1283,7 +1279,7 @@ SettingTab:AddSlider({
 	Name = "Change Delay Time For Auto Click",
 	Min = 0.01,
 	Max = 0.5,
-	Default = 0.1,
+	Default = 0.01,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 0.01,
 	ValueName = "delay every click",
@@ -1345,7 +1341,7 @@ local responce = request(
             ["title"] = "**Your Webhook Working!**",
             ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
             ["type"] = "rich",
-            ["color"] = tonumber(0xff0000)
+            ["color"] = tonumber(0x00FF00)
         }}
     })
 }   
