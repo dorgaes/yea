@@ -871,7 +871,7 @@ function autodt()
 	end
 	repeat
 	    wait(0.5)
-	until game.Players.LocalPlayer.Humanoid.Health == 0
+	until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	wait(8)	
 	
 	if _G.autodt == false then break
