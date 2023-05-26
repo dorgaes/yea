@@ -336,7 +336,7 @@ function autoLv()
             	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
            	             ["description"] = "if you want to auto reset turn on Enable Reset",
            	             ["type"] = "rich",
-           	             ["color"] = tonumber(0xff0000)
+           	             ["color"] = tonumber(0xFFFF00)
        	             }}
    	             })
 	            }   
@@ -514,7 +514,7 @@ function autoLv()
             	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
            	             ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
            	             ["type"] = "rich",
-           	             ["color"] = tonumber(0xff0000)
+           	             ["color"] = tonumber(0x00FF00)
        	             }}
    	             })
 	            }   
@@ -1347,7 +1347,7 @@ local responce = request(
             ["title"] = "**Your Webhook Working!**",
             ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
             ["type"] = "rich",
-            ["color"] = tonumber(0xff0000)
+            ["color"] = tonumber(0x00FF00)
         }}
     })
 }   
