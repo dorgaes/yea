@@ -778,7 +778,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "TP and Kromer Farm lv 6000+ (Hard!)",
+	Name = "TP and Kromer Farm lv 6600+ reset 6+ (Hard!)",
 	Default = false,
 	Callback = function(Value)
         _G.autoTPKromerHard = Value
