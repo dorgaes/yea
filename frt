@@ -813,53 +813,6 @@ function autodt()
 	if _G.dtlv == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		repeat
-	            wait(0.1)
-	            mousemoveabs(957,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,722)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,722)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,722)
-	            mouse1click()
-	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
 	    end
@@ -868,131 +821,16 @@ function autodt()
 	if _G.dttp == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3001.50049, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		repeat
-	            wait(0.1)
-	            mousemoveabs(957,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,722)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,722)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,722)
-	            mouse1click()
-	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then break
 	    end
 	end
 	
-	if _G.dtgold == true then
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	    repeat
-	        wait(0.2)
-	            wait(0.1)
-	            mousemoveabs(957,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,722)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,722)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(902,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(957,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,542)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,586)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,632)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,675)
-	            mouse1click()
-		    wait(0.1)
-	            mousemoveabs(1012,722)
-	            mouse1click()
-	    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	end
 	
-	wait(8)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Stick",2)
-        wait(0.1)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
-        wait(0.1)
-        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
-        wait(0.1)
-        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
 	
-	if _G.autodt == false then break
-	end
-	
-	if _G.dtlv == true then break
-	end
-	
-	if _G.dttp == true then break
-	end
-	
-	if _G.dtgold == true then break
-	end
-	    
+	if _G.dtgold == false then
+	if _G.dtlv == false then
+	if _G.dttp == false then
 	while _G.webhook == true do
 	        HttpService = game:GetService("HttpService")
 	        Webhook_URL = _G.webhookid
@@ -1032,6 +870,68 @@ function autodt()
 	
 	if _G.autodt == false then break
 	end
+	end
+	end
+	end
+	
+	repeat
+            wait(0.1)
+	    mousemoveabs(957,586)
+	    mouse1click()
+	    wait(0.1)
+            mousemoveabs(957,632)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(957,675)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(957,722)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(902,722)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(902,675)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(902,632)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(902,586)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(902,542)
+            mouse1click()
+            wait(0.1)
+            mousemoveabs(957,542)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(1012,542)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(1012,586)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(1012,632)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(1012,675)
+            mouse1click()
+	    wait(0.1)
+            mousemoveabs(1012,722)
+            mouse1click()
+        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+	
+	wait(8)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Stick",2)
+        wait(0.1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
+        wait(0.1)
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
+        wait(0.1)
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
+	
+	
     end
 end
 	
