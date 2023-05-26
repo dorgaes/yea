@@ -1283,7 +1283,7 @@ SettingTab:AddSlider({
 	Name = "Change Delay Time For Auto Click",
 	Min = 0.01,
 	Max = 0.5,
-	Default = 0.1,
+	Default = 0.01,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 0.01,
 	ValueName = "delay every click",
