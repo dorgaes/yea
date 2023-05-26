@@ -814,11 +814,41 @@ function autodt()
 	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		repeat
-	            wait(0.1)
-	            mousemoveabs(957,694)
+	            wait(0.2)
+	            mousemoveabs(957,586)
+		    wait(0.2)
+	            mousemoveabs(957,632)
+		    wait(0.2)
+	            mousemoveabs(957,675)
+		    wait(0.2)
+	            mousemoveabs(957,722)
+		    wait(0.2)
+	            mousemoveabs(902,722)
+		    wait(0.2)
+	            mousemoveabs(902,675)
+		    wait(0.2)
+	            mousemoveabs(902,632)
+		    wait(0.2)
+	            mousemoveabs(902,586)
+		    wait(0.2)
+	            mousemoveabs(902,542)
+		    wait(0.2)
+	            mousemoveabs(957,542)
+		    wait(0.2)
+	            mousemoveabs(1012,542)
+		    wait(0.2)
+	            mousemoveabs(1012,586)
+		    wait(0.2)
+	            mousemoveabs(1012,632)
+		    wait(0.2)
+	            mousemoveabs(1012,675)
+		    wait(0.2)
+	            mousemoveabs(1012,722)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
+	    end
+	    if _G.dtlv == true then break
 	    end
 	end
 	
@@ -826,20 +856,80 @@ function autodt()
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3001.50049, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		repeat
-	            wait(0.1)
-	            mousemoveabs(957,694)
+	            wait(0.2)
+	            mousemoveabs(957,586)
+		    wait(0.2)
+	            mousemoveabs(957,632)
+		    wait(0.2)
+	            mousemoveabs(957,675)
+		    wait(0.2)
+	            mousemoveabs(957,722)
+		    wait(0.2)
+	            mousemoveabs(902,722)
+		    wait(0.2)
+	            mousemoveabs(902,675)
+		    wait(0.2)
+	            mousemoveabs(902,632)
+		    wait(0.2)
+	            mousemoveabs(902,586)
+		    wait(0.2)
+	            mousemoveabs(902,542)
+		    wait(0.2)
+	            mousemoveabs(957,542)
+		    wait(0.2)
+	            mousemoveabs(1012,542)
+		    wait(0.2)
+	            mousemoveabs(1012,586)
+		    wait(0.2)
+	            mousemoveabs(1012,632)
+		    wait(0.2)
+	            mousemoveabs(1012,675)
+		    wait(0.2)
+	            mousemoveabs(1012,722)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then break
+	    end
+	    if _G.dttp == true then break
 	    end
 	end
 	
 	if _G.dtgold == true then
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	    repeat
-	        wait(0.1)
-	        mousemoveabs(957,694)
+	        wait(0.2)
+	            mousemoveabs(957,586)
+		    wait(0.2)
+	            mousemoveabs(957,632)
+		    wait(0.2)
+	            mousemoveabs(957,675)
+		    wait(0.2)
+	            mousemoveabs(957,722)
+		    wait(0.2)
+	            mousemoveabs(902,722)
+		    wait(0.2)
+	            mousemoveabs(902,675)
+		    wait(0.2)
+	            mousemoveabs(902,632)
+		    wait(0.2)
+	            mousemoveabs(902,586)
+		    wait(0.2)
+	            mousemoveabs(902,542)
+		    wait(0.2)
+	            mousemoveabs(957,542)
+		    wait(0.2)
+	            mousemoveabs(1012,542)
+		    wait(0.2)
+	            mousemoveabs(1012,586)
+		    wait(0.2)
+	            mousemoveabs(1012,632)
+		    wait(0.2)
+	            mousemoveabs(1012,675)
+		    wait(0.2)
+	            mousemoveabs(1012,722)
 	    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+	    if _G.dtgold == true then break
+	    end
 	end
 	
 	wait(8)
