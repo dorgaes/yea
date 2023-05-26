@@ -870,9 +870,7 @@ local Section = FarmTab:AddSection({
 
 FarmTab:AddLabel("Chose at least one reward")
 
-FarmTab:AddLabel("If you chose more than one")
-
-FarmTab:AddLabel("It will Lv -> TP -> Gold")
+FarmTab:AddLabel("If you chose more than one,it will Lv -> TP -> Gold")
 
 FarmTab:AddToggle({
 	Name = "DT6 Farm",
