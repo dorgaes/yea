@@ -810,23 +810,27 @@ function autodt()
 	
 	wait(20)
 	
-	if _G.dtgold == true then
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
+	    if _G.dtlv == true then
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    end
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
+	    end
 	end
 	
-	if _G.dttp == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
+	if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
+	    if _G.dttp == true then
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3001.50049, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	    end
 	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then break
 	    end
 	end
 	
-	if _G.dtlv == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	    end
-	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
+	if _G.dtgold == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
+	        if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		end
 	    end
 	end
 	
@@ -863,49 +867,49 @@ function autodt()
 	end
 	
 	repeat
-            wait(0.1)
+            wait(0.05)
 	    mousemoveabs(957,586)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(957,632)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(957,675)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(957,722)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,722)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,675)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,632)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,586)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(902,542)
 	    keypress(0x31)
-            wait(0.1)
+            wait(0.05)
             mousemoveabs(957,542)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,542)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,586)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,632)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,675)
 	    keypress(0x31)
-	    wait(0.1)
+	    wait(0.05)
             mousemoveabs(1012,722)
 	    keypress(0x31)
         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
@@ -918,8 +922,6 @@ function autodt()
         game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
         wait(0.1)
         game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
-	
-	
     end
 end
 	
@@ -1283,7 +1285,7 @@ SettingTab:AddSlider({
 	Name = "Change Delay Time For Auto Click",
 	Min = 0.01,
 	Max = 0.5,
-	Default = 0.1,
+	Default = 0.01,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 0.01,
 	ValueName = "delay every click",
