@@ -832,39 +832,45 @@ function autodt()
 	
 	wait(8)
 	
-	if _G.dtgold and _G.dttp and _G.dtlv == false then
-	    while _G.webhook == true do
-	            HttpService = game:GetService("HttpService")
-	            Webhook_URL = _G.webhookid
-
-	            local responce = request(
-	            {
-   	             Url = Webhook_URL,
-   	             Method = "POST",
-    	            Headers = {
-       	             ['Content-Type'] = 'application/json'
-   	             },
-    	            Body = HttpService:JSONEncode({
-       	             ["content"] = "",
-       	             ["embeds"] = {{
-            	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you forgot to chose reward!**",
-           	             ["description"] = "Dont forget dt6 have 3 reward can chose",
-           	             ["type"] = "rich",
-           	             ["color"] = tonumber(0xff0000)
-       	             }}
-   	             })
-	            }   
-	            )
-	            if _G.webhook == true then break
-		    end
-	    end
-	    repeat
-	        wait(0.5)
-	    until workspace.CharacterHolder.LocalPlayer.Humanoid.Health == 0
-	    
-	    wait(8)
+	if _G.dtlv == true then break
 	end
-		
+	
+	if _G.dttp == true then break
+	end
+	
+	if _G.dtgold == true then break
+	end
+	    
+	while _G.webhook == true do
+	        HttpService = game:GetService("HttpService")
+	        Webhook_URL = _G.webhookid
+
+	        local responce = request(
+	        {
+   	         Url = Webhook_URL,
+   	         Method = "POST",
+    	        Headers = {
+       	         ['Content-Type'] = 'application/json'
+   	         },
+    	        Body = HttpService:JSONEncode({
+       	         ["content"] = "",
+       	         ["embeds"] = {{
+            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you forgot to chose reward!**",
+           	         ["description"] = "Dont forget dt6 have 3 reward can chose",
+           	         ["type"] = "rich",
+           	         ["color"] = tonumber(0xff0000)
+       	         }}
+   	         })
+	        }   
+	        )
+	        if _G.webhook == true then break
+		end
+	end
+	repeat
+	    wait(0.5)
+	until workspace.CharacterHolder.LocalPlayer.Humanoid.Health == 0
+	    
+	wait(8)	
     end
 end
 	
@@ -1264,7 +1270,7 @@ SettingTab:AddTextbox({
 })
 
 SettingTab:AddToggle({
-	Name = "Reset Webhook",
+	Name = "Sent Webhook",
 	Default = false,
 	Callback = function(Value)
 		_G.webhook = Value
