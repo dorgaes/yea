@@ -34,6 +34,14 @@ _G.dttp = true
 _G.dtlv = true
 
 --Functions
+function findboss()
+    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+        if obj.Name == "dorgaes" then
+            _G.sslot = obj.Parent.Parent
+        end
+    end
+end
+
 function autoLv()
     while _G.autoLv == true do
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
@@ -41,7 +49,8 @@ function autoLv()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.0824780911, 0.968569219, -0.0430926532, 0.996297061, 0.0743984431, -0.971118987, -0.0242789779, -0.237357289)
-                repeat
+                findboss()
+		repeat
 		    wait(0.05)
                 until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
                 wait(6)
@@ -58,6 +67,7 @@ function autoLv()
 	        wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 	        wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["error sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -82,6 +92,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
                     _G.sslot.Bosses["1"].Imposter["Left Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Imposter.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -107,6 +118,7 @@ function autoLv()
 		wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 		wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -131,6 +143,7 @@ function autoLv()
 		wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 		wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SANESSS.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -155,6 +168,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
                     _G.sslot.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].UndyneULTRA.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -179,6 +193,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].TEMMIE.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -203,6 +218,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["OOF head"].NormalPumpkin.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["OOF head"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -227,6 +243,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].BOB.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -251,6 +268,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -275,6 +293,7 @@ function autoLv()
 		wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -299,6 +318,7 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
+		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -347,8 +367,8 @@ function autoLv()
 		        wait(4)
 	                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                         wait(2)
-		        _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		        repeat
+		        findboss()
+			repeat
 		            _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		            _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		            _G.sslot.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -368,7 +388,8 @@ function autoLv()
                 wait(4)
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss1.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss1.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss1["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -381,7 +402,8 @@ function autoLv()
             
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss2.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss2.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss2["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -394,7 +416,8 @@ function autoLv()
             
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss3.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss3.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss3["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -407,7 +430,8 @@ function autoLv()
                         
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss4.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss4.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss4["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -420,7 +444,8 @@ function autoLv()
                         
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss5.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss5.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss5["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -433,7 +458,8 @@ function autoLv()
                         
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss6.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss6.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss6["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -446,7 +472,8 @@ function autoLv()
                         
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss7.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss7.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss7["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -459,7 +486,8 @@ function autoLv()
             
                 wait(6)
             
-	        repeat
+	        findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss8.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss8["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -472,7 +500,8 @@ function autoLv()
             
                 wait(6)
             
-                repeat
+                findboss()
+		repeat
 		    _G.sslot.Bosses["1"].Boss9.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss9.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss9["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -527,15 +556,21 @@ function autoTP()
     while _G.autoTP == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            wait(3)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2999.23267, 3065.82861, 2986.99756, 0.999507487, 0.00229809363, -0.0312977135, 8.08081069e-09, 0.997315109, 0.0732299984, 0.0313819684, -0.0731939301, 0.996823847)
-            repeat
-	        wait(0.05)
-	    until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
+            wait(4)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-            wait(5)
-	    if _G.autoTP == false then break
-	    end
+            wait(2)
+            findboss()
+	    repeat
+		_G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	        _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		wait(0.2)
+	    until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
+            wait(6)
 	until _G.autoTP == false
     end
 end
@@ -544,13 +579,21 @@ function autoKromer()
     while _G.autoKromer == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
-	    wait(3)
-            repeat
-	        wait(0.05)
+	    wait(4)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
+            wait(2)
+            findboss()
+	    repeat
+		_G.sslot.Bosses["1"].Rudinn.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].Rudinn.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].Rudinn["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	        _G.sslot.Bosses["1"].Rudinn["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].Rudinn["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].Rudinn.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		_G.sslot.Bosses["1"].Rudinn.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		wait(0.2)
 	    until _G.sslot.Bosses["1"].Rudinn.Enemy.Health == 0
-	    wait(5)
-	    if _G.autoKromer == false then break
-	    end
+            wait(6)
 	until _G.autoKromer == false
     end
 end
@@ -587,6 +630,7 @@ function autoTPKromerHard()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2385.57349, 534.416504, -744.736328, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
 	    wait(2)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game._G.sslot.Bosses["1"]["FS Emerald Papyrus"].Part.CFrame
+	    findboss()
 	    repeat
 	        wait(0.05)
 	    until _G.sslot.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
@@ -733,6 +777,7 @@ function autodt()
 	wait(12)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
         wait(2)
+	findboss()
 	repeat
 	    _G.sslot.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"].TEMMIE.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -746,6 +791,7 @@ function autodt()
 	
 	wait(6)
 	
+	findboss()
 	repeat
             _G.sslot.Bosses["1"].Sans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             _G.sslot.Bosses["1"].Sans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -759,6 +805,7 @@ function autodt()
 	
 	wait(6)
 	
+	findboss()
 	repeat
 	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -779,6 +826,7 @@ function autodt()
 	
 	wait(6)
 	
+	findboss()
 	repeat
             _G.sslot.Bosses["1"].Jevil.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             _G.sslot.Bosses["1"].Jevil["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -791,6 +839,7 @@ function autodt()
 	    
 	wait(37)
 	
+	findboss()
 	repeat
 	    _G.sslot.Bosses["1"]["Undyne the undying"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"]["Undyne the undying"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
