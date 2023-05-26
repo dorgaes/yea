@@ -29,6 +29,9 @@ _G.grillbybutton = true
 _G.webhookid = true
 _G.webhook = true
 _G.autodt = true
+_G.dtgold = true
+_G.dttp = true
+_G.dtlv = true
 
 --Functions
 function autoLv()
@@ -804,6 +807,64 @@ function autodt()
 	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    wait(0.2)
 	until workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
+	
+	wait(20)
+	
+	if _G.dtlv == true do
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue do
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3022.84033, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    end
+	    if game:GetService("Players").LocalPlayer.leaderstats.LV.Value == game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then break
+	    end
+	end
+	
+	if _G.dttp == true do
+	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue do
+	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3001.50049, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    end
+	    if game:GetService("Players").LocalPlayer.leaderstats.TP.Value == game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then break
+	    end
+	end
+	
+	if _G.dtgold == true do
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	end
+	
+	wait(8)
+	
+	if _G.dtgold and _G.dttp and _G.dtlv == false then
+	    while _G.webhook == true do
+	            HttpService = game:GetService("HttpService")
+	            Webhook_URL = _G.webhookid
+
+	            local responce = request(
+	            {
+   	             Url = Webhook_URL,
+   	             Method = "POST",
+    	            Headers = {
+       	             ['Content-Type'] = 'application/json'
+   	             },
+    	            Body = HttpService:JSONEncode({
+       	             ["content"] = "",
+       	             ["embeds"] = {{
+            	            ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you forgot to chose reward!**",
+           	             ["description"] = "Dont forget dt6 have 3 reward can chose",
+           	             ["type"] = "rich",
+           	             ["color"] = tonumber(0xff0000)
+       	             }}
+   	             })
+	            }   
+	            )
+	            if _G.webhook == true then break
+		    end
+	    end
+	    repeat
+	        wait(0.5)
+	    until workspace.CharacterHolder.LocalPlayer.Humanoid.Health == 0
+	    
+	    wait(8)
+	end
+		
     end
 end
 	
