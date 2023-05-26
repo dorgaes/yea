@@ -843,6 +843,13 @@ function autodt()
 	end
 	
 	wait(8)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Stick",2)
+        wait(0.1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
+        wait(0.1)
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
+        wait(0.1)
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
 	
 	if _G.autodt == false then break
 	end
@@ -885,6 +892,13 @@ function autodt()
 	    wait(0.5)
 	until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	wait(8)	
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Stick",2)
+	wait(0.1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
+        wait(0.1)
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
+        wait(0.1)
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
 	
 	if _G.autodt == false then break
 	end
