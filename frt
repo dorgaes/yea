@@ -28,6 +28,7 @@ _G.hotbar8 = true
 _G.grillbybutton = true
 _G.webhookid = true
 _G.webhook = true
+_G.autodt = true
 
 --Functions
 function autoLv()
@@ -526,7 +527,7 @@ function autoLv()
 	        wait(0.1)
 	        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("String Master",2)
 	        wait(0.1)
-	        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Devils Knife",1)
+	        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("JOVILSCYTHE",1)
 	    
                 if _G.autoLv == false then break
                 end
@@ -729,6 +730,83 @@ function grillbybutton()
     end
 end
 
+function autodt()
+    while _G.autodt == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5400066, 133.080933, 191.340012, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+	wait(12)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+        wait(2)
+	repeat
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    wait(0.2)
+	until workspace.ActiveBosses.Slot1.Bosses["1"].TEMMIE.Enemy.Health == 0
+	
+	wait(6)
+	
+	repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Sans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            wait(0.2)
+        until workspace.ActiveBosses.Slot1.Bosses["1"].Sans.Enemy.Health == 0
+	
+	wait(6)
+	
+	repeat
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].LeftBottomLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].LeftHand.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].LeftMidArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].LeftTopLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].LeftUpArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].RightBottomLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].RightHand.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].RightMidArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].RightTopLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].RightUpArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].RootPart.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    wait(0.2)
+	until workspace.ActiveBosses.Slot1.Bosses["1"]["C.O.D.E Dummy"].Enemy.Health == 0
+	
+	wait(6)
+	
+	repeat
+            workspace.ActiveBosses.Slot1.Bosses["1"].Jevil.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Jevil["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Jevil["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Jevil["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Jevil.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            workspace.ActiveBosses.Slot1.Bosses["1"].Jevil.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            wait(0.2)
+            until workspace.ActiveBosses.Slot1.Bosses["1"].Jevil.Enemy.Health == 0
+	    
+	wait(37)
+	
+	repeat
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"]["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"]["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    wait(0.2)
+	until workspace.ActiveBosses.Slot1.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
+    end
+end
+	
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -784,6 +862,49 @@ FarmTab:AddToggle({
         _G.autoTPKromerHard = Value
         autoTPKromerHard()
     end
+})
+
+local Section = FarmTab:AddSection({
+	Name = "dt6"
+})
+
+Tab:AddLabel("Chose at least one reward")
+
+Tab:AddLabel("If you chose more than one")
+
+Tab:AddLabel("It will Lv -> TP -> Gold")
+
+FarmTab:AddToggle({
+	Name = "DT6 Farm",
+	Default = false,
+	Callback = function(Value)
+        _G.autodt = Value
+        autodt()
+    end
+})
+
+FarmTab:AddToggle({
+	Name = "150M Gold",
+	Default = false,
+	Callback = function(Value)
+	_G.dtgold = Value
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "1750 TP",
+	Default = false,
+	Callback = function(Value)
+	_G.dttp = Value
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "200 Lv",
+	Default = false,
+	Callback = function(Value)
+	_G.dtlv = Value
+	end    
 })
 
 --Local
