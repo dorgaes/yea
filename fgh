@@ -1285,7 +1285,7 @@ SettingTab:AddSlider({
 	Max = 0.5,
 	Default = 0.1,
 	Color = Color3.fromRGB(255,255,255),
-	Increment = 0.1,
+	Increment = 0.01,
 	ValueName = "delay every click",
 	Callback = function(Value)
 		_G.clcktime = Value
