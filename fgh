@@ -832,6 +832,9 @@ function autodt()
 	
 	wait(8)
 	
+	if _G.autodt == false then break
+	end
+	
 	if _G.dtlv == true then break
 	end
 	
@@ -868,9 +871,11 @@ function autodt()
 	end
 	repeat
 	    wait(0.5)
-	until workspace.CharacterHolder.LocalPlayer.Humanoid.Health == 0
-	    
+	until game.Players.LocalPlayer.Humanoid.Health == 0
 	wait(8)	
+	
+	if _G.autodt == false then break
+	end
     end
 end
 	
