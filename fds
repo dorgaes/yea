@@ -2156,7 +2156,7 @@ local Section = MiscTab:AddSection({
 	Name = "Weapon Restore"
 })
 	
-Tab:AddLabel("Click it if you lost your weapon in hotbar after you dead")
+MiscTab:AddLabel("Click it if you lost your weapon in hotbar after you dead")
 
 MiscTab:AddButton({
 	Name = "Restore",
