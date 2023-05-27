@@ -525,7 +525,7 @@ function autoLv()
 	            wait(0.05)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 	    
-	        whil _G.webhook == true do
+	        while _G.webhook == true do
 	            HttpService = game:GetService("HttpService")
 	            Webhook_URL = _G.webhookid
 
