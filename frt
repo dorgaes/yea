@@ -51,7 +51,7 @@ function findboss()
 end
 
 function placetp()
-    while _G.autoLv == true do
+    while _G.autoLvhelp == true do
         wait(0.1)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.0824780911, 0.968569219, -0.0430926532, 0.996297061, 0.0743984431, -0.971118987, -0.0242789779, -0.237357289)
     end
@@ -1845,9 +1845,17 @@ FarmTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
         _G.autoLv = Value
-        placetp()
 	autoLv()
     end
+})
+
+FarmTab:AddToggle({
+	Name = "This is a toggle!",
+	Default = false,
+	Callback = function(Value)
+	_G.autoLvhelp = Value
+	placetp()
+    end    
 })
 
 FarmTab:AddToggle({
