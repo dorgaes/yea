@@ -1845,7 +1845,8 @@ FarmTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
         _G.autoLv = Value
-        autoLv()
+        placetp()
+	autoLv()
     end
 })
 
