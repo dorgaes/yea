@@ -25,7 +25,6 @@ _G.hotbar5 = true
 _G.hotbar6 = true
 _G.hotbar7 = true
 _G.hotbar8 = true
-_G.grillbybutton = true
 _G.webhookid = true
 _G.webhook = true
 _G.autodt = true
@@ -61,6 +60,7 @@ function autoLv()
                 findboss()
 		repeat
 		    wait(0.05)
+		    keypress(0x58)
                 until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
                 wait(6)
                 if _G.autoLv == false then break
@@ -1636,13 +1636,6 @@ function autopress()
     end
 end
 
-function grillbybutton()
-    while _G.grillbybutton == true do
-        wait(0.1)
-	keypress(0x58)
-    end
-end
-
 function autodt()
     while _G.autodt == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5400066, 133.080933, 191.340012, 0, 0, -1, 0, 1, 0, 1, 0, 0)
@@ -2160,16 +2153,17 @@ MiscTab:AddBind({
 })
 
 local Section = MiscTab:AddSection({
-	Name = "Grillby Button"
+	Name = "Weapon Restore"
 })
 	
-MiscTab:AddToggle({
-	Name = "Auto Grillby Buton",
-	Default = false,
-	Callback = function(Value)
-		_G.grillbybutton = Value
-		grillbybutton()
-	end    
+Tab:AddLabel("click it if you lost your weapon in hotbar after you dead")
+
+MiscTab:AddButton({
+	Name = "Restore",
+	Callback = function()
+      		game.Players.LocalPlayer.Backpack:ClearAllChildren()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
+  	end    
 })
 
 	
