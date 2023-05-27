@@ -32,6 +32,15 @@ _G.autodt = true
 _G.dtgold = true
 _G.dttp = true
 _G.dtlv = true
+_G.skillflowey = true
+_G.skillfroggit = true
+_G.skillundyne = true
+_G.skillpapyrus = true
+_G.skillasgore = true
+_G.skillmettaton = true
+_G.skillsans = true
+_G.skillchara = true
+_G.skillbetty = true
 
 --Functions
 function findboss()
@@ -591,19 +600,109 @@ end
 
 function rollskill()
     while _G.rollskill == true do 
-        if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
-        end
-	
-	if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 or 2 or 11 or 12 or 21 or 22 or 33 then
-	    repeat
-                if game.Players.LocalPlayer.leaderstats.Kromer.Value < 100 then break
-                end
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                wait(0.5)
-                game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-                wait(1)
-	    until game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 31 or 32
+        if game.Players.LocalPlayer.leaderstats.Kromer.Value > 100 then
+            if _G.skillflowey == true then
+	        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 1 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+	    elseif _G.skillfroggit == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 2 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            elseif _G.skillundyne == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 11 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            elseif _G.skillpapyrus == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 12 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            elseif _G.skillasgore == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 21 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            elseif _G.skillmettaton == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 22 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		 end
+            elseif _G.skillsans == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 33 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            elseif _G.skillchara == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 32 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            elseif _G.skillbetty == true then
+                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 31 then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+		end
+            else wait(999999999999999999999)
+            end
 	end
+
+        if _G.skillflowey == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 then return
+            end
+        end
+
+        if _G.skillfroggit == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 2 then return
+            end
+        end
+
+        if _G.skillundyne == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 11 then return
+            end
+        end
+
+        if _G.skillpapyrus == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 then return
+            end
+        end
+
+        if _G.skillasgore == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 then return
+            end
+        end
+
+        if _G.skillmettaton == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 22 then return
+            end
+        end
+
+        if _G.skillsans == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 33 then return
+            end
+        end
+
+        if _G.skillchara == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 32 then return
+            end
+        end
+
+        if _G.skillbetty == true then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 31 then return
+            end
+        end
     end
 end
 
@@ -1941,6 +2040,83 @@ ShopTab:AddToggle({
 		rollskill()
 	end    
 })
+
+local Section = ShopTab:AddSection({
+	Name = "Keep Skill"
+})
+
+ShopTab:AddToggle({
+	Name = "Flowey",
+	Default = false,
+	Callback = function(Value)
+		_G.skillflowey = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Froggit",
+	Default = false,
+	Callback = function(Value)
+		_G.skillfroggit = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Undyne",
+	Default = false,
+	Callback = function(Value)
+		_G.skillundyne = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Papyrus",
+	Default = false,
+	Callback = function(Value)
+		_G.skillpapyrus = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Asgore",
+	Default = false,
+	Callback = function(Value)
+		_G.skillasgore = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Mettaton",
+	Default = false,
+	Callback = function(Value)
+		_G.skillmettaton = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Sans",
+	Default = false,
+	Callback = function(Value)
+		_G.skillsans = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Chara",
+	Default = false,
+	Callback = function(Value)
+		_G.skillchara = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Betty",
+	Default = false,
+	Callback = function(Value)
+		_G.skillbetty = Value
+	end    
+})
+
 
 --Misc
 local MiscTab = Window:MakeTab({
