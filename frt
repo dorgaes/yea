@@ -57,7 +57,9 @@ function autoLv()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.0824780911, 0.968569219, -0.0430926532, 0.996297061, 0.0743984431, -0.971118987, -0.0242789779, -0.237357289)
                     findboss()
 		    repeat
-		        WaitForChild("")
+		        wait(0.1)
+		        _G.sslot.Bosses["1"].BasePart:WaitForChild("GrillbyActButton")
+			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
                     until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
                     wait(6)
                     if _G.autoLv == false then break
@@ -484,10 +486,33 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
 		    break
 		end
 		    
-                wait(6)
+		_G.sslot.Bosses["1"]:WaitForChild("Boss2")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -532,7 +557,8 @@ function autoLv()
 		    break
 		end
             
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss3")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -577,7 +603,8 @@ function autoLv()
 		    break
 		end
                         
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss4")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -622,7 +649,8 @@ function autoLv()
 		    break
 		end
                         
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss5")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -667,7 +695,8 @@ function autoLv()
 		    break
 		end
                         
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss6")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -712,7 +741,8 @@ function autoLv()
 		    break
 		end
                         
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss7")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -757,7 +787,8 @@ function autoLv()
 		    break
 		end
             
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss8")
+                wait(0.1)
             
 	        findboss()
 		repeat
@@ -802,7 +833,8 @@ function autoLv()
 		    break
 		end
             
-                wait(6)
+                _G.sslot.Bosses["1"]:WaitForChild("Boss9")
+                wait(0.1)
             
                 findboss()
 		repeat
@@ -1950,7 +1982,8 @@ function autodt()
 	    wait(0.2)
 	until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
 	
-	wait(6)
+	_G.sslot.Bosses["1"]:WaitForChild("Sans")
+	wait(0.1)
 	
 	findboss()
 	repeat
@@ -1964,7 +1997,8 @@ function autodt()
             wait(0.2)
         until _G.sslot.Bosses["1"].Sans.Enemy.Health == 0
 	
-	wait(6)
+	_G.sslot.Bosses["1"]:WaitForChild("C.O.D.E Dummy")
+	wait(0.1)
 	
 	findboss()
 	repeat
@@ -1985,7 +2019,8 @@ function autodt()
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Enemy.Health == 0
 	
-	wait(6)
+	_G.sslot.Bosses["1"]:WaitForChild("Jevil")
+	wait(0.1)
 	
 	findboss()
 	repeat
@@ -1998,7 +2033,8 @@ function autodt()
             wait(0.2)
             until _G.sslot.Bosses["1"].Jevil.Enemy.Health == 0
 	    
-	wait(37)
+	_G.sslot.Bosses["1"]:WaitForChild("Undyne the undying")
+	wait(0.1)
 	
 	findboss()
 	repeat
@@ -2012,7 +2048,8 @@ function autodt()
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
 	
-	wait(20)
+	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
+	wait(0.1)
 	
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
