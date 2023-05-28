@@ -72,8 +72,6 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	        wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 	        wait(2)
 		findboss()
 		repeat
@@ -84,7 +82,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["error sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["error sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["error sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"]["error sans"].Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -97,10 +96,8 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 1250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
-		findboss()
+	        findboss()
 		repeat
                     _G.sslot.Bosses["1"].Imposter["Left Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Imposter.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -110,7 +107,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Imposter.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Imposter.GunLeft.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Imposter.GunRight.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
                 until _G.sslot.Bosses["1"].Imposter.Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -123,10 +121,8 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-		wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 		wait(2)
-		findboss()
+	        findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -135,7 +131,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["Dusttrust sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -148,8 +145,6 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
-		wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 		wait(2)
 		findboss()
 		repeat
@@ -160,7 +155,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].SANESSS["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SANESSS.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SANESSS.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
     		until _G.sslot.Bosses["1"].SANESSS.Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -173,8 +169,6 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3045)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
 		findboss()
 		repeat
@@ -185,7 +179,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].UndyneULTRA["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].UndyneULTRA.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].UndyneULTRA.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
                 until _G.sslot.Bosses["1"].UndyneULTRA.Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -198,8 +193,6 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
 		findboss()
 		repeat
@@ -210,7 +203,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].TEMMIE["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].TEMMIE.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -223,8 +217,6 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3985)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.57935, 532.41748, -443.823029, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
 		findboss()
 		repeat
@@ -235,7 +227,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["OOF head"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["OOF head"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["OOF head"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"]["OOF head"].Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -248,8 +241,6 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 4900)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
 		findboss()
 		repeat
@@ -260,7 +251,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].BOB["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].BOB.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].BOB.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"].BOB.Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -273,8 +265,6 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
 		findboss()
 		repeat
@@ -285,7 +275,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["HyperDT Sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
 		wait(6)
 		if _G.autoLv == false then break
@@ -298,9 +289,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 6000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                wait(2)
+		wait(2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -310,7 +299,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                 wait(6)
 		if _G.autoLv == false then break
@@ -326,10 +316,8 @@ function autoLv()
 		        while (game.Players.LocalPlayer.leaderstats.LV.Value < 7500)
                         do
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		            wait(4)
-	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                            wait(2)
-		            findboss()
+		            wait(2)
+	                    findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -338,7 +326,8 @@ function autoLv()
 		                 _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                wait(0.2)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	                        wait(0.2)
 		            until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                             wait(6)
 		            if _G.autoLv == false then break
@@ -348,8 +337,6 @@ function autoLv()
 			while (game.Players.LocalPlayer.leaderstats.TP.Value < 4000) 
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(4)
-	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                             wait(2)
 		            findboss()
 		            repeat
@@ -360,7 +347,8 @@ function autoLv()
 		                _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                wait(0.2)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	                        wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                             wait(6)
 		            if _G.autoLv == false then break
@@ -370,8 +358,6 @@ function autoLv()
 			while (game.Players.LocalPlayer.leaderstats.Gold.Value < 1000000000) 
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(4)
-	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                             wait(2)
 		            findboss()
 		            repeat
@@ -382,7 +368,8 @@ function autoLv()
 		                _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                wait(0.2)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	                        wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                             wait(6)
 		            if _G.autoLv == false then break
@@ -395,8 +382,6 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                wait(4)
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
                 wait(2)
 		findboss()
 		repeat
@@ -407,7 +392,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	            wait(0.2)
 		until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                 wait(6)
 		if _G.autoLv == false then break
