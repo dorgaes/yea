@@ -40,6 +40,7 @@ _G.skillmettaton = true
 _G.skillsans = true
 _G.skillchara = true
 _G.skillbetty = true
+_G.truereset = false
 
 --Functions
 function findboss()
