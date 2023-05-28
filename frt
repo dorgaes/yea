@@ -1931,7 +1931,9 @@ function autopress()
         elseif _G.hotbar8 == true then
             wait(_G.presstime)
             keypress(0x38)
-        end
+        else
+	    wait(99999999999999999999999999999)
+	end
     end
 end
 
@@ -2135,6 +2137,26 @@ function autodt()
 	
 	game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	wait(6)
+	
+	if _G.webhook == true then
+	    HttpService = game:GetService("HttpService")
+	        Webhook_URL = _G.webhookid
+
+	        local responce = request({
+   	        Url = Webhook_URL,
+   	        Method = "POST",
+    	        Headers = {['Content-Type'] = 'application/json'},
+    	            Body = HttpService:JSONEncode({
+       	            ["content"] = "",
+       	            ["embeds"] = {{
+            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you get a reward!**",
+           	            ["description"] = "You have "..game:GetService("Players").LocalPlayer.leaderstats.LV.Value.." Lv/ "..game:GetService("Players").LocalPlayer.leaderstats.TP.Value.." TP / "..game:GetService("Players").LocalPlayer.leaderstats.Gold.Value.." Gold",
+           	            ["type"] = "rich",
+           	            ["color"] = tonumber(0x00FF00)
+       	                    }}
+   	                })
+	            })
+	end
     end
 end
 	
