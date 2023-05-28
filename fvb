@@ -42,7 +42,7 @@ _G.truereset = false
 --Functions
 function findboss()
     for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
-        if obj.Name == "dorgaes" then
+        if obj.Name == game.Players.LocalPlayer then
             _G.sslot = obj.Parent.Parent
         end
     end
@@ -58,7 +58,7 @@ function autoLv()
                     findboss()
 		    repeat
 		        _G.sslot.Bosses["1"].BasePart:WaitForChild("GrillbyActButton")
-			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
+			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
 			wait(0.1)
                     until _G.sslot.Bosses["1"].Grillby.HP.Value == 0
 		    repeat
