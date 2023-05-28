@@ -75,7 +75,7 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	        wait(2)
+	        wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -99,7 +99,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 1250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
-                wait(2)
+                wait(5.2)
 	        findboss()
 		repeat
                     _G.sslot.Bosses["1"].Imposter["Left Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -124,7 +124,7 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-		wait(2)
+		wait(5.2)
 	        findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -148,7 +148,7 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
-		wait(2)
+		wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -172,7 +172,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3045)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
-                wait(2)
+                wait(5.2)
 		findboss()
 		repeat
                     _G.sslot.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -196,7 +196,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-                wait(2)
+                wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -220,7 +220,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3985)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.57935, 532.41748, -443.823029, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
-                wait(2)
+                wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["OOF head"].NormalPumpkin.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -244,7 +244,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 4900)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-                wait(2)
+                wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -268,7 +268,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
-                wait(2)
+                wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -292,7 +292,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 6000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		wait(2)
+		wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -319,7 +319,7 @@ function autoLv()
 		        while (game.Players.LocalPlayer.leaderstats.LV.Value < 7500)
                         do
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		            wait(2)
+		            wait(5.2)
 	                    findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -340,7 +340,7 @@ function autoLv()
 			while (game.Players.LocalPlayer.leaderstats.TP.Value < 4000) 
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(2)
+                            wait(5.2)
 		            findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -361,7 +361,7 @@ function autoLv()
 			while (game.Players.LocalPlayer.leaderstats.Gold.Value < 1000000000) 
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(2)
+                            wait(5.2)
 		            findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -385,7 +385,7 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                wait(2)
+                wait(5.2)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -433,7 +433,7 @@ function autoLv()
 	            end
 	            repeat
 		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		        wait(2)
+		        wait(5.2)
 		        findboss()
 			repeat
 		            _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
