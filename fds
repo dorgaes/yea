@@ -1931,7 +1931,9 @@ function autopress()
         elseif _G.hotbar8 == true then
             wait(_G.presstime)
             keypress(0x38)
-        end
+        else
+	    wait(99999999999999999999999999999)
+	end
     end
 end
 
