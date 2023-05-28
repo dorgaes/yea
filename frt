@@ -57,9 +57,9 @@ function autoLv()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.0824780911, 0.968569219, -0.0430926532, 0.996297061, 0.0743984431, -0.971118987, -0.0242789779, -0.237357289)
                     findboss()
 		    repeat
-		        wait(0.1)
 		        _G.sslot.Bosses["1"].BasePart:WaitForChild("GrillbyActButton")
 			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
+			wait(0.1)
                     until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
                     wait(6)
                     if _G.autoLv == false then break
