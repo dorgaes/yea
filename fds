@@ -42,7 +42,7 @@ _G.truereset = false
 --Functions
 function findboss()
     for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
-        if obj.Name == game.Players.LocalPlayer then
+        if obj.Name == "dorgaes" then
             _G.sslot = obj.Parent.Parent
         end
     end
