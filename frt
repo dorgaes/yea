@@ -2641,7 +2641,7 @@ SettingTab:AddSlider({
 	Name = "Change Delay Time For Auto Press",
 	Min = 0.2,
 	Max = 4,
-	Default = 0.2,
+	Default = 0.3,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 0.1,
 	ValueName = "delay every press",
