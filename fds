@@ -2150,7 +2150,7 @@ function autodt()
             	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you get a reward!**",
            	            ["description"] = "You have "..game:GetService("Players").LocalPlayer.leaderstats.LV.Value.." Lv/ "..game:GetService("Players").LocalPlayer.leaderstats.TP.Value.." TP / "..game:GetService("Players").LocalPlayer.leaderstats.Gold.Value.." Gold",
            	            ["type"] = "rich",
-           	            ["color"] = tonumber(0xff0000)
+           	            ["color"] = tonumber(0x00FF00)
        	                    }}
    	                })
 	            })
