@@ -40,6 +40,7 @@ _G.skillmettaton = true
 _G.skillsans = true
 _G.skillchara = true
 _G.skillbetty = true
+_G.truereset = false
 
 --Functions
 function findboss()
@@ -320,6 +321,78 @@ function autoLv()
             
             if _G.autoLv == false then break
             end
+	    
+	    if _G.truereset == true then
+	        if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 30 then
+		    if game:GetService("Players").LocalPlayer.leaderstats.TrueReset == 0 then
+		        while (game.Players.LocalPlayer.leaderstats.LV.Value < 7500)
+                        do
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
+		            wait(4)
+	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+                            wait(2)
+		            findboss()
+		            repeat
+		                _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                 _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                wait(0.2)
+		            until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
+                            wait(6)
+		            if _G.autoLv == false then break
+                            end
+			end
+			
+			while (game.Players.LocalPlayer.leaderstats.TP.Value < 4000) 
+			do
+			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                            wait(4)
+	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+                            wait(2)
+		            findboss()
+		            repeat
+		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                wait(0.2)
+		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
+                            wait(6)
+		            if _G.autoLv == false then break
+                            end
+			end
+			
+			while (game.Players.LocalPlayer.leaderstats.Gold.Value < 1000000000) 
+			do
+			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                            wait(4)
+	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+                            wait(2)
+		            findboss()
+		            repeat
+		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		                wait(0.2)
+		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
+                            wait(6)
+		            if _G.autoLv == false then break
+                            end
+			end
+		    end
+		end
+	    end
 
             while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000)
             do
@@ -408,7 +481,16 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss1.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss1.Enemy.Health == 0
-            
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 0 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    break
+		end
+		    
                 wait(6)
             
                 findboss()
@@ -422,6 +504,37 @@ function autoLv()
 	    	    _G.sslot.Bosses["1"].Boss2.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss2.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 1 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
             
                 wait(6)
             
@@ -436,6 +549,37 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss3.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss3.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 2 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
                         
                 wait(6)
             
@@ -450,6 +594,37 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss4.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss4.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 10 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
                         
                 wait(6)
             
@@ -464,6 +639,37 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss5.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss5.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 15 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
                         
                 wait(6)
             
@@ -478,6 +684,37 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss6.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss6.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 20 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
                         
                 wait(6)
             
@@ -492,6 +729,37 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss7.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss7.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 25 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
             
                 wait(6)
             
@@ -506,6 +774,37 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss8.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss8.Enemy.Health == 0
+		
+		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 30 then
+		    repeat
+		        wait(0.05)
+		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+	            wait(6)
+		    while _G.webhook == true do
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request({
+   	                Url = Webhook_URL,
+   	                Method = "POST",
+    	                    Headers = {
+       	                    ['Content-Type'] = 'application/json'},
+    	                    Body = HttpService:JSONEncode({
+       	                    ["content"] = "",
+       	                    ["embeds"] = {{
+            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+           	                ["type"] = "rich",
+           	                ["color"] = tonumber(0x00FF00)
+       	                        }}
+   	                    })
+	                })
+	                if _G.webhook == true then break
+		        end
+		    end
+		    break
+		end
             
                 wait(6)
             
@@ -1828,6 +2127,14 @@ FarmTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 	_G.autoReset = Value	
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "Auto True Reset",
+	Default = false,
+	Callback = function(Value)
+	_G.truereset = Value
 	end    
 })
 
