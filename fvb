@@ -60,7 +60,10 @@ function autoLv()
 		        _G.sslot.Bosses["1"].BasePart:WaitForChild("GrillbyActButton")
 			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
 			wait(0.1)
-                    until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
+                    until _G.sslot.Bosses["1"].Grillby.HP.Value == 0
+		    repeat
+		        wait(0.05)
+		    until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
                     wait(5.1)
                     if _G.autoLv == false then break
                     end
