@@ -70,7 +70,7 @@ function autoLv()
                     end
             end
 	else
-	    
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/underreset7"))()
             
             if _G.autoLv == false then break
             end
