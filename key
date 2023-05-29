@@ -15,7 +15,7 @@ Tab:AddLabel("Put your Username into here,if you want script work")
 
 Tab:AddTextbox({
 	Name = "Username",
-	Default = "default box input",
+	Default = "",
 	TextDisappear = false,
 	Callback = function(Value)
 		_G.playername = Value
