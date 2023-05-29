@@ -11,7 +11,7 @@ local Section = Tab:AddSection({
 	Name = "login"
 })
 
-Tab:AddLabel("Put your Username into here,if you want script work")
+Tab:AddLabel("Put your Username here to make script work")
 
 Tab:AddTextbox({
 	Name = "Username",
