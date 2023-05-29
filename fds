@@ -50,6 +50,7 @@ end
 
 function autoLv()
     while _G.autoLv == true do
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 7 then
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
             do
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -68,6 +69,8 @@ function autoLv()
                     if _G.autoLv == false then break
                     end
             end
+	else
+	    
             
             if _G.autoLv == false then break
             end
