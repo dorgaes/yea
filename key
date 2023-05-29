@@ -25,6 +25,8 @@ Tab:AddTextbox({
 Tab:AddButton({
 	Name = "Enter",
 	Callback = function()
+	        if _G.playername == game:GetService("Players").LocalPlayer.Name then
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/fds"))()
+		end
   	end    
 })
