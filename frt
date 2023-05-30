@@ -71,7 +71,7 @@ function bossfarm()
         end
     end
     _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
-    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+    for _, obj in pairs( _G.sslot.Bosses["1"].BasePart:GetDescendants ()) do
         if obj.ClassName == "UnionOperation" then
             obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
         end
