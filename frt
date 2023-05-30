@@ -38,12 +38,27 @@ _G.skillsans = true
 _G.skillchara = true
 _G.skillbetty = true
 _G.truereset = false
+_G.playercframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
 
 --Functions
 function findboss()
     for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
         if obj.Name == "dorgaes" then
             _G.sslot = obj.Parent.Parent
+        end
+    end
+end
+
+function dtback()
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,-2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,-2000,0)
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,-2000,0)
         end
     end
 end
@@ -73,7 +88,7 @@ function autoLv()
             do
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                     wait(3)
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.0824780911, 0.968569219, -0.0430926532, 0.996297061, 0.0743984431, -0.971118987, -0.0242789779, -0.237357289)
+                    bossfarm()
                     findboss()
 		    repeat
 		        _G.sslot.Bosses["1"].BasePart:WaitForChild("GrillbyActButton")
@@ -100,19 +115,16 @@ function autoLv()
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	        wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["error sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["error sans"]["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["error sans"]["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["error sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["error sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["error sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"]["error sans"]:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["error sans"].Enemy.Health == 0
@@ -128,20 +140,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-	        findboss()
 		repeat
-                    _G.sslot.Bosses["1"].Imposter["Left Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter.GunLeft.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Imposter.GunRight.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+                    for _, obj in pairs(_G.sslot.Bosses["1"].Imposter:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
                 until _G.sslot.Bosses["1"].Imposter.Enemy.Health == 0
@@ -157,21 +165,18 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 		wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-	        findboss()
 		repeat
-		    _G.sslot.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["Dusttrust sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["Dusttrust sans"]["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["Dusttrust sans"]["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["Dusttrust sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["Dusttrust sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["Dusttrust sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"]["Dusttrust sans"]:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
                     end
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -185,19 +190,16 @@ function autoLv()
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
 		wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SANESSS.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SANESSS["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SANESSS["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SANESSS["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SANESSS.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SANESSS.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"].SANESSS:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
     		until _G.sslot.Bosses["1"].SANESSS.Enemy.Health == 0
@@ -213,19 +215,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-                    _G.sslot.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].UndyneULTRA.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].UndyneULTRA["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].UndyneULTRA["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].UndyneULTRA["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].UndyneULTRA.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].UndyneULTRA.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+                    for _, obj in pairs(_G.sslot.Bosses["1"].UndyneULTRA:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
                 until _G.sslot.Bosses["1"].UndyneULTRA.Enemy.Health == 0
@@ -241,19 +240,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].TEMMIE.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].TEMMIE["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].TEMMIE["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].TEMMIE["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].TEMMIE.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"].TEMMIE:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
@@ -269,19 +265,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.57935, 532.41748, -443.823029, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"]["OOF head"].NormalPumpkin.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["OOF head"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["OOF head"]["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["OOF head"]["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["OOF head"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["OOF head"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["OOF head"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"]["OOF head"]:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["OOF head"].Enemy.Health == 0
@@ -297,19 +290,16 @@ function autoLv()
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].BOB.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].BOB["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].BOB["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].BOB["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].BOB.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].BOB.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"].BOB:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].BOB.Enemy.Health == 0
@@ -325,19 +315,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["HyperDT Sans"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["HyperDT Sans"]["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["HyperDT Sans"]["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["HyperDT Sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["HyperDT Sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"]["HyperDT Sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"]["HyperDT Sans"]:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
@@ -353,19 +340,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
@@ -384,19 +368,16 @@ function autoLv()
                         do
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		            wait(3)
-		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            bossfarm()
+                            findboss()
 		            wait(2.5)
-	                    findboss()
 		            repeat
-		                _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                 _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	                        if _G.autoLv == false then break
+		                for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
+                                    if obj.ClassName == "Part" then
+                                        obj.CFrame = _G.playercframe
+                                    end
+                                end
+                                if _G.autoLv == false then break
                                 end
 		                wait(0.2)
 		            until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
@@ -409,19 +390,16 @@ function autoLv()
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                             wait(3)
-		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            bossfarm()
+                            findboss()
 		            wait(2.5)
-		            findboss()
 		            repeat
-		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	                        if _G.autoLv == false then break
+		                for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
+                                    if obj.ClassName == "Part" then
+                                        obj.CFrame = _G.playercframe
+                                    end
+                                end
+                                if _G.autoLv == false then break
                                 end
 		                wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
@@ -434,19 +412,16 @@ function autoLv()
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                             wait(3)
-		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            bossfarm()
+                            findboss()
 		            wait(2.5)
-		            findboss()
 		            repeat
-		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	                        if _G.autoLv == false then break
+		                for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
+                                    if obj.ClassName == "Part" then
+                                        obj.CFrame = _G.playercframe
+                                    end
+                                end
+                                if _G.autoLv == false then break
                                 end
 		                wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
@@ -462,19 +437,16 @@ function autoLv()
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		bossfarm()
+                findboss()
 		wait(2.5)
-		findboss()
 		repeat
-		    _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            if _G.autoLv == false then break
+		    for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
@@ -514,18 +486,15 @@ function autoLv()
 	            repeat
 		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		        wait(3)
-		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		        bossfarm()
+                        findboss()
 		        wait(2.5)
-		        findboss()
 			repeat
-		            _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            _G.sslot.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            _G.sslot.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
+                                if obj.ClassName == "Part" then
+                                    obj.CFrame = _G.playercframe
+                                end
+                            end
                             if _G.autoLv == false then break
                             end
 		            wait(0.2)
@@ -538,18 +507,15 @@ function autoLv()
 	    if _G.autoReset == true then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.13379, 279.970581, 131.539795, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 wait(3)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-		wait(2.5)
+		bossfarm()
                 findboss()
+		wait(2.5)
 		repeat
-		    _G.sslot.Bosses["1"].Boss1.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss1.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss1["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss1["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss1["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss1.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss1.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss1:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -561,44 +527,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
 		    
 		_G.sslot.Bosses["1"]:WaitForChild("Boss2")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss2.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss2.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss2["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss2["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss2["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss2.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    	    _G.sslot.Bosses["1"].Boss2.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss2:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -610,44 +551,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
                 _G.sslot.Bosses["1"]:WaitForChild("Boss3")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss3.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss3.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss3["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss3["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss3["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss3.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss3.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss3:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -659,44 +575,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
                 _G.sslot.Bosses["1"]:WaitForChild("Boss4")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss4.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss4.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss4["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss4["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss4["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss4.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss4.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss4:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -708,44 +599,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
                 _G.sslot.Bosses["1"]:WaitForChild("Boss5")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss5.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss5.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss5["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss5["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss5["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss5.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss5.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss5:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -757,44 +623,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
                 _G.sslot.Bosses["1"]:WaitForChild("Boss6")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss6.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss6.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss6["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss6["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss6["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss6.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss6.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss6:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -806,44 +647,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
                 _G.sslot.Bosses["1"]:WaitForChild("Boss7")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss7.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss7.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss7["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss7["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss7["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss7.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss7.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss7:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -855,44 +671,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
                 _G.sslot.Bosses["1"]:WaitForChild("Boss8")
                 wait(0.1)
             
-	        findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss8.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss8.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss8["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss8["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss8["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss8.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss8.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss8:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -904,44 +695,19 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
                 _G.sslot.Bosses["1"]:WaitForChild("Boss9")
                 wait(0.1)
             
-                findboss()
 		repeat
-		    _G.sslot.Bosses["1"].Boss9.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss9.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss9["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss9["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss9["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss9.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    _G.sslot.Bosses["1"].Boss9.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss9:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = _G.playercframe
+                        end
+                    end
                     if _G.autoLv == false then break
                     end
 		    wait(0.2)
@@ -950,30 +716,7 @@ function autoLv()
 	        repeat
 	            wait(0.05)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	    
-	        while _G.webhook == true do
-	            HttpService = game:GetService("HttpService")
-	            Webhook_URL = _G.webhookid
-
-	            local responce = request({
-   	            Url = Webhook_URL,
-   	            Method = "POST",
-    	        Headers = {
-       	            ['Content-Type'] = 'application/json'},
-    	            Body = HttpService:JSONEncode({
-       	            ["content"] = "",
-       	            ["embeds"] = {{
-            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	            ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	            ["type"] = "rich",
-           	            ["color"] = tonumber(0x00FF00)
-       	                }}
-   	                })
-	            })
-	            if _G.webhook == true then break
-		    end
-		end
-		
+	        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	        wait(6)
 	    end
@@ -985,19 +728,16 @@ function autoTP()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
             wait(3)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-            wait(2.2)
+	    bossfarm()
             findboss()
+	    wait(2.5)
 	    repeat
-		_G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].SansStrong.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].SansStrong["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	        _G.sslot.Bosses["1"].SansStrong["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
-                if _G.autoTP == false then break
+		for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = _G.playercframe
+                    end
+                end
+		if _G.autoTP == false then break
                 end
 		wait(0.2)
 	    until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
@@ -1011,19 +751,16 @@ function autoKromer()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 	    wait(3)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
-            wait(2.2)
+	    bossfarm()
             findboss()
+	    wait(2.5)
 	    repeat
-		_G.sslot.Bosses["1"].Rudinn.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].Rudinn.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].Rudinn["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	        _G.sslot.Bosses["1"].Rudinn["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].Rudinn["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].Rudinn.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		_G.sslot.Bosses["1"].Rudinn.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
-                if _G.autoKromer == false then break
+		for _, obj in pairs(_G.sslot.Bosses["1"].Rudinn:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = _G.playercframe
+                    end
+                end
+		if _G.autoKromer == false then break
                 end
 		wait(0.2)
 	    until _G.sslot.Bosses["1"].Rudinn.Enemy.Health == 0
@@ -1171,73 +908,73 @@ function autoclick()
 end
 
 function autopress()
-    while _G.autopress == true do
-        if _G.hotbar1 == true then
-            wait(_G.presstime)
-    	    keypress(0x31)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar2 == true then
-            wait(_G.presstime)
-    	    keypress(0x32)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar3 == true then
-            wait(_G.presstime)
-    	    keypress(0x33)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar4 == true then
-            wait(_G.presstime)
-    	    keypress(0x34)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar5 == true then
-            wait(_G.presstime)
-    	    keypress(0x35)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar6 == true then
-            wait(_G.presstime)
-    	    keypress(0x36)
-    	end
-    	if _G.autopress == false then break
-	end
-    	if _G.hotbar7 == true then
-            wait(_G.presstime)
-    	    keypress(0x37)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar8 == true then
-            wait(_G.presstime)
-    	    keypress(0x38)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar1 == false then
-    	    if _G.hotbar2 == false then
-    	        if _G.hotbar3 == false then
-    	            if _G.hotbar4 == false then
-    	                if _G.hotbar5 == false then
-    	                    if _G.hotbar6 == false then
-    	                        if _G.hotbar7 == false then
-    	                            if _G.hotbar8 == false then
-    	                                wait(9999999999999999999999999999999999999999)
-    	                            end
-    	                        end
-    	                    end
-    	                end
-    	            end
-    	        end
-    	    end
-    	end
-    end
+while _G.autopress == true do
+if _G.hotbar1 == true then
+wait(_G.presstime)
+keypress(0x31)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar2 == true then
+wait(_G.presstime)
+keypress(0x32)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar3 == true then
+wait(_G.presstime)
+keypress(0x33)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar4 == true then
+wait(_G.presstime)
+keypress(0x34)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar5 == true then
+wait(_G.presstime)
+keypress(0x35)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar6 == true then
+wait(_G.presstime)
+keypress(0x36)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar7 == true then
+wait(_G.presstime)
+keypress(0x37)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar8 == true then
+wait(_G.presstime)
+keypress(0x38)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar1 == false then
+if _G.hotbar2 == false then
+if _G.hotbar3 == false then
+if _G.hotbar4 == false then
+if _G.hotbar5 == false then
+if _G.hotbar6 == false then
+if _G.hotbar7 == false then
+if _G.hotbar8 == false then
+wait(9999999999999999999999999999999999999999)
+end
+end
+end
+end
+end
+end
+end
+end
+end
 end
 
 function autodt()
@@ -1249,13 +986,11 @@ function autodt()
 	bossfarm()
 	dt6bossfarm()
 	repeat
-	    _G.sslot.Bosses["1"].TEMMIE.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    for _, obj in pairs(_G.sslot.Bosses["1"].TEMMIE:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1266,13 +1001,11 @@ function autodt()
 	
 	findboss()
 	repeat
-            _G.sslot.Bosses["1"].Sans.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            for _, obj in pairs(_G.sslot.Bosses["1"].Sans:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1283,20 +1016,11 @@ function autodt()
 	
 	findboss()
 	repeat
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftBottomLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftHand.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftMidArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftTopLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftUpArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightBottomLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightHand.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightMidArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightTopLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightUpArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    for _, obj in pairs(_G.sslot.Bosses["1"]["C.O.D.E Dummy"]:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1307,12 +1031,11 @@ function autodt()
 	
 	findboss()
 	repeat
-            _G.sslot.Bosses["1"].Jevil.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            for _, obj in pairs(_G.sslot.Bosses["1"].Jevil:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1323,63 +1046,38 @@ function autodt()
 	
 	findboss()
 	repeat
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    for _, obj in pairs(_G.sslot.Bosses["1"]["Undyne the undying"]:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
-	
+	wait(5)
+	dtback()
 	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
 	wait(0.1)
 	
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
-                    if obj.Name == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
             elseif _G.dttp == true then
                 if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                        if obj.Name == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                        end
-                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                 elseif _G.dtgold == true then
-                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                        if obj.Name == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                        end
-                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                 end
             end
         elseif _G.dttp == true then
             if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                    if obj.Name == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
             elseif _G.dtgold == true then
-                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                    if obj.Name == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
             end
         elseif _G.dtgold == true then
-            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                if obj.Name == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                end
-            end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
         else
             if _G.webhook == true then
 	        HttpService = game:GetService("HttpService")
@@ -1404,46 +1102,22 @@ function autodt()
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
-                            if obj.Name == "Part" then
-                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            end
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
                     elseif _G.dttp == true then
                         if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                                if obj.Name == "Part" then
-                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                                end
-                            end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                         elseif _G.dtgold == true then
-                            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                                if obj.Name == "Part" then
-                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                                end
-                            end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                         end
                     end
                 elseif _G.dttp == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                            if obj.Name == "Part" then
-                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            end
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                     elseif _G.dtgold == true then
-                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                            if obj.Name == "Part" then
-                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            end
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                     end
                 elseif _G.dtgold == true then
-                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                        if obj.Name == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                        end
-                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
 		end
 		wait(0.5)
             until game.Players.LocalPlayer.Character.Humanoid.Health == 0
