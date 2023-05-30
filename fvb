@@ -1341,20 +1341,20 @@ function autodt()
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
                 for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
-                    if obj.Name == "Humanoid" then
+                    if obj.ClassName == "Part" then
                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                     end
                 end
             elseif _G.dttp == true then
                 if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
                     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                        if obj.Name == "Humanoid" then
+                        if obj.ClassName == "Part" then
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                         end
                     end
                 elseif _G.dtgold == true then
                     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                        if obj.Name == "Part" then
+                        if obj.ClassName == "Part" then
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                         end
                     end
@@ -1363,20 +1363,20 @@ function autodt()
         elseif _G.dttp == true then
             if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
                 for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                    if obj.Name == "Humanoid" then
+                    if obj.ClassName == "Part" then
                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                     end
                 end
             elseif _G.dtgold == true then
                 for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                    if obj.Name == "Humanoid" then
+                    if obj.ClassName == "Part" then
                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                     end
                 end
             end
         elseif _G.dtgold == true then
             for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                if obj.Name == "Humanoid" then
+                if obj.ClassName == "Part" then
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
@@ -1405,20 +1405,20 @@ function autodt()
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
                         for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
-                            if obj.Name == "Humanoid" then
+                            if obj.ClassName == "Part" then
                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                             end
                         end
                     elseif _G.dttp == true then
                         if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
                             for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                                if obj.Name == "Humanoid" then
+                                if obj.ClassName == "Part" then
                                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                                 end
                             end
                         elseif _G.dtgold == true then
                             for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                                if obj.Name == "Humanoid" then
+                                if obj.ClassName == "Part" then
                                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                                 end
                             end
@@ -1427,20 +1427,20 @@ function autodt()
                 elseif _G.dttp == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
                         for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                            if obj.Name == "Humanoid" then
+                            if obj.ClassName == "Part" then
                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                             end
                         end
                     elseif _G.dtgold == true then
                         for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                            if obj.Name == "Humanoid" then
+                            if obj.ClassName == "Part" then
                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                             end
                         end
                     end
                 elseif _G.dtgold == true then
                     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                        if obj.Name == "Humanoid" then
+                        if obj.ClassName == "Part" then
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                         end
                     end
