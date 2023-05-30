@@ -487,6 +487,7 @@ function autoLv()
 			bossfarm()
 		        wait(2.5)
 			repeat
+			    findboss()
 		            for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
                                 if obj.ClassName == "Part" then
                                     obj.CFrame = _G.playercframe
