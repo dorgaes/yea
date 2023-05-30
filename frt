@@ -482,8 +482,8 @@ function autoLv()
 	            repeat
 		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		        wait(3)
-		        bossfarm()
                         findboss()
+			bossfarm()
 		        wait(2.5)
 			repeat
 		            for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
