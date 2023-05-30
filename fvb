@@ -561,28 +561,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
 		    
@@ -610,28 +589,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -659,28 +617,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -708,28 +645,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -757,28 +673,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -806,28 +701,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -855,28 +729,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -904,28 +757,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    while _G.webhook == true do
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request({
-   	                Url = Webhook_URL,
-   	                Method = "POST",
-    	                    Headers = {
-       	                    ['Content-Type'] = 'application/json'},
-    	                    Body = HttpService:JSONEncode({
-       	                    ["content"] = "",
-       	                    ["embeds"] = {{
-            	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	                ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	                ["type"] = "rich",
-           	                ["color"] = tonumber(0x00FF00)
-       	                        }}
-   	                    })
-	                })
-	                if _G.webhook == true then break
-		        end
-		    end
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -950,30 +782,7 @@ function autoLv()
 	        repeat
 	            wait(0.05)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	    
-	        while _G.webhook == true do
-	            HttpService = game:GetService("HttpService")
-	            Webhook_URL = _G.webhookid
-
-	            local responce = request({
-   	            Url = Webhook_URL,
-   	            Method = "POST",
-    	        Headers = {
-       	            ['Content-Type'] = 'application/json'},
-    	            Body = HttpService:JSONEncode({
-       	            ["content"] = "",
-       	            ["embeds"] = {{
-            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
-           	            ["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-           	            ["type"] = "rich",
-           	            ["color"] = tonumber(0x00FF00)
-       	                }}
-   	                })
-	            })
-	            if _G.webhook == true then break
-		    end
-		end
-		
+	        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	        wait(6)
 	    end
