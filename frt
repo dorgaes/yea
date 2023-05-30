@@ -48,8 +48,27 @@ function findboss()
     end
 end
 
+function bossfarm()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+end
+
+function dt6bossfarm()
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+end
+
 function autoLv()
     while _G.autoLv == true do
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 7 then
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
             do
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -58,8 +77,10 @@ function autoLv()
                     findboss()
 		    repeat
 		        _G.sslot.Bosses["1"].BasePart:WaitForChild("GrillbyActButton")
-			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = workspace.CharacterHolder.dorgaes.Head.CFrame
-			wait(0.1)
+			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
+			if _G.autoLv == false then break
+                        end
+		        wait(0.1)
                     until _G.sslot.Bosses["1"].Grillby.HP.Value == 0
 		    repeat
 		        wait(0.05)
@@ -68,6 +89,9 @@ function autoLv()
                     if _G.autoLv == false then break
                     end
             end
+	else
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/underreset7"))()
+	end
             
             if _G.autoLv == false then break
             end
@@ -75,7 +99,9 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	        wait(5.2)
+	        wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["error sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -86,7 +112,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["error sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["error sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"]["error sans"].Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -99,7 +127,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 1250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 	        findboss()
 		repeat
                     _G.sslot.Bosses["1"].Imposter["Left Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -111,7 +141,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Imposter.GunLeft.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Imposter.GunRight.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
                 until _G.sslot.Bosses["1"].Imposter.Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -124,7 +156,9 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-		wait(5.2)
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 	        findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -134,6 +168,8 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["Dusttrust sans"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["Dusttrust sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		    if _G.autoLv == false then break
+                    end
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
 	            wait(0.2)
 		until _G.sslot.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
@@ -148,7 +184,9 @@ function autoLv()
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
-		wait(5.2)
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].SANESSS.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -159,7 +197,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].SANESSS.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SANESSS.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
     		until _G.sslot.Bosses["1"].SANESSS.Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -172,7 +212,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3045)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
                     _G.sslot.Bosses["1"].UndyneULTRA.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -183,7 +225,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].UndyneULTRA.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].UndyneULTRA.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
                 until _G.sslot.Bosses["1"].UndyneULTRA.Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -196,7 +240,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -207,7 +253,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].TEMMIE.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -220,7 +268,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3985)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.57935, 532.41748, -443.823029, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["OOF head"].NormalPumpkin.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -231,7 +281,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["OOF head"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["OOF head"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"]["OOF head"].Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -244,7 +296,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 4900)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].BOB.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -255,7 +309,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].BOB.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].BOB.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"].BOB.Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -268,7 +324,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -279,7 +337,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"]["HyperDT Sans"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then break
@@ -292,7 +352,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 6000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		wait(5.2)
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -303,7 +365,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                 wait(5.1)
 		if _G.autoLv == false then break
@@ -319,7 +383,9 @@ function autoLv()
 		        while (game.Players.LocalPlayer.leaderstats.LV.Value < 7500)
                         do
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		            wait(5.2)
+		            wait(3)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            wait(2.5)
 	                    findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -330,7 +396,9 @@ function autoLv()
 		                _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	                        wait(0.2)
+	                        if _G.autoLv == false then break
+                                end
+		                wait(0.2)
 		            until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                             wait(5.1)
 		            if _G.autoLv == false then break
@@ -340,7 +408,9 @@ function autoLv()
 			while (game.Players.LocalPlayer.leaderstats.TP.Value < 4000) 
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(5.2)
+                            wait(3)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            wait(2.5)
 		            findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -351,7 +421,9 @@ function autoLv()
 		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	                        wait(0.2)
+	                        if _G.autoLv == false then break
+                                end
+		                wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                             wait(5.1)
 		            if _G.autoLv == false then break
@@ -361,7 +433,9 @@ function autoLv()
 			while (game.Players.LocalPlayer.leaderstats.Gold.Value < 1000000000) 
 			do
 			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(5.2)
+                            wait(3)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		            wait(2.5)
 		            findboss()
 		            repeat
 		                _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -372,7 +446,9 @@ function autoLv()
 		                _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	                        wait(0.2)
+	                        if _G.autoLv == false then break
+                                end
+		                wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                             wait(5.1)
 		            if _G.autoLv == false then break
@@ -385,7 +461,9 @@ function autoLv()
             while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
 		findboss()
 		repeat
 		    _G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -396,7 +474,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	            wait(0.2)
+	            if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 		until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                 wait(5.1)
 		if _G.autoLv == false then break
@@ -433,7 +513,9 @@ function autoLv()
 	            end
 	            repeat
 		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		        wait(5.2)
+		        wait(3)
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		        wait(2.5)
 		        findboss()
 			repeat
 		            _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -444,7 +526,9 @@ function autoLv()
 		            _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		            _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                            wait(0.2)
+                            if _G.autoLv == false then break
+                            end
+		            wait(0.2)
 		        until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                         wait(5.1)
 		    until _G.autoLv == false or _G.autoReset == true
@@ -453,7 +537,9 @@ function autoLv()
             
 	    if _G.autoReset == true then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.13379, 279.970581, 131.539795, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                wait(5.2)
+                wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		wait(2.5)
                 findboss()
 		repeat
 		    _G.sslot.Bosses["1"].Boss1.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -464,7 +550,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss1.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss1.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss1.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 0 then
@@ -511,7 +599,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss2.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    	    _G.sslot.Bosses["1"].Boss2.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss2.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 1 then
@@ -558,7 +648,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss3.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss3.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss3.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 2 then
@@ -605,7 +697,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss4.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss4.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss4.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 10 then
@@ -652,7 +746,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss5.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss5.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss5.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 15 then
@@ -699,7 +795,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss6.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss6.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss6.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 20 then
@@ -746,7 +844,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss7.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss7.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss7.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 25 then
@@ -793,7 +893,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss8.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss8.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss8.Enemy.Health == 0
 		
 		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 30 then
@@ -840,7 +942,9 @@ function autoLv()
 		    _G.sslot.Bosses["1"].Boss9.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    _G.sslot.Bosses["1"].Boss9.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-                    wait(0.2)
+                    if _G.autoLv == false then break
+                    end
+		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss9.Enemy.Health == 0
 	    
 	        repeat
@@ -880,9 +984,9 @@ function autoTP()
     while _G.autoTP == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            wait(4)
+            wait(3)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-            wait(2)
+            wait(2.2)
             findboss()
 	    repeat
 		_G.sslot.Bosses["1"].SansStrong.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -892,9 +996,12 @@ function autoTP()
 		_G.sslot.Bosses["1"].SansStrong["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		_G.sslot.Bosses["1"].SansStrong.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		_G.sslot.Bosses["1"].SansStrong.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
+                if _G.autoLv == false then break
+                end
 		wait(0.2)
 	    until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
-            wait(6)
+            wait(5.1)
 	until _G.autoTP == false
     end
 end
@@ -903,9 +1010,9 @@ function autoKromer()
     while _G.autoKromer == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
-	    wait(4)
+	    wait(3)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
-            wait(2)
+            wait(2.2)
             findboss()
 	    repeat
 		_G.sslot.Bosses["1"].Rudinn.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
@@ -915,9 +1022,12 @@ function autoKromer()
 		_G.sslot.Bosses["1"].Rudinn["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		_G.sslot.Bosses["1"].Rudinn.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 		_G.sslot.Bosses["1"].Rudinn.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
+                if _G.autoLv == false then break
+                end
 		wait(0.2)
 	    until _G.sslot.Bosses["1"].Rudinn.Enemy.Health == 0
-            wait(6)
+            wait(5.1)
 	until _G.autoKromer == false
     end
 end
@@ -1065,898 +1175,68 @@ function autopress()
         if _G.hotbar1 == true then
             wait(_G.presstime)
     	    keypress(0x31)
-            if _G.hotbar2 == true then
-                wait(_G.presstime)
-	            keypress(0x32)
-                if _G.hotbar3 == true then
-                    wait(_G.presstime)
-                    keypress(0x33)
-                    if _G.hotbar4 == true then
-                        wait(_G.presstime)
-                        keypress(0x34)
-                        if _G.hotbar5 == true then
-                            wait(_G.presstime)
-                            keypress(0x35)
-                            if _G.hotbar6 == true then
-                                wait(_G.presstime)
-                                keypress(0x36)
-                                if _G.hotbar7 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x37)
-                                    if _G.hotbar8 == true then
-                                        wait(_G.presstime)
-                                        keypress(0x38)
-                                    end
-                                elseif _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar7 == true then
-                                wait(_G.presstime)
-                                keypress(0x37)
-                                if _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar6 == true then
-                            wait(_G.presstime)
-                            keypress(0x36)
-                            if _G.hotbar7 == true then
-                                wait(_G.presstime)
-                                keypress(0x37)
-                                if _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar5 == true then
-                        wait(_G.presstime)
-                        keypress(0x35)
-                        if _G.hotbar6 == true then
-                            wait(_G.presstime)
-                            keypress(0x36)
-                            if _G.hotbar7 == true then
-                                wait(_G.presstime)
-                                keypress(0x37)
-                                if _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar4 == true then
-                    wait(_G.presstime)
-                    keypress(0x34)
-                    if _G.hotbar5 == true then
-                        wait(_G.presstime)
-                        keypress(0x35)
-                        if _G.hotbar6 == true then
-                            wait(_G.presstime)
-                            keypress(0x36)
-                            if _G.hotbar7 == true then
-                                wait(_G.presstime)
-                                keypress(0x37)
-                                if _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar5 == true then
-                    wait(_G.presstime)
-                    keypress(0x35)
-                    if _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar3 == true then
-                wait(_G.presstime)
-                keypress(0x33)
-                if _G.hotbar4 == true then
-                    wait(_G.presstime)
-                    keypress(0x34)
-                    if _G.hotbar5 == true then
-                        wait(_G.presstime)
-                        keypress(0x35)
-                        if _G.hotbar6 == true then
-                            wait(_G.presstime)
-                            keypress(0x36)
-                            if _G.hotbar7 == true then
-                                wait(_G.presstime)
-                                keypress(0x37)
-                                if _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar5 == true then
-                    wait(_G.presstime)
-                    keypress(0x35)
-                    if _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar4 == true then
-                wait(_G.presstime)
-                keypress(0x34)
-                if _G.hotbar5 == true then
-                    wait(_G.presstime)
-                    keypress(0x35)
-                    if _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar5 == true then
-                wait(_G.presstime)
-                keypress(0x35)
-                if _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar6 == true then
-                wait(_G.presstime)
-                keypress(0x36)
-                if _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar7 == true then
-                wait(_G.presstime)
-                keypress(0x37)
-                if _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar2 == true then
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar2 == true then
             wait(_G.presstime)
-            keypress(0x32)
-            if _G.hotbar3 == true then
-                wait(_G.presstime)
-                keypress(0x33)
-                if _G.hotbar4 == true then
-                    wait(_G.presstime)
-                    keypress(0x34)
-                    if _G.hotbar5 == true then
-                        wait(_G.presstime)
-                        keypress(0x35)
-                        if _G.hotbar6 == true then
-                            wait(_G.presstime)
-                            keypress(0x36)
-                            if _G.hotbar7 == true then
-                                wait(_G.presstime)
-                                keypress(0x37)
-                                if _G.hotbar8 == true then
-                                    wait(_G.presstime)
-                                    keypress(0x38)
-                                end
-                            elseif _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar5 == true then
-                    wait(_G.presstime)
-                    keypress(0x35)
-                    if _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar4 == true then
-                wait(_G.presstime)
-                keypress(0x34)
-                if _G.hotbar5 == true then
-                    wait(_G.presstime)
-                    keypress(0x35)
-                    if _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar5 == true then
-                wait(_G.presstime)
-                keypress(0x35)
-                if _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar6 == true then
-                wait(_G.presstime)
-                keypress(0x36)
-                if _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar7 == true then
-                wait(_G.presstime)
-                keypress(0x37)
-                if _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar3 == true then
+    	    keypress(0x32)
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar3 == true then
             wait(_G.presstime)
-            keypress(0x33)
-            if _G.hotbar4 == true then
-                wait(_G.presstime)
-                keypress(0x34)
-                if _G.hotbar5 == true then
-                    wait(_G.presstime)
-                    keypress(0x35)
-                    if _G.hotbar6 == true then
-                        wait(_G.presstime)
-                        keypress(0x36)
-                        if _G.hotbar7 == true then
-                            wait(_G.presstime)
-                            keypress(0x37)
-                            if _G.hotbar8 == true then
-                                wait(_G.presstime)
-                                keypress(0x38)
-                            end
-                        elseif _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar5 == true then
-                wait(_G.presstime)
-                keypress(0x35)
-                if _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar6 == true then
-                wait(_G.presstime)
-                keypress(0x36)
-                if _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar7 == true then
-                wait(_G.presstime)
-                keypress(0x37)
-                if _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar4 == true then
+    	    keypress(0x33)
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar4 == true then
             wait(_G.presstime)
-            keypress(0x34)
-            if _G.hotbar5 == true then
-                wait(_G.presstime)
-                keypress(0x35)
-                if _G.hotbar6 == true then
-                    wait(_G.presstime)
-                    keypress(0x36)
-                    if _G.hotbar7 == true then
-                        wait(_G.presstime)
-                        keypress(0x37)
-                        if _G.hotbar8 == true then
-                            wait(_G.presstime)
-                            keypress(0x38)
-                        end
-                    elseif _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar6 == true then
-                wait(_G.presstime)
-                keypress(0x36)
-                if _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar7 == true then
-                wait(_G.presstime)
-                keypress(0x37)
-                if _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar5 == true then
+    	    keypress(0x34)
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar5 == true then
             wait(_G.presstime)
-            keypress(0x35)
-            if _G.hotbar6 == true then
-                wait(_G.presstime)
-                keypress(0x36)
-                if _G.hotbar7 == true then
-                    wait(_G.presstime)
-                    keypress(0x37)
-                    if _G.hotbar8 == true then
-                        wait(_G.presstime)
-                        keypress(0x38)
-                    end
-                elseif _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar7 == true then
-                wait(_G.presstime)
-                keypress(0x37)
-                if _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar6 == true then
+    	    keypress(0x35)
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar6 == true then
             wait(_G.presstime)
-            keypress(0x36)
-            if _G.hotbar7 == true then
-                wait(_G.presstime)
-                keypress(0x37)
-                if _G.hotbar8 == true then
-                    wait(_G.presstime)
-                    keypress(0x38)
-                end
-            elseif _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar7 == true then
-            wait(_G.presstime)
-            keypress(0x37)
-            if _G.hotbar8 == true then
-                wait(_G.presstime)
-                keypress(0x38)
-            end
-        elseif _G.hotbar8 == true then
-            wait(_G.presstime)
-            keypress(0x38)
-        else
-	    wait(99999999999999999999999999999)
+    	    keypress(0x36)
+    	end
+    	if _G.autopress == false then break
 	end
+    	if _G.hotbar7 == true then
+            wait(_G.presstime)
+    	    keypress(0x37)
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar8 == true then
+            wait(_G.presstime)
+    	    keypress(0x38)
+    	end
+    	if _G.autopress == false then break
+    	end
+    	if _G.hotbar1 == false then
+    	    if _G.hotbar2 == false then
+    	        if _G.hotbar3 == false then
+    	            if _G.hotbar4 == false then
+    	                if _G.hotbar5 == false then
+    	                    if _G.hotbar6 == false then
+    	                        if _G.hotbar7 == false then
+    	                            if _G.hotbar8 == false then
+    	                                wait(9999999999999999999999999999999999999999)
+    	                            end
+    	                        end
+    	                    end
+    	                end
+    	            end
+    	        end
+    	    end
+    	end
     end
 end
 
@@ -1965,15 +1245,19 @@ function autodt()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5400066, 133.080933, 191.340012, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 	wait(1)
 	findboss()
+	wait(10)
+	bossfarm()
+	dt6bossfarm()
 	repeat
-	    _G.sslot.Bosses["1"].TEMMIE.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"].TEMMIE.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"].TEMMIE["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"].TEMMIE["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"].TEMMIE["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"].TEMMIE.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	    _G.sslot.Bosses["1"].TEMMIE.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"].TEMMIE.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"].TEMMIE["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"].TEMMIE["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"].TEMMIE["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"].TEMMIE.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    if _G.autoLv == false then break
+            end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
 	
@@ -1982,14 +1266,15 @@ function autodt()
 	
 	findboss()
 	repeat
-            _G.sslot.Bosses["1"].Sans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Sans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Sans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Sans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Sans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Sans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Sans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+            _G.sslot.Bosses["1"].Sans.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Sans.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Sans["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Sans["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Sans["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Sans.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Sans.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    if _G.autoLv == false then break
+            end
 	    wait(0.2)
         until _G.sslot.Bosses["1"].Sans.Enemy.Health == 0
 	
@@ -1998,21 +1283,22 @@ function autodt()
 	
 	findboss()
 	repeat
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftBottomLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftHand.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftMidArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftTopLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftUpArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightBottomLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightHand.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightMidArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightTopLeg.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightUpArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RootPart.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftBottomLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftHand.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftMidArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftTopLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftUpArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightBottomLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightHand.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightMidArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightTopLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightUpArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    if _G.autoLv == false then break
+            end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Enemy.Health == 0
 	
@@ -2021,13 +1307,14 @@ function autodt()
 	
 	findboss()
 	repeat
-            _G.sslot.Bosses["1"].Jevil.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Jevil["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Jevil["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Jevil["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Jevil.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].Jevil.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+            _G.sslot.Bosses["1"].Jevil.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Jevil["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Jevil["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Jevil["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Jevil.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            _G.sslot.Bosses["1"].Jevil.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    if _G.autoLv == false then break
+            end
 	    wait(0.2)
         until _G.sslot.Bosses["1"].Jevil.Enemy.Health == 0
 	    
@@ -2036,14 +1323,15 @@ function autodt()
 	
 	findboss()
 	repeat
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	    _G.sslot.Bosses["1"]["Undyne the undying"].Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["Undyne the undying"].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["Undyne the undying"]["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["Undyne the undying"].Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    _G.sslot.Bosses["1"]["Undyne the undying"].Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    if _G.autoLv == false then break
+            end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
 	
@@ -2052,22 +1340,46 @@ function autodt()
 	
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
+                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
+                    if obj.Name == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
             elseif _G.dttp == true then
                 if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
+                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
+                        if obj.Name == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                        end
+                    end
                 elseif _G.dtgold == true then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
+                        if obj.Name == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                        end
+                    end
                 end
             end
         elseif _G.dttp == true then
             if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
+                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
+                    if obj.Name == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
             elseif _G.dtgold == true then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
+                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
+                    if obj.Name == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
             end
         elseif _G.dtgold == true then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
+            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
+                if obj.Name == "Part" then
+                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                end
+            end
         else
             if _G.webhook == true then
 	        HttpService = game:GetService("HttpService")
@@ -2080,8 +1392,8 @@ function autodt()
     	            Body = HttpService:JSONEncode({
        	            ["content"] = "",
        	            ["embeds"] = {{
-            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you forgot to chose reward!**",
-           	            ["description"] = "Dont forget dt6 have 3 reward can chose",
+            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you didnt chose reward!**",
+           	            ["description"] = "Make sure to chose at least one reward",
            	            ["type"] = "rich",
            	            ["color"] = tonumber(0xff0000)
        	                    }}
@@ -2092,31 +1404,49 @@ function autodt()
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
+                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
+                            if obj.Name == "Part" then
+                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                            end
+                        end
                     elseif _G.dttp == true then
                         if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
+                            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
+                                if obj.Name == "Part" then
+                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                                end
+                            end
                         elseif _G.dtgold == true then
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
+                                if obj.Name == "Part" then
+                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                                end
+                            end
                         end
                     end
                 elseif _G.dttp == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
+                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
+                            if obj.Name == "Part" then
+                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                            end
+                        end
                     elseif _G.dtgold == true then
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
+                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
+                            if obj.Name == "Part" then
+                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                            end
+                        end
                     end
                 elseif _G.dtgold == true then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
+                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
+                        if obj.Name == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                        end
+                    end
 		end
 		wait(0.5)
             until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	    
-	    if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-	        game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	        wait(6)
-		break
-	    end
         end
 	
 	repeat
