@@ -64,6 +64,7 @@ function dtback()
 end
 
 function bossfarm()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
         if obj.ClassName == "Part" then
             obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
@@ -486,12 +487,11 @@ function autoLv()
 			bossfarm()
 		        wait(2.5)
 			repeat
-		            for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
+			    findboss()
+                            for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
                                 if obj.ClassName == "Part" then
                                     obj.CFrame = _G.playercframe
                                 end
-                            end
-                            if _G.autoLv == false then break
                             end
 		            wait(0.2)
 		        until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
