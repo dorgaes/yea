@@ -1236,7 +1236,7 @@ function autodt()
 	    _G.sslot.Bosses["1"].TEMMIE.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	    if _G.autoLv == false then break
+	    if _G.autodt == false then break
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
@@ -1254,7 +1254,7 @@ function autodt()
             _G.sslot.Bosses["1"].Sans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             _G.sslot.Bosses["1"].Sans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	    if _G.autoLv == false then break
+	    if _G.autodt == false then break
             end
 	    wait(0.2)
         until _G.sslot.Bosses["1"].Sans.Enemy.Health == 0
@@ -1279,7 +1279,7 @@ function autodt()
 	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightUpArm.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RootPart.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	    if _G.autoLv == false then break
+	    if _G.autodt == false then break
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Enemy.Health == 0
@@ -1296,7 +1296,7 @@ function autodt()
             _G.sslot.Bosses["1"].Jevil.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             _G.sslot.Bosses["1"].Jevil.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	    if _G.autoLv == false then break
+	    if _G.autodt == false then break
             end
 	    wait(0.2)
         until _G.sslot.Bosses["1"].Jevil.Enemy.Health == 0
@@ -1314,7 +1314,7 @@ function autodt()
 	    _G.sslot.Bosses["1"]["Undyne the undying"].Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"]["Undyne the undying"].Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-	    if _G.autoLv == false then break
+	    if _G.autodt == false then break
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
