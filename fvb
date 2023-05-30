@@ -49,6 +49,20 @@ function findboss()
     end
 end
 
+function dtback()
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,-2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,-2000,0)
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,-2000,0)
+        end
+    end
+end
+
 function bossfarm()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
@@ -972,13 +986,11 @@ function autodt()
 	bossfarm()
 	dt6bossfarm()
 	repeat
-	    _G.sslot.Bosses["1"].TEMMIE.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"].TEMMIE.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    for _, obj in pairs(_G.sslot.Bosses["1"].TEMMIE:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -989,13 +1001,11 @@ function autodt()
 	
 	findboss()
 	repeat
-            _G.sslot.Bosses["1"].Sans.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Sans.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            for _, obj in pairs(_G.sslot.Bosses["1"].Sans:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1006,20 +1016,11 @@ function autodt()
 	
 	findboss()
 	repeat
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftBottomLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftHand.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftMidArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftTopLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].LeftUpArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightBottomLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightHand.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightMidArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightTopLeg.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RightUpArm.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["C.O.D.E Dummy"].RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    for _, obj in pairs(_G.sslot.Bosses["1"]["C.O.D.E Dummy"]:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1030,12 +1031,11 @@ function autodt()
 	
 	findboss()
 	repeat
-            _G.sslot.Bosses["1"].Jevil.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-            _G.sslot.Bosses["1"].Jevil.Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+            for _, obj in pairs(_G.sslot.Bosses["1"].Jevil:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
@@ -1046,63 +1046,38 @@ function autodt()
 	
 	findboss()
 	repeat
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Left Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Arm"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"]["Right Leg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-	    _G.sslot.Bosses["1"]["Undyne the undying"].Torsoloco.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	    for _, obj in pairs(_G.sslot.Bosses["1"]["Undyne the undying"]:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = _G.playercframe
+                end
+            end
 	    if _G.autodt == false then break
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
-	
+	wait(5)
+	dtback()
 	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
 	wait(0.1)
 	
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
             elseif _G.dttp == true then
                 if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                        end
-                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                 elseif _G.dtgold == true then
-                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                        end
-                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                 end
             end
         elseif _G.dttp == true then
             if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
             elseif _G.dtgold == true then
-                for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
             end
         elseif _G.dtgold == true then
-            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                end
-            end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
         else
             if _G.webhook == true then
 	        HttpService = game:GetService("HttpService")
@@ -1127,46 +1102,22 @@ function autodt()
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
-                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["200 LV"]:GetChildren()) do
-                            if obj.ClassName == "Part" then
-                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            end
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
                     elseif _G.dttp == true then
                         if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                                if obj.ClassName == "Part" then
-                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                                end
-                            end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                         elseif _G.dtgold == true then
-                            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                                if obj.ClassName == "Part" then
-                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                                end
-                            end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                         end
                     end
                 elseif _G.dttp == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
-                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"]:GetChildren()) do
-                            if obj.ClassName == "Part" then
-                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            end
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                     elseif _G.dtgold == true then
-                        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                            if obj.ClassName == "Part" then
-                                obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            end
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                     end
                 elseif _G.dtgold == true then
-                    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                        end
-                    end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
 		end
 		wait(0.5)
             until game.Players.LocalPlayer.Character.Humanoid.Health == 0
