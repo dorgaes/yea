@@ -1,23 +1,22 @@
-_G.webhookid = 
-
+while _G.webhook == true do
 HttpService = game:GetService("HttpService")
-Webhook_URL = "_G.webhookid"
+Webhook_URL = _G.webhookid
 
-local responce = request(
-{
-    Url = Webhook_URL,
-    Method = "POST",
-    Headers = {
-        ['Content-Type'] = 'application/json'
-    },
-    Body = HttpService:JSONEncode({
-        ["content"] = "",
-        ["embeds"] = {{
-            ["title"] = "**You got a reset!**",
-            ["description"] = game.Players.LocalPlayer.DisplayName .." your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
-            ["type"] = "rich",
-            ["color"] = tonumber(0xff0000)
-        }}
-    })
-}   
-)
+local responce = request({
+Url = Webhook_URL,
+Method = "POST",
+Headers = {
+['Content-Type'] = 'application/json'},
+Body = HttpService:JSONEncode({
+["content"] = "",
+["embeds"] = {{
+["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you got a reset!**",
+["description"] = "your total reset is "..game:GetService("Players").LocalPlayer.leaderstats.Reset.Value,
+["type"] = "rich",
+["color"] = tonumber(0x00FF00)
+}}
+})
+})
+if _G.webhook == true then break
+end
+end
