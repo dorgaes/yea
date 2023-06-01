@@ -26,9 +26,81 @@ local Window = Rayfield:CreateWindow({
 })
 
 --Values
+_G.autoReset = true
+_G.autoLv = true
+_G.autoTP = true
+_G.autoKromer = true
+_G.rollskill = true
+_G.wspeed = 35
+_G.jpower = 80
+_G.autoTPKromerHard = true
+_G.autoclick = false
+_G.clcktime = 0.5
+_G.presstime = 0.5
+_G.autopress = false
+_G.hotbar1 = true
+_G.hotbar2 = true
+_G.hotbar3 = true
+_G.hotbar4 = true
+_G.hotbar5 = true
+_G.hotbar6 = true
+_G.hotbar7 = true
+_G.hotbar8 = true
+_G.webhookid = true
+_G.webhook = true
+_G.autodt = true
+_G.dtgold = true
+_G.dttp = true
+_G.dtlv = true
+_G.skillflowey = true
+_G.skillfroggit = true
+_G.skillundyne = true
+_G.skillpapyrus = true
+_G.skillasgore = true
+_G.skillmettaton = true
+_G.skillsans = true
+_G.skillchara = true
+_G.skillbetty = true
+_G.truereset = false
+_G.playercframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
 
+--Functions
+function findboss()
+    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+        if obj.Name == "dorgaes" then
+            _G.sslot = obj.Parent.Parent
+        end
+    end
+end
 
---Function
+function dtback()
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,-2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,-2000,0)
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,-2000,0)
+        end
+    end
+end
+
+function bossfarm()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+end
 
 --Tab
 local Tab = Window:CreateTab("Main")
