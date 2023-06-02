@@ -1094,7 +1094,7 @@ function autodt()
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                 end
             end
-	    if _G.autodt == false then break
+	    if _G.autodt == false then return
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
@@ -1110,7 +1110,7 @@ function autodt()
                 if game:GetService("Players").LocalPlayer.leaderstats.TP.Value ~= game:GetService("Players").LocalPlayer.leaderstats.TP.MaxValue then
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["1750 TP"].Head.CFrame
                 elseif _G.dtgold == true then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2978.43481, 3500.52075, 2984.53149, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
                 end
             end
         elseif _G.dttp == true then
