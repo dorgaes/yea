@@ -1777,6 +1777,11 @@ local Button = Tab:CreateButton({
                ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
                ["type"] = "rich",
                ["color"] = tonumber(0x00FF00)
+	           ["fields"] = {{
+                    ["name"] = "",
+                    ["Value"] = "",
+                    ["inline"] = true
+               }}
            }}
        })
    })
