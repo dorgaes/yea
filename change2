@@ -462,29 +462,6 @@ function autoLv()
 	    
 	    if _G.autoReset == false then 
 	        if _G.autoLv == true then
-	            if _G.webhook == true then
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request(
-	                {
-   	                 Url = Webhook_URL,
-   	                 Method = "POST",
-    	                Headers = {
-       	                 ['Content-Type'] = 'application/json'
-   	                 },
-    	                Body = HttpService:JSONEncode({
-       	                 ["content"] = "",
-       	                 ["embeds"] = {{
-        	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
-                             ["description"] = "if you want to auto reset turn on Enable Reset",
-                             ["type"] = "rich",
-                             ["color"] = tonumber(0xFFFF00)
-       	                 }}
-   	                 })
-	                }   
-	                )
-	            end
 	            repeat
 		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		        wait(2)
@@ -534,7 +511,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
 		    
@@ -558,7 +534,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -582,7 +557,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -606,7 +580,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -630,7 +603,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -654,7 +626,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -678,7 +649,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -702,7 +672,6 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -723,7 +692,6 @@ function autoLv()
 	        repeat
 	            wait(0.05)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	        wait(6)
 	    end
@@ -1160,26 +1128,6 @@ function autodt()
         elseif _G.dtgold == true then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
         else
-            if _G.webhook == true then
-	        HttpService = game:GetService("HttpService")
-	        Webhook_URL = _G.webhookid
-
-	        local responce = request({
-   	        Url = Webhook_URL,
-   	        Method = "POST",
-    	        Headers = {['Content-Type'] = 'application/json'},
-    	            Body = HttpService:JSONEncode({
-       	            ["content"] = "",
-       	            ["embeds"] = {{
-            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you didnt chose reward!**",
-           	            ["description"] = "you must chose at least one reward",
-           	            ["type"] = "rich",
-           	            ["color"] = tonumber(0xff0000)
-       	                    }}
-   	                })
-	            })
-            end
-	    
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
@@ -1260,26 +1208,6 @@ function autodt()
 	
 	game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	wait(6)
-	
-	if _G.webhook == true then
-	    HttpService = game:GetService("HttpService")
-	        Webhook_URL = _G.webhookid
-
-	        local responce = request({
-   	        Url = Webhook_URL,
-   	        Method = "POST",
-    	        Headers = {['Content-Type'] = 'application/json'},
-    	            Body = HttpService:JSONEncode({
-       	            ["content"] = "",
-       	            ["embeds"] = {{
-            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you get a reward!**",
-           	            ["description"] = "You have "..game:GetService("Players").LocalPlayer.leaderstats.LV.Value.." Lv/ "..game:GetService("Players").LocalPlayer.leaderstats.TP.Value.." TP / "..game:GetService("Players").LocalPlayer.leaderstats.Gold.Value.." Gold",
-           	            ["type"] = "rich",
-           	            ["color"] = tonumber(0x00FF00)
-       	                    }}
-   	                })
-	            })
-	end
     end
 end
 
@@ -1736,54 +1664,5 @@ local Slider = Tab:CreateSlider({
    Flag = "delaypress", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    _G.presstime = Value
-   end,
-})
-
-local Section = Tab:CreateSection("Webhook settings")
-
-local Input = Tab:CreateInput({
-   Name = "Webhook",
-   PlaceholderText = "",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(Text)
-   _G.webhookid = Value
-   end,
-})
-
-
-local Toggle = Tab:CreateToggle({
-   Name = "Use webhook",
-   CurrentValue = false,
-   Flag = "webhook", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.webhook = Value
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Webhook test",
-   Callback = function()
-   HttpService = game:GetService("HttpService")
-   Webhook_URL = _G.webhookid
-
-   local responce = request({
-       Url = Webhook_URL,
-       Method = "POST",
-       Headers = {['Content-Type'] = 'application/json'},
-       Body = HttpService:JSONEncode({
-           ["content"] = "",
-           ["embeds"] = {{
-               ["title"] = "**Your Webhook Working!**",
-               ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
-               ["type"] = "rich",
-               ["color"] = tonumber(0x00FF00),
-	           ["fields"] = {{
-                    ["name"] = "",
-                    ["Value"] = "",
-                    ["inline"] = true
-               }}
-           }}
-       })
-   })
    end,
 })
