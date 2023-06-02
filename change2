@@ -26,43 +26,43 @@ local Window = Rayfield:CreateWindow({
 })
 
 --Values
-_G.autoReset = true
-_G.autoLv = true
-_G.autoTP = true
-_G.autoKromer = true
-_G.rollskill = true
+_G.autoReset = false
+_G.autoLv = false
+_G.autoTP = false
+_G.autoKromer = false
+_G.rollskill = false
 _G.wspeed = 35
 _G.jpower = 80
-_G.autoTPKromerHard = true
+_G.autoTPKromerHard = false
 _G.autoclick = false
-_G.clcktime = 0.5
-_G.presstime = 0.5
+_G.clcktime = 0.01
+_G.presstime = 0.3
 _G.autopress = false
-_G.hotbar1 = true
-_G.hotbar2 = true
-_G.hotbar3 = true
-_G.hotbar4 = true
-_G.hotbar5 = true
-_G.hotbar6 = true
-_G.hotbar7 = true
-_G.hotbar8 = true
-_G.webhookid = true
-_G.webhook = true
-_G.autodt = true
-_G.dtgold = true
-_G.dttp = true
-_G.dtlv = true
-_G.skillflowey = true
-_G.skillfroggit = true
-_G.skillundyne = true
-_G.skillpapyrus = true
-_G.skillasgore = true
-_G.skillmettaton = true
-_G.skillsans = true
-_G.skillchara = true
-_G.skillbetty = true
-_G.truereset = true
-_G.rollskilled = true
+_G.hotbar1 = false
+_G.hotbar2 = false
+_G.hotbar3 = false
+_G.hotbar4 = false
+_G.hotbar5 = false
+_G.hotbar6 = false
+_G.hotbar7 = false
+_G.hotbar8 = false
+_G.webhookid = false
+_G.webhook = false
+_G.autodt = false
+_G.dtgold = false
+_G.dttp = false
+_G.dtlv = false
+_G.skillflowey = false
+_G.skillfroggit = false
+_G.skillundyne = false
+_G.skillpapyrus = false
+_G.skillasgore = false
+_G.skillmettaton = false
+_G.skillsans = false
+_G.skillchara = false
+_G.skillbetty = false
+_G.truereset = false
+_G.rollskilled = false
 
 --Functions
 function findboss()
@@ -1633,7 +1633,7 @@ local Button = Tab:CreateButton({
    Name = "Restore",
    Callback = function()
    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
+   game.Players.LocalPlayer.Character.Humanoid.Health = 0
    end,
 })
 
@@ -1782,4 +1782,3 @@ local Button = Tab:CreateButton({
    })
    end,
 })
-
