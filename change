@@ -995,49 +995,49 @@ function autopress()
             wait(_G.presstime)
     	    keypress(0x31)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar2 == true then
             wait(_G.presstime)
     	    keypress(0x32)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar3 == true then
             wait(_G.presstime)
     	    keypress(0x33)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar4 == true then
             wait(_G.presstime)
     	    keypress(0x34)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar5 == true then
             wait(_G.presstime)
     	    keypress(0x35)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar6 == true then
             wait(_G.presstime)
     	    keypress(0x36)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
 	end
     	if _G.hotbar7 == true then
             wait(_G.presstime)
     	    keypress(0x37)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar8 == true then
             wait(_G.presstime)
     	    keypress(0x38)
     	end
-    	if _G.autopress == false then return
+    	if _G.autopress == false then break
     	end
     	if _G.hotbar1 == false then
     	    if _G.hotbar2 == false then
