@@ -1246,10 +1246,10 @@ function autodt()
 end
 
 --Farm
-local MainTab = Window:CreateTab("Main")
-local Section = MainTab:CreateSection("Auto Farm")
+local Tab = Window:CreateTab("Main")
+local Section = Tab:CreateSection("Auto Farm")
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "Enable Reset",
    CurrentValue = false,
    Flag = "Reset", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1258,7 +1258,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "Auto True Reset",
    CurrentValue = false,
    Flag = "True Reset", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1267,9 +1267,9 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Label = MainTab:CreateLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
+local Label = Tab:CreateLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "Lv Farm (Reset 7+)",
    CurrentValue = false,
    Flag = "Lv Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1279,7 +1279,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "TP Farm (lv 5000+)",
    CurrentValue = false,
    Flag = "TP Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1289,7 +1289,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "Kromer Farm (lv 4250+)",
    CurrentValue = false,
    Flag = "Kromer Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1299,7 +1299,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "TP and Kromer Farm lv 6600+ reset 12+ (Hard!)",
    CurrentValue = false,
    Flag = "TPKromer Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1309,13 +1309,13 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Section = MainTab:CreateSection("DT6")
+local Section = Tab:CreateSection("DT6")
 
-local Label = MainTab:CreateLabel("Chose at least one reward")
+local Label = Tab:CreateLabel("Chose at least one reward")
 
-local Label = MainTab:CreateLabel("If you chose more than one,it would being like Lv -> TP -> Gold")
+local Label = Tab:CreateLabel("If you chose more than one,it would being like Lv -> TP -> Gold")
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "DT6 Farm",
    CurrentValue = false,
    Flag = "DT6 Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1325,7 +1325,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "150M Gold",
    CurrentValue = false,
    Flag = "Gold DT6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1335,7 +1335,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "1750 TP",
    CurrentValue = false,
    Flag = "TP DT6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -1345,7 +1345,7 @@ local Toggle = MainTab:CreateToggle({
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "200 Lv",
    CurrentValue = false,
    Flag = "LV DT6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
