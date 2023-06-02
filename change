@@ -1633,7 +1633,7 @@ local Button = Tab:CreateButton({
    Name = "Restore",
    Callback = function()
    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
+   game.Players.LocalPlayer.Character.Humanoid.Health = 0
    end,
 })
 
