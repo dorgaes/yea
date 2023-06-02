@@ -63,6 +63,7 @@ _G.skillchara = false
 _G.skillbetty = false
 _G.truereset = false
 _G.rollskilled = false
+_G.autoTPKromererror404 = false
 
 --Functions
 function findboss()
@@ -1211,6 +1212,67 @@ function autodt()
     end
 end
 
+function autoTPKromererror404()
+    while _G.autoTPKromererror404 == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals.error404sans2tel.Head.CFrame
+        wait(2)
+	findboss()
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2300,0)
+        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+            if obj.ClassName == "Part" then
+                obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+            end
+        end
+        _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetDescendants ()) do
+            if obj.ClassName == "UnionOperation" then
+                obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+            end
+        end
+	wait(2.2)
+	repeat
+	    for _, obj in pairs(_G.sslot.Bosses["1"].fperror404sans:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                end
+            end
+	    if _G.autoTPKromererror404 == false then return
+	    end
+            wait(0.5)
+        until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health ~= workspace.ActiveBosses.Slot1.Bosses["1"].fperror404sans.Enemy.MaxHealth
+	wait(2)
+        repeat
+            for _, obj in pairs(_G.sslot.Bosses["1"].fperror404sans:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                end
+            end
+	    if _G.autoTPKromererror404 == false then return
+	    end
+            wait(0.5)
+        until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health == workspace.ActiveBosses.Slot1.Bosses["1"].fperror404sans.Enemy.MaxHealth
+	_G.sslot.Bosses["1"].BasePart:WaitForChild("StringEnemy")
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2300,0)
+	wait(0.5)
+	_G.sslot.Bosses["1"].BasePart.StringEnemy.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	_G.sslot.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	wait(0.1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].BasePart.StringEnemy.Head.Position)
+	repeat
+   	    wait(0.5)
+    	    if _G.sslot.Bosses["1"].BasePart:FindFirstChild("StringEnemy") then
+        	_G.sslot.Bosses["1"].BasePart.StringEnemy.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+        	_G.sslot.Slot1.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+    	    end
+	    if _G.autoTPKromererror404 == false then return
+	    end
+	until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health == 0
+        wait(6)
+	if _G.autoTPKromererror404 == false then return
+	end
+    end
+end
 --Farm
 local Tab = Window:CreateTab("Main")
 local Section = Tab:CreateSection("Auto Farm")
@@ -1266,12 +1328,22 @@ local Toggle = Tab:CreateToggle({
 })
 
 local Toggle = Tab:CreateToggle({
-   Name = "TP and Kromer Farm lv 6600+ reset 12+ (Hard!)",
+   Name = "TP and Kromer Farm (Required 6600LV 12Resets)",
    CurrentValue = false,
    Flag = "TPKromer Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    _G.autoTPKromerHard = Value
    autoTPKromerHard()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Error404 TP and Kromer Farm (Requires 8000LV 3000TP 38Resets)",
+   CurrentValue = false,
+   Flag = "TPKromerError404 Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.autoTPKromererror404 = Value
+   autoTPKromererror404()
    end,
 })
 
