@@ -1246,7 +1246,7 @@ function autodt()
 end
 
 --Farm
-local Tab = Window:CreateTab("Main")
+local MainTab = Window:CreateTab("Main")
 local Section = MainTab:CreateSection("Auto Farm")
 
 local Toggle = MainTab:CreateToggle({
