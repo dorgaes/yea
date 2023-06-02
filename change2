@@ -61,8 +61,8 @@ _G.skillmettaton = true
 _G.skillsans = true
 _G.skillchara = true
 _G.skillbetty = true
-_G.truereset = false
-_G.playercframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+_G.truereset = true
+_G.rollskilled = true
 
 --Functions
 function findboss()
@@ -875,47 +875,119 @@ function rollskill()
 	end
 
         if _G.skillflowey == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 then
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillfroggit == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 2 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 2 then 
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillundyne == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 11 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 11 then 
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillpapyrus == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 then return
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillasgore == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 then return
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillmettaton == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 22 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 22 then 
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillsans == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 33 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 33 then 
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillchara == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 32 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 32 then 
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
 
         if _G.skillbetty == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 31 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 31 then 
+	        if _G.rollskilled == true then
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		    return
+		else
+		    return
+		end
             end
         end
     end
@@ -1353,4 +1425,409 @@ local Toggle = Tab:CreateToggle({
    _G.dtlv = Value
    dtlv()
    end,
+})
+
+--Local
+local Tab = Window:CreateTab("Local")
+local Section = Tab:CreateSection("Main World Local")
+
+local Button = Tab:CreateButton({
+   Name = "Doodle Sphere",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2371.54492, 533.417664, -664.189697, 0.999889791, 7.84340446e-05, -0.0148477741, -0.000266837538, 0.999919474, -0.0126874493, 0.0148455836, 0.0126900123, 0.999809265)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-24.2176151, 128.195923, 96.2679749, 0.999457359, 6.17527451e-09, 0.032939624, -9.36763644e-09, 1, 9.67612266e-08, -0.032939624, -9.70172849e-08, 0.999457359)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Snowdin",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(653.439941, 181.338318, -266.2453, 0.00180233037, 6.28873309e-08, -0.999998391, -8.02061066e-08, 1, 6.27428776e-08, 0.999998391, 8.00928888e-08, 0.00180233037)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Waterfall",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1257.57751, 169.429352, 88.9650726, 0.998708546, -5.7520019e-08, 0.0508055575, 5.4436093e-08, 1, 6.20842542e-08, -0.0508055575, -5.92384204e-08, 0.998708546)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hotland",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-270.449005, 61.9409943, -1039.23596, 0.999999046, -4.23244637e-06, 0.00138114532, -4.23244637e-06, 0.999981225, 0.0061288327, -0.00138114532, -0.0061288327, 0.9999802710)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Core",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-196.685608, 138.589142, -1870.35071, 0.999830186, -9.0252108e-09, 0.0184282269, 7.86572762e-09, 1, 6.29913686e-08, -0.0184282269, -6.28357171e-08, 0.999830186)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Barrier",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(500.602051, 271.163086, -1341.76501, 0.03912789, 0.110678345, -0.993085742, 7.56448415e-09, 0.993846834, 0.110763162, 0.9992342, -0.00433393661, 0.0388871282)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Final Room",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2474.2854, 255.795334, 133.112946, -0.0236631054, 0.0919846743, -0.995479226, 8.62032667e-09, 0.995758057, 0.0920104384, 0.999719977, 0.00217724429, -0.0235627294)
+   end,
+})
+   
+--Player 
+local Tab = Window:CreateTab("Player")
+local Section = Tab:CreateSection("Player")
+
+local Slider = Tab:CreateSlider({
+   Name = "WalkSpeed",
+   Range = {35, 500},
+   Increment = 1,
+   Suffix = "Walk Speed",
+   CurrentValue = 35,
+   Flag = "Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.wspeed = Value
+   wspeed()
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "JumpPower",
+   Range = {80, 500},
+   Increment = 1,
+   Suffix = "Jump Power",
+   CurrentValue = 80,
+   Flag = "Jump", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.jpower = Value
+   jpower()
+   end,
+})
+
+--Shop Reroll
+local Tab = Window:CreateTab("Shop")
+local Section = Tab:CreateSection("Skill Roll")
+
+local Label = Tab:CreateLabel("Chose what skill you want to keep before roll skill")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Reroll Skill(100+ Kromer)",
+   CurrentValue = false,
+   Flag = "skillroll", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.rollskill = Value
+   rollskill()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Reroll Skilled(200+ Kromer)",
+   CurrentValue = false,
+   Flag = "skillrolled", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.rollskilled = Value
+   end,
+})
+
+local Section = Tab:CreateSection("Keep Skill")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Flowey",
+   CurrentValue = false,
+   Flag = "Flowey", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillflowey = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Froggit",
+   CurrentValue = false,
+   Flag = "Froggit", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillfroggit = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Undyne",
+   CurrentValue = false,
+   Flag = "Undyne", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillundyne = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Papyrus",
+   CurrentValue = false,
+   Flag = "Papyrus", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillpapyrus = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Asgore",
+   CurrentValue = false,
+   Flag = "Asgore", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillasgore = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Mettaton",
+   CurrentValue = false,
+   Flag = "Mettaton", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillmettaton = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Sans",
+   CurrentValue = false,
+   Flag = "Sans", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillsans = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Chara",
+   CurrentValue = false,
+   Flag = "Chara", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillchara = Value
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Betty",
+   CurrentValue = false,
+   Flag = "Betty", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.skillbetty = Value
+   end,
+})
+
+--Misc
+local MiscTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = MiscTab:AddSection({
+	Name = "auto click/press"
+})
+
+MiscTab:AddLabel("Make Sure To Chose At Least One Hotbar")
+
+MiscTab:AddBind({
+	Name = "Auto Clicker",
+	Default = Enum.KeyCode.F,
+	Hold = false,
+	Callback = function()
+		if _G.autoclick == true then _G.autoclick = false
+        	elseif
+        	_G.autoclick == false then _G.autoclick = true
+        	end
+        	autoclick()
+	end    
+})
+
+MiscTab:AddBind({
+	Name = "Auto Use Weapon",
+	Default = Enum.KeyCode.G,
+	Hold = false,
+	Callback = function()
+		if _G.autopress == true then _G.autopress = false
+        	elseif
+        	_G.autopress == false then _G.autopress = true
+        	end
+        	autopress()
+	end    
+})
+
+local Section = MiscTab:AddSection({
+	Name = "Weapon Restore"
+})
+	
+MiscTab:AddLabel("Click it if you lost your weapon in hotbar after you dead")
+
+MiscTab:AddButton({
+	Name = "Restore",
+	Callback = function()
+      		game.Players.LocalPlayer.Backpack:ClearAllChildren()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
+  	end    
+})
+
+	
+local Section = MiscTab:AddSection({
+	Name = "Hotbar Chose"
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 1",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar1 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 2",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar2 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 3",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar3 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 4",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar4 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 5",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar5 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 6",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar6 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 7",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar7 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 8",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar8 = Value
+	end    
+})
+
+--Settings
+local SettingTab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = SettingTab:AddSection({
+	Name = "Settings"
+})
+
+SettingTab:AddSlider({
+	Name = "Change Delay Time For Auto Click",
+	Min = 0.01,
+	Max = 0.5,
+	Default = 0.01,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.01,
+	ValueName = "delay every click",
+	Callback = function(Value)
+		_G.clcktime = Value
+	end    
+})
+
+SettingTab:AddSlider({
+	Name = "Change Delay Time For Auto Press",
+	Min = 0.2,
+	Max = 4,
+	Default = 0.3,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.1,
+	ValueName = "delay every press",
+	Callback = function(Value)
+		_G.presstime = Value
+	end    
+})
+
+local Section = SettingTab:AddSection({
+	Name = "Webhook"
+})
+
+SettingTab:AddTextbox({
+	Name = "Webhook",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+		_G.webhookid = Value
+	end	  
+})
+
+SettingTab:AddToggle({
+	Name = "Sent Webhook",
+	Default = false,
+	Callback = function(Value)
+		_G.webhook = Value
+	end    
+})
+
+SettingTab:AddButton({
+	Name = "Webhook test",
+	Callback = function()
+      		HttpService = game:GetService("HttpService")
+Webhook_URL = _G.webhookid
+
+local responce = request(
+{
+    Url = Webhook_URL,
+    Method = "POST",
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "",
+        ["embeds"] = {{
+            ["title"] = "**Your Webhook Working!**",
+            ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
+            ["type"] = "rich",
+            ["color"] = tonumber(0x00FF00)
+        }}
+    })
+}   
+)
+  	end    
 })
