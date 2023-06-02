@@ -1263,7 +1263,7 @@ function autoTPKromererror404()
    	    wait(0.5)
     	    if _G.sslot.Bosses["1"].BasePart:FindFirstChild("StringEnemy") then
         	_G.sslot.Bosses["1"].BasePart.StringEnemy.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-        	_G.sslot.Slot1.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+        	_G.sslot.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
     	    end
 	    if _G.autoTPKromererror404 == false then return
 	    end
