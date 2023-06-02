@@ -117,7 +117,7 @@ function autoLv()
 		        if _G.sslot.Bosses["1"].BasePart:FindFirstChild("GrillbyActButton") then
 			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
 			end
-			if _G.autoLv == false then break
+			if _G.autoLv == false then return
                         end
 		        wait(0.1)
                     until _G.sslot.Bosses["1"].Grillby.HP.Value == 0
@@ -125,16 +125,13 @@ function autoLv()
 		        wait(0.05)
 		    until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
                     wait(5.1)
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
             end
 	else
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/underreset7"))()
 	end
-            
-            if _G.autoLv == false then break
-            end
-                
+             
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -149,17 +146,14 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["error sans"].Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
 	    end
-	    
-	    if _G.autoLv == false then break
-            end
 	    
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 1250)
             do
@@ -175,16 +169,13 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
                 until _G.sslot.Bosses["1"].Imposter.Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
-            end
-            
-            if _G.autoLv == false then break
             end
 	    
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1500)
@@ -201,17 +192,14 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
 	    end
-	    
-	    if _G.autoLv == false then break
-            end
 	    
 	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
             do
@@ -227,18 +215,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
     		until _G.sslot.Bosses["1"].SANESSS.Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
 	    end
 	    
-	    if _G.autoLv == false then break
-            end
-		
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3045)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
@@ -253,18 +238,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
                 until _G.sslot.Bosses["1"].UndyneULTRA.Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
             end
             
-            if _G.autoLv == false then break
-            end
-
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3250)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
@@ -279,18 +261,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
             end
             
-            if _G.autoLv == false then break
-            end
-
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 3985)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.57935, 532.41748, -443.823029, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
@@ -305,18 +284,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["OOF head"].Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
             end
             
-            if _G.autoLv == false then break
-            end
-
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 4900)
             do
 	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
@@ -331,18 +307,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].BOB.Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
             end
 	    
-	    if _G.autoLv == false then break
-            end
-
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
@@ -357,18 +330,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
 		wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
             end
             
-            if _G.autoLv == false then break
-            end
-
             while (game.Players.LocalPlayer.leaderstats.LV.Value < 6000)
             do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
@@ -383,18 +353,15 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                 wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
             end
             
-            if _G.autoLv == false then break
-            end
-	    
 	    if _G.truereset == true then
 	        if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 30 then
 		    if game:GetService("Players").LocalPlayer.leaderstats.TrueReset == 0 then
@@ -412,12 +379,12 @@ function autoLv()
                                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                                     end
                                 end
-	                        if _G.autoLv == false then break
+	                        if _G.autoLv == false then return
                                 end
 		                wait(0.2)
 		            until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
                             wait(5.1)
-		            if _G.autoLv == false then break
+		            if _G.autoLv == false then return
                             end
 			end
 			
@@ -435,12 +402,12 @@ function autoLv()
                                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                                     end
                                 end
-	                        if _G.autoLv == false then break
+	                        if _G.autoLv == false then return
                                 end
 		                wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                             wait(5.1)
-		            if _G.autoLv == false then break
+		            if _G.autoLv == false then return
                             end
 			end
 			
@@ -458,12 +425,12 @@ function autoLv()
                                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                                     end
                                 end
-	                        if _G.autoLv == false then break
+	                        if _G.autoLv == false then return
                                 end
 		                wait(0.2)
 		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                             wait(5.1)
-		            if _G.autoLv == false then break
+		            if _G.autoLv == false then return
                             end
 			end
 		    end
@@ -484,16 +451,13 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-	            if _G.autoLv == false then break
+	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
 		until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
                 wait(5.1)
-		if _G.autoLv == false then break
+		if _G.autoLv == false then return
                 end
-            end
-            
-            if _G.autoLv == false then break
             end
 	    
 	    if _G.autoReset == false then 
@@ -534,7 +498,7 @@ function autoLv()
                                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                                 end
                             end
-	                    if _G.autoLv == false then break
+	                    if _G.autoLv == false then return
                             end
 		            wait(0.2)
 		        until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
@@ -543,7 +507,7 @@ function autoLv()
 	        end
             end
 	    
-	    if _G.autoLv == false then break
+	    if _G.autoLv == false then return
             end
             
 	    if _G.autoReset == true then
@@ -559,7 +523,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss1.Enemy.Health == 0
@@ -583,7 +547,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss2.Enemy.Health == 0
@@ -607,7 +571,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss3.Enemy.Health == 0
@@ -631,7 +595,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss4.Enemy.Health == 0
@@ -655,7 +619,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss5.Enemy.Health == 0
@@ -679,7 +643,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss6.Enemy.Health == 0
@@ -703,7 +667,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss7.Enemy.Health == 0
@@ -727,7 +691,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss8.Enemy.Health == 0
@@ -751,7 +715,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then break
+                    if _G.autoLv == false then return
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss9.Enemy.Health == 0
@@ -770,10 +734,11 @@ function autoTP()
     while _G.autoTP == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            wait(3)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
-            wait(2.2)
-            findboss()
+            wait(2)
+	    findboss()
+	    wait(1)
+            bossfarm()
+	    wait(2.5)
 	    repeat
 		for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
                     if obj.ClassName == "Part" then
@@ -793,17 +758,18 @@ function autoKromer()
     while _G.autoKromer == true do
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
-	    wait(3)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
-            wait(2.2)
-            findboss()
+	    wait(2)
+	    findboss()
+	    wait(1)
+            bossfarm()
+	    wait(2.5)
 	    repeat
 		for _, obj in pairs(_G.sslot.Bosses["1"].Rudinn:GetChildren()) do
                     if obj.ClassName == "Part" then
                         obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                     end
                 end
-                if _G.autoKromer == false then break
+                if _G.autoKromer == false then return
                 end
 		wait(0.2)
 	    until _G.sslot.Bosses["1"].Rudinn.Enemy.Health == 0
@@ -914,7 +880,7 @@ function rollskill()
         end
 
         if _G.skillpapyrus == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 then 
 	        if _G.rollskilled == true then
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                     wait(0.5)
@@ -927,7 +893,7 @@ function rollskill()
         end
 
         if _G.skillasgore == true then
-	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 then return
+	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 then 
 	        if _G.rollskilled == true then
 		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                     wait(0.5)
@@ -1011,7 +977,7 @@ function autoTPKromerHard()
 	    repeat
 	        wait(0.05)
 	    until _G.sslot.Bosses["1"]["FS Emerald Papyrus"].Enemy.Health == 0
-	    wait(5)
+	    wait(5.2)
 	until _G.autoTPKromerHard == false
     end
 end
@@ -1029,49 +995,49 @@ function autopress()
             wait(_G.presstime)
     	    keypress(0x31)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar2 == true then
             wait(_G.presstime)
     	    keypress(0x32)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar3 == true then
             wait(_G.presstime)
     	    keypress(0x33)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar4 == true then
             wait(_G.presstime)
     	    keypress(0x34)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar5 == true then
             wait(_G.presstime)
     	    keypress(0x35)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar6 == true then
             wait(_G.presstime)
     	    keypress(0x36)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
 	end
     	if _G.hotbar7 == true then
             wait(_G.presstime)
     	    keypress(0x37)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar8 == true then
             wait(_G.presstime)
     	    keypress(0x38)
     	end
-    	if _G.autopress == false then break
+    	if _G.autopress == false then return
     	end
     	if _G.hotbar1 == false then
     	    if _G.hotbar2 == false then
@@ -1106,7 +1072,7 @@ function autodt()
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                 end
             end
-	    if _G.autodt == false then break
+	    if _G.autodt == false then return
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
@@ -1121,7 +1087,7 @@ function autodt()
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                 end
             end
-	    if _G.autodt == false then break
+	    if _G.autodt == false then return
             end
 	    wait(0.2)
         until _G.sslot.Bosses["1"].Sans.Enemy.Health == 0
@@ -1136,7 +1102,7 @@ function autodt()
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                 end
             end
-	    if _G.autodt == false then break
+	    if _G.autodt == false then return
             end
 	    wait(0.2)
 	until _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Enemy.Health == 0
@@ -1151,7 +1117,7 @@ function autodt()
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                 end
             end
-	    if _G.autodt == false then break
+	    if _G.autodt == false then return
             end
 	    wait(0.2)
         until _G.sslot.Bosses["1"].Jevil.Enemy.Health == 0
@@ -1626,208 +1592,194 @@ local Toggle = Tab:CreateToggle({
 })
 
 --Misc
-local MiscTab = Window:MakeTab({
-	Name = "Misc",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Tab = Window:CreateTab("Misc")
+local Section = Tab:CreateSection("Auto click/press")
+
+local Label = Tab:CreateLabel("Must chose at least one hotbar to do auto use weapon")
+
+local Keybind = Tab:CreateKeybind({
+   Name = "Auto Clicker",
+   CurrentKeybind = "F",
+   HoldToInteract = false,
+   Flag = "clicker", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+       if _G.autoclick == true then _G.autoclick = false
+       elseif
+       _G.autoclick == false then _G.autoclick = true
+       end
+       autoclick()
+   end,
 })
 
-local Section = MiscTab:AddSection({
-	Name = "auto click/press"
+local Keybind = Tab:CreateKeybind({
+   Name = "Auto use weapon",
+   CurrentKeybind = "G",
+   HoldToInteract = false,
+   Flag = "weapon", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+       if _G.autopress == true then _G.autopress = false
+       elseif
+       _G.autopress == false then _G.autopress = true
+       end
+       autopress()
+   end,
 })
 
-MiscTab:AddLabel("Make Sure To Chose At Least One Hotbar")
-
-MiscTab:AddBind({
-	Name = "Auto Clicker",
-	Default = Enum.KeyCode.F,
-	Hold = false,
-	Callback = function()
-		if _G.autoclick == true then _G.autoclick = false
-        	elseif
-        	_G.autoclick == false then _G.autoclick = true
-        	end
-        	autoclick()
-	end    
-})
-
-MiscTab:AddBind({
-	Name = "Auto Use Weapon",
-	Default = Enum.KeyCode.G,
-	Hold = false,
-	Callback = function()
-		if _G.autopress == true then _G.autopress = false
-        	elseif
-        	_G.autopress == false then _G.autopress = true
-        	end
-        	autopress()
-	end    
-})
-
-local Section = MiscTab:AddSection({
-	Name = "Weapon Restore"
-})
+local Section = Tab:CreateSection("Weapon restore")
 	
-MiscTab:AddLabel("Click it if you lost your weapon in hotbar after you dead")
+local Label = Tab:CreateLabel("Click it if you lost your weapon in hotbar after you dead")
 
-MiscTab:AddButton({
-	Name = "Restore",
-	Callback = function()
-      		game.Players.LocalPlayer.Backpack:ClearAllChildren()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Restore",
+   Callback = function()
+   game.Players.LocalPlayer.Backpack:ClearAllChildren()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
+   end,
 })
 
-	
-local Section = MiscTab:AddSection({
-	Name = "Hotbar Chose"
+local Section = Tab:CreateSection("Hotbar chose")	
+
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 1",
+   CurrentValue = false,
+   Flag = "hotbar1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar1 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 1",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar1 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 2",
+   CurrentValue = false,
+   Flag = "hotbar2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar2 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 2",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar2 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 3",
+   CurrentValue = false,
+   Flag = "hotbar3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar3 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 3",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar3 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 4",
+   CurrentValue = false,
+   Flag = "hotbar4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar4 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 4",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar4 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 5",
+   CurrentValue = false,
+   Flag = "hotbar5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar5 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 5",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar5 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 6",
+   CurrentValue = false,
+   Flag = "hotbar6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar6 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 6",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar6 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 7",
+   CurrentValue = false,
+   Flag = "hotbar7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar7 = Value
+   end,
 })
 
-MiscTab:AddToggle({
-	Name = "Hotbar 7",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar7 = Value
-	end    
-})
-
-MiscTab:AddToggle({
-	Name = "Hotbar 8",
-	Default = false,
-	Callback = function(Value)
-		_G.hotbar8 = Value
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Hotbar 8",
+   CurrentValue = false,
+   Flag = "hotbar8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.hotbar8 = Value
+   end,
 })
 
 --Settings
-local SettingTab = Window:MakeTab({
-	Name = "Settings",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Tab = Window:CreateTab("Settings")
+local Section = Tab:CreateSection("Settings")
+
+local Slider = Tab:CreateSlider({
+   Name = "Change delay time of auto click",
+   Range = {0.01, 0.5},
+   Increment = 0.01,
+   Suffix = "s delay every click",
+   CurrentValue = 0.01,
+   Flag = "delayclick", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.clcktime = Value
+   end,
 })
 
-local Section = SettingTab:AddSection({
-	Name = "Settings"
+local Slider = Tab:CreateSlider({
+   Name = "Change delay time of auto use weapon",
+   Range = {0.2, 4},
+   Increment = 0.1,
+   Suffix = "s delay every change weapon",
+   CurrentValue = 0.3,
+   Flag = "delaypress", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.presstime = Value
+   end,
 })
 
-SettingTab:AddSlider({
-	Name = "Change Delay Time For Auto Click",
-	Min = 0.01,
-	Max = 0.5,
-	Default = 0.01,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 0.01,
-	ValueName = "delay every click",
-	Callback = function(Value)
-		_G.clcktime = Value
-	end    
+local Section = Tab:CreateSection("Webhook settings")
+
+local Input = Tab:CreateInput({
+   Name = "Webhook",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+   _G.webhookid = Value
+   end,
 })
 
-SettingTab:AddSlider({
-	Name = "Change Delay Time For Auto Press",
-	Min = 0.2,
-	Max = 4,
-	Default = 0.3,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 0.1,
-	ValueName = "delay every press",
-	Callback = function(Value)
-		_G.presstime = Value
-	end    
+
+local Toggle = Tab:CreateToggle({
+   Name = "Use webhook",
+   CurrentValue = false,
+   Flag = "webhook", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   _G.webhook = Value
+   end,
 })
 
-local Section = SettingTab:AddSection({
-	Name = "Webhook"
+local Button = Tab:CreateButton({
+   Name = "Webhook test",
+   Callback = function()
+   HttpService = game:GetService("HttpService")
+   Webhook_URL = _G.webhookid
+
+   local responce = request({
+       Url = Webhook_URL,
+       Method = "POST",
+       Headers = {['Content-Type'] = 'application/json'},
+       Body = HttpService:JSONEncode({
+           ["content"] = "",
+           ["embeds"] = {{
+               ["title"] = "**Your Webhook Working!**",
+               ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
+               ["type"] = "rich",
+               ["color"] = tonumber(0x00FF00)
+           }}
+       })
+   })
+   end,
 })
 
-SettingTab:AddTextbox({
-	Name = "Webhook",
-	Default = "",
-	TextDisappear = false,
-	Callback = function(Value)
-		_G.webhookid = Value
-	end	  
-})
-
-SettingTab:AddToggle({
-	Name = "Sent Webhook",
-	Default = false,
-	Callback = function(Value)
-		_G.webhook = Value
-	end    
-})
-
-SettingTab:AddButton({
-	Name = "Webhook test",
-	Callback = function()
-      		HttpService = game:GetService("HttpService")
-Webhook_URL = _G.webhookid
-
-local responce = request(
-{
-    Url = Webhook_URL,
-    Method = "POST",
-    Headers = {
-        ['Content-Type'] = 'application/json'
-    },
-    Body = HttpService:JSONEncode({
-        ["content"] = "",
-        ["embeds"] = {{
-            ["title"] = "**Your Webhook Working!**",
-            ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
-            ["type"] = "rich",
-            ["color"] = tonumber(0x00FF00)
-        }}
-    })
-}   
-)
-  	end    
-})
