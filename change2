@@ -750,72 +750,15 @@ end
 function rollskill()
     while _G.rollskill == true do 
         wait(0.5)
-        if game.Players.LocalPlayer.leaderstats.Kromer.Value > 100 then
-            if _G.skillflowey == true then
-	        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 1 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-	    elseif _G.skillfroggit == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 2 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            elseif _G.skillundyne == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 11 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            elseif _G.skillpapyrus == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 12 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            elseif _G.skillasgore == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 21 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            elseif _G.skillmettaton == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 22 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		 end
-            elseif _G.skillsans == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 33 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            elseif _G.skillchara == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 32 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            elseif _G.skillbetty == true then
-                if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value ~= 31 then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
-		end
-            else wait(999999999999999999999)
-            end
-	end
-
         if _G.skillflowey == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 then
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -825,10 +768,12 @@ function rollskill()
         if _G.skillfroggit == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 2 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -838,10 +783,12 @@ function rollskill()
         if _G.skillundyne == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 11 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -851,10 +798,12 @@ function rollskill()
         if _G.skillpapyrus == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -864,10 +813,12 @@ function rollskill()
         if _G.skillasgore == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -877,10 +828,12 @@ function rollskill()
         if _G.skillmettaton == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 22 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -890,10 +843,12 @@ function rollskill()
         if _G.skillsans == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 33 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -903,10 +858,12 @@ function rollskill()
         if _G.skillchara == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 32 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
@@ -916,15 +873,24 @@ function rollskill()
         if _G.skillbetty == true then
 	    if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 31 then 
 	        if _G.rollskilled == true then
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(0.5)
-		    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
-		    return
+		    if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                        wait(0.5)
+		        game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+		        return
+		    end
 		else
 		    return
 		end
             end
         end
+	
+	if game.Players.LocalPlayer.leaderstats.Kromer.Value > 100 then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            wait(0.5)
+            game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+	end
+
     end
 end
 
