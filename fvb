@@ -38,7 +38,7 @@ _G.skillsans = true
 _G.skillchara = true
 _G.skillbetty = true
 _G.truereset = false
-_G.playercframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+_G.autoTPKromererror404 = true
 
 --Functions
 function findboss()
@@ -1192,6 +1192,68 @@ function autodt()
     end
 end
 	
+function autoTPKromererror404()
+    while _G.autoTPKromererror404 == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals.error404sans2tel.Head.CFrame
+        wait(2)
+	findboss()
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2300,0)
+        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+            if obj.ClassName == "Part" then
+                obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+            end
+        end
+        _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+        for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetDescendants ()) do
+            if obj.ClassName == "UnionOperation" then
+                obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+            end
+        end
+	wait(2.2)
+	repeat
+	    for _, obj in pairs(_G.sslot.Bosses["1"].fperror404sans:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                end
+            end
+	    if _G.autoTPKromererror404 == false then return
+	    end
+            wait(0.5)
+        until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health ~= workspace.ActiveBosses.Slot1.Bosses["1"].fperror404sans.Enemy.MaxHealth
+	wait(2)
+        repeat
+            for _, obj in pairs(_G.sslot.Bosses["1"].fperror404sans:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                end
+            end
+	    if _G.autoTPKromererror404 == false then return
+	    end
+            wait(0.5)
+        until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health == workspace.ActiveBosses.Slot1.Bosses["1"].fperror404sans.Enemy.MaxHealth
+	_G.sslot.Bosses["1"].BasePart:WaitForChild("StringEnemy")
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2300,0)
+	wait(0.5)
+	_G.sslot.Bosses["1"].BasePart.StringEnemy.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	_G.sslot.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+	wait(0.1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].BasePart.StringEnemy.Head.Position)
+	repeat
+   	    wait(0.5)
+    	    if _G.sslot.Bosses["1"].BasePart:FindFirstChild("StringEnemy") then
+        	_G.sslot.Bosses["1"].BasePart.StringEnemy.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+        	_G.sslot.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+    	    end
+	    if _G.autoTPKromererror404 == false then return
+	    end
+	until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health == 0
+        wait(6)
+	if _G.autoTPKromererror404 == false then return
+	end
+    end
+end
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
