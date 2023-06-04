@@ -1295,9 +1295,6 @@ function owdbbug()
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
 	    wait(2)
 	    findboss()
-	    if _G.autopress == true then
-	        _G.autopress = false
-	    end
 	    wait(3.5)
 	    for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetChildren()) do
                 if obj.ClassName == "Part" then
@@ -1317,9 +1314,8 @@ function owdbbug()
 	    mouse1click()
 	    wait(5)
 	    bossfarm()
-	    if _G.autopress == false then
-	        _G.autopress = true
-	    end
+	    local weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
+	    keypress("0x"..weaponhb)
 	    repeat
 		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
                     if obj.ClassName == "Part" then
