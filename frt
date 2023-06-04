@@ -1344,6 +1344,9 @@ function owdbbug()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
 		wait(0.5)
             until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
+	    repeat
+	        wait(0.5)
+	    until workspace.ActiveBosses:FindFirstChild("Slot1") == false
 	until bufdmg == 6
     end
 end
