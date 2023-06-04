@@ -1,69 +1,46 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local Window = Rayfield:CreateWindow({
-   Name = "Unwavering hub",
-   LoadingTitle = "Unwavering hub",
-   LoadingSubtitle = "by YaoYN",
-   ConfigurationSaving = {
-      Enabled = false,
-      FolderName = nil, 
-      FileName = ""
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
-})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --Values
-_G.autoReset = false
-_G.autoLv = false
-_G.autoTP = false
-_G.autoKromer = false
-_G.rollskill = false
+_G.autoReset = true
+_G.autoLv = true
+_G.autoTP = true
+_G.autoKromer = true
+_G.rollskill = true
 _G.wspeed = 35
 _G.jpower = 80
-_G.autoTPKromerHard = false
+_G.autoTPKromerHard = true
 _G.autoclick = false
-_G.clcktime = 0.01
-_G.presstime = 0.3
+_G.clcktime = 0.5
+_G.presstime = 0.5
 _G.autopress = false
-_G.hotbar1 = false
-_G.hotbar2 = false
-_G.hotbar3 = false
-_G.hotbar4 = false
-_G.hotbar5 = false
-_G.hotbar6 = false
-_G.hotbar7 = false
-_G.hotbar8 = false
-_G.webhookid = false
-_G.webhook = false
-_G.autodt = false
-_G.dtgold = false
-_G.dttp = false
-_G.dtlv = false
-_G.skillflowey = false
-_G.skillfroggit = false
-_G.skillundyne = false
-_G.skillpapyrus = false
-_G.skillasgore = false
-_G.skillmettaton = false
-_G.skillsans = false
-_G.skillchara = false
-_G.skillbetty = false
+_G.hotbar1 = true
+_G.hotbar2 = true
+_G.hotbar3 = true
+_G.hotbar4 = true
+_G.hotbar5 = true
+_G.hotbar6 = true
+_G.hotbar7 = true
+_G.hotbar8 = true
+_G.webhookid = true
+_G.webhook = true
+_G.autodt = true
+_G.dtgold = true
+_G.dttp = true
+_G.dtlv = true
+_G.skillflowey = true
+_G.skillfroggit = true
+_G.skillundyne = true
+_G.skillpapyrus = true
+_G.skillasgore = true
+_G.skillmettaton = true
+_G.skillsans = true
+_G.skillchara = true
+_G.skillbetty = true
 _G.truereset = false
-_G.rollskilled = false
-_G.autoTPKromererror404 = false
+_G.autoTPKromererror404 = true
+_G.rollskilled = true
+_G.owdbbug = true
 
 --Functions
 function findboss()
@@ -460,9 +437,35 @@ function autoLv()
 		if _G.autoLv == false then return
                 end
             end
+            
+            if _G.autoLv == false then break
+            end
 	    
 	    if _G.autoReset == false then 
 	        if _G.autoLv == true then
+	            if _G.webhook == true then
+	                HttpService = game:GetService("HttpService")
+	                Webhook_URL = _G.webhookid
+
+	                local responce = request(
+	                {
+   	                 Url = Webhook_URL,
+   	                 Method = "POST",
+    	                Headers = {
+       	                 ['Content-Type'] = 'application/json'
+   	                 },
+    	                Body = HttpService:JSONEncode({
+       	                 ["content"] = "",
+       	                 ["embeds"] = {{
+        	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
+                             ["description"] = "if you want to auto reset turn on Enable Reset",
+                             ["type"] = "rich",
+                             ["color"] = tonumber(0xFFFF00)
+       	                 }}
+   	                 })
+	                }   
+	                )
+	            end
 	            repeat
 		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
 		        wait(2)
@@ -483,9 +486,6 @@ function autoLv()
                         wait(5.1)
 		    until _G.autoLv == false or _G.autoReset == true
 	        end
-            end
-	    
-	    if _G.autoLv == false then return
             end
             
 	    if _G.autoReset == true then
@@ -512,6 +512,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
 		    
@@ -535,6 +536,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -547,7 +549,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss3.Enemy.Health == 0
@@ -558,6 +560,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -570,7 +573,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss4.Enemy.Health == 0
@@ -581,6 +584,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -593,7 +597,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss5.Enemy.Health == 0
@@ -604,6 +608,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -616,7 +621,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss6.Enemy.Health == 0
@@ -627,6 +632,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
                         
@@ -639,7 +645,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss7.Enemy.Health == 0
@@ -650,6 +656,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -662,7 +669,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss8.Enemy.Health == 0
@@ -673,6 +680,7 @@ function autoLv()
 		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
 		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	            wait(6)
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		    break
 		end
             
@@ -685,7 +693,7 @@ function autoLv()
                             obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
                         end
                     end
-                    if _G.autoLv == false then return
+                    if _G.autoLv == false then break
                     end
 		    wait(0.2)
 	        until _G.sslot.Bosses["1"].Boss9.Enemy.Health == 0
@@ -693,6 +701,7 @@ function autoLv()
 	        repeat
 	            wait(0.05)
 	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+	        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 		game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	        wait(6)
 	    end
@@ -907,7 +916,7 @@ function autoTPKromerHard()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2385.57349, 534.416504, -744.736328, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
 	    wait(2)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game._G.sslot.Bosses["1"]["FS Emerald Papyrus"].Part.CFrame
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"]["FS Emerald Papyrus"].Part.CFrame
 	    findboss()
 	    repeat
 	        wait(0.05)
@@ -925,73 +934,73 @@ function autoclick()
 end
 
 function autopress()
-    while _G.autopress == true do
-        if _G.hotbar1 == true then
-            wait(_G.presstime)
-    	    keypress(0x31)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar2 == true then
-            wait(_G.presstime)
-    	    keypress(0x32)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar3 == true then
-            wait(_G.presstime)
-    	    keypress(0x33)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar4 == true then
-            wait(_G.presstime)
-    	    keypress(0x34)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar5 == true then
-            wait(_G.presstime)
-    	    keypress(0x35)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar6 == true then
-            wait(_G.presstime)
-    	    keypress(0x36)
-    	end
-    	if _G.autopress == false then break
-	end
-    	if _G.hotbar7 == true then
-            wait(_G.presstime)
-    	    keypress(0x37)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar8 == true then
-            wait(_G.presstime)
-    	    keypress(0x38)
-    	end
-    	if _G.autopress == false then break
-    	end
-    	if _G.hotbar1 == false then
-    	    if _G.hotbar2 == false then
-    	        if _G.hotbar3 == false then
-    	            if _G.hotbar4 == false then
-    	                if _G.hotbar5 == false then
-    	                    if _G.hotbar6 == false then
-    	                        if _G.hotbar7 == false then
-    	                            if _G.hotbar8 == false then
-    	                                wait(9999999999999999999999999999999999999999)
-    	                            end
-    	                        end
-    	                    end
-    	                end
-    	            end
-    	        end
-    	    end
-    	end
-    end
+while _G.autopress == true do
+if _G.hotbar1 == true then
+wait(_G.presstime)
+keypress(0x31)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar2 == true then
+wait(_G.presstime)
+keypress(0x32)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar3 == true then
+wait(_G.presstime)
+keypress(0x33)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar4 == true then
+wait(_G.presstime)
+keypress(0x34)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar5 == true then
+wait(_G.presstime)
+keypress(0x35)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar6 == true then
+wait(_G.presstime)
+keypress(0x36)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar7 == true then
+wait(_G.presstime)
+keypress(0x37)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar8 == true then
+wait(_G.presstime)
+keypress(0x38)
+end
+if _G.autopress == false then break
+end
+if _G.hotbar1 == false then
+if _G.hotbar2 == false then
+if _G.hotbar3 == false then
+if _G.hotbar4 == false then
+if _G.hotbar5 == false then
+if _G.hotbar6 == false then
+if _G.hotbar7 == false then
+if _G.hotbar8 == false then
+wait(9999999999999999999999999999999999999999)
+end
+end
+end
+end
+end
+end
+end
+end
+end
 end
 
 function autodt()
@@ -1095,6 +1104,26 @@ function autodt()
         elseif _G.dtgold == true then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["150M Gold"].Head.CFrame
         else
+            if _G.webhook == true then
+	        HttpService = game:GetService("HttpService")
+	        Webhook_URL = _G.webhookid
+
+	        local responce = request({
+   	        Url = Webhook_URL,
+   	        Method = "POST",
+    	        Headers = {['Content-Type'] = 'application/json'},
+    	            Body = HttpService:JSONEncode({
+       	            ["content"] = "",
+       	            ["embeds"] = {{
+            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you didnt chose reward!**",
+           	            ["description"] = "Make sure to chose at least one reward",
+           	            ["type"] = "rich",
+           	            ["color"] = tonumber(0xff0000)
+       	                    }}
+   	                })
+	            })
+            end
+	    
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
@@ -1117,12 +1146,6 @@ function autodt()
 		end
 		wait(0.5)
             until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	    
-	    if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-	        game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	        wait(6)
-		break
-	    end
         end
 	
 	repeat
@@ -1175,9 +1198,29 @@ function autodt()
 	
 	game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	wait(6)
+	
+	if _G.webhook == true then
+	    HttpService = game:GetService("HttpService")
+	        Webhook_URL = _G.webhookid
+
+	        local responce = request({
+   	        Url = Webhook_URL,
+   	        Method = "POST",
+    	        Headers = {['Content-Type'] = 'application/json'},
+    	            Body = HttpService:JSONEncode({
+       	            ["content"] = "",
+       	            ["embeds"] = {{
+            	        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you get a reward!**",
+           	            ["description"] = "You have "..game:GetService("Players").LocalPlayer.leaderstats.LV.Value.." Lv/ "..game:GetService("Players").LocalPlayer.leaderstats.TP.Value.." TP / "..game:GetService("Players").LocalPlayer.leaderstats.Gold.Value.." Gold",
+           	            ["type"] = "rich",
+           	            ["color"] = tonumber(0x00FF00)
+       	                    }}
+   	                })
+	            })
+	end
     end
 end
-
+	
 function autoTPKromererror404()
     while _G.autoTPKromererror404 == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals.error404sans2tel.Head.CFrame
@@ -1239,468 +1282,612 @@ function autoTPKromererror404()
 	end
     end
 end
---Farm
-local Tab = Window:CreateTab("Main")
-local Section = Tab:CreateSection("Auto Farm")
 
-local Toggle = Tab:CreateToggle({
-   Name = "Enable Reset",
-   CurrentValue = false,
-   Flag = "Reset", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autoReset = Value
-   end,
+function owdbbug()
+    while _G.owdbbug == true do
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
+	bufdmg = 0
+	repeat
+	    bufdmg = bufdmg + 1
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
+	    wait(2)
+	    findboss()
+	    wait(3.5)
+	    for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = obj.CFrame + Vector3.new(0,0,10)
+                end
+            end
+	    local glasses = 30 + game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Hotbar.Value
+	    keypress("0x"..glasses)
+	    wait(0.2)
+	    mouse1click()
+	    wait(1)
+	    local kil = 30 + game:GetService("Players").LocalPlayer.Backpack.Kill.Hotbar.Value
+	    keypress("0x"..kil)
+	    wait(0.2)
+	    mouse1click()
+	    wait(1)
+	    mouse1click()
+	    wait(5)
+	    bossfarm()
+	    local weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
+	    keypress("0x"..weaponhb)
+	    repeat
+		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                    end
+                end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Lancer.Head.Position)
+		wait(0.5)
+            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
+	    wait(1)
+	    repeat
+		for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetDescendants()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                    end
+                end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
+		wait(0.5)
+            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
+	    wait(10)
+	until bufdmg == 6
+    end
+end
+	
+--Auto Farm
+local FarmTab = Window:MakeTab({
+	Name = "Auto farm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Auto True Reset",
-   CurrentValue = false,
-   Flag = "True Reset", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.truereset = Value
-   end,
+local Section = FarmTab:AddSection({
+	Name = "Auto Farm"
 })
 
-local Label = Tab:CreateLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Lv Farm (Reset 7+)",
-   CurrentValue = false,
-   Flag = "Lv Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autoLv = Value
-   autoLv()
-   end,
+FarmTab:AddToggle({
+	Name = "Enable Reset",
+	Default = false,
+	Callback = function(Value)
+	_G.autoReset = Value	
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "TP Farm (lv 5000+)",
-   CurrentValue = false,
-   Flag = "TP Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autoTP = Value
-   autoTP()
-   end,
+FarmTab:AddToggle({
+	Name = "Auto True Reset",
+	Default = false,
+	Callback = function(Value)
+	_G.truereset = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Kromer Farm (lv 4250+)",
-   CurrentValue = false,
-   Flag = "Kromer Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autoKromer = Value
-   autoKromer()
-   end,
+FarmTab:AddLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
+
+FarmTab:AddToggle({
+	Name = "Lv Farm (Reset 7+)",
+	Default = false,
+	Callback = function(Value)
+        _G.autoLv = Value
+        autoLv()
+    end
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "TP and Kromer Farm (Required 6600LV 12Resets)",
-   CurrentValue = false,
-   Flag = "TPKromer Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autoTPKromerHard = Value
-   autoTPKromerHard()
-   end,
+FarmTab:AddToggle({
+	Name = "TP Farm (lv 5000+)",
+	Default = false,
+	Callback = function(Value)
+        _G.autoTP = Value
+        autoTP()
+    end
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Error404 TP and Kromer Farm (Requires 8000LV 3000TP 38Resets)",
-   CurrentValue = false,
-   Flag = "TPKromerError404 Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autoTPKromererror404 = Value
-   autoTPKromererror404()
-   end,
+FarmTab:AddToggle({
+	Name = "Kromer Farm (lv 4250+)",
+	Default = false,
+	Callback = function(Value)
+        _G.autoKromer = Value
+        autoKromer()
+    end
 })
 
-local Section = Tab:CreateSection("DT6")
-
-local Label = Tab:CreateLabel("Chose at least one reward")
-
-local Label = Tab:CreateLabel("If you chose more than one,it would being like Lv -> TP -> Gold")
-
-local Toggle = Tab:CreateToggle({
-   Name = "DT6 Farm",
-   CurrentValue = false,
-   Flag = "DT6 Farm", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.autodt = Value
-   autodt()
-   end,
+FarmTab:AddToggle({
+	Name = "TP and Kromer Farm (Required 6600LV 12Resets)",
+	Default = false,
+	Callback = function(Value)
+        _G.autoTPKromerHard = Value
+        autoTPKromerHard()
+    end
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "150M Gold",
-   CurrentValue = false,
-   Flag = "Gold DT6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.dtgold = Value
-   dtgold()
-   end,
+FarmTab:AddToggle({
+	Name = "Error404 TP and Kromer Farm (Requires 8000LV 3000TP 38Resets)",
+	Default = false,
+	Callback = function(Value)
+        _G.autoTPKromererror404 = Value
+        autoTPKromererror404()
+    end
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "1750 TP",
-   CurrentValue = false,
-   Flag = "TP DT6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.dttp = Value
-   dttp()
-   end,
+local Section = FarmTab:AddSection({
+	Name = "DT6"
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "200 Lv",
-   CurrentValue = false,
-   Flag = "LV DT6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.dtlv = Value
-   dtlv()
-   end,
+FarmTab:AddLabel("Chose at least one reward")
+
+FarmTab:AddLabel("If you chose more than one,it will Lv max then TP max then Gold")
+
+FarmTab:AddToggle({
+	Name = "DT6 Farm",
+	Default = false,
+	Callback = function(Value)
+        _G.autodt = Value
+        autodt()
+    end
+})
+
+FarmTab:AddToggle({
+	Name = "150M Gold",
+	Default = false,
+	Callback = function(Value)
+	_G.dtgold = Value
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "1750 TP",
+	Default = false,
+	Callback = function(Value)
+	_G.dttp = Value
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "200 Lv",
+	Default = false,
+	Callback = function(Value)
+	_G.dtlv = Value
+	end    
 })
 
 --Local
-local Tab = Window:CreateTab("Local")
-local Section = Tab:CreateSection("Main World Local")
-
-local Button = Tab:CreateButton({
-   Name = "Doodle Sphere",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2371.54492, 533.417664, -664.189697, 0.999889791, 7.84340446e-05, -0.0148477741, -0.000266837538, 0.999919474, -0.0126874493, 0.0148455836, 0.0126900123, 0.999809265)
-   end,
+local LocalTab = Window:MakeTab({
+	Name = "Local",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Button = Tab:CreateButton({
-   Name = "Spawn",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-24.2176151, 128.195923, 96.2679749, 0.999457359, 6.17527451e-09, 0.032939624, -9.36763644e-09, 1, 9.67612266e-08, -0.032939624, -9.70172849e-08, 0.999457359)
-   end,
+local Section = LocalTab:AddSection({
+	Name = "Main World Local"
 })
 
-local Button = Tab:CreateButton({
-   Name = "Snowdin",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(653.439941, 181.338318, -266.2453, 0.00180233037, 6.28873309e-08, -0.999998391, -8.02061066e-08, 1, 6.27428776e-08, 0.999998391, 8.00928888e-08, 0.00180233037)
-   end,
+LocalTab:AddButton({
+	Name = "Teleport To Doodle Sphere",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2371.54492, 533.417664, -664.189697, 0.999889791, 7.84340446e-05, -0.0148477741, -0.000266837538, 0.999919474, -0.0126874493, 0.0148455836, 0.0126900123, 0.999809265)
+    end    
 })
 
-local Button = Tab:CreateButton({
-   Name = "Waterfall",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1257.57751, 169.429352, 88.9650726, 0.998708546, -5.7520019e-08, 0.0508055575, 5.4436093e-08, 1, 6.20842542e-08, -0.0508055575, -5.92384204e-08, 0.998708546)
-   end,
+LocalTab:AddButton({
+	Name = "Teleport To Spawn",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-24.2176151, 128.195923, 96.2679749, 0.999457359, 6.17527451e-09, 0.032939624, -9.36763644e-09, 1, 9.67612266e-08, -0.032939624, -9.70172849e-08, 0.999457359)
+    end    
 })
 
-local Button = Tab:CreateButton({
-   Name = "Hotland",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-270.449005, 61.9409943, -1039.23596, 0.999999046, -4.23244637e-06, 0.00138114532, -4.23244637e-06, 0.999981225, 0.0061288327, -0.00138114532, -0.0061288327, 0.9999802710)
-   end,
+LocalTab:AddButton({
+	Name = "Teleport To Snowdin",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(653.439941, 181.338318, -266.2453, 0.00180233037, 6.28873309e-08, -0.999998391, -8.02061066e-08, 1, 6.27428776e-08, 0.999998391, 8.00928888e-08, 0.00180233037)
+    end    
 })
 
-local Button = Tab:CreateButton({
-   Name = "Core",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-196.685608, 138.589142, -1870.35071, 0.999830186, -9.0252108e-09, 0.0184282269, 7.86572762e-09, 1, 6.29913686e-08, -0.0184282269, -6.28357171e-08, 0.999830186)
-   end,
+LocalTab:AddButton({
+	Name = "Teleport To Waterfall",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1257.57751, 169.429352, 88.9650726, 0.998708546, -5.7520019e-08, 0.0508055575, 5.4436093e-08, 1, 6.20842542e-08, -0.0508055575, -5.92384204e-08, 0.998708546)
+    end    
 })
 
-local Button = Tab:CreateButton({
-   Name = "Barrier",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(500.602051, 271.163086, -1341.76501, 0.03912789, 0.110678345, -0.993085742, 7.56448415e-09, 0.993846834, 0.110763162, 0.9992342, -0.00433393661, 0.0388871282)
-   end,
+LocalTab:AddButton({
+	Name = "Teleport To Hotland",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-270.449005, 61.9409943, -1039.23596, 0.999999046, -4.23244637e-06, 0.00138114532, -4.23244637e-06, 0.999981225, 0.0061288327, -0.00138114532, -0.0061288327, 0.9999802710)
+    end    
 })
 
-local Button = Tab:CreateButton({
-   Name = "Final Room",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2474.2854, 255.795334, 133.112946, -0.0236631054, 0.0919846743, -0.995479226, 8.62032667e-09, 0.995758057, 0.0920104384, 0.999719977, 0.00217724429, -0.0235627294)
-   end,
+LocalTab:AddButton({
+	Name = "Teleport To Core",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-196.685608, 138.589142, -1870.35071, 0.999830186, -9.0252108e-09, 0.0184282269, 7.86572762e-09, 1, 6.29913686e-08, -0.0184282269, -6.28357171e-08, 0.999830186)
+    end    
+})
+
+LocalTab:AddButton({
+	Name = "Teleport To The Barrier",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(500.602051, 271.163086, -1341.76501, 0.03912789, 0.110678345, -0.993085742, 7.56448415e-09, 0.993846834, 0.110763162, 0.9992342, -0.00433393661, 0.0388871282)
+    end    
+})
+
+LocalTab:AddButton({
+	Name = "Teleport To Final Room",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2474.2854, 255.795334, 133.112946, -0.0236631054, 0.0919846743, -0.995479226, 8.62032667e-09, 0.995758057, 0.0920104384, 0.999719977, 0.00217724429, -0.0235627294)
+    end    
 })
    
 --Player 
-local Tab = Window:CreateTab("Player")
-local Section = Tab:CreateSection("Player")
-
-local Slider = Tab:CreateSlider({
-   Name = "WalkSpeed",
-   Range = {35, 500},
-   Increment = 1,
-   Suffix = "Walk Speed",
-   CurrentValue = 35,
-   Flag = "Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.wspeed = Value
-   wspeed()
-   end,
+local PlayerTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Slider = Tab:CreateSlider({
-   Name = "JumpPower",
-   Range = {80, 500},
-   Increment = 1,
-   Suffix = "Jump Power",
-   CurrentValue = 80,
-   Flag = "Jump", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.jpower = Value
-   jpower()
-   end,
+local Section = PlayerTab:AddSection({
+	Name = "Player"
+})
+
+PlayerTab:AddSlider({
+	Name = "Walk Speed",
+	Min = 35,
+	Max = 500,
+	Default = 35,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walk Speed",
+	Callback = function(Value)
+		_G.wspeed = Value
+		wspeed()
+	end    
+})
+
+PlayerTab:AddSlider({
+	Name = "JumpPower",
+	Min = 80,
+	Max = 500,
+	Default = 80,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jump Power",
+	Callback = function(Value)
+		_G.jpower = Value
+		jpower()
+	end    
+})
+
+local Section = PlayerTab:AddSection({
+	Name = "Dmg boost(bug)"
+})
+
+PlayerTab:AddLabel("Required Kill and Broken Glasses")
+
+PlayerTab:AddLabel("also it will auto off and on auto use weapon")
+
+PlayerTab:AddLabel("should be chose hotbar first")
+
+PlayerTab:AddToggle({
+	Name = "Auto buff dmg other world(bug)",
+	Default = false,
+	Callback = function(Value)
+		_G.owdbbug = Value
+		owdbbug()
+	end    
 })
 
 --Shop Reroll
-local Tab = Window:CreateTab("Shop")
-local Section = Tab:CreateSection("Skill Roll")
-
-local Label = Tab:CreateLabel("Chose what skill you want to keep before roll skill")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Reroll Skill(100+ Kromer)",
-   CurrentValue = false,
-   Flag = "skillroll", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.rollskill = Value
-   rollskill()
-   end,
+local ShopTab = Window:MakeTab({
+	Name = "Shop",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Reroll Skilled(200+ Kromer)",
-   CurrentValue = false,
-   Flag = "skillrolled", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.rollskilled = Value
-   end,
+local Section = ShopTab:AddSection({
+	Name = "Skill Roll"
 })
 
-local Section = Tab:CreateSection("Keep Skill")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Flowey",
-   CurrentValue = false,
-   Flag = "Flowey", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillflowey = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Auto Reroll Skill(100+ Kromer)",
+	Default = false,
+	Callback = function(Value)
+		_G.rollskill = Value
+		rollskill()
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Froggit",
-   CurrentValue = false,
-   Flag = "Froggit", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillfroggit = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Auto Reroll Skilled(200+ Kromer)",
+	Default = false,
+	Callback = function(Value)
+		_G.rollskilled = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Undyne",
-   CurrentValue = false,
-   Flag = "Undyne", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillundyne = Value
-   end,
+local Section = ShopTab:AddSection({
+	Name = "Keep Skill"
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Papyrus",
-   CurrentValue = false,
-   Flag = "Papyrus", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillpapyrus = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Flowey",
+	Default = false,
+	Callback = function(Value)
+		_G.skillflowey = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Asgore",
-   CurrentValue = false,
-   Flag = "Asgore", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillasgore = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Froggit",
+	Default = false,
+	Callback = function(Value)
+		_G.skillfroggit = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Mettaton",
-   CurrentValue = false,
-   Flag = "Mettaton", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillmettaton = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Undyne",
+	Default = false,
+	Callback = function(Value)
+		_G.skillundyne = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Sans",
-   CurrentValue = false,
-   Flag = "Sans", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillsans = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Papyrus",
+	Default = false,
+	Callback = function(Value)
+		_G.skillpapyrus = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Chara",
-   CurrentValue = false,
-   Flag = "Chara", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillchara = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Asgore",
+	Default = false,
+	Callback = function(Value)
+		_G.skillasgore = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Betty",
-   CurrentValue = false,
-   Flag = "Betty", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.skillbetty = Value
-   end,
+ShopTab:AddToggle({
+	Name = "Mettaton",
+	Default = false,
+	Callback = function(Value)
+		_G.skillmettaton = Value
+	end    
 })
+
+ShopTab:AddToggle({
+	Name = "Sans",
+	Default = false,
+	Callback = function(Value)
+		_G.skillsans = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Chara",
+	Default = false,
+	Callback = function(Value)
+		_G.skillchara = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Betty",
+	Default = false,
+	Callback = function(Value)
+		_G.skillbetty = Value
+	end    
+})
+
 
 --Misc
-local Tab = Window:CreateTab("Misc")
-local Section = Tab:CreateSection("Auto click/press")
-
-local Label = Tab:CreateLabel("Must chose at least one hotbar to do auto use weapon")
-
-local Keybind = Tab:CreateKeybind({
-   Name = "Auto Clicker",
-   CurrentKeybind = "F",
-   HoldToInteract = false,
-   Flag = "clicker", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Keybind)
-       if _G.autoclick == true then _G.autoclick = false
-       elseif
-       _G.autoclick == false then _G.autoclick = true
-       end
-       autoclick()
-   end,
+local MiscTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Keybind = Tab:CreateKeybind({
-   Name = "Auto use weapon",
-   CurrentKeybind = "G",
-   HoldToInteract = false,
-   Flag = "weapon", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Keybind)
-       if _G.autopress == true then _G.autopress = false
-       elseif
-       _G.autopress == false then _G.autopress = true
-       end
-       autopress()
-   end,
+local Section = MiscTab:AddSection({
+	Name = "auto click/press"
 })
 
-local Section = Tab:CreateSection("Weapon restore")
+MiscTab:AddLabel("Make Sure To Chose At Least One Hotbar")
+
+MiscTab:AddBind({
+	Name = "Auto Clicker",
+	Default = Enum.KeyCode.F,
+	Hold = false,
+	Callback = function()
+		if _G.autoclick == true then _G.autoclick = false
+        	elseif
+        	_G.autoclick == false then _G.autoclick = true
+        	end
+        	autoclick()
+	end    
+})
+
+MiscTab:AddBind({
+	Name = "Auto Use Weapon",
+	Default = Enum.KeyCode.G,
+	Hold = false,
+	Callback = function()
+		if _G.autopress == true then _G.autopress = false
+        	elseif
+        	_G.autopress == false then _G.autopress = true
+        	end
+        	autopress()
+	end    
+})
+
+local Section = MiscTab:AddSection({
+	Name = "Weapon Restore"
+})
 	
-local Label = Tab:CreateLabel("Click it if you lost your weapon in hotbar after you dead")
+MiscTab:AddLabel("Click it if you lost your weapon in hotbar after you dead")
 
-local Button = Tab:CreateButton({
-   Name = "Restore",
-   Callback = function()
-   game.Players.LocalPlayer.Backpack:ClearAllChildren()
-   game.Players.LocalPlayer.Character.Humanoid.Health = 0
-   end,
+MiscTab:AddButton({
+	Name = "Restore",
+	Callback = function()
+      		game.Players.LocalPlayer.Backpack:ClearAllChildren()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.883789, -1900.42139, -541.843628, -0.999506295, -0.0309412293, -0.00545577426, -8.27816393e-09, 0.173648462, -0.98480773, 0.031418547, -0.984321535, -0.173562735)
+  	end    
 })
 
-local Section = Tab:CreateSection("Hotbar chose")	
-
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 1",
-   CurrentValue = false,
-   Flag = "hotbar1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar1 = Value
-   end,
+	
+local Section = MiscTab:AddSection({
+	Name = "Hotbar Chose"
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 2",
-   CurrentValue = false,
-   Flag = "hotbar2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar2 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 1",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar1 = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 3",
-   CurrentValue = false,
-   Flag = "hotbar3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar3 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 2",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar2 = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 4",
-   CurrentValue = false,
-   Flag = "hotbar4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar4 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 3",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar3 = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 5",
-   CurrentValue = false,
-   Flag = "hotbar5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar5 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 4",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar4 = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 6",
-   CurrentValue = false,
-   Flag = "hotbar6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar6 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 5",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar5 = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 7",
-   CurrentValue = false,
-   Flag = "hotbar7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar7 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 6",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar6 = Value
+	end    
 })
 
-local Toggle = Tab:CreateToggle({
-   Name = "Hotbar 8",
-   CurrentValue = false,
-   Flag = "hotbar8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.hotbar8 = Value
-   end,
+MiscTab:AddToggle({
+	Name = "Hotbar 7",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar7 = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Hotbar 8",
+	Default = false,
+	Callback = function(Value)
+		_G.hotbar8 = Value
+	end    
 })
 
 --Settings
-local Tab = Window:CreateTab("Settings")
-local Section = Tab:CreateSection("Settings")
-
-local Slider = Tab:CreateSlider({
-   Name = "Change delay time of auto click",
-   Range = {0.01, 0.5},
-   Increment = 0.01,
-   Suffix = "s delay every click",
-   CurrentValue = 0.01,
-   Flag = "delayclick", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.clcktime = Value
-   end,
+local SettingTab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Slider = Tab:CreateSlider({
-   Name = "Change delay time of auto use weapon",
-   Range = {0.2, 4},
-   Increment = 0.1,
-   Suffix = "s delay every change weapon",
-   CurrentValue = 0.3,
-   Flag = "delaypress", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   _G.presstime = Value
-   end,
+local Section = SettingTab:AddSection({
+	Name = "Settings"
+})
+
+SettingTab:AddSlider({
+	Name = "Change Delay Time For Auto Click",
+	Min = 0.01,
+	Max = 0.5,
+	Default = 0.01,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.01,
+	ValueName = "delay every click",
+	Callback = function(Value)
+		_G.clcktime = Value
+	end    
+})
+
+SettingTab:AddSlider({
+	Name = "Change Delay Time For Auto Press",
+	Min = 0.2,
+	Max = 4,
+	Default = 0.3,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.1,
+	ValueName = "delay every press",
+	Callback = function(Value)
+		_G.presstime = Value
+	end    
+})
+
+local Section = SettingTab:AddSection({
+	Name = "Webhook"
+})
+
+SettingTab:AddTextbox({
+	Name = "Webhook",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+		_G.webhookid = Value
+	end	  
+})
+
+SettingTab:AddToggle({
+	Name = "Sent Webhook",
+	Default = false,
+	Callback = function(Value)
+		_G.webhook = Value
+	end    
+})
+
+SettingTab:AddButton({
+	Name = "Webhook test",
+	Callback = function()
+      		HttpService = game:GetService("HttpService")
+Webhook_URL = _G.webhookid
+
+local responce = request(
+{
+    Url = Webhook_URL,
+    Method = "POST",
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "",
+        ["embeds"] = {{
+            ["title"] = "**Your Webhook Working!**",
+            ["description"] = game.Players.LocalPlayer.DisplayName .." keep your determination ",
+            ["type"] = "rich",
+            ["color"] = tonumber(0x00FF00)
+        }}
+    })
+}   
+)
+  	end    
 })
