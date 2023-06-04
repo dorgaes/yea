@@ -1293,6 +1293,7 @@ function owdbbug()
 	repeat
 	    bufdmg = bufdmg + 1
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
+	    workspace.ActiveBosses:WaitForChild("Slot1")
 	    wait(2)
 	    findboss()
 	    wait(3.5)
