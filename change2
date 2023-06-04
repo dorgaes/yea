@@ -1293,6 +1293,12 @@ function owdbbug()
 	repeat
 	    bufdmg = bufdmg + 1
 	    repeat
+	        wait(0.5)
+	    until game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Enabled == true
+	    repeat
+	        wait(0.5)
+	    until game:GetService("Players").LocalPlayer.Backpack.Kill.Enabled == true
+	    repeat
 	        if workspace.ActiveBosses:FindFirstChild("Slot1") then
 		    wait(0.1)
 		else 
@@ -1310,6 +1316,7 @@ function owdbbug()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = obj.CFrame + Vector3.new(0,0,10)
                 end
             end
+	    wait(1)
 	    local glasses = 30 + game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Hotbar.Value
 	    keypress("0x"..glasses)
 	    wait(0.2)
@@ -1323,7 +1330,7 @@ function owdbbug()
 	    mouse1click()
 	    wait(5)
 	    bossfarm()
-	    local weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
+	    weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
 	    keypress("0x"..weaponhb)
 	    repeat
 		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
@@ -1344,6 +1351,7 @@ function owdbbug()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
 		wait(0.5)
             until _G.sslot.Bosses["1"].Susie.Enemy.Health == 0
+	    keypress("0x"..weaponhb)
 	    wait(10)
 	until bufdmg == 6
     end
