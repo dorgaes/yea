@@ -1335,7 +1335,7 @@ function owdbbug()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
 		wait(0.5)
             until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
-	    wait(6)
+	    wait(10)
 	until bufdmg == 6
     end
 end
