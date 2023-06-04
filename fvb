@@ -1296,7 +1296,7 @@ function owdbbug()
 	    wait(2)
 	    findboss()
 	    if _G.autopress == true then
-	        _G.autopress == false
+	        _G.autopress = false
 	    end
 	    wait(3.5)
 	    for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetChildren()) do
@@ -1318,7 +1318,8 @@ function owdbbug()
 	    wait(5)
 	    bossfarm()
 	    if _G.autopress == false then
-	        _G.autopress == true
+	        _G.autopress = true
+	    end
 	    repeat
 		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
                     if obj.ClassName == "Part" then
