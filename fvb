@@ -40,6 +40,7 @@ _G.skillbetty = true
 _G.truereset = false
 _G.autoTPKromererror404 = true
 _G.rollskilled = true
+_G.owdbbug = true
 
 --Functions
 function findboss()
