@@ -1282,6 +1282,66 @@ function autoTPKromererror404()
     end
 end
 
+function owdbbug()
+    while _G.owdbbug == true do
+        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
+	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
+	bufdmg = 0
+	repeat
+	    bufdmg = bufdmg + 1
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
+	    wait(2)
+	    findboss()
+	    if _G.autopress == true then
+	        _G.autopress == false
+	    end
+	    wait(3.5)
+	    for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetChildren()) do
+                if obj.ClassName == "Part" then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = obj.CFrame + Vector3.new(0,0,10)
+                end
+            end
+	    local glasses = 30 + game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Hotbar.Value
+	    keypress("0x"..glasses)
+	    wait(0.2)
+	    mouse1click()
+	    wait(1)
+	    local kil = 30 + game:GetService("Players").LocalPlayer.Backpack.Kill.Hotbar.Value
+	    keypress("0x"..kil)
+	    wait(0.2)
+	    mouse1click()
+	    wait(1)
+	    mouse1click()
+	    wait(5)
+	    bossfarm()
+	    if _G.autopress == false then
+	        _G.autopress == true
+	    repeat
+		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                    end
+                end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Lancer.Head.Position)
+		wait(0.5)
+            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
+	    wait(1)
+	    repeat
+		for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetDescendants()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                    end
+                end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
+		wait(0.5)
+            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
+	    wait(6)
+	until bufdmg == 6
+    end
+end
+	
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1500,6 +1560,25 @@ PlayerTab:AddSlider({
 	Callback = function(Value)
 		_G.jpower = Value
 		jpower()
+	end    
+})
+
+local Section = PlayerTab:AddSection({
+	Name = "Dmg boost(bug)"
+})
+
+PlayerTab:AddLabel("Required Kill and Broken Glasses")
+
+PlayerTab:AddLabel("also it will auto off and on auto use weapon")
+
+PlayerTab:AddLabel("should be chose hotbar first")
+
+PlayerTab:AddToggle({
+	Name = "Auto buff dmg other world(bug)",
+	Default = false,
+	Callback = function(Value)
+		_G.owdbbug = Value
+		owdbbug()
 	end    
 })
 
