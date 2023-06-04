@@ -1292,6 +1292,13 @@ function owdbbug()
 	bufdmg = 0
 	repeat
 	    bufdmg = bufdmg + 1
+	    repeat
+	        if workspace.ActiveBosses:FindFirstChild("Slot1") then
+		    wait(0.1)
+		else 
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
+		end
+	    until workspace.ActiveBosses:FindFirstChild("Slot1")
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
 	    workspace.ActiveBosses:WaitForChild("Slot1")
 	    wait(2)
@@ -1336,7 +1343,8 @@ function owdbbug()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
 		wait(0.5)
             until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
-	    wait(10)
+	    local weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
+	    keypress("0x"..weaponhb)
 	until bufdmg == 6
     end
 end
