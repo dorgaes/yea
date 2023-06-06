@@ -219,6 +219,7 @@ function autoLv()
 	            if _G.autoLv == false then return
                     end
 		    wait(0.2)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].UndyneULTRA.Head.Position)
                 until _G.sslot.Bosses["1"].UndyneULTRA.Enemy.Health == 0
 		wait(5.1)
 		if _G.autoLv == false then return
