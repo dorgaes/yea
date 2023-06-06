@@ -1551,51 +1551,24 @@ local Section = PlayerTab:AddSection({
 	Name = "Player"
 })
 
-PlayerTab:AddSlider({
+PlayerTab:AddTextbox({
 	Name = "Walk Speed",
-	Min = 35,
-	Max = 500,
-	Default = 35,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Walk Speed",
+	Default = "35",
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.wspeed = Value
 		wspeed()
-	end    
+	end	  
 })
 
-PlayerTab:AddSlider({
+PlayerTab:AddTextbox({
 	Name = "JumpPower",
-	Min = 80,
-	Max = 500,
-	Default = 80,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Jump Power",
+	Default = "80",
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.jpower = Value
 		jpower()
-	end    
-})
-
-local Section = PlayerTab:AddSection({
-	Name = "Dmg boost(bug)"
-})
-
-PlayerTab:AddLabel("Required Kill and Broken Glasses")
-
-PlayerTab:AddLabel("also it will auto off and on auto use weapon")
-
-PlayerTab:AddLabel("should be chose hotbar first")
-
-PlayerTab:AddToggle({
-	Name = "Auto buff dmg other world(bug)",
-	Default = false,
-	Callback = function(Value)
-		_G.owdbbug = Value
-		owdbbug()
-	end    
+	end	  
 })
 
 --Shop Reroll
