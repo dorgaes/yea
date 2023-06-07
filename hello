@@ -1,0 +1,53 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--Values
+_G.boss = flowey
+_G.autofarm = true
+
+--function
+function findbossname()
+    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+        if obj.Name == "dorgaes" then
+            for _, obj in pairs(obj.Parent.Parent.Bosses["1"]:GetChildren()) do
+                if obj.ClassName == "Model" then
+                    _G.findbossname = obj
+                end
+            end
+        end
+    end
+end
+
+function autofarm(0
+    while _G.autofarm == true do
+        if _G.boss == "flowey" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Flowey tel"].Head.CFrame
+        if _G.boss == "froggit" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Froggit tel"].Head.CFrame
+--tab
+local Tab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Section"
+})
+
+Tab:AddToggle({
+	Name = "auto farm",
+	Default = false,
+	Callback = function(Value)
+		_G.autofarm = Value
+    autofarm()
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Dropdown",
+	Default = "flowey",
+	Options = {"flowey", "froggit"},
+	Callback = function(Value)
+		_G.boss = Value
+	end    
+})
