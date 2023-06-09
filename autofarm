@@ -55,10 +55,15 @@ function autoLv()
         else
             if game.Players.LocalPlayer.leaderstats.LV.Value == 1 then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Flowey tel"].Head.CFrame
-                wait(4)
+                wait(2)
                 findboss()
-                wait(0.1)
+                wait(1)
                 boss()
+                wait(2.5)
+                repeat
+                    _G.sslot.Bosses["1"].Boss.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,_G.range)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Boss.Head.Position)
+                
             end
                 
                 
