@@ -12,15 +12,20 @@ function boss()
         end
     end
     wait(1)
+    for _, obj in pairs(_G.sslot.Bosses["1"]:GetChildren()) do
+        if obj.ClassName == "Model" then
+            _G.bossname = obj.Name
+        end
+    end
     repeat
         wait(0.5)
-        for _, obj in pairs(_G.sslot.Bosses["1"]:GetChildren()) do
-            if obj.ClassName == Model then
-            _G.bossname = obj.Name
-                _G.bossname.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,_G.range)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+        for _, obj in pairs(_G.bossname:GetChildren()) do
+            if obj.ClassName == "Part" then
+                _G.bosspart = obj.Name
             end
         end
+         _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
     until _G.bossname.Enemy.Health == 0
     wait(5.2)
 end
@@ -59,10 +64,6 @@ function autoLv()
                 findboss()
                 wait(1)
                 boss()
-                wait(2.5)
-                repeat
-                    _G.sslot.Bosses["1"].Boss.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,_G.range)
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Boss.Head.Position)
                 
             end
                 
