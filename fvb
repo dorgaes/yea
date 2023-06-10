@@ -91,6 +91,7 @@ function boss()
          _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
          lvstop()
+	 wait(0,1)
     until _G.bosspart.Parent.Enemy.Health == 0
     wait(5.2)
 end
