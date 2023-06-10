@@ -80,14 +80,14 @@ function boss()
         end
     end
     wait(1)
-    repeat
-        for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
-            if obj.ClassName == "TouchTransmitter" then
-                if obj.Parent.Parent.ClassName == "Model" then
-                    _G.bosspart = obj.Parent
-                end
+    for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+        if obj.ClassName == "TouchTransmitter" then
+            if obj.Parent.Parent.ClassName == "Model" then
+                _G.bosspart = obj.Parent
             end
         end
+    end
+    repeat
          _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
          lvstop()
