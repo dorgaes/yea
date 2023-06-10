@@ -115,6 +115,7 @@ function lvstop()
     repeat
         if _G.autoLv == false then break
         end
+	wait(0.1)
     until a == a
 end
 
