@@ -524,6 +524,7 @@ function autoLv()
                                 if game.Players.LocalPlayer.leaderstats.Reset.Value >= 30 then break
                                 end
                             end
+			    lvstop()
                         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
                         repeat
                             wait(0.1)
@@ -531,6 +532,14 @@ function autoLv()
                         game.Players.LocalPlayer.Backpack:ClearAllChildren()
                         workspace.CharacterHolder.gfiraht:ClearAllChildren()
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
+	            end
+		end
+	    end
+	end
+	wait(6)
+	lvstop()
+    end
+end
                 
                  
                 
