@@ -21,12 +21,6 @@ function boss()
     end
     wait(1)
     repeat
-        for _, obj in pairs(_G.sslot.Bosses["1"]:GetChildren()) do
-            if obj.ClassName == "Model" then
-                bossname = obj.Name
-            end
-        end
-        wait(0.1)
         for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
             if obj.ClassName == "TouchTransmitter" then
                 if obj.Parent.Parent.ClassName == "Model" then
@@ -36,8 +30,24 @@ function boss()
         end
          _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
+         lvstop()
     until _G.bosspart.Parent.Enemy.Health == 0
     wait(5.2)
+end
+
+function resetboss()
+    repeat
+        for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+            if obj.ClassName == "TouchTransmitter" then
+                if obj.Parent.Parent.ClassName == "Model" then
+                    _G.bosspart = obj.Parent
+                end
+            end
+        end
+         _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,10)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
+         lvstop()
+    until _G.bosspart.Parent.Enemy.Health == 0
 end
         
 function lvstop()
@@ -423,7 +433,105 @@ function autoLv()
             lvstop()
         end
         lvstop()
+        if _G.autoReset == false then 
+            if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
+                if game.Players.LocalPlayer.leaderstats.TP.Value >= 70 then
+                    if game.Players.LocalPlayer.leaderstats.Gold.Value >= 30000000 then
+                        if _G.webhook == true then
+                            HttpService = game:GetService("HttpService")
+	                        Webhook_URL = _G.webhookid
+
+	                        local responce = request(
+	                        {
+   	                         Url = Webhook_URL,
+   	                         Method = "POST",
+    	                        Headers = {
+       	                         ['Content-Type'] = 'application/json'
+   	                         },
+    	                        Body = HttpService:JSONEncode({
+       	                         ["content"] = "",
+       	                         ["embeds"] = {{
+        	                        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
+                                     ["description"] = "if you want to auto reset turn on Enable Reset",
+                                     ["type"] = "rich",
+                                     ["color"] = tonumber(0xFFFF00)
+       	                         }}
+   	                         })
+	                        }   
+	                        )
+	                    end
+                    while _G.autoReset == false do
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["outersans tel"].Head.CFrame
+                        wait(2)
+                        findboss()
+                        wait(2)
+                        boss()
+                        lvstop()
+                    end
+                    lvstop()
+                    
         
+        end
+        if _G.autoReset == true then 
+            if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
+                if game.Players.LocalPlayer.leaderstats.TP.Value >= 70 then
+                    if game.Players.LocalPlayer.leaderstats.Gold.Value >= 30000000 then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["resetrush tel"].Head.CFrame
+                        wait(2)
+                        findboss()
+                        wait(2)
+                        boss()
+                        repeat
+                            if game.Players.LocalPlayer.leaderstats.Reset.Value == 0 then break
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss2") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value == 1 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss3") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value < 5 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss4") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value < 10 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss5") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value < 15 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss6") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value < 20 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss7") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value < 25 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss8") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value < 30 then break
+                                end
+                            end
+                            if _G.sslot.Bosses["1"]:FindFirstChild("Boss9") then
+                                resetboss()
+                                if game.Players.LocalPlayer.leaderstats.Reset.Value >= 30 then break
+                                end
+                            end
+                        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+                        repeat
+                            wait(0.1)
+                        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+                        game.Players.LocalPlayer.Backpack:ClearAllChildren()
+                        workspace.CharacterHolder.gfiraht:ClearAllChildren()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
+                
                  
                 
                 
