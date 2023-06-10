@@ -205,17 +205,7 @@ function autoLv()
             lvstop()
         end
         lvstop()
-        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 1 then
-            while game.Players.LocalPlayer.leaderstats.LV.Value < 305 do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Errorsans tel"].Head.CFrame
-                wait(2)
-                findboss()
-                wait(2)
-                boss()
-                lvstop()
-            end
-            lvstop()
-        else
+        if game.Players.LocalPlayer.leaderstats.Reset.Value == 0 then
             while game.Players.LocalPlayer.leaderstats.LV.Value < 230 do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFAsgore tel"].Head.CFrame
                 wait(2)
@@ -243,6 +233,29 @@ function autoLv()
                 lvstop()
             end
             lvstop()
+        else
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 305 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Errorsans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+        end
+        lvstop()
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 2 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1600 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["SixSoulsAsgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+        else
             while game.Players.LocalPlayer.leaderstats.LV.Value < 400 do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["XSans tel"].Head.CFrame
                 wait(2)
@@ -324,6 +337,23 @@ function autoLv()
                 lvstop()
             end
             lvstop()
+        end
+        lvstop()
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 2 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 3045 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Sus tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+        end
+        lvstop()
+        if game.Players.LocalPlayer.leaderstats.Reset.Value <= 1 then
+        
+        
                 
                 
                 
