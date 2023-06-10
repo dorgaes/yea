@@ -111,8 +111,10 @@ function resetboss()
 end
         
 function lvstop()
-    if _G.autoLv == false then break
-    end
+    repeat
+        if _G.autoLv == false then break
+        end
+    until a == a
 end
 
 function autoLv()
@@ -124,7 +126,7 @@ function autoLv()
                 findboss()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,120,0)
                 wait(2)
-                while _G.sslot.Bosses["1"].Grillby.HP.Value ~= 0
+                while _G.sslot.Bosses["1"].Grillby.HP.Value ~= 0 do
                     if _G.sslot.Bosses["1"].BasePart:FindFirstChild("GrillbyActButton") then
                         _G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
                     end
@@ -529,8 +531,9 @@ function autoLv()
                         lvstop()
                     end
                     lvstop()
-                    
-        
+                    end
+		end
+	    end
         end
         if _G.autoReset == true then 
             if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
