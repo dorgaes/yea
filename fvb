@@ -81,15 +81,18 @@ function boss()
     end
     wait(1.5) 
     for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
-        repeat
-            if obj.Name == "Head" then
-                _G.bossname = obj.Parent
-		_G.bossname.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
-            end
-            lvstop()
-	    wait(0,1)
-        until _G.bosspart.Enemy.Health == 0
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0,1)
+            until obj.Parent.Enemy.Health == 0
+        end
     end
     wait(5.2)
 end
