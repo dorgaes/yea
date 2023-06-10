@@ -91,6 +91,7 @@ function boss()
 		            end
 		        end
                 wait(0,1)
+		lvstop()
             until obj.Parent.Enemy.Health == 0
         end
     end
