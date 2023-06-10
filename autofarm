@@ -1,3 +1,11 @@
+function findboss()
+    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+        if obj.Name == "gfiraht" then
+            _G.sslot = obj.Parent.Parent
+        end
+    end
+end
+
 function boss()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
@@ -12,21 +20,23 @@ function boss()
         end
     end
     wait(1)
-    for _, obj in pairs(_G.sslot.Bosses["1"]:GetChildren()) do
-        if obj.ClassName == "Model" then
-            _G.bossname = obj.Name
-        end
-    end
     repeat
-        wait(0.5)
-        for _, obj in pairs(_G.bossname:GetChildren()) do
-            if obj.ClassName == "Part" then
-                _G.bosspart = obj.Name
+        for _, obj in pairs(_G.sslot.Bosses["1"]:GetChildren()) do
+            if obj.ClassName == "Model" then
+                bossname = obj.Name
+            end
+        end
+        wait(0.1)
+        for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+            if obj.ClassName == "TouchTransmitter" then
+                if obj.Parent.Parent.ClassName == "Model" then
+                    _G.bosspart = obj.Parent
+                end
             end
         end
          _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
-    until _G.bossname.Enemy.Health == 0
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
+    until _G.bosspart.Parent.Enemy.Health == 0
     wait(5.2)
 end
         
@@ -58,13 +68,296 @@ function autoLv()
             end
             lvstop()
         else
-            if game.Players.LocalPlayer.leaderstats.LV.Value == 1 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value == 1 do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Flowey tel"].Head.CFrame
                 wait(2)
                 findboss()
-                wait(1)
+                wait(2)
                 boss()
-                
+                lvstop()
             end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 5 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Toriel tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 10 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Papyrus tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 15 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Undyne tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 20 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Muffet tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 25 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Mettaton EX Tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 35 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Asgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 50 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Asriel tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 60 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Mettaton NEO tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 65 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFToriel tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 75 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFMettaton tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 90 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFPapyrus tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 125 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFUndyne tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 150 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFSans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 200 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFAsgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+        end
+        lvstop()
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 1 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 305 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Errorsans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+        else
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 230 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFAsgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 275 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["ultra sans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 340 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Nightmare sans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 400 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["XSans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 430 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Negatale sans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 500 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Inksans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1000 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Hyperdeath tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1250 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["OOF boss tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1500 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["DustTrust tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1700 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["SANESSS tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 2000 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["SixSoulsAsgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 3045 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["XGaster tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            lvstop()
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
