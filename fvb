@@ -67,7 +67,7 @@ function findboss()
 end
 
 function boss()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
         if obj.ClassName == "Part" then
             obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
