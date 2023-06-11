@@ -1,0 +1,4 @@
+function autobestweapon()
+    while _G.autobestweapon == true do
+        for _, obj in pairs(game.Players.LocalPlayer.ToolFolder:GetChildren()) do
+            if 
