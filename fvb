@@ -117,17 +117,48 @@ function multiboss()
 		            end
 		        end
                 wait(0,1)
-		if _G.autoLv == false then break
+            until obj.Parent.Enemy.Health == 0
+	    wait(5.2)
+        end
+    end
+end
+
+function otherboss()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+    wait(1.5) 
+    for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0.1)
+		if _G.otherboss == false then break
 		end
             until obj.Parent.Enemy.Health == 0
 	    wait(5.2)
-	    if _G.autoLv == false then break
+	    if _G.otherboss == false then break
 	    end
         end
-	if _G.autoLv == false then break
+	if _G.otherboss == false then break
 	end
     end
-    if _G.autoLv == false then break
+    if _G.otherboss == false then break
     end
 end
 
@@ -652,23 +683,44 @@ end
 function autoTP()
     while _G.autoTP == true do
         repeat
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
             wait(2)
-	    findboss()
-	    wait(1)
-            bossfarm()
-	    wait(2.5)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-                if _G.autoTP == false then break
-                end
-		wait(0.2)
-	    until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
-            wait(5.1)
+            findboss()
+            wait(2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
+            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+                 if obj.ClassName == "Part" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+             for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+                 if obj.ClassName == "UnionOperation" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             wait(1.5) 
+             for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+                 if obj.Name == "Head" then
+                     _G.bossname = obj.Parent
+                     repeat
+                         for _, obj in pairs(_G.bossname:GetChildren()) do
+                             if obj.ClassName == "Part" then
+                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		                     end
+		                 end
+                         wait(0.1)
+		         if _G.autoTP == false then break
+		         end
+                     until obj.Parent.Enemy.Health == 0
+	             wait(5.2)
+	             if _G.autoTP == false then break
+	             end
+                 end
+	         if _G.autoTP == false then break
+	         end
+             end
 	until _G.autoTP == false
     end
 end
@@ -678,21 +730,42 @@ function autoKromer()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 	    wait(2)
-	    findboss()
-	    wait(1)
-            bossfarm()
-	    wait(2.5)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].Rudinn:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-                if _G.autoKromer == false then return
-                end
-		wait(0.2)
-	    until _G.sslot.Bosses["1"].Rudinn.Enemy.Health == 0
-            wait(5.1)
+            findboss()
+            wait(2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
+            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+                 if obj.ClassName == "Part" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+             for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+                 if obj.ClassName == "UnionOperation" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             wait(1.5) 
+             for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+                 if obj.Name == "Head" then
+                     _G.bossname = obj.Parent
+                     repeat
+                         for _, obj in pairs(_G.bossname:GetChildren()) do
+                             if obj.ClassName == "Part" then
+                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		                     end
+		                 end
+                         wait(0.1)
+		         if _G.autoKromer == false then break
+		         end
+                     until obj.Parent.Enemy.Health == 0
+	             wait(5.2)
+	             if _G.autoKromer == false then break
+	             end
+                 end
+	         if _G.autoKromer == false then break
+	         end
+             end
 	until _G.autoKromer == false
     end
 end
