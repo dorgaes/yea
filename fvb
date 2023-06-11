@@ -101,8 +101,6 @@ function boss()
 	if _G.autoLv == false then break
 	end
     end
-    if _G.autoLv == false then break
-    end
 end
 
 function multiboss()
@@ -157,8 +155,6 @@ function otherboss()
         end
 	if _G.otherboss == false then break
 	end
-    end
-    if _G.otherboss == false then break
     end
 end
 
