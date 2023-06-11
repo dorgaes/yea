@@ -124,10 +124,12 @@ end
         
 function lvstop()
     repeat
-        if _G.autoLv == false then return
+        if _G.autoLv == true then
+	    break
+	else 
+            return
         end
-	wait(0.1)
-    until a == a
+    until true == true
 end
 
 function autoLv()
