@@ -108,7 +108,7 @@ function resetboss()
             repeat
                 for _, obj in pairs(_G.bossname:GetChildren()) do
                     if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,9)
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,5)
 		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
