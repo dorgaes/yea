@@ -160,11 +160,6 @@ end
 
 function autoLv()
     while _G.autoLv == true do
-        if workspace.ActiveBosses:FindFirstDescendant("gfiraht") then
-	    findboss()
-            wait(2)
-            multiboss()
-	end
         if game.Players.LocalPlayer.leaderstats.Reset.Value >= 7 then
             if game.Players.LocalPlayer.leaderstats.LV.Value < 200 then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["grillby tel"].Head.CFrame
@@ -1487,78 +1482,6 @@ FarmTab:AddToggle({
 	end    
 })
 
---otherboss
-local OtherTab = Window:MakeTab({
-	Name = "Other Boss",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = OtherTab:AddSection({
-	Name = "Main Boss"
-})
-
-OtherTab:AddDropdown({
-	Name = "Boss Chose",
-	Default = "1",
-	Options = {"1", "2"},
-	Callback = function(Value)
-		_G.bosschosenamemain = Value
-	end    
-})
-
-OtherTab:AddToggle({
-	Name = "Auto Boss",
-	Default = false,
-	Callback = function(Value)
-		_G.Otherbossfarmmain = Value
-		Otherbossfarm()
-	end    
-})
-
-local Section = OtherTab:AddSection({
-	Name = "Other Boss"
-})
-
-OtherTab:AddDropdown({
-	Name = "Boss Chose",
-	Default = "1",
-	Options = {"1", "2"},
-	Callback = function(Value)
-		_G.bosschosenameother = Value
-	end    
-})
-
-OtherTab:AddToggle({
-	Name = "Auto Boss",
-	Default = false,
-	Callback = function(Value)
-		_G.Otherbossfarmother = Value
-		Otherbossfarm()
-	end    
-})
-
-local Section = OtherTab:AddSection({
-	Name = "CODE Boss"
-})
-
-OtherTab:AddDropdown({
-	Name = "Boss Chose",
-	Default = "1",
-	Options = {"1", "2"},
-	Callback = function(Value)
-		_G.bosschosenamecode = Value
-	end    
-})
-
-OtherTab:AddToggle({
-	Name = "Auto Boss",
-	Default = false,
-	Callback = function(Value)
-		_G.Otherbossfarmcode = Value
-		Otherbossfarm()
-	end    
-})
 --Local
 local LocalTab = Window:MakeTab({
 	Name = "Local",
