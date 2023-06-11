@@ -160,6 +160,11 @@ end
 
 function autoLv()
     while _G.autoLv == true do
+        if workspace.ActiveBosses:FindFirstDescendant("gfiraht") then
+	    findboss()
+            wait(2)
+            multiboss()
+	end
         if game.Players.LocalPlayer.leaderstats.Reset.Value >= 7 then
             if game.Players.LocalPlayer.leaderstats.LV.Value < 200 then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["grillby tel"].Head.CFrame
