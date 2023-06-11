@@ -80,7 +80,7 @@ function boss()
         end
     end
     wait(1.5) 
-    for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+    for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
             _G.bossname = obj.Parent
             repeat
@@ -104,7 +104,7 @@ function boss()
 end
 
 function multiboss()
-    for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+    for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
             _G.bossname = obj.Parent
             repeat
@@ -135,7 +135,7 @@ function otherboss()
         end
     end
     wait(1.5) 
-    for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+    for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
             _G.bossname = obj.Parent
             repeat
