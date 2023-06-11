@@ -390,7 +390,7 @@ function autoLv()
                 if _G.autoLv == false then break
 	        end
             end
-            while game.Players.LocalPlayer.leaderstats.LV.Value < 500 do
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 800 do
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Inksans tel"].Head.CFrame
                 wait(2)
                 findboss()
@@ -400,7 +400,7 @@ function autoLv()
 	        end
             end
             while game.Players.LocalPlayer.leaderstats.LV.Value < 1000 do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Hyperdeath tel"].Head.CFrame
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Betty tel"].Head.CFrame
                 wait(2)
                 findboss()
                 wait(2)
