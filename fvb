@@ -116,11 +116,11 @@ function multiboss()
 		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0,1)
+                wait(0.1)
             until obj.Parent.Enemy.Health == 0
-	    wait(5.2)
         end
     end
+    wait(5.2)
 end
 
 function otherboss()
