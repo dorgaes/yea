@@ -86,38 +86,45 @@ function boss()
             repeat
                 for _, obj in pairs(_G.bossname:GetChildren()) do
                     if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,9)
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,8)
 		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
                 wait(0,1)
 		lvstop()
             until obj.Parent.Enemy.Health == 0
-	   lvstop()
+	    lvstop()
         end
 	lvstop()
     end
     wait(5.2)
+    lvstop()
 end
 
 function resetboss()
-    repeat
-        for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
-            if obj.ClassName == "TouchTransmitter" then
-                if obj.Parent.Parent.ClassName == "Model" then
-                    _G.bosspart = obj.Parent
-                end
-            end
+    for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,8)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0,1)
+		lvstop()
+            until obj.Parent.Enemy.Health == 0
+	    lvstop()
         end
-         _G.bosspart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,10)
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bosspart.Position)
-         lvstop()
-    until _G.bosspart.Parent.Enemy.Health == 0
+	lvstop()
+    end
+    lvstop()
 end
         
 function lvstop()
     repeat
-        if _G.autoLv == false then break
+        if _G.autoLv == false then return
         end
 	wait(0.1)
     until a == a
