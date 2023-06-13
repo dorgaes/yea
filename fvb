@@ -60,7 +60,7 @@ end
 
 function findboss()
     for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
-        if obj.Name == "gfiraht" then
+        if obj.Name == "dorgaes" then
             _G.sslot = obj.Parent.Parent
         end
     end
@@ -662,7 +662,7 @@ function autoLv()
                             wait(0.1)
                         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
                         game.Players.LocalPlayer.Backpack:ClearAllChildren()
-			for _, obj in pairs(workspace.CharacterHolder.gfirhat:GetChildren()) do 
+			for _, obj in pairs(workspace.CharacterHolder.dorgaes:GetChildren()) do 
                             if obj.ClassName == "Tool" then
 			        obj:Destroy()
 		            end
