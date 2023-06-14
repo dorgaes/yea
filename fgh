@@ -40,17 +40,9 @@ _G.skillbetty = true
 _G.truereset = false
 _G.autoTPKromererror404 = true
 _G.rollskilled = true
-_G.owdbbug = true
+_G.autoepicsans = true
 
 --Functions
-function findboss()
-    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
-        if obj.Name == "dorgaes" then
-            _G.sslot = obj.Parent.Parent
-        end
-    end
-end
-
 function dtback()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-2000,0)
     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
@@ -66,8 +58,16 @@ function dtback()
     end
 end
 
-function bossfarm()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2000,0)
+function findboss()
+    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+        if obj.Name == "dorgaes" then
+            _G.sslot = obj.Parent.Parent
+        end
+    end
+end
+
+function boss()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
     for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
         if obj.ClassName == "Part" then
             obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
@@ -79,655 +79,644 @@ function bossfarm()
             obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
         end
     end
+    wait(1.5) 
+    for _, obj in pairs(_G.sslot:GetDescendants()) do
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0.1)
+		if _G.autoLv == false then break
+		end
+            until obj.Parent.Enemy.Health == 0
+	    wait(5.2)
+	    if _G.autoLv == false then break
+	    end
+        end
+	if _G.autoLv == false then break
+	end
+    end
+end
+
+function multiboss()
+    for _, obj in pairs(_G.sslot:GetDescendants()) do
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0.1)
+            until obj.Parent.Enemy.Health == 0
+        end
+    end
+    wait(5.2)
+end
+
+function otherboss()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
+    for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+        if obj.ClassName == "Part" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+    _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+    for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+        if obj.ClassName == "UnionOperation" then
+            obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+        end
+    end
+    wait(1.5) 
+    for _, obj in pairs(_G.sslot:GetDescendants()) do
+        if obj.Name == "Head" then
+            _G.bossname = obj.Parent
+            repeat
+                for _, obj in pairs(_G.bossname:GetChildren()) do
+                    if obj.ClassName == "Part" then
+                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		            end
+		        end
+                wait(0.1)
+		if _G.otherboss == false then break
+		end
+            until obj.Parent.Enemy.Health == 0
+	    wait(5.2)
+	    if _G.otherboss == false then break
+	    end
+        end
+	if _G.otherboss == false then break
+	end
+    end
 end
 
 function autoLv()
     while _G.autoLv == true do
         if game.Players.LocalPlayer.leaderstats.Reset.Value >= 7 then
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 200)
-            do
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(953.379272, 183.278214, -343.080353, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                    wait(2)
-                    findboss()
-		    wait(1)
-		    bossfarm()
-		    repeat
-		        if _G.sslot.Bosses["1"].BasePart:FindFirstChild("GrillbyActButton") then
-			_G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
-			end
-			if _G.autoLv == false then return
-                        end
-		        wait(0.1)
-                    until _G.sslot.Bosses["1"].Grillby.HP.Value == 0
-		    repeat
-		        wait(0.05)
-		    until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
-                    wait(5.1)
-                    if _G.autoLv == false then return
+            if game.Players.LocalPlayer.leaderstats.LV.Value < 200 then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["grillby tel"].Head.CFrame
+                wait(4)
+                findboss()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,120,0)
+                wait(2)
+                while _G.sslot.Bosses["1"].Grillby.HP.Value ~= 0 do
+                    if _G.sslot.Bosses["1"].BasePart:FindFirstChild("GrillbyActButton") then
+                        _G.sslot.Bosses["1"].BasePart.GrillbyActButton.HitBox.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
                     end
+                    wait(0.1)
+                end
+                repeat
+                    wait(0.5)
+                until _G.sslot.Bosses["1"].Grillby.Enemy.Health == 0
+                wait(5.2)
             end
-	else
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/underreset7"))()
+            if _G.autoLv == false then break
+	    end
+        else
+            while game.Players.LocalPlayer.leaderstats.LV.Value == 1 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Flowey tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 5 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Toriel tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end            
+	    end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 10 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Papyrus tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 15 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Undyne tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 20 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Muffet tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 25 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Mettaton EX Tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 35 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Asgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 50 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Asriel tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 60 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Mettaton NEO tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 65 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFToriel tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 75 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFMettaton tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 90 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFPapyrus tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 125 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFUndyne tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 150 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFSans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 200 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFAsgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+        end
+        if _G.autoLv == false then break
 	end
-             
-	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 305)
-            do
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.7200089, 139.595917, -137.199783, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	        wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"]["error sans"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"]["error sans"].Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 1 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 305 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Errorsans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                lvstop()
+            end
+            if _G.autoLv == false then break
 	    end
-	    
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 1250)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.463684, 65.2882614, -1284.24158, -0.980785012, 0, 0.195093334, 0, 1, 0, -0.195093334, 0, -0.980785012)
+        else
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 230 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["UFAsgore tel"].Head.CFrame
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-                    for _, obj in pairs(_G.sslot.Bosses["1"].Imposter:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-                until _G.sslot.Bosses["1"].Imposter.Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
-            end
-	    
-	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1500)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4898186, 173.817627, -367.354919, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-		wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"]["Dusttrust sans"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"]["Dusttrust sans"].Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
-	    end
-	    
-	    while (game.Players.LocalPlayer.leaderstats.LV.Value < 1600)
-            do
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.07959, 534.316895, -580.354309, -0.991448522, 0, -0.130497962, 0, 1, 0, 0.130497962, 0, -0.991448522)
-		wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].SANESSS:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-    		until _G.sslot.Bosses["1"].SANESSS.Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
-	    end
-	    
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 3045)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2425.78149, 534.416504, -587.87262, -0.843312979, 0, -0.537422776, 0, 1, 0, 0.537422776, 0, -0.843312979)
+                findboss()
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-                    for _, obj in pairs(_G.sslot.Bosses["1"].UndyneULTRA:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-                until _G.sslot.Bosses["1"].UndyneULTRA.Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
+                boss()
+                if _G.autoLv == false then break
+	        end
             end
-            
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 3250)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8427.22949, 1245.69019, -917.139893, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 275 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["ultra sans tel"].Head.CFrame
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].TEMMIE:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
-            end
-            
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 3985)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2443.57935, 532.41748, -443.823029, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
+                findboss()
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"]["OOF head"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"]["OOF head"].Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
+                boss()
+                if _G.autoLv == false then break
+	        end
             end
-            
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 4900)
-            do
-	        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8431.5293, 1245.69019, -778.839844, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 340 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Nightmare sans tel"].Head.CFrame
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].BOB:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"].BOB.Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
-            end
-	    
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 5500)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2403.30225, 534.416504, -572.865234, -0.980785012, 0, -0.195093334, 0, 1, 0, 0.195093334, 0, -0.980785012)
+                findboss()
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"]["HyperDT Sans"]:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"]["HyperDT Sans"].Enemy.Health == 0
-		wait(5.1)
-		if _G.autoLv == false then return
-                end
+                boss()
+                if _G.autoLv == false then break
+	        end
             end
-            
-            while (game.Players.LocalPlayer.leaderstats.LV.Value < 6000)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
-                wait(5.1)
-		if _G.autoLv == false then return
-                end
+        end
+        if _G.autoLv == false then break
+	end
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 2 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1600 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Ultraundyne tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
             end
-            
-	    if _G.truereset == true then
-	        if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 30 then
-		    if game:GetService("Players").LocalPlayer.leaderstats.TrueReset == 0 then
-		        while (game.Players.LocalPlayer.leaderstats.LV.Value < 7500)
-                        do
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		            wait(2)
-		            findboss()
-		            wait(1)
-		            bossfarm()
-		            wait(2.5)
-		            repeat
-		                for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
-                                    if obj.ClassName == "Part" then
-                                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                                    end
-                                end
-	                        if _G.autoLv == false then return
-                                end
-		                wait(0.2)
-		            until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
-                            wait(5.1)
-		            if _G.autoLv == false then return
-                            end
-			end
-			
-			while (game.Players.LocalPlayer.leaderstats.TP.Value < 4000) 
-			do
-			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(2)
-		            findboss()
-		            wait(1)
-		            bossfarm()
-		            wait(2.5)
-		            repeat
-		                for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
-                                    if obj.ClassName == "Part" then
-                                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                                    end
-                                end
-	                        if _G.autoLv == false then return
-                                end
-		                wait(0.2)
-		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
-                            wait(5.1)
-		            if _G.autoLv == false then return
-                            end
-			end
-			
-			while (game.Players.LocalPlayer.leaderstats.Gold.Value < 1000000000) 
-			do
-			    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                            wait(2)
-		            findboss()
-		            wait(1)
-		            bossfarm()
-		            wait(2.5)
-		            repeat
-		                for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
-                                    if obj.ClassName == "Part" then
-                                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                                    end
-                                end
-	                        if _G.autoLv == false then return
-                                end
-		                wait(0.2)
-		            until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
-                            wait(5.1)
-		            if _G.autoLv == false then return
-                            end
-			end
+        else
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 400 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["XSans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 430 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Negatale sans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 800 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Inksans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1000 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Betty tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1250 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["OOF boss tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1500 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["DustTrust tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 1700 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["SANESSS tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 2000 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["SixSoulsAsgore tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 3045 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["XGaster tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+        end
+        if _G.autoLv == false then break
+	end
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 5 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 3045 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Ultraundyne tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+        end
+        if _G.autoLv == false then break
+	end
+        if game.Players.LocalPlayer.leaderstats.Reset.Value >= 0 then
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 3545 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Temmie tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 3985 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Dog tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 4900 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Bob tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 5500 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Hyperdustsans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+            while game.Players.LocalPlayer.leaderstats.LV.Value < 6000 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["outersans tel"].Head.CFrame
+                wait(2)
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
+	        end
+            end
+        end
+	if _G.autoLv == false then break
+	end
+	if _G.truereset == true then
+	    if game.Players.LocalPlayer.leaderstats.Reset.Value == 30 then
+	        if game.Players.LocalPlayer.leaderstats.TrueReset.Value == 0 then
+		    while game:GetService("Players").LocalPlayer.leaderstats.LV.Value < 7500 do
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["outersans tel"].Head.CFrame
+                        wait(2)
+                        findboss()
+                        wait(2)
+                        boss()
+                        if _G.autoLv == false then break
+	                end
 		    end
 		end
 	    end
-
-            while (game.Players.LocalPlayer.leaderstats.Gold.Value < 30000000)
-            do
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	end
+        if _G.autoLv == false then break
+	end
+        if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
+            while game:GetService("Players").LocalPlayer.leaderstats.Gold.Value < 30000000 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
                 wait(2)
-		findboss()
-		wait(1)
-		bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-	            if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-		until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
-                wait(5.1)
-		if _G.autoLv == false then return
-                end
-            end
-            
-            if _G.autoLv == false then break
-            end
-	    
-	    if _G.autoReset == false then 
-	        if _G.autoLv == true then
-	            if _G.webhook == true then
-	                HttpService = game:GetService("HttpService")
-	                Webhook_URL = _G.webhookid
-
-	                local responce = request(
-	                {
-   	                 Url = Webhook_URL,
-   	                 Method = "POST",
-    	                Headers = {
-       	                 ['Content-Type'] = 'application/json'
-   	                 },
-    	                Body = HttpService:JSONEncode({
-       	                 ["content"] = "",
-       	                 ["embeds"] = {{
-        	                ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
-                             ["description"] = "if you want to auto reset turn on Enable Reset",
-                             ["type"] = "rich",
-                             ["color"] = tonumber(0xFFFF00)
-       	                 }}
-   	                 })
-	                }   
-	                )
-	            end
-	            repeat
-		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
-		        wait(2)
-		        findboss()
-		        wait(1)
-		        bossfarm()
-		        wait(2.5)
-			repeat
-		            for _, obj in pairs(_G.sslot.Bosses["1"].OuterSans:GetChildren()) do
-                                if obj.ClassName == "Part" then
-                                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                                end
-                            end
-	                    if _G.autoLv == false then return
-                            end
-		            wait(0.2)
-		        until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
-                        wait(5.1)
-		    until _G.autoLv == false or _G.autoReset == true
+                findboss()
+                wait(2)
+                boss()
+                if _G.autoLv == false then break
 	        end
             end
-            
-	    if _G.autoReset == true then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.13379, 279.970581, 131.539795, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                wait(2)
-		findboss()
-		wait(1)
-                bossfarm()
-		wait(2.5)
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss1:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss1.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 0 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
-		end
-		    
-		_G.sslot.Bosses["1"]:WaitForChild("Boss2")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss2:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then return
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss2.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 1 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
-		end
-            
-                _G.sslot.Bosses["1"]:WaitForChild("Boss3")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss3:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
+        end
+        if _G.autoLv == false then break
+	end
+        if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
+	    if game:GetService("Players").LocalPlayer.leaderstats.Gold.Value >= 30000000 then
+                while game:GetService("Players").LocalPlayer.leaderstats.TP.Value < 70 do
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
+                    wait(2)
+                    findboss()
+                    wait(2)
+                    boss()
                     if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss3.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 2 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
+	            end
 		end
-                        
-                _G.sslot.Bosses["1"]:WaitForChild("Boss4")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss4:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss4.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 10 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
+            end
+        end
+        if _G.autoLv == false then break
+	end
+	if _G.truereset == true then
+	    if game.Players.LocalPlayer.leaderstats.Reset.Value == 30 then
+	        if game.Players.LocalPlayer.leaderstats.TrueReset.Value == 0 then
+		    while game:GetService("Players").LocalPlayer.leaderstats.TP.Value < 4000 do
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
+                        wait(2)
+                        findboss()
+                        wait(2)
+                        boss()
+                        if _G.autoLv == false then break
+	                end
+		    end
+		    while game:GetService("Players").LocalPlayer.leaderstats.Gold.Value < 1000000000 do
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
+                        wait(2)
+                        findboss()
+                        wait(2)
+                        boss()
+                        if _G.autoLv == false then break
+	                end
+		    end
 		end
-                        
-                _G.sslot.Bosses["1"]:WaitForChild("Boss5")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss5:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss5.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 15 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
-		end
-                        
-                _G.sslot.Bosses["1"]:WaitForChild("Boss6")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss6:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss6.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 20 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
-		end
-                        
-                _G.sslot.Bosses["1"]:WaitForChild("Boss7")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss7:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss7.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 25 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
-		end
-            
-                _G.sslot.Bosses["1"]:WaitForChild("Boss8")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss8:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss8.Enemy.Health == 0
-		
-		if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value < 30 then
-		    repeat
-		        wait(0.05)
-		    until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-		    game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	            wait(6)
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		    break
-		end
-            
-                _G.sslot.Bosses["1"]:WaitForChild("Boss9")
-                wait(0.1)
-            
-		repeat
-		    for _, obj in pairs(_G.sslot.Bosses["1"].Boss9:GetChildren()) do
-                        if obj.ClassName == "Part" then
-                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                        end
-                    end
-                    if _G.autoLv == false then break
-                    end
-		    wait(0.2)
-	        until _G.sslot.Bosses["1"].Boss9.Enemy.Health == 0
-	    
-	        repeat
-	            wait(0.05)
-	        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
-		game.Players.LocalPlayer.Backpack:ClearAllChildren()
-	        wait(6)
 	    end
+	end
+	if _G.autoLv == false then break
+	end
+        if _G.autoReset == false then 
+            if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
+                if game.Players.LocalPlayer.leaderstats.TP.Value >= 70 then
+                    if game.Players.LocalPlayer.leaderstats.Gold.Value >= 30000000 then
+                        if _G.webhook == true then
+                            HttpService = game:GetService("HttpService")
+	                        Webhook_URL = _G.webhookid
+
+	                        local responce = request(
+	                        {
+   	                         Url = Webhook_URL,
+   	                         Method = "POST",
+    	                        Headers = {
+       	                         ['Content-Type'] = 'application/json'
+   	                         },
+    	                        Body = HttpService:JSONEncode({
+       	                         ["content"] = "",
+       	                         ["embeds"] = {{
+        	                        ["title"] = "**"..game.Players.LocalPlayer.DisplayName.." you were able to reset now!**",
+                                     ["description"] = "if you want to auto reset turn on Enable Reset",
+                                     ["type"] = "rich",
+                                     ["color"] = tonumber(0xFFFF00)
+       	                         }}
+   	                         })
+	                        }   
+	                        )
+	                end
+                        while _G.autoReset == false do
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["outersans tel"].Head.CFrame
+                            wait(2)
+                            findboss()
+                            wait(2)
+                            boss()
+                            if _G.autoLv == false then break
+	                    end
+                        end
+                    end
+		end
+	    end
+        end
+	if _G.autoLv == false then break
+	end
+        if _G.autoReset == true then 
+            if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000 then
+                if game.Players.LocalPlayer.leaderstats.TP.Value >= 70 then
+                    if game.Players.LocalPlayer.leaderstats.Gold.Value >= 30000000 then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["resetrush tel"].Head.CFrame
+                        wait(2)
+                        findboss()
+                        wait(3)
+                        boss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss2")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss3")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss4")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss5")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss6")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss7")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss8")
+			multiboss()
+			_G.sslot.Bosses["1"]:WaitForChild("Boss9")
+			multiboss()
+                        repeat
+			    if _G.autoLv == false then break
+	                    end
+                            wait(0.1)
+                        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+                        game.Players.LocalPlayer.Backpack:ClearAllChildren()
+			for _, obj in pairs(workspace.CharacterHolder.dorgaes:GetChildren()) do 
+                            if obj.ClassName == "Tool" then
+			        obj:Destroy()
+		            end
+			end
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/dorgaes/yea/main/webhook"))()
+			wait(6)
+	            end
+		end
+	    end
+	end
     end
 end
 
 function autoTP()
     while _G.autoTP == true do
         repeat
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1373.04004, 197.739136, -89.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
             wait(2)
-	    findboss()
-	    wait(1)
-            bossfarm()
-	    wait(2.5)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].SansStrong:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-                if _G.autoTP == false then break
-                end
-		wait(0.2)
-	    until _G.sslot.Bosses["1"].SansStrong.Enemy.Health == 0
-            wait(5.1)
+            findboss()
+            wait(2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
+            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+                 if obj.ClassName == "Part" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+             for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+                 if obj.ClassName == "UnionOperation" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             wait(1.5) 
+             for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+                 if obj.Name == "Head" then
+                     _G.bossname = obj.Parent
+                     repeat
+                         for _, obj in pairs(_G.bossname:GetChildren()) do
+                             if obj.ClassName == "Part" then
+                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		                     end
+		                 end
+                         wait(0.1)
+		         if _G.autoTP == false then break
+		         end
+                     until obj.Parent.Enemy.Health == 0
+	             wait(5.2)
+	             if _G.autoTP == false then break
+	             end
+                 end
+	         if _G.autoTP == false then break
+	         end
+             end
 	until _G.autoTP == false
     end
 end
@@ -737,21 +726,42 @@ function autoKromer()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 	    wait(2)
-	    findboss()
-	    wait(1)
-            bossfarm()
-	    wait(2.5)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].Rudinn:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-                if _G.autoKromer == false then return
-                end
-		wait(0.2)
-	    until _G.sslot.Bosses["1"].Rudinn.Enemy.Health == 0
-            wait(5.1)
+            findboss()
+            wait(2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
+            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
+                 if obj.ClassName == "Part" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
+             for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
+                 if obj.ClassName == "UnionOperation" then
+                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
+                 end
+             end
+             wait(1.5) 
+             for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
+                 if obj.Name == "Head" then
+                     _G.bossname = obj.Parent
+                     repeat
+                         for _, obj in pairs(_G.bossname:GetChildren()) do
+                             if obj.ClassName == "Part" then
+                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+		                     end
+		                 end
+                         wait(0.1)
+		         if _G.autoKromer == false then break
+		         end
+                     until obj.Parent.Enemy.Health == 0
+	             wait(5.2)
+	             if _G.autoKromer == false then break
+	             end
+                 end
+	         if _G.autoKromer == false then break
+	         end
+             end
 	until _G.autoKromer == false
     end
 end
@@ -1282,64 +1292,17 @@ function autoTPKromererror404()
 	end
     end
 end
-
-function owdbbug()
-    while _G.owdbbug == true do
-        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
-	bufdmg = 0
-	repeat
-	    bufdmg = bufdmg + 1
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
-	    wait(2)
-	    findboss()
-	    wait(3.5)
-	    for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = obj.CFrame + Vector3.new(0,0,10)
-                end
-            end
-	    local glasses = 30 + game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Hotbar.Value
-	    keypress("0x"..glasses)
-	    wait(0.2)
-	    mouse1click()
-	    wait(1)
-	    local kil = 30 + game:GetService("Players").LocalPlayer.Backpack.Kill.Hotbar.Value
-	    keypress("0x"..kil)
-	    wait(0.2)
-	    mouse1click()
-	    wait(1)
-	    mouse1click()
-	    wait(5)
-	    bossfarm()
-	    local weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
-	    keypress("0x"..weaponhb)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Lancer.Head.Position)
-		wait(0.5)
-            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
-	    wait(1)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetDescendants()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
-		wait(0.5)
-            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
-	    wait(6)
-	until bufdmg == 6
+	
+function autoepicsans()
+    while _G.otherboss == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["epicsans tel"].Head.CFrame
+        wait(2)
+        findboss()
+        wait(2)
+        otherboss()
     end
 end
-	
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1370,7 +1333,7 @@ FarmTab:AddToggle({
 FarmTab:AddLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
 
 FarmTab:AddToggle({
-	Name = "Lv Farm (Reset 7+)",
+	Name = "Lv Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoLv = Value
@@ -1379,7 +1342,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "TP Farm (lv 5000+)",
+	Name = "TP Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoTP = Value
@@ -1388,7 +1351,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "Kromer Farm (lv 4250+)",
+	Name = "Kromer Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoKromer = Value
@@ -1397,7 +1360,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "TP and Kromer Farm (Required 6600LV 12Resets)",
+	Name = "TP and Kromer Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoTPKromerHard = Value
@@ -1406,11 +1369,20 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "Error404 TP and Kromer Farm (Requires 8000LV 3000TP 38Resets)",
+	Name = "Error404 TP and Kromer Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoTPKromererror404 = Value
         autoTPKromererror404()
+    end
+})
+
+FarmTab:AddToggle({
+	Name = "Epic sans Farm",
+	Default = false,
+	Callback = function(Value)
+        _G.otherboss = Value
+        autoepicsans()
     end
 })
 
@@ -1533,51 +1505,24 @@ local Section = PlayerTab:AddSection({
 	Name = "Player"
 })
 
-PlayerTab:AddSlider({
+PlayerTab:AddTextbox({
 	Name = "Walk Speed",
-	Min = 35,
-	Max = 500,
-	Default = 35,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Walk Speed",
+	Default = "35",
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.wspeed = Value
 		wspeed()
-	end    
+	end	  
 })
 
-PlayerTab:AddSlider({
+PlayerTab:AddTextbox({
 	Name = "JumpPower",
-	Min = 80,
-	Max = 500,
-	Default = 80,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Jump Power",
+	Default = "80",
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.jpower = Value
 		jpower()
-	end    
-})
-
-local Section = PlayerTab:AddSection({
-	Name = "Dmg boost(bug)"
-})
-
-PlayerTab:AddLabel("Required Kill and Broken Glasses")
-
-PlayerTab:AddLabel("also it will auto off and on auto use weapon")
-
-PlayerTab:AddLabel("should be chose hotbar first")
-
-PlayerTab:AddToggle({
-	Name = "Auto buff dmg other world(bug)",
-	Default = false,
-	Callback = function(Value)
-		_G.owdbbug = Value
-		owdbbug()
-	end    
+	end	  
 })
 
 --Shop Reroll
