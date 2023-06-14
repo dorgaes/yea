@@ -1294,12 +1294,12 @@ function autoTPKromererror404()
 end
 	
 function autoepicsans()
-    while _G.autoepicsans == true do
+    while _G.otherboss == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["epicsans tel"].Head.CFrame
         wait(2)
         findboss()
         wait(2)
-        boss()
+        otherboss()
     end
 end
 
@@ -1381,7 +1381,7 @@ FarmTab:AddToggle({
 	Name = "Epic sans Farm",
 	Default = false,
 	Callback = function(Value)
-        _G.autoepicsans = Value
+        _G.otherboss = Value
         autoepicsans()
     end
 })
