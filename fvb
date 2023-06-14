@@ -40,7 +40,7 @@ _G.skillbetty = true
 _G.truereset = false
 _G.autoTPKromererror404 = true
 _G.rollskilled = true
-_G.owdbbug = true
+_G.autoepicsans = true
 
 --Functions
 function dtback()
@@ -1292,81 +1292,17 @@ function autoTPKromererror404()
 	end
     end
 end
-
-function owdbbug()
-    while _G.owdbbug == true do
-        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Broken Glasses",1)
-	game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Kill",2)
-	bufdmg = 0
-	repeat
-	    bufdmg = bufdmg + 1
-	    repeat
-	        wait(0.5)
-	    until game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Enabled == true
-	    repeat
-	        wait(0.5)
-	    until game:GetService("Players").LocalPlayer.Backpack.Kill.Enabled == true
-	    repeat
-	        if workspace.ActiveBosses:FindFirstChild("Slot1") then
-		    wait(0.1)
-		else 
-		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
-		    wait(0.1)
-		end
-	    until workspace.ActiveBosses:FindFirstChild("Slot1")
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Twobadguys tel"].Head.CFrame
-	    workspace.ActiveBosses:WaitForChild("Slot1")
-	    wait(2)
-	    findboss()
-	    wait(3.5)
-	    for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = obj.CFrame + Vector3.new(0,0,10)
-                end
-            end
-	    wait(1)
-	    local glasses = 30 + game:GetService("Players").LocalPlayer.Backpack["Broken Glasses"].Hotbar.Value
-	    keypress("0x"..glasses)
-	    wait(0.2)
-	    mouse1click()
-	    wait(1)
-	    local kil = 30 + game:GetService("Players").LocalPlayer.Backpack.Kill.Hotbar.Value
-	    keypress("0x"..kil)
-	    wait(0.2)
-	    mouse1click()
-	    wait(1)
-	    mouse1click()
-	    wait(5)
-	    bossfarm()
-	    weaponhb = 30 + game:GetService("Players").LocalPlayer.Backpack.Doombringer.Hotbar.Value
-	    keypress("0x"..weaponhb)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].Lancer:GetDescendants()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Lancer.Head.Position)
-		wait(0.5)
-            until _G.sslot.Bosses["1"].Lancer.Enemy.Health == 0
-	    wait(1)
-	    repeat
-		for _, obj in pairs(_G.sslot.Bosses["1"].Susie:GetDescendants()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                    end
-                end
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].Susie.Head.Position)
-		wait(0.5)
-            until _G.sslot.Bosses["1"].Susie.Enemy.Health == 0
-	    keypress("0x"..weaponhb)
-	    wait(10)
-	until bufdmg == 6
+	
+function autoepicsans()
+    while _G.autoepicsans == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["epicsans tel"].Head.CFrame
+        wait(2)
+        findboss()
+        wait(2)
+        boss()
     end
 end
-	
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1397,7 +1333,7 @@ FarmTab:AddToggle({
 FarmTab:AddLabel("Turn on Enable Reset and Lv Farm to auto farm reset")
 
 FarmTab:AddToggle({
-	Name = "Lv Farm (Reset 7+)",
+	Name = "Lv Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoLv = Value
@@ -1406,7 +1342,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "TP Farm (lv 5000+)",
+	Name = "TP Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoTP = Value
@@ -1415,7 +1351,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "Kromer Farm (lv 4250+)",
+	Name = "Kromer Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoKromer = Value
@@ -1424,7 +1360,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "TP and Kromer Farm (Required 6600LV 12Resets)",
+	Name = "TP and Kromer Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoTPKromerHard = Value
@@ -1433,11 +1369,20 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "Error404 TP and Kromer Farm (Requires 8000LV 3000TP 38Resets)",
+	Name = "Error404 TP and Kromer Farm",
 	Default = false,
 	Callback = function(Value)
         _G.autoTPKromererror404 = Value
         autoTPKromererror404()
+    end
+})
+
+FarmTab:AddToggle({
+	Name = "Epic sans Farm",
+	Default = false,
+	Callback = function(Value)
+        _G.autoepicsans = Value
+        autoepicsans()
     end
 })
 
