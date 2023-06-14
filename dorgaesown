@@ -360,6 +360,36 @@ function autoLv()
             if _G.autoLv == false then break
             end
 	    
+	    if game.Players.LocalPlayer.leaderstats.LV.Value >= 6000
+	        while (game.Players.LocalPlayer.leaderstats.Reset.Value >= 300)
+                do
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2383.97363, 534.416504, -578.915344, -0.923881531, 0, -0.382678568, 0, 1, 0, 0.382678568, 0, -0.923881531)
+		    wait(3)
+		    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+		    wait(2.5)
+		    findboss()
+		    repeat
+		        _G.sslot.Bosses["1"].OuterSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        _G.sslot.Bosses["1"].OuterSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        _G.sslot.Bosses["1"].OuterSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        _G.sslot.Bosses["1"].OuterSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        _G.sslot.Bosses["1"].OuterSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        _G.sslot.Bosses["1"].OuterSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        _G.sslot.Bosses["1"].OuterSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+	                if _G.autoLv == false then break
+                        end
+		        wait(0.2)
+		    until _G.sslot.Bosses["1"].OuterSans.Enemy.Health == 0
+                    wait(5.1)
+		    if _G.autoLv == false then break
+                    end
+                end
+	    end
+	    
+	    if _G.autoLv == false then break
+            end
+	    
 	    if _G.truereset == true then
 	        if game:GetService("Players").LocalPlayer.leaderstats.Reset.Value == 30 then
 		    if game:GetService("Players").LocalPlayer.leaderstats.TrueReset == 0 then
