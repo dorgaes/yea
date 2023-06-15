@@ -93,7 +93,7 @@ function boss()
                 wait(0.1)
 		if _G.autoLv == false then break
 		end
-            until obj.Parent.Enemy.Health == 0
+            until _G.bossname.Enemy.Health == 0
 	    wait(5.2)
 	    if _G.autoLv == false then break
 	    end
@@ -115,7 +115,7 @@ function multiboss()
 		            end
 		        end
                 wait(0.1)
-            until obj.Parent.Enemy.Health == 0
+            until _G.bossname.Enemy.Health == 0
         end
     end
     wait(5.2)
@@ -148,7 +148,7 @@ function otherboss()
                 wait(0.1)
 		if _G.otherboss == false then break
 		end
-            until obj.Parent.Enemy.Health == 0
+            until _G.bossname.Enemy.Health == 0
 	    wait(5.2)
 	    if _G.otherboss == false then break
 	    end
