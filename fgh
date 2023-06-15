@@ -1019,82 +1019,23 @@ function autodt()
 	wait(1)
 	findboss()
 	wait(10)
-	bossfarm()
-	repeat
-	    for _, obj in pairs(_G.sslot.Bosses["1"].TEMMIE:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                end
-            end
-	    if _G.autodt == false then return
-            end
-	    wait(0.2)
-	until _G.sslot.Bosses["1"].TEMMIE.Enemy.Health == 0
-	
+	otherboss()
 	_G.sslot.Bosses["1"]:WaitForChild("Sans")
 	wait(0.1)
-	
-	findboss()
-	repeat
-            for _, obj in pairs(_G.sslot.Bosses["1"].Sans:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                end
-            end
-	    if _G.autodt == false then return
-            end
-	    wait(0.2)
-        until _G.sslot.Bosses["1"].Sans.Enemy.Health == 0
-	
+	multiboss()
 	_G.sslot.Bosses["1"]:WaitForChild("C.O.D.E Dummy")
 	wait(0.1)
-	
-	findboss()
-	repeat
-	    for _, obj in pairs(_G.sslot.Bosses["1"]["C.O.D.E Dummy"]:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                end
-            end
-	    if _G.autodt == false then return
-            end
-	    wait(0.2)
-	until _G.sslot.Bosses["1"]["C.O.D.E Dummy"].Enemy.Health == 0
-	
+	multiboss()
 	_G.sslot.Bosses["1"]:WaitForChild("Jevil")
 	wait(0.1)
-	
-	findboss()
-	repeat
-            for _, obj in pairs(_G.sslot.Bosses["1"].Jevil:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                end
-            end
-	    if _G.autodt == false then return
-            end
-	    wait(0.2)
-        until _G.sslot.Bosses["1"].Jevil.Enemy.Health == 0
-	    
+	multiboss()    
 	_G.sslot.Bosses["1"]:WaitForChild("Undyne the undying")
 	wait(0.1)
-	
-	findboss()
-	repeat
-	    for _, obj in pairs(_G.sslot.Bosses["1"]["Undyne the undying"]:GetChildren()) do
-                if obj.ClassName == "Part" then
-                    obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
-                end
-            end
-	    if _G.autodt == false then return
-            end
-	    wait(0.2)
-	until _G.sslot.Bosses["1"]["Undyne the undying"].Enemy.Health == 0
+	multiboss()
 	wait(5)
 	dtback()
 	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
 	wait(0.1)
-	
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
@@ -1399,6 +1340,7 @@ FarmTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
         _G.autodt = Value
+	_G.otherboss = Value
         autodt()
     end
 })
