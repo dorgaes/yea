@@ -1340,6 +1340,7 @@ FarmTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
         _G.autodt = Value
+	_G.otherboss = Value
         autodt()
     end
 })
