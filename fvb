@@ -683,92 +683,22 @@ function autoLv()
 end
 
 function autoTP()
-    while _G.autoTP == true do
-        repeat
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
-            wait(2)
-            findboss()
-            wait(2)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
-            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
-                 if obj.ClassName == "Part" then
-                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
-                 end
-             end
-             _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
-             for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
-                 if obj.ClassName == "UnionOperation" then
-                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
-                 end
-             end
-             wait(1.5) 
-             for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
-                 if obj.Name == "Head" then
-                     _G.bossname = obj.Parent
-                     repeat
-                         for _, obj in pairs(_G.bossname:GetChildren()) do
-                             if obj.ClassName == "Part" then
-                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
-		                     end
-		                 end
-                         wait(0.1)
-		         if _G.autoTP == false then break
-		         end
-                     until obj.Parent.Enemy.Health == 0
-	             wait(5.2)
-	             if _G.autoTP == false then break
-	             end
-                 end
-	         if _G.autoTP == false then break
-	         end
-             end
-	until _G.autoTP == false
+    while _G.otherboss == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Strongysans tel"].Head.CFrame
+        wait(2)
+        findboss()
+        wait(2)
+        otherboss()
     end
 end
 
 function autoKromer()
-    while _G.autoKromer == true do
-        repeat
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
-	    wait(2)
-            findboss()
-            wait(2)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2010,0)
-            for _, obj in pairs(_G.sslot.Bosses["1"].BasePart:GetChildren()) do
-                 if obj.ClassName == "Part" then
-                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
-                 end
-             end
-             _G.sslot.Bosses["1"].BasePart.CFrame = _G.sslot.Bosses["1"].BasePart.CFrame + Vector3.new(0,2000,0)
-             for _, obj in pairs(workspace.ActiveBosses.Slot1.Bosses["1"].BasePart:GetDescendants ()) do
-                 if obj.ClassName == "UnionOperation" then
-                     obj.CFrame = obj.CFrame + Vector3.new(0,2000,0)
-                 end
-             end
-             wait(1.5) 
-             for _, obj in pairs(_G.sslot.Bosses["1"]:GetDescendants()) do
-                 if obj.Name == "Head" then
-                     _G.bossname = obj.Parent
-                     repeat
-                         for _, obj in pairs(_G.bossname:GetChildren()) do
-                             if obj.ClassName == "Part" then
-                                 obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
-		                     end
-		                 end
-                         wait(0.1)
-		         if _G.autoKromer == false then break
-		         end
-                     until obj.Parent.Enemy.Health == 0
-	             wait(5.2)
-	             if _G.autoKromer == false then break
-	             end
-                 end
-	         if _G.autoKromer == false then break
-	         end
-             end
-	until _G.autoKromer == false
+    while _G.otherboss == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1322.4502, 434.101685, -2246.38013, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+	wait(2)
+        findboss()
+        wait(2)
+        otherboss()
     end
 end
 
@@ -932,7 +862,6 @@ function autoTPKromerHard()
         repeat
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2385.57349, 534.416504, -744.736328, 0.980784655, -0, -0.195093334, 0, 1, -0, 0.195093334, 0, 0.980784655)
 	    wait(2)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"]["FS Emerald Papyrus"].Part.CFrame
 	    findboss()
 	    repeat
 	        wait(0.05)
@@ -943,10 +872,10 @@ function autoTPKromerHard()
 end
 
 function autoclick()
-    while _G.autoclick == true do
-        wait(_G.clicktime)
-        mouse1click()
-    end
+while _G.autoclick == true do
+wait(_G.clicktime)
+mouse1click()
+end
 end
 
 function autopress()
@@ -1282,7 +1211,7 @@ FarmTab:AddToggle({
 	Name = "TP Farm",
 	Default = false,
 	Callback = function(Value)
-        _G.autoTP = Value
+        _G.otherboss = Value
         autoTP()
     end
 })
@@ -1291,7 +1220,7 @@ FarmTab:AddToggle({
 	Name = "Kromer Farm",
 	Default = false,
 	Callback = function(Value)
-        _G.autoKromer = Value
+        _G.otherboss = Value
         autoKromer()
     end
 })
@@ -1306,7 +1235,7 @@ FarmTab:AddToggle({
 })
 
 FarmTab:AddToggle({
-	Name = "Error404 TP and Kromer Farm",
+	Name = "TP and Kromer Farm(Error404)",
 	Default = false,
 	Callback = function(Value)
         _G.autoTPKromererror404 = Value
