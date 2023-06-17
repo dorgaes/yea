@@ -1021,7 +1021,7 @@ end
 
 function autodt()
     while _G.autodt == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5400066, 133.080933, 191.340012, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["dt6 tel"].Head.CFrame
 	wait(1)
 	findboss()
 	wait(10)
