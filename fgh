@@ -82,43 +82,47 @@ function boss()
     wait(1.5) 
     for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
-            _G.bossname = obj.Parent
-            repeat
-                for _, obj in pairs(_G.bossname:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+            if obj.ClassName == "Part" then
+                _G.bossname = obj.Parent
+                repeat
+                    for _, obj in pairs(_G.bossname:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0.1)
-		if _G.autoLv == false then break
-		end
-            until obj.Parent.Enemy.Health == 0
-	    wait(5.2)
+                    wait(0.1)
+		    if _G.autoLv == false then break
+		    end
+                until _G.bossname.Enemy.Health == 0
+	        wait(5.2)
+	        if _G.autoLv == false then break
+	        end
+            end
 	    if _G.autoLv == false then break
 	    end
         end
-	if _G.autoLv == false then break
-	end
     end
 end
 
 function multiboss()
     for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
-            _G.bossname = obj.Parent
-            repeat
-                for _, obj in pairs(_G.bossname:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+            if obj.ClassName == "Part" then
+                _G.bossname = obj.Parent
+                repeat
+                    for _, obj in pairs(_G.bossname:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0.1)
-            until obj.Parent.Enemy.Health == 0
+                    wait(0.1)
+                until _G.bossname.Enemy.Health == 0
+	        wait(5.2)
+            end
         end
     end
-    wait(5.2)
 end
 
 function otherboss()
@@ -137,24 +141,26 @@ function otherboss()
     wait(1.5) 
     for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
-            _G.bossname = obj.Parent
-            repeat
-                for _, obj in pairs(_G.bossname:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+            if obj.ClassName == "Part" then
+                _G.bossname = obj.Parent
+                repeat
+                    for _, obj in pairs(_G.bossname:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0.1)
-		if _G.otherboss == false then break
-		end
-            until obj.Parent.Enemy.Health == 0
-	    wait(5.2)
+                    wait(0.1)
+		    if _G.otherboss == false then break
+		    end
+                until _G.bossname.Enemy.Health == 0
+	        wait(5.2)
+	        if _G.otherboss == false then break
+	        end
+            end
 	    if _G.otherboss == false then break
 	    end
         end
-	if _G.otherboss == false then break
-	end
     end
 end
 
@@ -1015,7 +1021,7 @@ end
 
 function autodt()
     while _G.autodt == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5400066, 133.080933, 191.340012, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["dt6 tel"].Head.CFrame
 	wait(1)
 	findboss()
 	wait(10)
@@ -1034,6 +1040,8 @@ function autodt()
 	multiboss()
 	wait(5)
 	dtback()
+        wait(0.1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,320,0)
 	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
 	wait(0.1)
 	if _G.dtlv == true then
@@ -1074,7 +1082,6 @@ function autodt()
    	                })
 	            })
             end
-	    
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
@@ -1098,58 +1105,45 @@ function autodt()
 		wait(0.5)
             until game.Players.LocalPlayer.Character.Humanoid.Health == 0
         end
-	
+	game.Players.LocalPlayer.Backpack:ClearAllChildren()
+        for _, obj in pairs(workspace.CharacterHolder.dorgaes:GetChildren()) do
+            if obj.ClassName == "Tool" then
+                obj:Destroy()
+            end
+        end
 	repeat
             wait(0.05)
 	    mousemoveabs(957,586)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(957,632)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(957,675)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(957,722)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,722)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,675)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,632)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,586)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,542)
-	    keypress(0x31)
             wait(0.05)
             mousemoveabs(957,542)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,542)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,586)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,632)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,675)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,722)
-	    keypress(0x31)
         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	
-	game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	wait(6)
-	
 	if _G.webhook == true then
 	    HttpService = game:GetService("HttpService")
 	        Webhook_URL = _G.webhookid
