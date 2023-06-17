@@ -38,6 +38,7 @@ _G.skillsans = true
 _G.skillchara = true
 _G.skillbetty = true
 _G.truereset = false
+_G.autohtsans = true
 
 --Functions
 function findboss()
@@ -1494,7 +1495,32 @@ function autodt()
 	end
     end
 end
-	
+
+function autohtsans()
+    while _G.autohtsans == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["htsans tel"].Head.CFrame
+        wait(3)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.800725, 1042.77441, -41.7752724, -0.23467204, -0.08207453549, 0.970185518, -1.41583092e-08, 0.977893889, 0.209101811, -0.992117405, 0.0262029003, -0.122541592)
+        wait(2.2)
+        findboss()
+	repeat
+	    _G.sslot.Bosses["1"].HTSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            _G.sslot.Bosses["1"].HTSans.FPart.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+            _G.sslot.Bosses["1"].HTSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    _G.sslot.Bosses["1"].HTSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    _G.sslot.Bosses["1"].HTSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    _G.sslot.Bosses["1"].HTSans["Right Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    _G.sslot.Bosses["1"].HTSans.Torso.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    _G.sslot.Bosses["1"].HTSans.Torsoloco.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-503.818665, 1955.37244, -2313.68896, 0.155304581, -0.0436244383, 0.986902893, -0.0355460197, 0.998130679, 0.0497144647, -0.987226903, -0.0428013317, 0.153463528)
+            if _G.autohtsans == false then break
+            end
+	    wait(0.2)
+	until _G.sslot.Bosses["1"].HTSans.Enemy.Health == 0
+        wait(5.1)
+    end
+end
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1557,6 +1583,15 @@ FarmTab:AddToggle({
 	Callback = function(Value)
         _G.autoTPKromerHard = Value
         autoTPKromerHard()
+    end
+})
+
+FarmTab:AddToggle({
+	Name = "hardtale sans",
+	Default = false,
+	Callback = function(Value)
+        _G.autohtsans = Value
+        autohtsans()
     end
 })
 
