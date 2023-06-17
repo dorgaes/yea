@@ -1042,6 +1042,7 @@ function autodt()
 	dtback()
 	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
 	wait(0.1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,320,0)
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
@@ -1080,7 +1081,6 @@ function autodt()
    	                })
 	            })
             end
-	    
 	    repeat
 		if _G.dtlv == true then
                     if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
@@ -1104,58 +1104,45 @@ function autodt()
 		wait(0.5)
             until game.Players.LocalPlayer.Character.Humanoid.Health == 0
         end
-	
+	game.Players.LocalPlayer.Backpack:ClearAllChildren()
+        for _, obj in pairs(workspace.CharacterHolder.dorgaes:GetChildren()) do
+            if obj.ClassName == "Tool" then
+                obj:Destroy()
+            end
+        end
 	repeat
             wait(0.05)
 	    mousemoveabs(957,586)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(957,632)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(957,675)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(957,722)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,722)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,675)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,632)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,586)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(902,542)
-	    keypress(0x31)
             wait(0.05)
             mousemoveabs(957,542)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,542)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,586)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,632)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,675)
-	    keypress(0x31)
 	    wait(0.05)
             mousemoveabs(1012,722)
-	    keypress(0x31)
         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
-	
-	game.Players.LocalPlayer.Backpack:ClearAllChildren()
 	wait(6)
-	
 	if _G.webhook == true then
 	    HttpService = game:GetService("HttpService")
 	        Webhook_URL = _G.webhookid
