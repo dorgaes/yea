@@ -1040,9 +1040,10 @@ function autodt()
 	multiboss()
 	wait(5)
 	dtback()
+        wait(0.1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,320,0)
 	_G.sslot.Bosses["1"].BasePart:WaitForChild("Rewards")
 	wait(0.1)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,320,0)
 	if _G.dtlv == true then
             if game:GetService("Players").LocalPlayer.leaderstats.LV.Value ~= game:GetService("Players").LocalPlayer.leaderstats.LV.MaxValue then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.sslot.Bosses["1"].BasePart.Rewards["200 LV"].Head.CFrame
