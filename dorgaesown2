@@ -1505,7 +1505,6 @@ function autohtsans()
         findboss()
 	repeat
 	    _G.sslot.Bosses["1"].HTSans.Part.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
-            _G.sslot.Bosses["1"].HTSans.FPart.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
             _G.sslot.Bosses["1"].HTSans.Head.Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"].HTSans["Left Leg"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
 	    _G.sslot.Bosses["1"].HTSans["Right Arm"].Position = Vector3.new(-21.120670318603516,1041.623046875,-41.209712982177734)
