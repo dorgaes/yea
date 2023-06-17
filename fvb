@@ -82,43 +82,47 @@ function boss()
     wait(1.5) 
     for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
-            _G.bossname = obj.Parent
-            repeat
-                for _, obj in pairs(_G.bossname:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+            if obj.ClassName == "Part" then
+                _G.bossname = obj.Parent
+                repeat
+                    for _, obj in pairs(_G.bossname:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0.1)
-		if _G.autoLv == false then break
-		end
-            until _G.bossname.Enemy.Health == 0
-	    wait(5.2)
+                    wait(0.1)
+		    if _G.autoLv == false then break
+		    end
+                until _G.bossname.Enemy.Health == 0
+	        wait(5.2)
+	        if _G.autoLv == false then break
+	        end
+            end
 	    if _G.autoLv == false then break
 	    end
         end
-	if _G.autoLv == false then break
-	end
     end
 end
 
 function multiboss()
     for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
-            _G.bossname = obj.Parent
-            repeat
-                for _, obj in pairs(_G.bossname:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+            if obj.ClassName == "Part" then
+                _G.bossname = obj.Parent
+                repeat
+                    for _, obj in pairs(_G.bossname:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0.1)
-            until _G.bossname.Enemy.Health == 0
+                    wait(0.1)
+                until _G.bossname.Enemy.Health == 0
+	        wait(5.2)
+            end
         end
     end
-    wait(5.2)
 end
 
 function otherboss()
@@ -137,24 +141,26 @@ function otherboss()
     wait(1.5) 
     for _, obj in pairs(_G.sslot:GetDescendants()) do
         if obj.Name == "Head" then
-            _G.bossname = obj.Parent
-            repeat
-                for _, obj in pairs(_G.bossname:GetChildren()) do
-                    if obj.ClassName == "Part" then
-                        obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
-		                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
+            if obj.ClassName == "Part" then
+                _G.bossname = obj.Parent
+                repeat
+                    for _, obj in pairs(_G.bossname:GetChildren()) do
+                        if obj.ClassName == "Part" then
+                            obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(8,0,0)
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.bossname.Head.Position)
 		            end
 		        end
-                wait(0.1)
-		if _G.otherboss == false then break
-		end
-            until _G.bossname.Enemy.Health == 0
-	    wait(5.2)
+                    wait(0.1)
+		    if _G.otherboss == false then break
+		    end
+                until _G.bossname.Enemy.Health == 0
+	        wait(5.2)
+	        if _G.otherboss == false then break
+	        end
+            end
 	    if _G.otherboss == false then break
 	    end
         end
-	if _G.otherboss == false then break
-	end
     end
 end
 
