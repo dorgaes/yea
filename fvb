@@ -1175,6 +1175,35 @@ function autoepicsans()
     end
 end
 
+function code()
+    while _G.code == true do
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("C.O.D.E") then
+            if game.Players.LocalPlayer.Backpack["C.O.D.E"].Enabled == true then
+                codehotbar = game.Players.LocalPlayer.Backpack["C.O.D.E"].Hotbar.Value
+                keypress("0x3"..codehotbar)
+            end
+        end
+        wait(0.01)
+        if workspace.CharacterHolder:FindFirstChild("dorgaes") then
+            if workspace.CharacterHolder.dorgaes:FindFirstChild("C.O.D.E") then
+                if workspace.CharacterHolder.dorgaes["C.O.D.E"].Enabled == true then
+                    wait(0.1)
+                    mouse1click()
+                    wait(0.01)
+                    if workspace.CharacterHolder:FindFirstChild("dorgaes") then
+                        if workspace.CharacterHolder.dorgaes:FindFirstChild("C.O.D.E") then
+                            if workspace.CharacterHolder.dorgaes["C.O.D.E"].Enabled == false then
+                                codehotbar2 = workspace.CharacterHolder.dorgaes["C.O.D.E"].Hotbar.Value
+                                keypress("0x3"..codehotbar2)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
 --Auto Farm
 local FarmTab = Window:MakeTab({
 	Name = "Auto farm",
@@ -1511,10 +1540,19 @@ local MiscTab = Window:MakeTab({
 })
 
 local Section = MiscTab:AddSection({
-	Name = "auto click/press"
+	Name = "Misc"
 })
 
-MiscTab:AddLabel("Make Sure To Chose At Least One Hotbar")
+MiscTab:AddToggle({
+	Name = "Auto use CODE",
+	Default = false,
+	Callback = function(Value)
+		_G.code = Value
+		code()
+	end    
+})
+
+MiscTab:AddLabel("Equip C.O.D.E before turn on Auto use CODE")
 
 MiscTab:AddBind({
 	Name = "Auto Clicker",
