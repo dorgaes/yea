@@ -1548,6 +1548,7 @@ MiscTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.code = Value
+                wait(5)
 		code()
 	end    
 })
