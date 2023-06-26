@@ -1,4 +1,16 @@
 function autobestweapon()
     while _G.autobestweapon == true do
-        for _, obj in pairs(game.Players.LocalPlayer.ToolFolder:GetChildren()) do
-            if 
+        if workspace.ActiveBosses:FindFirstDescendant("dorgaes") then
+            wait(0.1)
+        else
+            for _, obj in pairs(game.Players.LocalPlayer.ToolFolder:GetChildren()) do
+                if obj.Name == "Doombringer" then
+                    if game.Players.LocalPlayer.Backpack:FindFirstChild("Doombringer") then
+                        break
+                    elseif workspace.CharacterHolder.dorgaes:FindFirstChild("Doombringer") then
+                        break
+                    else
+                        game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("Doombringer",1)
+                    end
+                end
+                if obj.Name
