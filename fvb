@@ -1179,6 +1179,7 @@ function code()
     while _G.code == true do
         if game.Players.LocalPlayer.Backpack:FindFirstChild("C.O.D.E") then
             if game.Players.LocalPlayer.Backpack["C.O.D.E"].Enabled == true then
+                wait(1)
                 codehotbar = game.Players.LocalPlayer.Backpack["C.O.D.E"].Hotbar.Value
                 keypress("0x3"..codehotbar)
             end
@@ -1187,7 +1188,7 @@ function code()
         if workspace.CharacterHolder:FindFirstChild("dorgaes") then
             if workspace.CharacterHolder.dorgaes:FindFirstChild("C.O.D.E") then
                 if workspace.CharacterHolder.dorgaes["C.O.D.E"].Enabled == true then
-                    wait(0.1)
+                    wait(1)
                     mouse1click()
                     wait(0.01)
                     if workspace.CharacterHolder:FindFirstChild("dorgaes") then
@@ -1548,7 +1549,7 @@ MiscTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.code = Value
-                wait(5)
+                wait(3)
 		code()
 	end    
 })
