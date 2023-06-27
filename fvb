@@ -1124,11 +1124,12 @@ function autoTPKromererror404()
 	    for _, obj in pairs(_G.sslot.Bosses["1"].fperror404sans:GetChildren()) do
                 if obj.ClassName == "Part" then
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].fperror404sans.Head.Position)
                 end
             end
 	    if _G.autoTPKromererror404 == false then break
 	    end
-            wait(0.5)
+            wait(0.1)
         until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health ~= workspace.ActiveBosses.Slot1.Bosses["1"].fperror404sans.Enemy.MaxHealth
         if _G.autoTPKromererror404 == false then break
 	end
@@ -1137,20 +1138,28 @@ function autoTPKromererror404()
             for _, obj in pairs(_G.sslot.Bosses["1"].fperror404sans:GetChildren()) do
                 if obj.ClassName == "Part" then
                     obj.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.sslot.Bosses["1"].fperror404sans.Head.Position)
                 end
             end
 	    if _G.autoTPKromererror404 == false then break
 	    end
-            wait(0.5)
+            wait(0.1)
         until _G.sslot.Bosses["1"].fperror404sans.Enemy.Health == workspace.ActiveBosses.Slot1.Bosses["1"].fperror404sans.Enemy.MaxHealth
         if _G.autoTPKromererror404 == false then break
 	end
-	_G.sslot.Bosses["1"].BasePart:WaitForChild("StringEnemy")
+        repeat
+            wait(0.001)
+	    if _G.sslot.Bosses["1"].BasePart:FindFirstChild("StringEnemy") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2300,0)
+                if _G.autoTPKromererror404 == false then break
+	        end
+                break
+            end
+        until _G.autoTPKromererror404 == false
         if _G.autoTPKromererror404 == false then break
-	end
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,2300,0)
+        end
 	repeat
-   	    wait(0.5)
+   	    wait(0.1)
     	    if _G.sslot.Bosses["1"].BasePart:FindFirstChild("StringEnemy") then
         	_G.sslot.Bosses["1"].BasePart.StringEnemy.Torso.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
         	_G.sslot.Bosses["1"].BasePart.StringEnemy.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,-10)
