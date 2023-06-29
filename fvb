@@ -1188,12 +1188,12 @@ function code()
     while _G.code == true do
         if game.Players.LocalPlayer.Backpack:FindFirstChild("C.O.D.E") then
             if game.Players.LocalPlayer.Backpack["C.O.D.E"].Enabled == true then
-                wait(0.1)
+                wait(0.01)
                 codehotbar = game.Players.LocalPlayer.Backpack["C.O.D.E"].Hotbar.Value
                 keypress("0x3"..codehotbar)
             end
         end
-        wait(0.01)
+        wait(0.1)
         if workspace.CharacterHolder:FindFirstChild("dorgaes") then
             if workspace.CharacterHolder.dorgaes:FindFirstChild("C.O.D.E") then
                 if workspace.CharacterHolder.dorgaes["C.O.D.E"].Enabled == true then
