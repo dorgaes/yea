@@ -100,6 +100,12 @@ local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, S
         
 --functions
     --main
+        function mainworldbosses()
+        end
+        function otherworldbosses()
+        end
+        function codeworldbosses()
+        end
     --farm
     --local
         function mainworldlocal()
