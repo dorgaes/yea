@@ -435,7 +435,7 @@ local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, S
                 for  _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
                     if obj.Name == _G.playername then
                         _G.playingbossslot = obj.Parent.Parent
-                        for  _, obj in pairs(workspace.ActiveBosses[_G.playingbossslot]:GetDescendants()) do
+                        for  _, obj in pairs(_G.playingbossslot.Bosses["1"]:GetDescendants()) do
                             if obj.Name == "Head" then
                                 if obj.ClassName == "Part" then
                                     if obj.Parent.Parent.Parent.Name == "Bosses" then
@@ -464,7 +464,7 @@ local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, S
                 for  _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
                     if obj.Name == _G.playername then
                         _G.playingbossslot = obj.Parent.Parent
-                        for  _, obj in pairs(workspace.ActiveBosses[_G.playingbossslot]:GetDescendants()) do
+                        for  _, obj in pairs(_G.playingbossslot.Bosses["1"]:GetDescendants()) do
                             if obj.Name == "Head" then
                                 if obj.ClassName == "Part" then
                                     if obj.Parent.Parent.Parent.Name == "Bosses" then
