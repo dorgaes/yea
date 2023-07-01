@@ -1,53 +1,1097 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Dorgaes Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --Values
-_G.boss = flowey
-_G.autofarm = true
+    --nochangevalues
+        --main
+        --farm
+        --local
+        --player
+            _G.nochangevalueswspeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+            _G.nochangevaluesjpower = game.Players.LocalPlayer.Character.Humanoid.JumpPower
+        --shop
+        --misc
+        --setting
+        --other
+            _G.playername = game.Players.LocalPlayer.Name
+    --main
+        _G.mainworldbosses = 0
+        _G.otherworldbosses = 0
+        _G.codeworldbosses = 0
+        _G.repeatfarmboss = true
+    --farm
+        _G.autoReset = true
+        _G.autoReset = true
+        _G.truereset = true
+        _G.autoLv = true
+        _G.otherboss = true
+        _G.autoTPKromerHard = true
+        _G.autoTPKromererror404 = true
+        _G.autodt = true
+        _G.dtgold = true
+        _G.dttp = true
+        _G.dtlv = true
+    --local
+        _G.mainworldlocal = Lobby
+        _G.otherworldlocal = Lobby
+        _G.codeworldlocal = Lobby
+    --player 
+        _G.wspeed = 35
+        _G.jpower = 80
+    --shop
+        _G.mainworldshop = "Tem Shop"
+        _G.otherworldshop = "Infinite Tem Shop"
+        _G.codeworldshop = "C.O.D.E Tem Shop"
+        _G.rollskill = true
+        _G.rollskilled = true
+        _G.skillflowey = true
+        _G.skillfroggit = true
+        _G.skillundyne = true
+        _G.skillpapyrus = true
+        _G.skillasgore = true
+        _G.skillmettaton = true
+        _G.skillsans = true
+        _G.skillchara = true
+        _G.skillbetty = true
+    --misc
+        _G.code = true
+        _G.autoclick = true
+        _G.clcktime = 0.01
+        _G.autopress = true
+        _G.presstime = 0.3
+        _G.codehotbar = 0
+        _G.healitem = 0
+        _G.skill = 0
+        _G.skilled = 0
+        _G.weapon = 0
+        _G.otherweapon = 0
+        _G.usingtoolhotbar = 0
+        _G.usingweapon1 = 0
+        _G.usingweapon2 = 0
+        _G.usingotherweapon1 = 0
+        _G.usingotherweapon2 = 0
+        _G.usingskill = 0
+        _G.usingskilled = 0
+        _G.usinghealitem1 = 0
+        _G.usinghealitem2 = 0
+        _G.playingbossslot = 0
+        _G.playingbossname = 0
+        _G.healthlost = 0
+        _G.usingweaponname1 = 0
+        _G.usingweaponname2 = 0
+        _G.usingotherweaponname1 = 0
+        _G.usingotherweaponname2 = 0
+        _G.usingskillname = 0
+        _G.usingskilledname = 0
+        _G.usinghealitemname1 = 0
+        _G.usinghealitemname2 = 0
+        _G.usehealitem = true
+        _G.healthlost = 10
+        _G.lockboss = true
+    --setting
+        _G.webhookid = 0
+        _G.webhook = true
+        _G.lv = 1
+        _G.TP = 1
+        _G.Gold = 1
+        _G.Kromer = 1
+        _G.Reset = 1
+    --other
+        
+--functions
+    --main
+        function mainworldbosses()
+        end
+        function otherworldbosses()
+        end
+        function codeworldbosses()
+        end
+    --farm
+    --local
+        function mainworldlocal()
+            if _G.mainworldlocal == Lobby then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30.9164753, 128.198303, 94.7774734, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            end
+            if _G.mainworldlocal == "Doodle Sphere" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2371.54492, 533.919861, -664.177002, 1, -1.92089331e-08, 7.60387829e-15, 1.92089331e-08, 1, -1.19010373e-07, -5.31781557e-15, 1.19010373e-07, 1)
+            end
+            if _G.mainworldlocal == Snowdin then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(653.440002, 181.340698, -266.249756, 1, 3.10372861e-09, -9.72705493e-07, -3.10370973e-09, 1, 1.94500256e-08, 9.72705493e-07, -1.9450022e-08, 1)
+            end
+            if _G.mainworldlocal == Waterfall then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1255.56006, 161.942261, 128.429993, 1, -5.63168783e-08, -3.60698901e-15, 5.63168783e-08, 1, 1.12792664e-08, 2.97177613e-15, -1.12792664e-08, 1)
+            end
+            if _G.mainworldlocal == Hotland then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-281.368988, 53.7223892, -1032.04297, 1, 1.47022972e-08, -7.74075859e-10, -1.47022972e-08, 1, 7.35707388e-08, 7.74076914e-10, -7.35707388e-08, 1)
+            end
+            if _G.mainworldlocal == Core then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.249557, 138.591522, -1885.05017, 0.999999702, 8.02068527e-08, 0.000759557821, -8.02068456e-08, 1, -3.9073151e-11, -0.000759557821, -2.18485958e-11, 0.999999702)
+            end
+            if _G.mainworldlocal == "Judgement Hall" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-786.424011, 314.374084, -2602.5249, 1, -1.91362002e-08, -4.63554932e-12, 1.91362002e-08, 1, -4.86587126e-08, 4.63648044e-12, 4.86587126e-08, 1)
+            end
+            if _G.mainworldlocal == Throne then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(219.162033, 233.509521, -1393.60254, 1, -1.3586583e-09, -5.93289633e-06, 1.35888922e-09, 1, 3.89190689e-08, 5.93289633e-06, -3.8919076e-08, 1)
+            end
+            if _G.mainworldlocal == Barrier then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(500.282013, 264.139404, -1341.72205, 1, -1.10587228e-08, 1.89851974e-15, 1.10587228e-08, 1, -1.03437661e-10, -1.89737582e-15, 1.03437661e-10, 1)
+            end
+            if _G.mainworldlocal == "Final Room" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2049.229, 248.802994, 131.630005, 1, -4.29058673e-08, 5.41702683e-09, 4.29058673e-08, 1, 4.69007988e-09, -5.41702683e-09, -4.69007944e-09, 1)
+            end
+            if _G.mainworldlocal == "True Lab(Gaster place)" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-575.48999, 827.03656, -1627.52002, 1, 6.86139785e-08, -3.57959554e-15, -6.86139785e-08, 1, -8.80043842e-08, -2.45873569e-15, 8.80043842e-08, 1)
+            end
+        end
 
---function
-function findbossname()
-    for _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
-        if obj.Name == "dorgaes" then
-            for _, obj in pairs(obj.Parent.Parent.Bosses["1"]:GetChildren()) do
-                if obj.ClassName == "Model" then
-                    _G.findbossname = obj
+        function otherworldlocal()
+            if _G.otherworldlocal == Lobby then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(67.9427338, 107.428406, 64.1774063, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            end
+            if _G.otherworldlocal == "HardCore Bosses" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-409.084015, 370.727753, 226.119003, 1, -8.9776222e-09, -5.26585858e-11, 8.9776222e-09, 1, 1.19555725e-08, 5.26584783e-11, -1.19555725e-08, 1)
+            end
+            if _G.otherworldlocal == "Infinite Realm" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(82.8099976, 178.714035, 1088.80005, 1, 7.10998105e-09, -9.12905768e-15, -7.10998105e-09, 1, 1.00279614e-07, 9.84204427e-15, -1.00279614e-07, 1)
+            end
+            if _G.otherworldlocal == "Castle Town" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 433.003967, -2114, 1, -5.16745651e-08, -5.78934574e-11, 5.16745651e-08, 1, -2.16822116e-08, 5.78945746e-11, 2.16822116e-08, 1)
+            end
+            if _G.otherworldlocal == Gateway then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2546.80005, 756.701599, -2185.448, 1, 8.87547245e-08, -1.14016276e-14, -8.87547245e-08, 1, -4.66190855e-08, 7.26396313e-15, 4.66190855e-08, 1)
+            end
+            if _G.otherworldlocal == "CHAOS World" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-355.934998, 1301.39624, -1969.18396, 1, -9.69178071e-10, 1.9741226e-14, 9.69178071e-10, 1, -3.69891384e-09, -1.97376414e-14, 3.69891384e-09, 1)
+            end
+            if _G.otherworldlocal == "No Mercy Bosses" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(829, 122.408241, 4.1999979, 1, -5.98568217e-09, -8.10426379e-11, 5.98568217e-09, 1, -4.84212883e-08, 8.10429293e-11, 4.84212883e-08, 1)
+            end
+            if _G.otherworldlocal == "Queen's Mansion" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1999.97998, 624.802185, -2173.62012, 1, -1.01505062e-08, 8.6922638e-09, 1.01505053e-08, 1, 1.12224052e-08, -8.6922638e-09, -1.12224052e-08, 1)
+            end
+            if _G.otherworldlocal == "Sandy C.O.D.E Dummy's Beach" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1903.03406, 920.202332, -1710.93201, 1, -5.2198633e-08, 2.33144254e-10, 5.2198633e-08, 1, -7.61257297e-08, -2.33140285e-10, 7.61257297e-08, 1)
+            end
+        end
+
+        function codeworldlocal()
+            if _G.codeworldlocal == Looby then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.7144241, 270.257202, 107.583809, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            end
+            if _G.codeworldlocal == Yans then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(180.746399, -405.375824, -463.211792, 0.998612046, 1.98434136e-09, 0.0526689589, -3.64510977e-09, 1, 3.14361479e-08, -0.0526689589, -3.15844986e-08, 0.998612046)
+            end
+            if _G.codeworldlocal == "C.O.D.E Dummy 0%" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.26325274, -123.185745, 154.406784, 0.995690346, -1.03834878e-08, -0.092740342, 1.2506427e-08, 1, 2.23100347e-08, 0.092740342, -2.33737349e-08, 0.995690346)
+            end
+            if _G.codeworldlocal == "C.O.D.E Dummy 50%" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.28714, -197.331573, 101.860603, -0.463136166, 8.5472962e-08, -0.886287153, 2.28554971e-08, 1, 8.44960439e-08, 0.886287153, 1.88766389e-08, -0.463136166)
+            end
+            if _G.codeworldlocal == "C.O.D.E Dummy 100%" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.6925621, -495.586395, 259.750305, -0.0603643358, 6.59820216e-08, -0.998176396, 3.76683538e-08, 1, 6.38245865e-08, 0.998176396, -3.37469324e-08, -0.0603643358)
+            end
+        end
+    --player 
+        function wspeed()
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = _G.wspeed
+        end
+
+        function jpower()
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = _G.jpower
+        end
+    --shop
+        function mainworldshop()
+            if _G.mainworldshop == "Tem Shop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1435.19788, 161.952454, 26.6895046, -0.999892592, 7.60860317e-08, -0.0146549512, 7.69280604e-08, 1, -5.68935086e-08, 0.0146549512, -5.8014777e-08, -0.999892592)
+            end
+            if _G.mainworldshop == "Reset Tem Shop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-126.045586, 127.983322, 133.48288, -0.996460915, 2.19786802e-08, -0.084057577, 2.24088605e-08, 1, -4.17419876e-09, 0.084057577, -6.04306027e-09, -0.996460915)
+            end
+        end
+
+        function otherworldshop()
+            if _G.otherworldshop == "Infinite Tem Shop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.2992325, 178.714066, 1097.31458, -0.99997884, -7.11739601e-09, 0.00650824001, -7.73703057e-09, 1, -9.51824788e-08, -0.00650824001, -9.5230817e-08, -0.99997884)
+            end
+            if _G.otherworldshop == "HardCore Tem Shop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-416.198639, 370.727753, 174.534302, 0.999799669, 7.12633152e-09, 0.0200163908, -6.09339379e-09, 1, -5.16655874e-08, -0.0200163908, 5.15332665e-08, 0.999799669)
+            end
+            if _G.otherworldshop == "Ralsei's Skill Awakening Workshop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1283.76025, 433.117157, -2276.60132, 0.999979198, -3.55127412e-08, -0.00645468198, 3.51306362e-08, 1, -5.93111089e-08, 0.00645468198, 5.90831171e-08, 0.999979198)
+            end
+            if _G.otherworldshop == "Spamton Shop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2555.87061, 980.001709, -2158.72705, 0.999916315, -7.39110551e-09, -0.0129388757, 5.98659344e-09, 1, -1.08588516e-07, 0.0129388757, 1.08501965e-07, 0.999916315)
+            end
+        end
+
+        function codeworldshop()
+            if _G.codeworldshop == "C.O.D.E Tem Shop" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-23.463686, 270.257202, -13.204874, 0.574453294, -7.85907961e-09, -0.818537354, -1.1299254e-08, 1, -1.75312387e-08, 0.818537354, 1.93197387e-08, 0.574453294)
+            end
+        end
+
+        function rollskill()
+            while _G.rollskill == true do
+                wait(0.01)
+                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 100 then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage").SkillSpin:FireServer()
+                    wait(0.5)
+                    if _G.skillflowey == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 1 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillfroggit == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 2 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillundyne == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 11 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillpapyrus == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 12 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillasgore == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 21 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillmettaton == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 22 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillsans == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 33 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillchara == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 32 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
+                    if _G.skillbetty == true then
+                        if game:GetService("Players").LocalPlayer.leaderstats.Skill.Value == 31 then
+                            if _G.rollskilled == true then
+                                if game.Players.LocalPlayer.leaderstats.Kromer.Value > 200 then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1284, 432.841309, -2284.47192, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                    wait(0.5)
+                                    game:GetService("ReplicatedStorage").SkilledSpin:FireServer()
+                                end
+                            end
+                            break
+                        end
+                    end
                 end
             end
         end
-    end
-end
+    --misc
+        function finditemname()
+            for _, obj in pairs(game:GetService("Players").LocalPlayer.ToolFolder:GetChildren()) do
+                if obj:FindFirstChild("HealScript") then
+                    if obj.HealScript:FindFirstChild("HealEffect") then
+                        if obj.Name ~= "Rift Essence" then
+                            _G.healitem = obj.Name
+                        end
+                    end
+                end
+                if obj:FindFirstChild("SkillValue") then
+                    _G.skill = obj.Name
+                end
+                if obj:FindFirstChild("SkilledValue") then
+                    _G.skilled = obj.Name
+                end
+                if obj.Name ~= "Rift Essence" then
+                    if obj.Name ~= "C.O.D.E" then
+                        if obj.Name ~= "EPICNESS" then
+                            if obj.Name ~= "Counter Bone" then
+                                if obj.Name ~= "Kill" then
+                                    if obj.Name ~= "Bike" then
+                                        if obj.Name ~= "Mysterious Paper" then
+                                            if obj.Name ~= "Broken Glasses" then
+                                                if obj.Name ~= "Wire" then
+                                                    if obj.Name ~= "Jevilstail" then
+                                                        if obj.Name ~= "KeyGen" then
+                                                            if obj.Name ~= "Banana" then
+                                                                if obj.Name ~= _G.healitem then
+                                                                    if obj.Name ~= _G.skill then
+                                                                        if obj.Name ~= _G.skilled then
+                                                                            _G.weapon = obj.Name
+                                                                        end
+                                                                    end
+                                                                end
+                                                            end
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+                if obj.Name ~= _G.healitem then
+                    if obj.Name ~= _G.skill then
+                        if obj.Name ~= _G.skilled then
+                            if obj.Name ~= _G.weapon then
+                                _G.otherweapon = obj.Name
+                            end
+                        end
+                    end
+                end
+            end
+        end
 
-function autofarm(0
-    while _G.autofarm == true do
-        if _G.boss == "flowey" then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Flowey tel"].Head.CFrame
-        if _G.boss == "froggit" then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Portals["Froggit tel"].Head.CFrame
---tab
-local Tab = Window:MakeTab({
-	Name = "Tab 1",
+        function code()
+            if game:GetService("Players").LocalPlayer.StarterGear:FindFirstChild("C.O.D.E") then
+                wait(0.1)
+            elseif game:GetService("Players").LocalPlayer.ToolFolder:FindFirstChild("C.O.D.E") then
+                game:GetService("ReplicatedStorage").GameRemotes.EquipTool:FireServer("C.O.D.E",1)
+            end
+            while _G.code == true do
+                wait(2)
+                if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("C.O.D.E") then
+                    if game:GetService("Players").LocalPlayer.Backpack["C.O.D.E"].Enabled == true then
+                        _G.codehotbar = game.Players.LocalPlayer.Backpack["C.O.D.E"].Hotbar.Value
+                        keypress("0x3".._G.codehotbar)
+                        wait(0.1)
+                        if _G.autoclick == false then
+                            mouse1click()
+                        end
+                    end
+                end
+            end
+        end
+
+        function lockboss()
+            while _G.lockboss == true do
+                wait(0.01)
+                for  _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+                    if obj.Name == _G.playername then
+                        _G.playingbossslot = obj.Parent.Parent
+                        for  _, obj in pairs(workspace.ActiveBosses[_G.playingbossslot]:GetDescendants()) do
+                            if obj.Name == "Head" then
+                                if obj.ClassName == "Part" then
+                                    if obj.Parent.Parent.Parent.Name == "Bosses" then
+                                        _G.playingbossname = obj.Parent
+                                    end
+                                end
+                            end
+                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.playingbossname.Torso.Position)
+                    end
+                end
+            end
+        end
+
+        function autoclick()
+            while _G.autoclick == true do
+                wait(_G.clcktime)
+                mouse1click()
+            end
+        end
+
+        function autopress()
+            finditemname()
+            while _G.autopress == true do
+                wait(0.01)
+                for  _, obj in pairs(workspace.ActiveBosses:GetDescendants()) do
+                    if obj.Name == _G.playername then
+                        _G.playingbossslot = obj.Parent.Parent
+                        for  _, obj in pairs(workspace.ActiveBosses[_G.playingbossslot]:GetDescendants()) do
+                            if obj.Name == "Head" then
+                                if obj.ClassName == "Part" then
+                                    if obj.Parent.Parent.Parent.Name == "Bosses" then
+                                        _G.playingbossname = obj.Parent
+                                    end
+                                end
+                            end
+                        end
+                        for _, obj in pairs(workspace.CharacterHolder[_G.playername]:GetChildren()) do
+                            if obj.ClassName == Tool then
+                                _G.usingtoolhotbar = obj.Hotbar.Value
+                                keypress("0x3".._G.usingtoolhotbar)
+                            end
+                        end
+                        wait(0.1)
+                        for _, obj in pairs(game:GetService("Players").LocalPlayer.StarterGear:GetChildren()) do
+                            if obj.Name == _G.weapon then
+                                if obj.Slot.Value == 1 then
+                                    _G.usingweaponname1 = obj.Name
+                                    _G.usingweapon1 = obj.Hotbar.Value
+                                end
+                                if obj.Slot.Value == 2 then
+                                    _G.usingweaponname2 = obj.Name
+                                    _G.usingweapon2 = obj.Hotbar.Value
+                                end
+                            end
+                            if obj.Name == _G.otherweapon then
+                                if obj.Slot.Value == 1 then
+                                    _G.usingotherweaponname1 = obj.Name
+                                    _G.usingotherweapon1 = obj.Hotbar.Value
+                                end
+                                if obj.Slot.Value == 2 then
+                                    _G.usingotherweaponname2 = obj.Name
+                                    _G.usingotherweapon2 = obj.Hotbar.Value
+                                end
+                            end
+                            if obj.Name == _G.skill then
+                                _G.usingskillname = obj.Name
+                                if obj.Slot.Value == 1 then
+                                    _G.usingskill = obj.Hotbar.Value
+                                elseif obj.Slot.Value == 2 then
+                                    _G.usingskill = obj.Hotbar.Value
+                                end
+                            end
+                            if obj.Name == _G.skilled then
+                                _G.usingskilledname = obj.Name
+                                if obj.Slot.Value == 1 then
+                                    _G.usingskilled = obj.Hotbar.Value
+                                elseif obj.Slot.Value == 2 then
+                                    _G.usingskilled = obj.Hotbar.Value
+                                end
+                            end
+                            if obj.Name == _G.healitem then
+                                if obj.Slot.Value == 1 then
+                                    _G.usinghealitemname1 = obj.Name
+                                    _G.usinghealitem1 = obj.Hotbar.Value
+                                end
+                                if obj.Slot.Value == 2 then
+                                    _G.usinghealitemname2 = obj.Name
+                                    _G.usinghealitem2 = obj.Hotbar.Value
+                                end
+                            end
+                        end
+                        repeat
+                            if _G.autopress == false then break
+                            end
+                            keypress("0x3".._G.usingotherweapon1)
+                            wait(_G.presstime)
+                            keypress("0x3".._G.usingotherweapon2)
+                            wait(_G.presstime)
+                            if _G.usehealitem == true then
+                                if game.Players.LocalPlayer.Character.Humanoid.Health <= (game.Players.LocalPlayer.Character.Humanoid.MaxHealth * _G.healthlost) then
+                                    if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.usinghealitemname1) then
+                                        if game:GetService("Players").LocalPlayer.Backpack[_G.usinghealitemname1].Enabled == true then
+                                            keypress("0x3".._G.usinghealitem1)
+                                            wait(0.1)
+                                            mouse1click()
+                                            wait(_G.presstime)
+                                        end
+                                    end
+                                end
+                            end
+                            if _G.usehealitem == true then
+                                if game.Players.LocalPlayer.Character.Humanoid.Health <= (game.Players.LocalPlayer.Character.Humanoid.MaxHealth * _G.healthlost) then
+                                    if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.usinghealitemname2) then
+                                        if game:GetService("Players").LocalPlayer.Backpack[_G.usinghealitemname2].Enabled == true then
+                                            keypress("0x3".._G.usinghealitem1)
+                                            wait(0.1)
+                                            mouse1click()
+                                            wait(_G.presstime)
+                                        end
+                                    end
+                                end
+                            end
+                            if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.usingskillname) then
+                                if game:GetService("Players").LocalPlayer.Backpack[_G.usingskillname].Enabled == true then
+                                    keypress("0x3".._G.usingskill)
+                                    wait(_G.presstime)
+                                end
+                            end
+                            if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.usingskilledname) then
+                                if game:GetService("Players").LocalPlayer.Backpack[_G.usingskilledname].Enabled == true then
+                                    keypress("0x3".._G.usingskilled)
+                                    wait(_G.presstime)
+                                end
+                            end
+                            if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.usingotherweaponname1) then
+                                if game:GetService("Players").LocalPlayer.Backpack[_G.usingotherweaponname1].Enabled == true then
+                                    if _G.usingotherweaponname1 ~= "Rift Essence" then
+                                        if _G.usingotherweaponname1 ~= "C.O.D.E" then
+                                            if _G.usingotherweaponname1 ~= "Mysterious Paper" then
+                                                if _G.usingotherweaponname1 ~= "KeyGen" then
+                                                    keypress("0x3".._G.usingotherweapon1)
+                                                    wait(_G.presstime)
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                            if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.usingotherweaponname2) then
+                                if game:GetService("Players").LocalPlayer.Backpack[_G.usingotherweaponname2].Enabled == true then
+                                    if _G.usingotherweaponname2 ~= "Rift Essence" then
+                                        if _G.usingotherweaponname2 ~= "C.O.D.E" then
+                                            if _G.usingotherweaponname2 ~= "Mysterious Paper" then
+                                                if _G.usingotherweaponname2 ~= "KeyGen" then
+                                                    keypress("0x3".._G.usingotherweapon1)
+                                                    wait(_G.presstime)
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        until _G.playingbossname.Enemy.Health == 0
+                    end
+                end
+            end
+        end
+    --setting
+        function webhookfindstats()
+            if game.Players.LocalPlayer.leaderstats.LV.Value > 999 then
+                _G.lv = game.Players.LocalPlayer.leaderstats.LV.Value / 1000
+                _G.lv = math.floor(_G.lv)
+                _G.lv = _G.lv.."K"
+            else
+                _G.lv = game.Players.LocalPlayer.leaderstats.LV.Value
+            end
+            if game.Players.LocalPlayer.leaderstats.TP.Value > 999 then
+                _G.TP = game.Players.LocalPlayer.leaderstats.TP.Value / 1000
+                _G.TP = math.floor(_G.TP)
+                _G.TP = _G.TP.."K"
+            else
+                _G.TP = game.Players.LocalPlayer.leaderstats.TP.Value
+            end
+            if game.Players.LocalPlayer.leaderstats.Gold.Value > 999999999999 then
+                _G.Gold = game.Players.LocalPlayer.leaderstats.Gold.Value / 1000000000000
+                _G.Gold = math.floor(_G.Gold)
+                _G.Gold = _G.Gold.."T"
+            elseif game.Players.LocalPlayer.leaderstats.Gold.Value > 999999999 then
+                _G.Gold = game.Players.LocalPlayer.leaderstats.Gold.Value / 1000000000
+                _G.Gold = math.floor(_G.Gold)
+                _G.Gold = _G.Gold.."B"
+            elseif game.Players.LocalPlayer.leaderstats.Gold.Value > 999999 then
+                _G.Gold = game.Players.LocalPlayer.leaderstats.Gold.Value / 1000000
+                _G.Gold = math.floor(_G.Gold)
+                _G.Gold = _G.Gold.."M"
+            elseif game.Players.LocalPlayer.leaderstats.Gold.Value > 999 then
+                _G.Gold = game.Players.LocalPlayer.leaderstats.Gold.Value / 1000
+                _G.Gold = math.floor(_G.Gold)
+                _G.Gold = _G.Gold.."K"
+            else
+                _G.Gold = game.Players.LocalPlayer.leaderstats.Gold.Value
+            end
+            if game.Players.LocalPlayer.leaderstats.Kromer.Value > 999999 then
+                _G.Kromer = game.Players.LocalPlayer.leaderstats.Kromer.Value / 1000000
+                _G.Kromer = math.floor(_G.Kromer)
+                _G.Kromer = _G.Kromer.."M"
+            elseif game.Players.LocalPlayer.leaderstats.Kromer.Value > 999 then
+                _G.Kromer = game.Players.LocalPlayer.leaderstats.Kromer.Value / 1000
+                _G.Kromer = math.floor(_G.Kromer)
+                _G.Kromer = _G.Kromer.."K"
+            else
+                _G.Kromer = game.Players.LocalPlayer.leaderstats.Kromer.Value
+            end
+            if game.Players.LocalPlayer.leaderstats.Reset.Value > 999 then
+                _G.Reset = game.Players.LocalPlayer.leaderstats.Reset.Value / 1000
+                _G.Reset = math.floor(_G.Reset)
+                _G.Reset = _G.Reset.."K"
+            else
+                _G.Reset = game.Players.LocalPlayer.leaderstats.Reset.Value
+            end
+        end
+    --other
+--main
+local MainTab = Window:MakeTab({
+	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local Section = Tab:AddSection({
-	Name = "Section"
+
+local Section = MainTab:AddSection({
+	Name = "Main"
 })
 
-Tab:AddToggle({
-	Name = "auto farm",
+MainTab:AddDropdown({
+	Name = "Main world bosses",
+	Default = "1",
+	Options = {"1", "2"},
+	Callback = function(Value)
+		_G.mainworldbosses = Value
+		mainworldbosses()
+	end    
+})
+
+MainTab:AddDropdown({
+	Name = "Other world bosses",
+	Default = "1",
+	Options = {"1", "2"},
+	Callback = function(Value)
+		_G.otherworldbosses = Value
+		otherworldbosses()
+	end    
+})
+
+MainTab:AddDropdown({
+	Name = "Code world bosses",
+	Default = "1",
+	Options = {"1", "2"},
+	Callback = function(Value)
+		_G.codeworldbosses = Value
+		codeworldbosses()
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Repeat farm",
 	Default = false,
 	Callback = function(Value)
-		_G.autofarm = Value
-    autofarm()
+		_G.repeatfarmboss = Value
+	end    
+})
+--farm
+
+--Local
+local LocalTab = Window:MakeTab({
+	Name = "Local",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = LocalTab:AddSection({
+	Name = "Main World Local"
+})
+
+LocalTab:AddDropdown({
+	Name = "Main World",
+	Default = "Lobby",
+	Options = {"Lobby", "Doodle Sphere", "Snowdin", "Waterfall", "Hotland", "Core", "Judgement Hall", "Throne", "Barrier", "Final Room", "True Lab(Gaster place)"},
+	Callback = function(Value)
+		_G.mainworldlocal = Value
+    mainworldlocal()
 	end    
 })
 
-Tab:AddDropdown({
-	Name = "Dropdown",
-	Default = "flowey",
-	Options = {"flowey", "froggit"},
+LocalTab:AddDropdown({
+	Name = "Other World",
+	Default = "Lobby",
+	Options = {"Lobby", "HardCore Bosses", "Infinite Realm", "Castle Town", "Gateway", "CHAOS World", "No Mercy Bosses", "Queen's Mansion", "Sandy C.O.D.E Dummy's Beach"},
 	Callback = function(Value)
-		_G.boss = Value
+		_G.otherworldlocal = Value
+    otherworldlocal()
 	end    
+})
+
+LocalTab:AddDropdown({
+	Name = "Code World",
+	Default = "Lobby",
+	Options = {"Lobby", "Yans", "C.O.D.E Dummy 0%", "C.O.D.E Dummy 50%", "C.O.D.E Dummy 100%"},
+	Callback = function(Value)
+		_G.codeworldlocal = Value
+    codeworldlocal()
+	end    
+})
+
+--Player 
+local PlayerTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PlayerTab:AddSection({
+	Name = "Player"
+})
+
+PlayerTab:AddTextbox({
+	Name = "Walk Speed",
+	Default = "35",
+	TextDisappear = false,
+	Callback = function(Value)
+		_G.wspeed = Value
+		wspeed()
+	end	  
+})
+
+PlayerTab:AddTextbox({
+	Name = "JumpPower",
+	Default = "80",
+	TextDisappear = false,
+	Callback = function(Value)
+		_G.jpower = Value
+		jpower()
+	end	  
+})
+
+PlayerTab:AddButton({
+	Name = "Reset Soeed and Jump",
+	Callback = function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = _G.nochangevalueswspeed
+          game.Players.LocalPlayer.Character.Humanoid.JumpPower = _G.nochangevaluesjpower
+  	end    
+})
+
+--Shop
+local ShopTab = Window:MakeTab({
+	Name = "Shop",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = ShopTab:AddSection({
+	Name = "Shop"
+})
+
+ShopTab:AddDropdown({
+	Name = "Main World Shop",
+	Default = "Tem Shop",
+	Options = {"Tem Shop", "Reset Tem Shop"},
+	Callback = function(Value)
+		_G.mainworldshop = Value
+    mainworldshop()
+	end    
+})
+
+ShopTab:AddDropdown({
+	Name = "Other World Shop",
+	Default = "Infinite Tem Shop",
+	Options = {"Infinite Tem Shop", "HardCore Tem Shop", "Ralsei's Skill Awakening Workshop", "Spamton Shop"},
+	Callback = function(Value)
+		_G.otherworldshop = Value
+    otherworldshop()
+	end    
+})
+
+ShopTab:AddDropdown({
+	Name = "Code World Shop",
+	Default = "C.O.D.E Tem Shop",
+	Options = {"C.O.D.E Tem Shop"},
+	Callback = function(Value)
+		_G.codeworldshop = Value
+    codeworldshop()
+	end    
+})
+
+local Section = ShopTab:AddSection({
+	Name = "Auto Roll Skill"
+})
+
+ShopTab:AddToggle({
+	Name = "Auto Roll Skill(100+ Kromer)",
+	Default = false,
+	Callback = function(Value)
+		_G.rollskill = Value
+		rollskill()
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Auto Roll Skilled Skills(200+ Kromer)",
+	Default = false,
+	Callback = function(Value)
+		_G.rollskilled = Value
+	end    
+})
+
+local Section = ShopTab:AddSection({
+	Name = "Skill Keep"
+})
+
+ShopTab:AddToggle({
+	Name = "Flowey",
+	Default = false,
+	Callback = function(Value)
+		_G.skillflowey = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Froggit",
+	Default = false,
+	Callback = function(Value)
+		_G.skillfroggit = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Undyne",
+	Default = false,
+	Callback = function(Value)
+		_G.skillundyne = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Papyrus",
+	Default = false,
+	Callback = function(Value)
+		_G.skillpapyrus = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Asgore",
+	Default = false,
+	Callback = function(Value)
+		_G.skillasgore = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Mettaton",
+	Default = false,
+	Callback = function(Value)
+		_G.skillmettaton = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Sans",
+	Default = false,
+	Callback = function(Value)
+		_G.skillsans = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Chara",
+	Default = false,
+	Callback = function(Value)
+		_G.skillchara = Value
+	end    
+})
+
+ShopTab:AddToggle({
+	Name = "Betty",
+	Default = false,
+	Callback = function(Value)
+		_G.skillbetty = Value
+	end    
+})
+
+--misc
+local MiscTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = MiscTab:AddSection({
+	Name = "Misc"
+})
+
+MiscTab:AddLabel("Equip C.O.D.E before turn on Auto use CODE")
+
+MiscTab:AddToggle({
+	Name = "Auto use CODE",
+	Default = false,
+	Callback = function(Value)
+		_G.code = Value
+                wait(3)
+		code()
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Lock boss",
+	Default = false,
+	Callback = function(Value)
+		_G.lockboss = Value
+		lockboss()
+	end    
+})
+
+MiscTab:AddBind({
+	Name = "Auto Clicker",
+	Default = Enum.KeyCode.F,
+	Hold = false,
+	Callback = function()
+		if _G.autoclick == true then
+        _G.autoclick = false
+    elseif _G.autoclick == false then 
+        _G.autoclick = true
+    end
+    autoclick()
+	end    
+})
+
+MiscTab:AddSlider({
+	Name = "Change Delay Time For Auto Click",
+	Min = 0.01,
+	Max = 0.5,
+	Default = 0.01,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.01,
+	ValueName = "delay every click",
+	Callback = function(Value)
+		_G.clcktime = Value
+	end    
+})
+
+MiscTab:AddLabel("Only work when you fighting")
+
+MiscTab:AddBind({
+	Name = "Auto switch weapon",
+	Default = Enum.KeyCode.G,
+	Hold = false,
+	Callback = function()
+		if _G.autopress == true then 
+        _G.autopress = false
+    elseif _G.autopress == false then 
+        _G.autopress = true
+    end
+    autopress()
+	end    
+})
+
+MiscTab:AddSlider({
+	Name = "Change Delay Time For Auto Press",
+	Min = 0.2,
+	Max = 4,
+	Default = 0.3,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 0.1,
+	ValueName = "delay every press",
+	Callback = function(Value)
+		_G.presstime = Value
+	end    
+})
+
+MiscTab:AddToggle({
+	Name = "Use heal items",
+	Default = false,
+	Callback = function(Value)
+		_G.usehealitem = Value
+	end    
+})
+
+MiscTab:AddSlider({
+	Name = "Less than % to heal",
+	Min = 10,
+	Max = 90,
+	Default = 10,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 10,
+	ValueName = "Less than %",
+	Callback = function(Value)
+		_G.healthlost = (Value / 100)
+	end    
+})
+
+--setting
+local SettingTab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = SettingTab:AddSection({
+	Name = "Webhook"
+})
+
+SettingTab:AddTextbox({
+	Name = "Webhook ID",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+		_G.webhookid = Value
+	end	  
+})
+
+SettingTab:AddToggle({
+	Name = "Sent Webhook",
+	Default = false,
+	Callback = function(Value)
+		_G.webhook = Value
+	end    
+})
+
+SettingTab:AddButton({
+	Name = "Webhook test",
+	Callback = function()
+                webhookfindstats()
+      		HttpService = game:GetService("HttpService")
+   Webhook_URL = _G.webhookid
+
+   local responce = request({
+       Url = Webhook_URL,
+       Method = "POST",
+       Headers = {['Content-Type'] = 'application/json'},
+       Body = HttpService:JSONEncode({
+           ["content"] = "Your webhook is working",
+           ["embeds"] = {{
+               ["title"] = game.Players.LocalPlayer.DisplayName.." here is your stat",
+               ["description"] = _G.lv.." LV"..[[
+
+]].._G.TP.." TP"..[[
+
+]].._G.Gold.." Gold"..[[
+
+]].._G.Kromer.." Kromer"..[[
+
+]].._G.Reset.." Reset",
+               ["type"] = "rich",
+               ["color"] = tonumber(0x00FF00)
+           }}
+       })
+   })
+  	end    
 })
