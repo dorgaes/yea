@@ -1185,6 +1185,7 @@ function autoepicsans()
 end
 
 function code()
+    wait(3)
     while _G.code == true do
         if game.Players.LocalPlayer.Backpack:FindFirstChild("C.O.D.E") then
             if game.Players.LocalPlayer.Backpack["C.O.D.E"].Enabled == true then
@@ -1558,7 +1559,6 @@ MiscTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.code = Value
-                wait(3)
 		code()
 	end    
 })
