@@ -1,5 +1,25 @@
 function finddoor()
-    if 
+    if workspace.Worlds.Dungeon.Map.Model[_G.xypoint]:FindFirstChild("Door1") then
+        x = x + 1
+        y = y
+        _G.xypoint = x..",  "..y
+    end
+    if workspace.Worlds.Dungeon.Map.Model[_G.xypoint]:FindFirstChild("Door2") then
+        x = x
+        y = y + 1
+        _G.xypoint = x..",  "..y
+    end
+    if workspace.Worlds.Dungeon.Map.Model[_G.xypoint]:FindFirstChild("Door3") then
+        x = x - 1
+        y = y
+        _G.xypoint = x..",  "..y
+    end
+    if workspace.Worlds.Dungeon.Map.Model[_G.xypoint]:FindFirstChild("Door4") then
+        x = x
+        y = y - 1
+        _G.xypoint = x..",  "..y
+    end
+end
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Cframe.new(-8949.06641, 49.1790962, -3602.30493, 0.67880553, -6.47042179e-05, -0.734318018, -1.47055835e-06, 1, -8.94712284e-05, 0.734318018, 6.18319027e-05, 0.67880553)
 wait(0.5)
@@ -15,24 +35,20 @@ for _, obj in pairs(workspace.Worlds.Dungeon.Map.Model:GetChildren()) do
             _G.startroom = obj
         end
     end
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.firstroom.AltarBase.CFrame
-    wait(0.5)
-    keypress(0x45)
-    wait(3)
+    local x = 0
+    local y = 0
     repeat
-        for _, obj in pairs(_G.firstroom.enemyfile:GetChildren()) do
-            _G.enemyname = obj.Name
-            if _G.firstroom.enemyfile:FindFirstChild(_G.enemyname) then
-                game:GetService("ReplicatedStorage").Remote.SendPet:FireServer(workspace.Pets.Kaido,.[_G.enemyname]
-    until 
-    if _G.startroom:FindFirstChild("Door1") then
-        (x+1,y)
-    elseif _G.startroom:FindFirstChild("Door2") then
-        (x,y+1)
-    elseif _G.startroom:FindFirstChild("Door3") then
-        (x-1,y)
-    elseif _G.startroom:FindFirstChild("Door4") then
-        (x,y-1)
-    end
+        _G.xypoint = x..",  "..y
+        if y ~= 10 then
+            y = y + 1
+        else
+            y = 0
+            x = x + 1
+        end
+    until _G.xypoint == _G.startroom.Name
+    doneroomlist = {_G.xypoint}
+    finddoor()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Dungeon.Map.Model[_G.xypoint].AltarBase.CFrame + Vector3.new(0,5,0)
+    
     
 
