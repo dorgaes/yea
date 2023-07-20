@@ -1,0 +1,14 @@
+if game.PlaceId == 7338881230 then
+    repeat
+        wait(0.01)
+    until game:IsLoaded()
+    a = 1
+    repeat
+        wait(1)
+        _G.player = game.Players:GetChildren()
+        if #_G.player < 10 then
+            wait(10)
+            game.Players.LocalPlayer:Kick()
+        end
+    until a == 2
+end
