@@ -1,0 +1,47 @@
+repeat
+    wait(0.01)
+until game:IsLoaded()
+if game.PlaceId == 7338881230 then
+    waiting = 1
+    repeat
+        wait(0.1)
+        _G.player = game.Players:GetChildren()
+        if #_G.player <= raidlobbyplayernumber then
+            wait(10)
+            game.Players.LocalPlayer:Kick()
+        end
+    until waiting == 2
+elseif game.PlaceId == 6990129309 then 
+    waitingboss = 0
+    waitingraidbosstime2 = waitingraidbosstime * 10
+    count1 = 0
+    repeat
+        wait(0.1)
+        if workspace.Folders.Monsters:FindFirstChildOfClass("Model") then
+            waitingboss = 1
+        else
+            count1 = count1 + 1
+            if count1 >= waitingraidbosstime2 then
+                game.Players.LocalPlayer:Kick()
+            end
+        end
+    until waitingboss == 1
+    _G.playername = game.Players.LocalPlayer.Name
+    for _, obj in pairs(workspace.Folders.Players:GetChildren()) do
+        if obj.Name == _G.playername then
+            _G.playername = obj.Name
+            waitingbossdie = 0
+            repeat
+                wait(0.1)
+                if workspace.Folders.Monsters:FindFirstChildOfClass("Model") then
+                    _G.monster = workspace.Folders.Monsters:FindFirstChildOfClass("Model")
+                    if workspace.Folders.Players:FindFirstChild(_G.playername) then
+                        workspace.Folders.Players[_G.playername].Humanoid.WalkToPoint = _G.monster.HumanoidRootPart.Position + Vector3.new(20,0,0)
+                    end
+                else
+                    waitingbossdie = 1
+                end
+            until waitingbossdie == 1
+        end
+    end
+end
