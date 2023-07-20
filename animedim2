@@ -37,7 +37,7 @@ elseif game.PlaceId == 6990129309 then
                     _G.monster = workspace.Folders.Monsters:FindFirstChildOfClass("Model")
                     if workspace.Folders.Players:FindFirstChild(_G.playername) then
                         workspace.Folders.Players[_G.playername].Humanoid.WalkToPoint = _G.monster.HumanoidRootPart.Position + Vector3.new(20,0,0)
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.monster.HumanoidRootPart.Position)
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, _G.monster.HumanoidRootPart.Position + Vector3.new(0,-10,0))
                     end
                 else
                     waitingbossdie = 1
