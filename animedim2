@@ -7,7 +7,7 @@ if game.PlaceId == 7338881230 then
         wait(0.1)
         _G.player = game.Players:GetChildren()
         if #_G.player <= raidlobbyplayernumber then
-            wait(10)
+            wait(20)
             game.Players.LocalPlayer:Kick()
         end
     until waiting == 2
