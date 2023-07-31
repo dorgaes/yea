@@ -110,7 +110,7 @@ if game.PlaceId == 11545598432 then
                         [2] = _stat
                     }
                         
-                    game:GetService("ReplicatedStorage").Events[Stats/RemoteFunction]:InvokeServer(unpack(args))
+                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(unpack(args))
                 end
             end
         end
@@ -122,7 +122,7 @@ if game.PlaceId == 11545598432 then
                     [2] = "Speed"
                 }
                 
-                game:GetService("ReplicatedStorage").Events[Stats/RemoteFunction]:InvokeServer(unpack(args))
+                game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(unpack(args))
                 wait(0.1)
             end
         end
@@ -237,10 +237,16 @@ if game.PlaceId == 11545598432 then
                     end
                     print("find boss")
                     local _NowBoss = Boss:FindFirstChildOfClass("Model")
+                    print("boss is ".._NowBoss.Name)
                     local _NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
+                    print("set player cframe")
                     PlayerHumanoidRootPart.CFrame = _NowBoss.WorldPivot + Vector3.new(0,110,0)
+                    print("teleporting")
+                    wait(0.5)
                     repeat
+                        print("in repeat")
                         if _NowBoss and _NowBoss:FindFirstChild("HumanoidRootPart") then
+                            print("doing boss")
                             PlayerHumanoidRootPart.Anchored = true
                             PlayerHumanoidRootPart.CFrame = _NowBoss:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
                             PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _NowBoss:FindFirstChild("HumanoidRootPart").Position)
@@ -248,10 +254,8 @@ if game.PlaceId == 11545598432 then
                             PlayerHumanoidRootPart.Anchored = false
                             wait(0.01)
                         end
-                        if _NowBoss and _NowBoss.Name == "_pain" then
-                            boss:Destroy()
-                        end
                     until not _NowBoss or not _NowBoss:FindFirstChild("HumanoidRootPart")
+                    print("boss died")
                     PlayerHumanoidRootPart.Anchored = false
                     PlayerHumanoidRootPart.CFrame = _NowPlayerCFrame
                 end
