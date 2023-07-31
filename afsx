@@ -12,77 +12,77 @@ if game.PlaceId == 11545598432 then
         --main----------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        farmchest = true
-        Cchest = true
-        Rchest = true
-        Echest = true
-        Lchest = true
-        chosefarm = nil
-        farmstat = true
-        farmspeed = true
-        painboss = true
-        normalboss = true
+        _farmchest = true
+        _Cchest = true
+        _Rchest = true
+        _Echest = true
+        _Lchest = true
+        _chosefarm = nil
+        _farmstat = true
+        _farmspeed = true
+        _painboss = true
+        _normalboss = true
         --player--------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        speed = Player.Character.Humanoid.WalkSpeed
-        jump = Player.Character.Humanoid.JumpPower
+        _speed = Player.Character.Humanoid.WalkSpeed
+        _jump = Player.Character.Humanoid.JumpPower
         --teleport------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        island = nil
-        Bossplace = nil
-        trainarea = nil
+        _island = nil
+        _Bossplace = nil
+        _trainarea = nil
         --Hatch---------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        champion = true
+        _champion = true
         --Setting-------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        igarlongo = true
-        igarmoredtitan = true
-        igfriezy = true
-        ighanddemon = true
-        igmonkey = true
-        igshukaku = true
+        _igarlongo = true
+        _igarmoredtitan = true
+        _igfriezy = true
+        _ighanddemon = true
+        _igmonkey = true
+        _igshukaku = true
     --functions
         --main----------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
         function chest() --value:Cchest1,Rchest1,Echest1,Lchest1(done)
-            while farmchest == true do
+            while _farmchest == true do
                 repeat
-                    local Cchest1 = workspace.Scriptable.Crates:FindFirstChild("common")
-                    local Rchest1 = workspace.Scriptable.Crates:FindFirstChild("rare")
-                    local Echest1 = workspace.Scriptable.Crates:FindFirstChild("epic")
-                    local Lchest1 = workspace.Scriptable.Crates:FindFirstChild("legendary")
+                    local _Cchest1 = workspace.Scriptable.Crates:FindFirstChild("common")
+                    local _Rchest1 = workspace.Scriptable.Crates:FindFirstChild("rare")
+                    local _Echest1 = workspace.Scriptable.Crates:FindFirstChild("epic")
+                    local _Lchest1 = workspace.Scriptable.Crates:FindFirstChild("legendary")
                     wait(0.5)
-                    if Cchest == true or Rchest == true or Echest == true or Lchest == true then
+                    if _Cchest == true or _Rchest == true or _Echest == true or _Lchest == true then
                         if Lchest == true then
-                            if Lchest1 then
-                                PlayerHumanoidRootPart.CFrame = Lchest1.WorldPivot
+                            if _Lchest1 then
+                                PlayerHumanoidRootPart.CFrame = _Lchest1.WorldPivot
                                 keypress(0x45)
                                 break
                             end
                         end
-                        if Echest == true then
-                            if Echest1 then
-                                PlayerHumanoidRootPart.CFrame = Echest1.WorldPivot
+                        if _Echest == true then
+                            if _Echest1 then
+                                PlayerHumanoidRootPart.CFrame = _Echest1.WorldPivot
                                 keypress(0x45)
                                 break
                             end
                         end
-                        if Rchest == true then
-                            if Rchest1 then
-                                PlayerHumanoidRootPart.CFrame = Rchest1.WorldPivot
+                        if _Rchest == true then
+                            if _Rchest1 then
+                                PlayerHumanoidRootPart.CFrame = _Rchest1.WorldPivot
                                 keypress(0x45)
                                 break
                             end
                         end
-                        if Cchest == true then
-                            if Cchest1 then
-                                PlayerHumanoidRootPart.CFrame = Cchest1.WorldPivot
+                        if _Cchest == true then
+                            if _Cchest1 then
+                                PlayerHumanoidRootPart.CFrame = _Cchest1.WorldPivot
                                 keypress(0x45)
                                 break
                             end
@@ -93,32 +93,30 @@ if game.PlaceId == 11545598432 then
         end
 
         function farmstat()
-            while farmstat == true do
-                if chosefarm ~= nil then
-                    if chosefarm == "strength" then
-                        local stat = "Strength"
+            while _farmstat == true do
+                if _chosefarm ~= nil then
+                    if _chosefarm == "strength" then
+                        local _stat = "Strength"
                     elseif chosefarm == "durability" then
-                        local stat = "Durability"
+                        local _stat = "Durability"
                     elseif chosefarm == "chakra" then
-                        local stat = "Chakra"
+                        local _stat = "Chakra"
                     elseif chosefarm == "sword" then
-                        local stat = "Sword"
+                        local _stat = "Sword"
                     end
-                    while farmstat == true do
-                        local args = {
-                            [1] = "TrainStat",
-                            [2] = stat
-                        }
+                    local args = {
+                        [1] = "TrainStat",
+                        [2] = _stat
+                    }
                         
-                        game:GetService("ReplicatedStorage").Events[Stats/RemoteFunction]:InvokeServer(unpack(args))
-                        wait(0.1)
-                    end
+                    game:GetService("ReplicatedStorage").Events[Stats/RemoteFunction]:InvokeServer(unpack(args))
+                    wait(0.1)
                 end
             end
         end
 
         function farmspeed() --no values
-            while farmspeed == true do
+            while _farmspeed == true do
                 local args = {
                     [1] = "TrainStat",
                     [2] = "Speed"
@@ -130,25 +128,25 @@ if game.PlaceId == 11545598432 then
         end
 
         function painboss()
-            while painboss == true do
+            while _painboss == true do
                 wait(0.1)
                 if not Boss:FindFirstChild("_pain") then
                     PlayerHumanoidRootPart.CFrame = CFrame.new(-111.995575, 57.6821747, -158.570511, -0.966234148, 4.10521928e-08, -0.257665724, 6.6476602e-08, 1, -8.9960615e-08, 0.257665724, -1.04051757e-07, -0.966234148)
-                    local countwaitpain = 0
+                    local _countwaitpain = 0
                     repeat
                         wait(0.1)
-                        countwaitpain = countwaitpain + 1
+                        _countwaitpain = _countwaitpain + 1
                         keypress(0x45)
-                    until countwaitpain == 50
-                    PlayerHumanoidRootPart.CFrame = Player.Character.HumanoidRootPart.CFrame + Vector3.new(0,300,0)
+                    until _countwaitpain == 50
+                    PlayerHumanoidRootPart.CFrame = PlayerHumanoidRootPart.CFrame + Vector3.new(0,300,0)
                     repeat
                         wait(0.1)
                     until Boss:FindFirstChild("_pain")
-                    local pain = Boss:FindFirstChild("_pain")
+                    local _pain = Boss:FindFirstChild("_pain")
                     PlayerHumanoidRootPart.CFrame = pain.WorldPivot + Vector3.new(0, 110, 0)
                     wait(0.2)
                     repeat
-                        if pain and pain:FindFirstChild("HumanoidRootPart") then
+                        if _pain and pain:FindFirstChild("HumanoidRootPart") then
                             PlayerHumanoidRootPart.Anchored = true
                             PlayerHumanoidRootPart.CFrame = boss:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
                             PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, boss:FindFirstChild("HumanoidRootPart").Position)
@@ -162,186 +160,191 @@ if game.PlaceId == 11545598432 then
         end
 
         function normalboss()
-            while normalboss == true do
+            while _normalboss == true do
                 wait(0.1)
                 if Boss:FindFirstChildOfClass("Model") and Boss:FindFirstChildOfClass("Model").Name ~= ("_pain") then
-                    if igarlongo == true then
+                    if _igarlongo == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_arlongo" then
                             repeat
                                 wait(1)
-                                if normalboss == false then
+                                if _normalboss == false then
                                     break
                                 end
                             until not Boss:FindFirstChildOfClass("Model").Name == "_arlongo" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
                             break
                         end
                     end
-                    if igarmoredtitan == true then
+                    if _igarmoredtitan == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_armoredTitan" then
                             repeat
                                 wait(1)
-                                if normalboss == false then
+                                if _normalboss == false then
                                     break
                                 end
                             until not Boss:FindFirstChildOfClass("Model").Name == "_armoredTitan" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
                             break
                         end
                     end
-                    if igfriezy == true then
+                    if _igfriezy == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_friezy" then
                             repeat
                                 wait(1)
-                                if normalboss == false then
+                                if _normalboss == false then
                                     break
                                 end
                             until not Boss:FindFirstChildOfClass("Model").Name == "_friezy" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
                             break
                         end
                     end
-                    if ighanddemon == true then
+                    if _ighanddemon == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_handDemon" then
                             repeat
                                 wait(1)
-                                if normalboss == false then
+                                if _normalboss == false then
                                     break
                                 end
                             until not Boss:FindFirstChildOfClass("Model").Name == "_handDemon" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
                             break
                         end
                     end
-                    if igmonkey == true then
+                    if _igmonkey == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_ape" then
                             repeat
                                 wait(1)
-                                if normalboss == false then
+                                if _normalboss == false then
                                     break
                                 end
                             until not Boss:FindFirstChildOfClass("Model").Name == "_ape" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
                             break
                         end
                     end
-                    if igshukaku == true then
+                    if _igshukaku == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_desertBoss" then
                             repeat
                                 wait(1)
-                                if normalboss == false then
+                                if _normalboss == false then
                                     break
                                 end
                             until not Boss:FindFirstChildOfClass("Model").Name == "_desertBoss" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
                             break
                         end
                     end
-                    local NowBoss = Boss:FindFirstChildOfClass("Model")
-                    local NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
-                    PlayerHumanoidRootPart.CFrame = NowBoss.WorldPivot + Vector3.new(0,110,0)
+                    local _NowBoss = Boss:FindFirstChildOfClass("Model")
+                    local _NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
+                    PlayerHumanoidRootPart.CFrame = _NowBoss.WorldPivot + Vector3.new(0,110,0)
                     repeat
-                        if NowBoss and NowBoss:FindFirstChild("HumanoidRootPart") then
+                        if _NowBoss and _NowBoss:FindFirstChild("HumanoidRootPart") then
                             PlayerHumanoidRootPart.Anchored = true
-                            PlayerHumanoidRootPart.CFrame = NowBoss:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
-                            PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, NowBoss:FindFirstChild("HumanoidRootPart").Position)
+                            PlayerHumanoidRootPart.CFrame = _NowBoss:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
+                            PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _NowBoss:FindFirstChild("HumanoidRootPart").Position)
                             wait(0.4)
                             PlayerHumanoidRootPart.Anchored = false
                             wait(0.01)
                         end
-                        if NowBoss and NowBoss.Name == "_pain" then
+                        if _NowBoss and _NowBoss.Name == "_pain" then
                             boss:Destroy()
                         end
-                    until not NowBoss or not NowBoss:FindFirstChild("HumanoidRootPart")
+                    until not _NowBoss or not _NowBoss:FindFirstChild("HumanoidRootPart")
                     PlayerHumanoidRootPart.Anchored = false
-                    PlayerHumanoidRootPart.CFrame = NowPlayerCFrame
+                    PlayerHumanoidRootPart.CFrame = _NowPlayerCFrame
                 end
             end
         end
         --player--------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function speed() --Values:speed2(done)
-            Player.Character.Humanoid.WalkSpeed = speed
+        function speed()
+            Player.Character.Humanoid.WalkSpeed = _speed
         end
 
-        function jump() --Values:jump2(done)
-            Player.Character.Humanoid.JumpPower = jump
+        function jump()
+            Player.Character.Humanoid.JumpPower = _jump
         end
         --teleport------------------------------------------------------------------------------------------------------------------------------------------------------
-        
+
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function teleport() --no values
-            if island ~= nil then
-                if island == "Main island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-37.9272308, 57.9989052, -207.58168, 0.271720946, 4.94854966e-08, -0.962376058, 2.81858838e-08, 1, 5.93782339e-08, 0.962376058, -4.32597282e-08, 0.271720946)
-                elseif island == "Desert island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1167.62427, 13.596139, -290.172943, 0.513728023, 3.0669991e-08, -0.857953072, -6.62519106e-09, 1, 3.17808073e-08, 0.857953072, -1.0642589e-08, 0.513728023)
-                elseif island == "Ice island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(865.241333, 16.5045547, -2005.47083, 0.947903931, 2.43465714e-09, -0.318556279, 1.80285191e-08, 1, 6.1288894e-08, 0.318556279, -6.38390816e-08, 0.947903931)
-                elseif island == "Demon island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1007.52686, 173.81929, -1767.69592, 0.920600295, -1.34153293e-08, -0.390506238, 1.58166156e-08, 1, 2.93324831e-09, 0.390506238, -8.87683616e-09, 0.920600295)
-                elseif island == "Volcano island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(971.073853, 13.5997581, 1063.28796, -0.679763496, 3.33324586e-08, -0.733431399, -2.79389116e-08, 1, 7.13417876e-08, 0.733431399, 6.89868216e-08, -0.679763496)
-                elseif island == "Cell island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1193.83704, 13.8008919, -143.740356, -0.0099736983, 7.80451472e-08, 0.99995029, 1.40346472e-08, 1, -7.79090428e-08, -0.99995029, 1.32569085e-08, -0.0099736983)
+        function teleport()
+            if _island ~= nil then
+                if _island == "Main island" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-37.9272308, 57.9989052, -207.58168, 0.271720946, 4.94854966e-08, -0.962376058, 2.81858838e-08, 1, 5.93782339e-08, 0.962376058, -4.32597282e-08, 0.271720946)
+                elseif _island == "Desert island" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1167.62427, 13.596139, -290.172943, 0.513728023, 3.0669991e-08, -0.857953072, -6.62519106e-09, 1, 3.17808073e-08, 0.857953072, -1.0642589e-08, 0.513728023)
+                elseif _island == "Ice island" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(865.241333, 16.5045547, -2005.47083, 0.947903931, 2.43465714e-09, -0.318556279, 1.80285191e-08, 1, 6.1288894e-08, 0.318556279, -6.38390816e-08, 0.947903931)
+                elseif _island == "Demon island" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1007.52686, 173.81929, -1767.69592, 0.920600295, -1.34153293e-08, -0.390506238, 1.58166156e-08, 1, 2.93324831e-09, 0.390506238, -8.87683616e-09, 0.920600295)
+                elseif _island == "Volcano island" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(971.073853, 13.5997581, 1063.28796, -0.679763496, 3.33324586e-08, -0.733431399, -2.79389116e-08, 1, 7.13417876e-08, 0.733431399, 6.89868216e-08, -0.679763496)
+                elseif _island == "Cell island" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1193.83704, 13.8008919, -143.740356, -0.0099736983, 7.80451472e-08, 0.99995029, 1.40346472e-08, 1, -7.79090428e-08, -0.99995029, 1.32569085e-08, -0.0099736983)
                 end
-                island = nil
-                Bossplace = nil
-            elseif Bossplace ~= nil then
-                if Bossplace == "Pain" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-112.7108, 57.6821594, -164.52002, -0.979042888, -2.35146391e-08, -0.203654259, -3.85682988e-08, 1, 6.99488396e-08, 0.203654259, 7.6337507e-08, -0.979042888)
-                elseif Bossplace == "Arlongo" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
-                elseif Bossplace == "Hand Demon" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-720.885193, 173.819305, -2085.30811, 0.961095989, -1.56375908e-08, -0.276214659, -1.33553135e-09, 1, -6.1260927e-08, 0.276214659, 5.92465206e-08, 0.961095989)
-                elseif Bossplace == "Armored Titan" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
-                elseif Bossplace == "Shukaku" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1530.1311, 13.8009348, -476.421295, 0.99395448, 3.80231882e-08, -0.109793, -3.05327248e-08, 1, 6.99047504e-08, 0.109793, -6.61298571e-08, 0.99395448)
-                elseif Bossplace == "Friezy" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1060.02063, 34.5537605, 1781.6405, -0.43528834, 4.28204814e-08, -0.900291085, -1.53159874e-09, 1, 4.83034519e-08, 0.900291085, 2.2404814e-08, -0.43528834)
-                elseif Bossplace == "Monkey" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1483.83179, 24.1382084, -172.728317, 0.00188439596, -5.82290411e-08, 0.999998212, -7.91759547e-09, 1, 5.8244062e-08, -0.999998212, -8.02733613e-09, 0.00188439596)
+                _island = nil
+                _Bossplace = nil
+                _trainarea = nil
+            elseif _Bossplace ~= nil then
+                if _Bossplace == "Pain" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-112.7108, 57.6821594, -164.52002, -0.979042888, -2.35146391e-08, -0.203654259, -3.85682988e-08, 1, 6.99488396e-08, 0.203654259, 7.6337507e-08, -0.979042888)
+                elseif _Bossplace == "Arlongo" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
+                elseif _Bossplace == "Hand Demon" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-720.885193, 173.819305, -2085.30811, 0.961095989, -1.56375908e-08, -0.276214659, -1.33553135e-09, 1, -6.1260927e-08, 0.276214659, 5.92465206e-08, 0.961095989)
+                elseif _Bossplace == "Armored Titan" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
+                elseif _Bossplace == "Shukaku" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1530.1311, 13.8009348, -476.421295, 0.99395448, 3.80231882e-08, -0.109793, -3.05327248e-08, 1, 6.99047504e-08, 0.109793, -6.61298571e-08, 0.99395448)
+                elseif _Bossplace == "Friezy" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1060.02063, 34.5537605, 1781.6405, -0.43528834, 4.28204814e-08, -0.900291085, -1.53159874e-09, 1, 4.83034519e-08, 0.900291085, 2.2404814e-08, -0.43528834)
+                elseif _Bossplace == "Monkey" then
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1483.83179, 24.1382084, -172.728317, 0.00188439596, -5.82290411e-08, 0.999998212, -7.91759547e-09, 1, 5.8244062e-08, -0.999998212, -8.02733613e-09, 0.00188439596)
                 end 
-                island = nil
-                Bossplace = nil
-            elseif trainarea ~= nil then
-                if trainarea == "Strength(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Wood Logs"].CFrame
-                elseif trainarea == "Strength(10k)" or trainarea == "Speed(10k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Gym.CFrame
-                elseif trainarea == "Strength(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Garbage Beach"].CFrame
-                elseif trainarea == "Strength(1M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Boulder.CFrame + Vector3.new(0,20,0)
-                elseif trainarea == "Strength(10M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Meteor.CFrame + Vector3.new(0,30,0)
-                elseif trainarea == "Strength(100M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Cell Arena"].CFrame
-                elseif trainarea == "Durability(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Pirate Ship"].CFrame
-                elseif trainarea == "Durability(10k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Burning House"].CFrame
-                elseif trainarea == "Durability(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Desert Storm"].CFrame
-                elseif trainarea == "Durability(1M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Ice Chamber"].CFrame
-                elseif trainarea == "Durability(10M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Volcano.CFrame
-                elseif trainarea == "Durability(100M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["North King's Planet"].CFrame + Vector3.new(0,100,0)
-                elseif trainarea == "Chakra(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Chakra Tree"].CFrame + Vector3.new(0,-40,-20)
-                elseif trainarea == "Chakra(10k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Library.CFrame
-                elseif trainarea == "Chakra(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Waterfall.CFrame + Vector3.new(0,30,0)
-                elseif trainarea == "Chakra(1M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Temple.CFrame + Vector3.new(0,-100,-80)
-                elseif trainarea == "Chakra(15M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Spider Web"].CFrame + Vector3.new(0,20,0)
-                elseif trainarea == "Chakra(100M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Tower of Heaven"].CFrame + Vector3.new(0,-330,80)
-                elseif trainarea == "Speed(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Trampoline.CFrame
-                elseif trainarea == "Speed(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Gravity Chamber"].CFrame + Vector3.new(0,0,10)
+                _island = nil
+                _Bossplace = nil
+                _trainarea = nil
+            elseif _trainarea ~= nil then
+                if _trainarea == "Strength(100)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Wood Logs"].CFrame
+                elseif _trainarea == "Strength(10k)" or _trainarea == "Speed(10k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Gym.CFrame
+                elseif _trainarea == "Strength(100k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Garbage Beach"].CFrame
+                elseif _trainarea == "Strength(1M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Boulder.CFrame + Vector3.new(0,20,0)
+                elseif _trainarea == "Strength(10M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Meteor.CFrame + Vector3.new(0,30,0)
+                elseif _trainarea == "Strength(100M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Cell Arena"].CFrame
+                elseif _trainarea == "Durability(100)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Pirate Ship"].CFrame
+                elseif _trainarea == "Durability(10k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Burning House"].CFrame
+                elseif _trainarea == "Durability(100k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Desert Storm"].CFrame
+                elseif _trainarea == "Durability(1M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Ice Chamber"].CFrame
+                elseif _trainarea == "Durability(10M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Volcano.CFrame
+                elseif _trainarea == "Durability(100M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["North King's Planet"].CFrame + Vector3.new(0,100,0)
+                elseif _trainarea == "Chakra(100)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Chakra Tree"].CFrame + Vector3.new(0,-40,-20)
+                elseif _trainarea == "Chakra(10k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Library.CFrame
+                elseif _trainarea == "Chakra(100k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Waterfall.CFrame + Vector3.new(0,30,0)
+                elseif _trainarea == "Chakra(1M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Temple.CFrame + Vector3.new(0,-100,-80)
+                elseif _trainarea == "Chakra(15M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Spider Web"].CFrame + Vector3.new(0,20,0)
+                elseif _trainarea == "Chakra(100M)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Tower of Heaven"].CFrame + Vector3.new(0,-330,80)
+                elseif _trainarea == "Speed(100)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Trampoline.CFrame
+                elseif _trainarea == "Speed(100k)" then
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Gravity Chamber"].CFrame + Vector3.new(0,0,10)
                 end
+                _island = nil
+                _Bossplace = nil
+                _trainarea = nil
             else
                 print("No place")
             end
@@ -350,7 +353,7 @@ if game.PlaceId == 11545598432 then
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
         function champion() --no values
-            while champion == true do
+            while _champion == true do
                 wait(20)
                 local args = {
                     [1] = "Roll",
@@ -380,7 +383,7 @@ if game.PlaceId == 11545598432 then
             Default = "",
             Options = {"strength", "durability", "chakra", "sword"},
             Callback = function(Value)
-                chosefarm = Value
+                _chosefarm = Value
             end    
         })
 
@@ -388,7 +391,7 @@ if game.PlaceId == 11545598432 then
             Name = "Farm stat",
             Default = false,
             Callback = function(Value)
-                farmstat = Value
+                _farmstat = Value
                 farmstat()
             end    
         })
@@ -397,7 +400,7 @@ if game.PlaceId == 11545598432 then
             Name = "Farm with speed",
             Default = false,
             Callback = function(Value)
-                farmspeed = Value
+                _farmspeed = Value
                 farmspeed()
             end    
         })
@@ -410,7 +413,7 @@ if game.PlaceId == 11545598432 then
             Name = "Pain",
             Default = false,
             Callback = function(Value)
-                painboss = Value
+                _painboss = Value
                 painboss()
             end    
         })
@@ -419,7 +422,7 @@ if game.PlaceId == 11545598432 then
             Name = "World Boss",
             Default = false,
             Callback = function(Value)
-                normalboss = Value
+                _normalboss = Value
                 normalboss()
             end    
         })
@@ -435,7 +438,7 @@ if game.PlaceId == 11545598432 then
             Name = "Farm Chest",
             Default = false,
             Callback = function(Value)
-                farmchest = Value
+                _farmchest = Value
                 chest()
             end    
         })
@@ -444,7 +447,7 @@ if game.PlaceId == 11545598432 then
             Name = "Common",
             Default = false,
             Callback = function(Value)
-                Cchest = Value
+                _Cchest = Value
             end    
         })
 
@@ -452,7 +455,7 @@ if game.PlaceId == 11545598432 then
             Name = "Rare",
             Default = false,
             Callback = function(Value)
-                Rchest = Value
+                _Rchest = Value
             end    
         })
 
@@ -460,7 +463,7 @@ if game.PlaceId == 11545598432 then
             Name = "Epic",
             Default = false,
             Callback = function(Value)
-                Echest = Value
+                _Echest = Value
             end    
         })
 
@@ -468,7 +471,7 @@ if game.PlaceId == 11545598432 then
             Name = "Legendary",
             Default = false,
             Callback = function(Value)
-                Lchest = Value
+                _Lchest = Value
             end    
         })
         --Player--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -491,8 +494,8 @@ if game.PlaceId == 11545598432 then
             Default = "",
             TextDisappear = false,
             Callback = function(Value)
-                speed1 = Value
-                speed(speed1)
+                _speed1 = Value
+                speed()
             end	  
         })
 
@@ -501,7 +504,7 @@ if game.PlaceId == 11545598432 then
             Default = "",
             TextDisappear = false,
             Callback = function(Value)
-                jump1 = Value
+                _jump1 = Value
                 jump()
             end	  
         })
@@ -524,9 +527,9 @@ if game.PlaceId == 11545598432 then
             Default = "",
             Options = {"Main island", "Desert island", "Ice island", "Demon island", "Volcano island", "Cell island"},
             Callback = function(Value)
-                island = Value
-                Bossplace = nil
-                trainarea = nil
+                _island = Value
+                _Bossplace = nil
+                _trainarea = nil
             end    
         })
 
@@ -535,9 +538,9 @@ if game.PlaceId == 11545598432 then
             Default = "",
             Options = {"Pain", "Arlongo", "Hand Demon", "Armored Titan", "Shukaku", "Friezy", "Monkey"},
             Callback = function(Value)
-                Bossplace = Value
-                island = nil
-                trainarea = nil
+                _Bossplace = Value
+                _island = nil
+                _trainarea = nil
             end    
         })
 
@@ -549,9 +552,9 @@ if game.PlaceId == 11545598432 then
                         "Chakra(100)", "Chakra(10k)", "Chakra(100k)", "Chakra(1M)", "Chakra(10M)", "Chakra(100M)",
                         "Speed(100)", "Speed(10k)", "Speed(100k)"},
             Callback = function(Value)
-                trainarea = Value
-                Bossplace = nil
-                island = nil
+                _trainarea = Value
+                _Bossplace = nil
+                _island = nil
             end    
         })
 
@@ -579,7 +582,7 @@ if game.PlaceId == 11545598432 then
             Name = "Auto hatch champion",
             Default = false,
             Callback = function(Value)
-                champion = Value
+                _champion = Value
                 champion()
             end    
         })
@@ -601,7 +604,7 @@ if game.PlaceId == 11545598432 then
             Name = "Arlongo",
             Default = false,
             Callback = function(Value)
-                igarlongo = Value
+                _igarlongo = Value
             end    
         })
 
@@ -609,7 +612,7 @@ if game.PlaceId == 11545598432 then
             Name = "Hand Demon",
             Default = false,
             Callback = function(Value)
-                ighanddemon = Value
+                _ighanddemon = Value
             end    
         })
 
@@ -617,7 +620,7 @@ if game.PlaceId == 11545598432 then
             Name = "Armored Titan",
             Default = false,
             Callback = function(Value)
-                igarmoredtitan = Value
+                _igarmoredtitan = Value
             end    
         })
 
@@ -625,7 +628,7 @@ if game.PlaceId == 11545598432 then
             Name = "Shukaku",
             Default = false,
             Callback = function(Value)
-                igshukaku = Value
+                _igshukaku = Value
             end    
         })
 
@@ -633,7 +636,7 @@ if game.PlaceId == 11545598432 then
             Name = "Friezy",
             Default = false,
             Callback = function(Value)
-                igfriezy = Value
+                _igfriezy = Value
             end    
         })
 
@@ -641,7 +644,7 @@ if game.PlaceId == 11545598432 then
             Name = "Monkey",
             Default = false,
             Callback = function(Value)
-                igmonkey = Value
+                _igmonkey = Value
             end    
         })
 end
