@@ -94,6 +94,7 @@ if game.PlaceId == 11545598432 then
 
         function farmstat()
             while _farmstat == true do
+                wait(0.1)
                 if _chosefarm ~= nil then
                     if _chosefarm == "strength" then
                         local _stat = "Strength"
@@ -109,8 +110,7 @@ if game.PlaceId == 11545598432 then
                         [2] = _stat
                     }
                         
-                    game:GetService("ReplicatedStorage").Events[Stats/RemoteFunction]:InvokeServer(unpack(args))
-                    wait(0.1)
+                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(unpack(args))
                 end
             end
         end
@@ -122,7 +122,7 @@ if game.PlaceId == 11545598432 then
                     [2] = "Speed"
                 }
                 
-                game:GetService("ReplicatedStorage").Events[Stats/RemoteFunction]:InvokeServer(unpack(args))
+                game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(unpack(args))
                 wait(0.1)
             end
         end
@@ -165,6 +165,7 @@ if game.PlaceId == 11545598432 then
                 if Boss:FindFirstChildOfClass("Model") and Boss:FindFirstChildOfClass("Model").Name ~= ("_pain") then
                     if _igarlongo == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_arlongo" then
+                            print("arlongo")
                             repeat
                                 wait(1)
                                 if _normalboss == false then
@@ -176,6 +177,7 @@ if game.PlaceId == 11545598432 then
                     end
                     if _igarmoredtitan == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_armoredTitan" then
+                            print("armoredtitan")
                             repeat
                                 wait(1)
                                 if _normalboss == false then
@@ -187,6 +189,7 @@ if game.PlaceId == 11545598432 then
                     end
                     if _igfriezy == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_friezy" then
+                            print("friezy")
                             repeat
                                 wait(1)
                                 if _normalboss == false then
@@ -198,6 +201,7 @@ if game.PlaceId == 11545598432 then
                     end
                     if _ighanddemon == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_handDemon" then
+                            print("handdemon")
                             repeat
                                 wait(1)
                                 if _normalboss == false then
@@ -209,6 +213,7 @@ if game.PlaceId == 11545598432 then
                     end
                     if _igmonkey == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_ape" then
+                            print("monkey")
                             repeat
                                 wait(1)
                                 if _normalboss == false then
@@ -220,6 +225,7 @@ if game.PlaceId == 11545598432 then
                     end
                     if _igshukaku == true then
                         if Boss:FindFirstChildOfClass("Model").Name == "_desertBoss" then
+                            print("shukaku")
                             repeat
                                 wait(1)
                                 if _normalboss == false then
@@ -229,6 +235,7 @@ if game.PlaceId == 11545598432 then
                             break
                         end
                     end
+                    print("find boss")
                     local _NowBoss = Boss:FindFirstChildOfClass("Model")
                     local _NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
                     PlayerHumanoidRootPart.CFrame = _NowBoss.WorldPivot + Vector3.new(0,110,0)
