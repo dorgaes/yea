@@ -138,15 +138,15 @@ if game.PlaceId == 11545598432 then
                         _countwaitpain = _countwaitpain + 1
                         keypress(0x45)
                     until _countwaitpain == 50
-                    PlayerHumanoidRootPart.CFrame = Player.Character.HumanoidRootPart.CFrame + Vector3.new(0,300,0)
+                    PlayerHumanoidRootPart.CFrame = PlayerHumanoidRootPart.CFrame + Vector3.new(0,300,0)
                     repeat
                         wait(0.1)
                     until Boss:FindFirstChild("_pain")
                     local _pain = Boss:FindFirstChild("_pain")
-                    PlayerHumanoidRootPart.CFrame = pain.WorldPivot + Vector3.new(0, 110, 0)
+                    PlayerHumanoidRootPart.CFrame = _pain.WorldPivot + Vector3.new(0, 110, 0)
                     wait(0.2)
                     repeat
-                        if _pain and pain:FindFirstChild("HumanoidRootPart") then
+                        if _pain and _pain:FindFirstChild("HumanoidRootPart") then
                             PlayerHumanoidRootPart.Anchored = true
                             PlayerHumanoidRootPart.CFrame = boss:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
                             PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, boss:FindFirstChild("HumanoidRootPart").Position)
@@ -231,7 +231,7 @@ if game.PlaceId == 11545598432 then
                     end
                     local _NowBoss = Boss:FindFirstChildOfClass("Model")
                     local _NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
-                    PlayerHumanoidRootPart.CFrame = NowBoss.WorldPivot + Vector3.new(0,110,0)
+                    PlayerHumanoidRootPart.CFrame = _NowBoss.WorldPivot + Vector3.new(0,110,0)
                     repeat
                         if _NowBoss and _NowBoss:FindFirstChild("HumanoidRootPart") then
                             PlayerHumanoidRootPart.Anchored = true
@@ -266,81 +266,81 @@ if game.PlaceId == 11545598432 then
         function teleport()
             if _island ~= nil then
                 if _island == "Main island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-37.9272308, 57.9989052, -207.58168, 0.271720946, 4.94854966e-08, -0.962376058, 2.81858838e-08, 1, 5.93782339e-08, 0.962376058, -4.32597282e-08, 0.271720946)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-37.9272308, 57.9989052, -207.58168, 0.271720946, 4.94854966e-08, -0.962376058, 2.81858838e-08, 1, 5.93782339e-08, 0.962376058, -4.32597282e-08, 0.271720946)
                 elseif _island == "Desert island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1167.62427, 13.596139, -290.172943, 0.513728023, 3.0669991e-08, -0.857953072, -6.62519106e-09, 1, 3.17808073e-08, 0.857953072, -1.0642589e-08, 0.513728023)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1167.62427, 13.596139, -290.172943, 0.513728023, 3.0669991e-08, -0.857953072, -6.62519106e-09, 1, 3.17808073e-08, 0.857953072, -1.0642589e-08, 0.513728023)
                 elseif _island == "Ice island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(865.241333, 16.5045547, -2005.47083, 0.947903931, 2.43465714e-09, -0.318556279, 1.80285191e-08, 1, 6.1288894e-08, 0.318556279, -6.38390816e-08, 0.947903931)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(865.241333, 16.5045547, -2005.47083, 0.947903931, 2.43465714e-09, -0.318556279, 1.80285191e-08, 1, 6.1288894e-08, 0.318556279, -6.38390816e-08, 0.947903931)
                 elseif _island == "Demon island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1007.52686, 173.81929, -1767.69592, 0.920600295, -1.34153293e-08, -0.390506238, 1.58166156e-08, 1, 2.93324831e-09, 0.390506238, -8.87683616e-09, 0.920600295)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1007.52686, 173.81929, -1767.69592, 0.920600295, -1.34153293e-08, -0.390506238, 1.58166156e-08, 1, 2.93324831e-09, 0.390506238, -8.87683616e-09, 0.920600295)
                 elseif _island == "Volcano island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(971.073853, 13.5997581, 1063.28796, -0.679763496, 3.33324586e-08, -0.733431399, -2.79389116e-08, 1, 7.13417876e-08, 0.733431399, 6.89868216e-08, -0.679763496)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(971.073853, 13.5997581, 1063.28796, -0.679763496, 3.33324586e-08, -0.733431399, -2.79389116e-08, 1, 7.13417876e-08, 0.733431399, 6.89868216e-08, -0.679763496)
                 elseif _island == "Cell island" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1193.83704, 13.8008919, -143.740356, -0.0099736983, 7.80451472e-08, 0.99995029, 1.40346472e-08, 1, -7.79090428e-08, -0.99995029, 1.32569085e-08, -0.0099736983)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1193.83704, 13.8008919, -143.740356, -0.0099736983, 7.80451472e-08, 0.99995029, 1.40346472e-08, 1, -7.79090428e-08, -0.99995029, 1.32569085e-08, -0.0099736983)
                 end
                 _island = nil
                 _Bossplace = nil
                 _trainarea = nil
             elseif _Bossplace ~= nil then
                 if _Bossplace == "Pain" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-112.7108, 57.6821594, -164.52002, -0.979042888, -2.35146391e-08, -0.203654259, -3.85682988e-08, 1, 6.99488396e-08, 0.203654259, 7.6337507e-08, -0.979042888)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-112.7108, 57.6821594, -164.52002, -0.979042888, -2.35146391e-08, -0.203654259, -3.85682988e-08, 1, 6.99488396e-08, 0.203654259, 7.6337507e-08, -0.979042888)
                 elseif _Bossplace == "Arlongo" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
                 elseif _Bossplace == "Hand Demon" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-720.885193, 173.819305, -2085.30811, 0.961095989, -1.56375908e-08, -0.276214659, -1.33553135e-09, 1, -6.1260927e-08, 0.276214659, 5.92465206e-08, 0.961095989)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-720.885193, 173.819305, -2085.30811, 0.961095989, -1.56375908e-08, -0.276214659, -1.33553135e-09, 1, -6.1260927e-08, 0.276214659, 5.92465206e-08, 0.961095989)
                 elseif _Bossplace == "Armored Titan" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
                 elseif _Bossplace == "Shukaku" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1530.1311, 13.8009348, -476.421295, 0.99395448, 3.80231882e-08, -0.109793, -3.05327248e-08, 1, 6.99047504e-08, 0.109793, -6.61298571e-08, 0.99395448)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1530.1311, 13.8009348, -476.421295, 0.99395448, 3.80231882e-08, -0.109793, -3.05327248e-08, 1, 6.99047504e-08, 0.109793, -6.61298571e-08, 0.99395448)
                 elseif _Bossplace == "Friezy" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(1060.02063, 34.5537605, 1781.6405, -0.43528834, 4.28204814e-08, -0.900291085, -1.53159874e-09, 1, 4.83034519e-08, 0.900291085, 2.2404814e-08, -0.43528834)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(1060.02063, 34.5537605, 1781.6405, -0.43528834, 4.28204814e-08, -0.900291085, -1.53159874e-09, 1, 4.83034519e-08, 0.900291085, 2.2404814e-08, -0.43528834)
                 elseif _Bossplace == "Monkey" then
-                    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1483.83179, 24.1382084, -172.728317, 0.00188439596, -5.82290411e-08, 0.999998212, -7.91759547e-09, 1, 5.8244062e-08, -0.999998212, -8.02733613e-09, 0.00188439596)
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1483.83179, 24.1382084, -172.728317, 0.00188439596, -5.82290411e-08, 0.999998212, -7.91759547e-09, 1, 5.8244062e-08, -0.999998212, -8.02733613e-09, 0.00188439596)
                 end 
                 _island = nil
                 _Bossplace = nil
                 _trainarea = nil
             elseif _trainarea ~= nil then
                 if _trainarea == "Strength(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Wood Logs"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Wood Logs"].CFrame
                 elseif _trainarea == "Strength(10k)" or _trainarea == "Speed(10k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Gym.CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Gym.CFrame
                 elseif _trainarea == "Strength(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Garbage Beach"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Garbage Beach"].CFrame
                 elseif _trainarea == "Strength(1M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Boulder.CFrame + Vector3.new(0,20,0)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Boulder.CFrame + Vector3.new(0,20,0)
                 elseif _trainarea == "Strength(10M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Meteor.CFrame + Vector3.new(0,30,0)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Meteor.CFrame + Vector3.new(0,30,0)
                 elseif _trainarea == "Strength(100M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Cell Arena"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Cell Arena"].CFrame
                 elseif _trainarea == "Durability(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Pirate Ship"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Pirate Ship"].CFrame
                 elseif _trainarea == "Durability(10k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Burning House"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Burning House"].CFrame
                 elseif _trainarea == "Durability(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Desert Storm"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Desert Storm"].CFrame
                 elseif _trainarea == "Durability(1M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Ice Chamber"].CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Ice Chamber"].CFrame
                 elseif _trainarea == "Durability(10M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Volcano.CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Volcano.CFrame
                 elseif _trainarea == "Durability(100M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["North King's Planet"].CFrame + Vector3.new(0,100,0)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["North King's Planet"].CFrame + Vector3.new(0,100,0)
                 elseif _trainarea == "Chakra(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Chakra Tree"].CFrame + Vector3.new(0,-40,-20)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Chakra Tree"].CFrame + Vector3.new(0,-40,-20)
                 elseif _trainarea == "Chakra(10k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Library.CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Library.CFrame
                 elseif _trainarea == "Chakra(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Waterfall.CFrame + Vector3.new(0,30,0)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Waterfall.CFrame + Vector3.new(0,30,0)
                 elseif _trainarea == "Chakra(1M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Temple.CFrame + Vector3.new(0,-100,-80)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Temple.CFrame + Vector3.new(0,-100,-80)
                 elseif _trainarea == "Chakra(15M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Spider Web"].CFrame + Vector3.new(0,20,0)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Spider Web"].CFrame + Vector3.new(0,20,0)
                 elseif _trainarea == "Chakra(100M)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Tower of Heaven"].CFrame + Vector3.new(0,-330,80)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Tower of Heaven"].CFrame + Vector3.new(0,-330,80)
                 elseif _trainarea == "Speed(100)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Trampoline.CFrame
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Trampoline.CFrame
                 elseif _trainarea == "Speed(100k)" then
-                    player.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Gravity Chamber"].CFrame + Vector3.new(0,0,10)
+                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Gravity Chamber"].CFrame + Vector3.new(0,0,10)
                 end
                 _island = nil
                 _Bossplace = nil
