@@ -292,6 +292,12 @@ if game.PlaceId == 11545598432 then
                             PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _Mobfarming:FindFirstChild("HumanoidRootPart").Position)
                             wait(0.4)
                             PlayerHumanoidRootPart.Anchored = false
+                            if Player.Character:FindFirstChild("Humanoid").Health == 0 then
+                                wait(10)
+                                keypress(0x34)
+                                PlayerHumanoidRootPart.CFrame = _Mobfarming.WorldPivot
+                                Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+                            end
                         else
                             break
                         end
@@ -307,6 +313,12 @@ if game.PlaceId == 11545598432 then
                         wait(0.1)
                         keypress(0x45)
                         countq = countq + 1
+                        if Player.Character:FindFirstChild("Humanoid").Health == 0 then
+                            wait(10)  
+                            keypress(0x34)                         
+                            Camera.CFrame = Cframe.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0 ,0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+                            break
+                        end
                     until countq == 60
                 end
             end
