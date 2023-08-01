@@ -23,6 +23,7 @@ if game.PlaceId == 11545598432 then
         _farmspeed = true
         _painboss = true
         _normalboss = true
+        _quest = true
         --player--------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -156,6 +157,9 @@ if game.PlaceId == 11545598432 then
                             PlayerHumanoidRootPart.Anchored = false
                             wait(0.001)
                         end
+                        if _painboss == false then
+                            Player.Character.Humanoid.Health = 0
+                        end
                     until Player.Character.Humanoid.Health == 0
                 end
             end
@@ -257,6 +261,48 @@ if game.PlaceId == 11545598432 then
                     until not _NowBoss or not _NowBoss:FindFirstChild("HumanoidRootPart")
                     PlayerHumanoidRootPart.Anchored = false
                     PlayerHumanoidRootPart.CFrame = _NowPlayerCFrame
+                end
+            end
+        end
+
+        function quest()
+            while _quest == true do
+                wait(0.1)
+                local args = {
+                    [1] = "StartQuest",
+                    [2] = "BanditQuest5",
+                    [3] = 3
+                }
+            
+                game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
+                if Mob:FindFirstChild("saiyanCaptain") then
+                    local _Mobfarming = Mob:FindFirstChild("saiyanCaptain")
+                    if _Mobfarming:FindFirstChild("HumanoidRootPart") then
+                        PlayerHumanoidRootPart.CFrame = _Mobfarming.HumanoidRootPart.CFrame + Vector3.new(0,20,0)
+                    else
+                        PlayerHumanoidRootPart.CFrame = _Mobfarming.WorldPivot + Vector3.new(0,20,0)
+                    end
+                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+                    wait(0.2)
+                    repeat
+                        if _Mobfarming and _Mobfarming:FindFirstChild("HumanoidRootPart") then
+                            PlayerHumanoidRootPart.Anchored = true
+                            PlayerHumanoidRootPart.CFrame = _Mobfarming:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0,20,0)
+                            PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _Mobfarming:FindFirstChild("HumanoidRootPart").Position)
+                            wait(0.4)
+                            PlayerHumanoidRootPart.Anchored = false
+                            wait(0.01)
+                        end
+                        if _quest == false then
+                            break
+                        end
+                    until not _Mobfarming and not _Mobfarming:FindFirstChild("HumanoidRootPart")
+                    PlayerHumanoidRootPart.Anchored = false
+                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1227.12146, 19.3429832, -75.9542007, 0.406470805, -9.75114673e-08, 0.913663745, 2.35581066e-08, 1, 9.62452376e-08, -0.913663745, -1.75966903e-08, 0.406470805)
+                    repeat
+                        Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+                        keypress(0x45)
+                    until Mob:FindFirstChild("saiyanCaptain")
                 end
             end
         end
@@ -412,6 +458,15 @@ if game.PlaceId == 11545598432 then
             Callback = function(Value)
                 _farmspeed = Value
                 farmspeed()
+            end    
+        })
+
+        MainTab:AddToggle({ --Values:quest(done) function:quest(done)
+            Name = "Auto quest",
+            Default = false,
+            Callback = function(Value)
+                _quest = Value
+                quest()
             end    
         })
         --Boss----------------------------------------------------------------------------------------------------------------------------------------------------------
