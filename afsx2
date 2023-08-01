@@ -411,21 +411,20 @@ if game.PlaceId == 11545598432 then
         --Hatch---------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function champion() --no values
+        function champion()
             while _champion == true do
-                local count = 200
+                count = 0
                 repeat
-                    wait(0.1)
-                    keypress(0x45)
+                    wait(1)
                     count = count + 1
-                    if count >= 200 then
+                    if count == 20 then
                         local args = {
                             [1] = "Roll",
                             [2] = "Champion Capsule",
-                            [3] = 999
+                            [3] = 10
                         }
-                        
-                        game:GetService("ReplicatedStorage").Events[Champions/RemoteEvent]:FireServer(unpack(args))
+
+                        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
                         count = 0
                     end
                 until _champion == false
