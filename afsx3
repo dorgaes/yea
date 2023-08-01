@@ -301,11 +301,14 @@ if game.PlaceId == 11545598432 then
                     until not _Mobfarming
                     PlayerHumanoidRootPart.Anchored = false
                     PlayerHumanoidRootPart.CFrame = CFrame.new(-1227.12146, 19.3429832, -75.9542007, 0.406470805, -9.75114673e-08, 0.913663745, 2.35581066e-08, 1, 9.62452376e-08, -0.913663745, -1.75966903e-08, 0.406470805)
-                    wait(0.4)
-                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                    wait(0.1)
-                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                    keypress(0x45)
+                    repeat
+                        wait(0.01)
+                    until not Mob:FindFirstChild("saiyanCaptain")
+                    repeat
+                        wait(0.1)
+                        keypress(0x45)
+                        Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+                    until Mob:FindFirstChild("saiyanCaptain")
                 end
             end
         end
@@ -413,7 +416,14 @@ if game.PlaceId == 11545598432 then
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
         function champion()
             while _champion == true do
-                count = 0
+                local args = {
+                    [1] = "Roll",
+                    [2] = "Champion Capsule",
+                    [3] = 10
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
+                local count = 0
                 repeat
                     wait(1)
                     keypress(0x45)
