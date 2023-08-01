@@ -292,11 +292,14 @@ if game.PlaceId == 11545598432 then
                             PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _Mobfarming:FindFirstChild("HumanoidRootPart").Position)
                             wait(0.4)
                             PlayerHumanoidRootPart.Anchored = false
+                        else
+                            break
                         end
                         if _quest == false then
                             break
                         end
-                    until not _Mobfarming and not _Mobfarming:FindFirstChild("HumanoidRootPart")
+                    until not _Mobfarming
+                    wait(0.1)
                     PlayerHumanoidRootPart.Anchored = false
                     PlayerHumanoidRootPart.CFrame = CFrame.new(-1227.12146, 19.3429832, -75.9542007, 0.406470805, -9.75114673e-08, 0.913663745, 2.35581066e-08, 1, 9.62452376e-08, -0.913663745, -1.75966903e-08, 0.406470805)
                     repeat
