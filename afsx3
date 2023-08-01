@@ -9,6 +9,7 @@ if game.PlaceId == 11545598432 then
     PlayerHumanoidRootPart = Player.Character:FindFirstChild("HumanoidRootPart")
     Boss = workspace.Scriptable.Bosses
     Mob = workspace.Scriptable.Mobs
+    Camera = workspace.Camera
         --main----------------------------------------------------------------------------------------------------------------------------------------------------------
 
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -131,6 +132,7 @@ if game.PlaceId == 11545598432 then
             while _painboss == true do
                 wait(0.1)
                 if not Boss:FindFirstChild("_pain") then
+                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
                     PlayerHumanoidRootPart.CFrame = CFrame.new(-111.995575, 57.6821747, -158.570511, -0.966234148, 4.10521928e-08, -0.257665724, 6.6476602e-08, 1, -8.9960615e-08, 0.257665724, -1.04051757e-07, -0.966234148)
                     local _countwaitpain = 0
                     repeat
@@ -235,10 +237,11 @@ if game.PlaceId == 11545598432 then
                             break
                         end
                     end
-                    print("find boss")
                     local _NowBoss = Boss:FindFirstChildOfClass("Model")
                     local _NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
                     PlayerHumanoidRootPart.CFrame = _NowBoss.WorldPivot + Vector3.new(0,110,0)
+                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+                    wait(0.5)
                     repeat
                         if _NowBoss and _NowBoss:FindFirstChild("HumanoidRootPart") then
                             PlayerHumanoidRootPart.Anchored = true
@@ -248,8 +251,8 @@ if game.PlaceId == 11545598432 then
                             PlayerHumanoidRootPart.Anchored = false
                             wait(0.01)
                         end
-                        if _NowBoss and _NowBoss.Name == "_pain" then
-                            boss:Destroy()
+                        if _normalboss == false then
+                            break
                         end
                     until not _NowBoss or not _NowBoss:FindFirstChild("HumanoidRootPart")
                     PlayerHumanoidRootPart.Anchored = false
