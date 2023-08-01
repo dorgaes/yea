@@ -413,14 +413,23 @@ if game.PlaceId == 11545598432 then
         ----------------------------------------------------------------------------------------------------------------------------------------------------------------
         function champion() --no values
             while _champion == true do
-                wait(20)
-                local args = {
-                    [1] = "Roll",
-                    [2] = "Champion Capsule",
-                    [3] = 999
-                }
-                
-                game:GetService("ReplicatedStorage").Events[Champions/RemoteEvent]:FireServer(unpack(args))
+                local count = 200
+                repeat
+                    wait(0.1)
+                    keypress(0x45)
+                    count = count + 1
+                    if count >= 200 then
+                        local args = {
+                            [1] = "Roll",
+                            [2] = "Champion Capsule",
+                            [3] = 999
+                        }
+                        
+                        game:GetService("ReplicatedStorage").Events["Champions/RemoteEvent"]:FireServer(unpack(args))
+                        count = 0
+                        wait(0.1)
+                    end
+                until _champion == false
             end
         end
     --tab
