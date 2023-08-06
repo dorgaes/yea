@@ -14,6 +14,7 @@ if game.PlaceId == 11545598432 then
     local _Mobfile = workspace.Scriptable.Mobs
     local _Camera = workspace.Camera
         --Main
+        local _autoskill = true
         local _wordadd = nil
         local _wordremove = nil
         --Farm
@@ -27,6 +28,16 @@ if game.PlaceId == 11545598432 then
         --Farm
     --Functions
         --Main
+        function autoskill()
+            if _autoskill == true then
+                for _word, _tf in pairs(Skilltable) do
+                    if _tf == true then
+                        local _keycode = Enum.KeyCode[_word]
+                        keypress(_keycode.Value)
+                    end
+                end
+            end
+        end
         --Farm
         function farmstat() --done
             while _farmstat == true do
@@ -78,6 +89,7 @@ if game.PlaceId == 11545598432 then
                         _PlayerHumanoidRootPart.CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,100,0)
                         _PlayerHumanoidRootPart.CFrame = CFrame.new(_PlayerHumanoidRootPart.Position, _painHumanoidRootPart.Position)
                         wait(0.01)
+                        autoskill()
                         _PlayerHumanoidRootPart.Anchored = false
                     until _PlayerHumanoid.Health == 0
                     _PlayerHumanoidRootPart.Anchored = false
@@ -99,7 +111,15 @@ if game.PlaceId == 11545598432 then
             Name = "Main"
         })
 
-        MainTab:AddTextbox({
+        MainTab:AddToggle({ --value added
+            Name = "Auto skill",
+            Default = false,
+            Callback = function(Value)
+                _autoskill = Value
+            end    
+        })
+
+        MainTab:AddTextbox({ --value added
             Name = "Skill add",
             Default = "",
             TextDisappear = false,
@@ -108,13 +128,14 @@ if game.PlaceId == 11545598432 then
                 if string.match(_wordadd, "^[A-Za-z]*$") then
                     _wordadd = string.lower(_wordadd)
                     Skilltable[_wordadd] = true
+                    print("Add ".._wordadd)
                 else
                     print("not work")
                 end
             end	  
         })
 
-        MainTab:AddTextbox({
+        MainTab:AddTextbox({ --value added
             Name = "Skill remove",
             Default = "",
             TextDisappear = false,
@@ -123,6 +144,7 @@ if game.PlaceId == 11545598432 then
                 if string.match(_wordremove, "^[A-Za-z]*$") then
                     _wordremove = string.lower(_wordremove)
                     Skilltable[_wordremove] = false
+                    print("Remove ".._wordremove)
                 else
                     print("not work")
                 end
@@ -167,7 +189,7 @@ if game.PlaceId == 11545598432 then
             end    
         })
 
-        Tab:AddToggle({ --value added
+        FarmTab:AddToggle({ --value added
             Name = "Auto pain",
             Default = false,
             Callback = function(Value)
