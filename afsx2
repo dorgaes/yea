@@ -24,15 +24,17 @@ if game.PlaceId == 11545598432 then
         local _farmpain = true
     --Tables
         --Main
-        local Skilltable = {a = false, b = false, c = false, d = false, e = false, f = false, g = false, h = false, i = false, j = false, k = false, l = false, m = false, n = false, o = false, p = false, q = false, r = false, s = false, t = false, u = false, v = false, w = false, x = false, y = false, z = false}
+        local Skilltable = {A = false, B = false, C = false, D = false, E = false, F = false, G = false, H = false, I = false, J = false, K = false, L = false, M = false, N = false, O = false, P = false, Q = false, R = false, S = false, T = false, U = false, V = false, W = false, X = false, Y = false, Z = false}
         --Farm
     --Functions
         --Main
         function autoskill()
-            for _word, _tf in pairs(Skilltable) do
-                if _tf == true then
-                    local _keycode = Enum.KeyCode[_word]
-                    keypress(_keycode.Value)
+            if _autoskill == true then
+                for _word, _tf in pairs(Skilltable) do
+                    if _tf == true then
+                        local _keycode = Enum.KeyCode[_word]
+                        keypress("0x"_keycode.Value)
+                    end
                 end
             end
         end
@@ -74,7 +76,9 @@ if game.PlaceId == 11545598432 then
                     }
                     
                     game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Prompt/RemoteFunction"):InvokeServer(unpack(args))
+                    print("joining")
                     wait(5)
+                    print("in boss area")
                     _PlayerHumanoidRootPart.CFrame = _PlayerHumanoidRootPart.CFrame + Vector3.new(0,300,0)
                     repeat
                         wait(1)
@@ -87,6 +91,7 @@ if game.PlaceId == 11545598432 then
                         _PlayerHumanoidRootPart.CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,100,0)
                         _PlayerHumanoidRootPart.CFrame = CFrame.new(_PlayerHumanoidRootPart.Position, _painHumanoidRootPart.Position)
                         wait(0.01)
+                        autoskill()
                         _PlayerHumanoidRootPart.Anchored = false
                     until _PlayerHumanoid.Health == 0
                     _PlayerHumanoidRootPart.Anchored = false
@@ -123,8 +128,9 @@ if game.PlaceId == 11545598432 then
             Callback = function(Value)
                 _wordadd = Value
                 if string.match(_wordadd, "^[A-Za-z]*$") then
-                    _wordadd = string.lower(_wordadd)
+                    _wordadd = string.upper(_wordadd)
                     Skilltable[_wordadd] = true
+                    print("Add ".._wordadd)
                 else
                     print("not work")
                 end
@@ -138,8 +144,9 @@ if game.PlaceId == 11545598432 then
             Callback = function(Value)
                 _wordremove = Value
                 if string.match(_wordremove, "^[A-Za-z]*$") then
-                    _wordremove = string.lower(_wordremove)
+                    _wordremove = string.upper(_wordremove)
                     Skilltable[_wordremove] = false
+                    print("Remove ".._wordremove)
                 else
                     print("not work")
                 end
