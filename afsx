@@ -1,461 +1,94 @@
 --afsx
 if game.PlaceId == 11545598432 then
+    repeat
+        wait(1)
+    until game:IsLoaded()
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
     local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
-    --values
-    Player = game:GetService("Players").LocalPlayer
-    PlayerName = Player.Name
-    PlayerHumanoidRootPart = Player.Character:FindFirstChild("HumanoidRootPart")
-    Boss = workspace.Scriptable.Bosses
-    Mob = workspace.Scriptable.Mobs
-    Camera = workspace.Camera
-        --main----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        _farmchest = true
-        _Cchest = true
-        _Rchest = true
-        _Echest = true
-        _Lchest = true
-        _chosefarm = nil
-        _farmstat = true
-        _farmspeed = true
-        _painboss = true
-        _normalboss = true
-        _quest = true
-        --player--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        _speed = Player.Character.Humanoid.WalkSpeed
-        _jump = Player.Character.Humanoid.JumpPower
-        --teleport------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        _island = nil
-        _Bossplace = nil
-        _trainarea = nil
-        --Hatch---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        _champion = true
-        --Setting-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        _igarlongo = true
-        _igarmoredtitan = true
-        _igfriezy = true
-        _ighanddemon = true
-        _igmonkey = true
-        _igshukaku = true
-    --functions
-        --main----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function chest() --value:Cchest1,Rchest1,Echest1,Lchest1(done)
-            while _farmchest == true do
-                repeat
-                    local _Cchest1 = workspace.Scriptable.Crates:FindFirstChild("common")
-                    local _Rchest1 = workspace.Scriptable.Crates:FindFirstChild("rare")
-                    local _Echest1 = workspace.Scriptable.Crates:FindFirstChild("epic")
-                    local _Lchest1 = workspace.Scriptable.Crates:FindFirstChild("legendary")
-                    wait(0.5)
-                    if _Cchest == true or _Rchest == true or _Echest == true or _Lchest == true then
-                        if Lchest == true then
-                            if _Lchest1 then
-                                PlayerHumanoidRootPart.CFrame = _Lchest1.WorldPivot
-                                keypress(0x45)
-                                break
-                            end
-                        end
-                        if _Echest == true then
-                            if _Echest1 then
-                                PlayerHumanoidRootPart.CFrame = _Echest1.WorldPivot
-                                keypress(0x45)
-                                break
-                            end
-                        end
-                        if _Rchest == true then
-                            if _Rchest1 then
-                                PlayerHumanoidRootPart.CFrame = _Rchest1.WorldPivot
-                                keypress(0x45)
-                                break
-                            end
-                        end
-                        if _Cchest == true then
-                            if _Cchest1 then
-                                PlayerHumanoidRootPart.CFrame = _Cchest1.WorldPivot
-                                keypress(0x45)
-                                break
-                            end
-                        end
-                    end
-                until farmchest == false
-            end
-        end
-
-        function farmstat()
+    --Values
+    local _Player = game:GetService("Players").LocalPlayer
+    local _PlayerName = _Player.Name
+    local _PlayerHumanoidRootPart = workspace[_PlayerName]:FindFirstChild("HumanoidRootPart")
+    local _PlayerHumanoid = workspace[_PlayerName]:FindFirstChild("Humanoid")
+    local _Bossfile = workspace.Scriptable.Bosses
+    local _Mobfile = workspace.Scriptable.Mobs
+    local _Camera = workspace.Camera
+        --Main
+        local _wordadd = nil
+        local _wordremove = nil
+        --Farm
+        local _farmstatchose = nil
+        local _farmstat = true
+        local _farmjump = true
+        local _farmpain = true
+    --Tables
+        --Main
+        Skilltable{a = false, b = false, c = false, d = false, e = false, f = false, g = false, h = false, i = false, j = false, k = false, l = false, m = false, n = false, o = false, p = false, q = false, r = false, s = false, t = false, u = false, v = false, w = false, x = false, y = false, z = false}
+        --Farm
+    --Functions
+        --Main
+        --Farm
+        function farmstat() --done
             while _farmstat == true do
-                wait(0.1)
-                if _chosefarm ~= nil then
-                    if _chosefarm == "strength" then
-                        local _stat = "Strength"
-                    elseif chosefarm == "durability" then
-                        local _stat = "Durability"
-                    elseif chosefarm == "chakra" then
-                        local _stat = "Chakra"
-                    elseif chosefarm == "sword" then
-                        local _stat = "Sword"
-                    end
+                wait(0.01)
+                if _farmstatchose ~= nil then
                     local args = {
                         [1] = "TrainStat",
-                        [2] = _stat
+                        [2] = _farmstatchose
                     }
-                        
+                
                     game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(unpack(args))
                 end
             end
         end
 
-        function farmspeed() --no values
-            while _farmspeed == true do
+        function farmjump() --done
+            while _farmjump == true do
+                wait(0.01)
                 local args = {
                     [1] = "TrainStat",
                     [2] = "Speed"
                 }
                 
                 game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(unpack(args))
-                wait(0.1)
             end
         end
 
-        function painboss()
-            while _painboss == true do
-                wait(0.1)
-                if not Boss:FindFirstChild("_pain") then
-                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-111.995575, 57.6821747, -158.570511, -0.966234148, 4.10521928e-08, -0.257665724, 6.6476602e-08, 1, -8.9960615e-08, 0.257665724, -1.04051757e-07, -0.966234148)
-                    local _countwaitpain = 0
-                    repeat
-                        wait(0.1)
-                        _countwaitpain = _countwaitpain + 1
-                        keypress(0x45)
-                    until _countwaitpain == 50
-                    PlayerHumanoidRootPart.CFrame = PlayerHumanoidRootPart.CFrame + Vector3.new(0,300,0)
-                    repeat
-                        wait(0.1)
-                    until Boss:FindFirstChild("_pain")
-                    local _pain = Boss:FindFirstChild("_pain")
-                    PlayerHumanoidRootPart.CFrame = _pain.WorldPivot + Vector3.new(0, 110, 0)
-                    wait(0.2)
-                    repeat
-                        if _pain and _pain:FindFirstChild("HumanoidRootPart") and PlayerHumanoidRootPart then
-                            PlayerHumanoidRootPart.Anchored = true
-                            PlayerHumanoidRootPart.CFrame = _pain:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
-                            PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _pain:FindFirstChild("HumanoidRootPart").Position)
-                            wait(0.4)
-                            PlayerHumanoidRootPart.Anchored = false
-                            wait(0.001)
-                        end
-                        if _painboss == false then
-                            Player.Character.Humanoid.Health = 0
-                        end
-                    until Player.Character.Humanoid.Health == 0
-                end
-            end
-        end
-
-        function normalboss()
-            while _normalboss == true do
-                wait(0.1)
-                if Boss:FindFirstChildOfClass("Model") and Boss:FindFirstChildOfClass("Model").Name ~= ("_pain") then
-                    if _igarlongo == true then
-                        if Boss:FindFirstChildOfClass("Model").Name == "_arlongo" then
-                            print("arlongo")
-                            repeat
-                                wait(1)
-                                if _normalboss == false then
-                                    break
-                                end
-                            until not Boss:FindFirstChildOfClass("Model").Name == "_arlongo" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
-                            break
-                        end
-                    end
-                    if _igarmoredtitan == true then
-                        if Boss:FindFirstChildOfClass("Model").Name == "_armoredTitan" then
-                            print("armoredtitan")
-                            repeat
-                                wait(1)
-                                if _normalboss == false then
-                                    break
-                                end
-                            until not Boss:FindFirstChildOfClass("Model").Name == "_armoredTitan" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
-                            break
-                        end
-                    end
-                    if _igfriezy == true then
-                        if Boss:FindFirstChildOfClass("Model").Name == "_friezy" then
-                            print("friezy")
-                            repeat
-                                wait(1)
-                                if _normalboss == false then
-                                    break
-                                end
-                            until not Boss:FindFirstChildOfClass("Model").Name == "_friezy" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
-                            break
-                        end
-                    end
-                    if _ighanddemon == true then
-                        if Boss:FindFirstChildOfClass("Model").Name == "_handDemon" then
-                            print("handdemon")
-                            repeat
-                                wait(1)
-                                if _normalboss == false then
-                                    break
-                                end
-                            until not Boss:FindFirstChildOfClass("Model").Name == "_handDemon" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
-                            break
-                        end
-                    end
-                    if _igmonkey == true then
-                        if Boss:FindFirstChildOfClass("Model").Name == "_ape" then
-                            print("monkey")
-                            repeat
-                                wait(1)
-                                if _normalboss == false then
-                                    break
-                                end
-                            until not Boss:FindFirstChildOfClass("Model").Name == "_ape" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
-                            break
-                        end
-                    end
-                    if _igshukaku == true then
-                        if Boss:FindFirstChildOfClass("Model").Name == "_desertBoss" then
-                            print("shukaku")
-                            repeat
-                                wait(1)
-                                if _normalboss == false then
-                                    break
-                                end
-                            until not Boss:FindFirstChildOfClass("Model").Name == "_desertBoss" and not Boss:FindFirstChildOfClass("Model").Name == "_pain" or not Boss:FindFirstChildOfClass("Model")
-                            break
-                        end
-                    end
-                    local _NowBoss = Boss:FindFirstChildOfClass("Model")
-                    local _NowPlayerCFrame = PlayerHumanoidRootPart.CFrame
-                    PlayerHumanoidRootPart.CFrame = _NowBoss.WorldPivot + Vector3.new(0,110,0)
-                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
+        function farmpain()
+            while _farmpain == true do
+                if not _Bossfile:FindFirstChild("_pain") then
+                    _PlayerHumanoidRootPart.CFrame = workspace.Scriptable.BossBattle.PP.CFrame + Vector3.new(0,0,-10)
                     wait(0.5)
+                    local args = {
+                        [1] = "Prompt",
+                        [2] = "0865d553-91be-4633-b690-daceaa68f91f"
+                    }
+                    
+                    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Prompt/RemoteFunction"):InvokeServer(unpack(args))
+                    wait(5)
+                    _PlayerHumanoidRootPart.CFrame = _PlayerHumanoidRootPart.CFrame + Vector3.new(0,300,0)
                     repeat
-                        if _NowBoss and _NowBoss:FindFirstChild("HumanoidRootPart") and PlayerHumanoidRootPart then
-                            PlayerHumanoidRootPart.Anchored = true
-                            PlayerHumanoidRootPart.CFrame = _NowBoss:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 100, 0)
-                            PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _NowBoss:FindFirstChild("HumanoidRootPart").Position)
-                            wait(0.4)
-                            PlayerHumanoidRootPart.Anchored = false
-                            wait(0.01)
-                        end
-                        if _normalboss == false then
-                            break
-                        end
-                    until not _NowBoss or not _NowBoss:FindFirstChild("HumanoidRootPart")
-                    PlayerHumanoidRootPart.Anchored = false
-                    PlayerHumanoidRootPart.CFrame = _NowPlayerCFrame
-                end
-            end
-        end
-
-        function quest()
-            while _quest == true do
-                wait(0.1)
-                local args = {
-                    [1] = "StartQuest",
-                    [2] = "BanditQuest5",
-                    [3] = 3
-                }
-            
-                game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
-                if Mob:FindFirstChild("saiyanCaptain") then
-                    local _Mobfarming = Mob:FindFirstChild("saiyanCaptain")
-                    if _Mobfarming:FindFirstChild("HumanoidRootPart") then
-                        PlayerHumanoidRootPart.CFrame = _Mobfarming.HumanoidRootPart.CFrame + Vector3.new(0,20,0)
-                    else
-                        PlayerHumanoidRootPart.CFrame = _Mobfarming.WorldPivot + Vector3.new(0,20,0)
-                    end
-                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                    wait(0.2)
+                        wait(1)
+                    until _Bossfile:FindFirstChild("_pain") and _Bossfile._pain:FindFirstChild("HumanoidRootPart")
+                    local _painHumanoidRootPart = _Bossfile._pain:FindFirstChild("HumanoidRootPart")
+                    _PlayerHumanoidRootPart.CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,110,0)
+                    wait(0.1)
                     repeat
+                        _PlayerHumanoidRootPart.Anchored = true
+                        _PlayerHumanoidRootPart.CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,100,0)
+                        _PlayerHumanoidRootPart.CFrame = CFrame.new(_PlayerHumanoidRootPart.Position, _painHumanoidRootPart.Position)
                         wait(0.01)
-                        if _Mobfarming and _Mobfarming:FindFirstChild("HumanoidRootPart") and PlayerHumanoidRootPart then
-                            PlayerHumanoidRootPart.Anchored = true
-                            PlayerHumanoidRootPart.CFrame = _Mobfarming:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0,20,0)
-                            PlayerHumanoidRootPart.CFrame = CFrame.new(PlayerHumanoidRootPart.Position, _Mobfarming:FindFirstChild("HumanoidRootPart").Position)
-                            wait(0.4)
-                            PlayerHumanoidRootPart.Anchored = false
-                            if Player.Character:FindFirstChild("Humanoid").Health == 0 then
-                                wait(10)
-                                keypress(0x34)
-                                Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                                break
-                            end
-                        else
-                            break
-                        end
-                        if _quest == false then
-                            break
-                        end
-                    until false
-                    PlayerHumanoidRootPart.Anchored = false
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1227.12146, 19.3429832, -75.9542007, 0.406470805, -9.75114673e-08, 0.913663745, 2.35581066e-08, 1, 9.62452376e-08, -0.913663745, -1.75966903e-08, 0.406470805)
-                    Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0, 0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                    local countq = 0
-                    repeat
-                        wait(0.1)
-                        keypress(0x45)
-                        countq = countq + 1
-                        if Player.Character:FindFirstChild("Humanoid").Health == 0 then
-                            wait(10)  
-                            keypress(0x34)                         
-                            Camera.CFrame = CFrame.new(-2115.79688, 1380.76758, -1536.13379, 0.714777708, -0.688726842, 0.121442348, 0 ,0.173649892, 0.984807551, -0.699351728, -0.703918457, 0.12412107)
-                            break
-                        end 
-                    until countq == 60
+                        _PlayerHumanoidRootPart.Anchored = false
+                    until _PlayerHumanoid.Health == 0
+                    _PlayerHumanoidRootPart.Anchored = false
+                    repeat 
+                        wait(1)
+                    until not _Bossfile:FindFirstChild("_pain") or not _painHumanoidRootPart
                 end
             end
         end
-        --player--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function speed()
-            Player.Character.Humanoid.WalkSpeed = _speed
-        end
-
-        function jump()
-            Player.Character.Humanoid.JumpPower = _jump
-        end
-        --teleport------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function teleport()
-            if _island ~= nil then
-                if _island == "Main island" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-37.9272308, 57.9989052, -207.58168, 0.271720946, 4.94854966e-08, -0.962376058, 2.81858838e-08, 1, 5.93782339e-08, 0.962376058, -4.32597282e-08, 0.271720946)
-                elseif _island == "Desert island" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(1167.62427, 13.596139, -290.172943, 0.513728023, 3.0669991e-08, -0.857953072, -6.62519106e-09, 1, 3.17808073e-08, 0.857953072, -1.0642589e-08, 0.513728023)
-                elseif _island == "Ice island" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(865.241333, 16.5045547, -2005.47083, 0.947903931, 2.43465714e-09, -0.318556279, 1.80285191e-08, 1, 6.1288894e-08, 0.318556279, -6.38390816e-08, 0.947903931)
-                elseif _island == "Demon island" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1007.52686, 173.81929, -1767.69592, 0.920600295, -1.34153293e-08, -0.390506238, 1.58166156e-08, 1, 2.93324831e-09, 0.390506238, -8.87683616e-09, 0.920600295)
-                elseif _island == "Volcano island" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(971.073853, 13.5997581, 1063.28796, -0.679763496, 3.33324586e-08, -0.733431399, -2.79389116e-08, 1, 7.13417876e-08, 0.733431399, 6.89868216e-08, -0.679763496)
-                elseif _island == "Cell island" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1193.83704, 13.8008919, -143.740356, -0.0099736983, 7.80451472e-08, 0.99995029, 1.40346472e-08, 1, -7.79090428e-08, -0.99995029, 1.32569085e-08, -0.0099736983)
-                end
-                _island = nil
-                _Bossplace = nil
-                _trainarea = nil
-            elseif _Bossplace ~= nil then
-                if _Bossplace == "Pain" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-112.7108, 57.6821594, -164.52002, -0.979042888, -2.35146391e-08, -0.203654259, -3.85682988e-08, 1, 6.99488396e-08, 0.203654259, 7.6337507e-08, -0.979042888)
-                elseif _Bossplace == "Arlongo" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
-                elseif _Bossplace == "Hand Demon" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-720.885193, 173.819305, -2085.30811, 0.961095989, -1.56375908e-08, -0.276214659, -1.33553135e-09, 1, -6.1260927e-08, 0.276214659, 5.92465206e-08, 0.961095989)
-                elseif _Bossplace == "Armored Titan" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(1857.15393, 175.303894, -2578.94116, 0.805505753, 2.81497448e-09, -0.592587948, 4.86410467e-10, 1, 5.41148504e-09, 0.592587948, -4.64722349e-09, 0.805505753)
-                elseif _Bossplace == "Shukaku" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(1530.1311, 13.8009348, -476.421295, 0.99395448, 3.80231882e-08, -0.109793, -3.05327248e-08, 1, 6.99047504e-08, 0.109793, -6.61298571e-08, 0.99395448)
-                elseif _Bossplace == "Friezy" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(1060.02063, 34.5537605, 1781.6405, -0.43528834, 4.28204814e-08, -0.900291085, -1.53159874e-09, 1, 4.83034519e-08, 0.900291085, 2.2404814e-08, -0.43528834)
-                elseif _Bossplace == "Monkey" then
-                    PlayerHumanoidRootPart.CFrame = CFrame.new(-1483.83179, 24.1382084, -172.728317, 0.00188439596, -5.82290411e-08, 0.999998212, -7.91759547e-09, 1, 5.8244062e-08, -0.999998212, -8.02733613e-09, 0.00188439596)
-                end 
-                _island = nil
-                _Bossplace = nil
-                _trainarea = nil
-            elseif _trainarea ~= nil then
-                if _trainarea == "Strength(100)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Wood Logs"].CFrame
-                elseif _trainarea == "Strength(10k)" or _trainarea == "Speed(10k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Gym.CFrame
-                elseif _trainarea == "Strength(100k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Garbage Beach"].CFrame
-                elseif _trainarea == "Strength(1M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Boulder.CFrame + Vector3.new(0,20,0)
-                elseif _trainarea == "Strength(10M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Meteor.CFrame + Vector3.new(0,30,0)
-                elseif _trainarea == "Strength(100M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Cell Arena"].CFrame
-                elseif _trainarea == "Durability(100)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Pirate Ship"].CFrame
-                elseif _trainarea == "Durability(10k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Burning House"].CFrame
-                elseif _trainarea == "Durability(100k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Desert Storm"].CFrame
-                elseif _trainarea == "Durability(1M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Ice Chamber"].CFrame
-                elseif _trainarea == "Durability(10M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Volcano.CFrame
-                elseif _trainarea == "Durability(100M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["North King's Planet"].CFrame + Vector3.new(0,100,0)
-                elseif _trainarea == "Chakra(100)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Chakra Tree"].CFrame + Vector3.new(0,-40,-20)
-                elseif _trainarea == "Chakra(10k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Library.CFrame
-                elseif _trainarea == "Chakra(100k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Waterfall.CFrame + Vector3.new(0,30,0)
-                elseif _trainarea == "Chakra(1M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Temple.CFrame + Vector3.new(0,-100,-80)
-                elseif _trainarea == "Chakra(15M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Spider Web"].CFrame + Vector3.new(0,20,0)
-                elseif _trainarea == "Chakra(100M)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Tower of Heaven"].CFrame + Vector3.new(0,-330,80)
-                elseif _trainarea == "Speed(100)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Trampoline.CFrame
-                elseif _trainarea == "Speed(100k)" then
-                    PlayerHumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Gravity Chamber"].CFrame + Vector3.new(0,0,10)
-                end
-                _island = nil
-                _Bossplace = nil
-                _trainarea = nil
-            else
-                print("No place")
-            end
-        end
-        --Hatch---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        function champion()
-            while _champion == true do
-                local args = {
-                    [1] = "Roll",
-                    [2] = "Champion Capsule",
-                    [3] = 10
-                }
-
-                game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
-                local count = 0
-                repeat
-                    wait(1)
-                    keypress(0x45)
-                    count = count + 1
-                    if count == 20 then
-                        local args = {
-                            [1] = "Roll",
-                            [2] = "Champion Capsule",
-                            [3] = 10
-                        }
-
-                        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
-                        count = 0
-                    end
-                until _champion == false
-            end
-        end
-    --tab
-        --main----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        --Farm----------------------------------------------------------------------------------------------------------------------------------------------------------
+    --Tab
+        --Main
         local MainTab = Window:MakeTab({
             Name = "Main",
             Icon = "rbxassetid://4483345998",
@@ -465,17 +98,67 @@ if game.PlaceId == 11545598432 then
         local Section = MainTab:AddSection({
             Name = "Main"
         })
-        
-        MainTab:AddDropdown({ --Values:chosefarm(done)
+
+        MainTab:AddTextbox({
+            Name = "Skill add",
+            Default = "",
+            TextDisappear = false,
+            Callback = function(Value)
+                _wordadd = Value
+                if string.match(_wordadd, "^[A-Za-z]*$") then
+                    _wordadd = string.lower(_wordadd)
+                    Skilltable[_wordadd] = true
+                else
+                    print("not work")
+                end
+            end	  
+        })
+
+        MainTab:AddTextbox({
+            Name = "Skill remove",
+            Default = "",
+            TextDisappear = false,
+            Callback = function(Value)
+                _wordremove = Value
+                if string.match(_wordremove, "^[A-Za-z]*$") then
+                    _wordremove = string.lower(_wordremove)
+                    Skilltable[_wordremove] = false
+                else
+                    print("not work")
+                end
+            end	  
+        })
+
+        --Farm
+        local FarmTab = Window:MakeTab({
+            Name = "Farm",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+        local Section = FarmTab:AddSection({
+            Name = "Auto farm stat"
+        })
+
+        FarmTab:AddDropdown({ --value added
             Name = "Chose farm stat",
             Default = "",
-            Options = {"strength", "durability", "chakra", "sword"},
+            Options = {"Strength", "Durability", "Chakra", "Sword"},
             Callback = function(Value)
-                _chosefarm = Value
+                _farmstatchose = Value
             end    
         })
 
-        MainTab:AddToggle({ --Values:farmstat(done) function:farmstat()
+        FarmTab:AddToggle({ --value added --function added
+            Name = "Farm jump",
+            Default = false,
+            Callback = function(Value)
+                _farmjump = Value
+                farmjump()
+            end    
+        })
+
+        FarmTab:AddToggle({ --value added --function added
             Name = "Farm stat",
             Default = false,
             Callback = function(Value)
@@ -484,264 +167,12 @@ if game.PlaceId == 11545598432 then
             end    
         })
 
-        MainTab:AddToggle({ --Values:farmspeed(done) function:farmspeed(done)
-            Name = "Farm with speed",
+        Tab:AddToggle({ --value added
+            Name = "Auto pain",
             Default = false,
             Callback = function(Value)
-                _farmspeed = Value
-                farmspeed()
-            end    
-        })
-
-        MainTab:AddToggle({ --Values:quest(done) function:quest(done)
-            Name = "Auto quest",
-            Default = false,
-            Callback = function(Value)
-                _quest = Value
-                quest()
-            end    
-        })
-        --Boss----------------------------------------------------------------------------------------------------------------------------------------------------------
-        local Section = MainTab:AddSection({
-            Name = "Boss Farm"
-        })
-
-        MainTab:AddToggle({ --Values:painboss(done) function:painboss(done)
-            Name = "Pain",
-            Default = false,
-            Callback = function(Value)
-                _painboss = Value
-                painboss()
-            end    
-        })
-
-        MainTab:AddToggle({ --Values:normalboss(done) function:normalboss(done)
-            Name = "World Boss",
-            Default = false,
-            Callback = function(Value)
-                _normalboss = Value
-                normalboss()
-            end    
-        })
-
-        MainTab:AddLabel("Go setting to ignore boss")
-
-        --Chest---------------------------------------------------------------------------------------------------------------------------------------------------------
-        local Section = MainTab:AddSection({
-            Name = "Chest"
-        })
-
-        MainTab:AddToggle({ --Values:farmchest(done) function:farmchest(done)
-            Name = "Farm Chest",
-            Default = false,
-            Callback = function(Value)
-                _farmchest = Value
-                chest()
-            end    
-        })
-
-        MainTab:AddToggle({ --Values:Cchest(done)
-            Name = "Common",
-            Default = false,
-            Callback = function(Value)
-                _Cchest = Value
-            end    
-        })
-
-        MainTab:AddToggle({ --Values:Rchest(done)
-            Name = "Rare",
-            Default = false,
-            Callback = function(Value)
-                _Rchest = Value
-            end    
-        })
-
-        MainTab:AddToggle({ --Values:Echest(done)
-            Name = "Epic",
-            Default = false,
-            Callback = function(Value)
-                _Echest = Value
-            end    
-        })
-
-        MainTab:AddToggle({ --Values:Lchest(done)
-            Name = "Legendary",
-            Default = false,
-            Callback = function(Value)
-                _Lchest = Value
-            end    
-        })
-        --Player--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        local PlayerTab = Window:MakeTab({
-            Name = "Player",
-            Icon = "rbxassetid://4483345998",
-            PremiumOnly = false
-        })
-
-        local Section = PlayerTab:AddSection({
-            Name = "Player"
-        })
-
-        PlayerTab:AddLabel("Only number")
-
-        PlayerTab:AddTextbox({ --Values:speed(done) function:speed(done)
-            Name = "Speed",
-            Default = "",
-            TextDisappear = false,
-            Callback = function(Value)
-                _speed1 = Value
-                speed()
-            end	  
-        })
-
-        PlayerTab:AddTextbox({ --Values:jump(done) function:jump(done)
-            Name = "Jump",
-            Default = "",
-            TextDisappear = false,
-            Callback = function(Value)
-                _jump1 = Value
-                jump()
-            end	  
-        })
-
-        --teleport------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        local TeleportTab = Window:MakeTab({
-            Name = "Teleport",
-            Icon = "rbxassetid://4483345998",
-            PremiumOnly = false
-        })
-
-        local Section = TeleportTab:AddSection({
-            Name = "Place"
-        })
-
-        TeleportTab:AddDropdown({ --Values:island(done)
-            Name = "Island",
-            Default = "",
-            Options = {"Main island", "Desert island", "Ice island", "Demon island", "Volcano island", "Cell island"},
-            Callback = function(Value)
-                _island = Value
-                _Bossplace = nil
-                _trainarea = nil
-            end    
-        })
-
-        TeleportTab:AddDropdown({ --Values:Bossplace(done)
-            Name = "Boss area",
-            Default = "",
-            Options = {"Pain", "Arlongo", "Hand Demon", "Armored Titan", "Shukaku", "Friezy", "Monkey"},
-            Callback = function(Value)
-                _Bossplace = Value
-                _island = nil
-                _trainarea = nil
-            end    
-        })
-
-        TeleportTab:AddDropdown({ --Values:trainarea(done)
-            Name = "Training area",
-            Default = "",
-            Options = {"Strength(100)", "Strength(10k)", "Strength(100k)", "Strength(1M)", "Strength(10M)", "Strength(100M)",
-                        "Durability(100)", "Durability(10k)", "Durability(100k)", "Durability(1M)", "Durability(10M)", "Durability(100M)",
-                        "Chakra(100)", "Chakra(10k)", "Chakra(100k)", "Chakra(1M)", "Chakra(10M)", "Chakra(100M)",
-                        "Speed(100)", "Speed(10k)", "Speed(100k)"},
-            Callback = function(Value)
-                _trainarea = Value
-                _Bossplace = nil
-                _island = nil
-            end    
-        })
-
-        TeleportTab:AddButton({ --no values function:teleport(done)
-            Name = "Teleport",
-            Callback = function()
-                teleport()
-            end    
-        })
-
-        --Hatch---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        local HatchTab = Window:MakeTab({
-            Name = "Hatch",
-            Icon = "rbxassetid://4483345998",
-            PremiumOnly = false
-        })
-
-        local Section = HatchTab:AddSection({
-            Name = "Hatch"
-        })
-
-        HatchTab:AddToggle({ --Values:champion(done) function:champion(done)
-            Name = "Auto hatch champion",
-            Default = false,
-            Callback = function(Value)
-                _champion = Value
-                champion()
-            end    
-        })
-
-        --Setting-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        local SettingTab = Window:MakeTab({
-            Name = "Setting",
-            Icon = "rbxassetid://4483345998",
-            PremiumOnly = false
-        })
-
-        local Section = SettingTab:AddSection({
-            Name = "Ignore boss(World boss)"
-        })
-
-        SettingTab:AddToggle({ --Values:igarlongo(done)
-            Name = "Arlongo",
-            Default = false,
-            Callback = function(Value)
-                _igarlongo = Value
-            end    
-        })
-
-        SettingTab:AddToggle({ --Values:ighanddemon(done)
-            Name = "Hand Demon",
-            Default = false,
-            Callback = function(Value)
-                _ighanddemon = Value
-            end    
-        })
-
-        SettingTab:AddToggle({ --Values:igarmoredtitan(done)
-            Name = "Armored Titan",
-            Default = false,
-            Callback = function(Value)
-                _igarmoredtitan = Value
-            end    
-        })
-
-        SettingTab:AddToggle({ --Values:igshukaku(done)
-            Name = "Shukaku",
-            Default = false,
-            Callback = function(Value)
-                _igshukaku = Value
-            end    
-        })
-
-        SettingTab:AddToggle({ --Values:igfriezy(done)
-            Name = "Friezy",
-            Default = false,
-            Callback = function(Value)
-                _igfriezy = Value
-            end    
-        })
-
-        SettingTab:AddToggle({ --Values:igmonkey(done)
-            Name = "Monkey",
-            Default = false,
-            Callback = function(Value)
-                _igmonkey = Value
+                _farmpain = Value
+                farmpain()
             end    
         })
 end
