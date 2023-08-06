@@ -14,6 +14,7 @@ if game.PlaceId == 11545598432 then
     local _Mobfile = workspace.Scriptable.Mobs
     local _Camera = workspace.Camera
         --Main
+        local _autoskill = true
         local _wordadd = nil
         local _wordremove = nil
         --Farm
@@ -23,10 +24,18 @@ if game.PlaceId == 11545598432 then
         local _farmpain = true
     --Tables
         --Main
-        Skilltable{a = false, b = false, c = false, d = false, e = false, f = false, g = false, h = false, i = false, j = false, k = false, l = false, m = false, n = false, o = false, p = false, q = false, r = false, s = false, t = false, u = false, v = false, w = false, x = false, y = false, z = false}
+        local Skilltable = {a = false, b = false, c = false, d = false, e = false, f = false, g = false, h = false, i = false, j = false, k = false, l = false, m = false, n = false, o = false, p = false, q = false, r = false, s = false, t = false, u = false, v = false, w = false, x = false, y = false, z = false}
         --Farm
     --Functions
         --Main
+        function autoskill()
+            for _word, _tf in pairs(Skilltable) do
+                if _tf == true then
+                    local _keycode = Enum.KeyCode[_word]
+                    keypress(_keycode.Value)
+                end
+            end
+        end
         --Farm
         function farmstat() --done
             while _farmstat == true do
@@ -99,7 +108,15 @@ if game.PlaceId == 11545598432 then
             Name = "Main"
         })
 
-        MainTab:AddTextbox({
+        MainTab:AddToggle({ --value added
+            Name = "Auto skill",
+            Default = false,
+            Callback = function(Value)
+                _autoskill = Value
+            end    
+        })
+
+        MainTab:AddTextbox({ --value added
             Name = "Skill add",
             Default = "",
             TextDisappear = false,
@@ -114,7 +131,7 @@ if game.PlaceId == 11545598432 then
             end	  
         })
 
-        MainTab:AddTextbox({
+        MainTab:AddTextbox({ --value added
             Name = "Skill remove",
             Default = "",
             TextDisappear = false,
