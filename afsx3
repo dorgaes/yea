@@ -4,7 +4,7 @@ if game.PlaceId == 11545598432 then
         wait(1)
     until game:IsLoaded()
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-    local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+    local Window = OrionLib:MakeWindow({Name = "afsx hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
     --Values
     local _Player = game:GetService("Players").LocalPlayer
     local _PlayerName = _Player.Name
@@ -188,7 +188,7 @@ if game.PlaceId == 11545598432 then
                     until _Boss:FindFirstChild("HumanoidRootPart")
                     local _BossHumanoidRootPart = _Boss:FindFirstChild("HumanoidRootPart")
                     workspace.Camera.CFrame = CFrame.new(-33.9159927, 105.433418, -193.31192, -0.97657299, 0.211917371, -0.037366841, 0, 0.173648596, 0.98480767, 0.215186551, 0.96173656, -0.169580519)
-                    wait(0.1)
+                    wait(0.5)
                     repeat
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _BossHumanoidRootPart.CFrame + Vector3.new(0,100,0)
@@ -252,8 +252,8 @@ if game.PlaceId == 11545598432 then
                 if workspace[_PlayerName].Humanoid.Health == 0 then
                     repeat
                         wait(0.01)
-                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth and workspace[_PlayerName]:FindFirstChild("SWORD")
-                    wait(1)
+                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth
+                    wait(3)
                     keypress(0x34)
                 end
             end
@@ -452,9 +452,9 @@ if game.PlaceId == 11545598432 then
             Default = false,
             Callback = function(Value)
                 if Value == true then
-                    IgnoreBoss[_arlongo] = true
+                    IgnoreBoss._arlongo = true
                 elseif Value == false then
-                    IgnoreBoss[_arlongo] = false
+                    IgnoreBoss._arlongo = false
                 end
             end    
         })
@@ -464,9 +464,9 @@ if game.PlaceId == 11545598432 then
             Default = false,
             Callback = function(Value)
                 if Value == true then
-                    IgnoreBoss[_handDemon] = true
+                    IgnoreBoss._handDemon = true
                 elseif Value == false then
-                    IgnoreBoss[_handDemon] = false
+                    IgnoreBoss._handDemon = false
                 end
             end    
         })
@@ -476,9 +476,9 @@ if game.PlaceId == 11545598432 then
             Default = false,
             Callback = function(Value)
                 if Value == true then
-                    IgnoreBoss[_armoredTitan] = true
+                    IgnoreBoss._armoredTitan = true
                 elseif Value == false then
-                    IgnoreBoss[_armoredTitan] = false
+                    IgnoreBoss._armoredTitan = false
                 end
             end    
         })
@@ -488,9 +488,9 @@ if game.PlaceId == 11545598432 then
             Default = false,
             Callback = function(Value)
                 if Value == true then
-                    IgnoreBoss[_desertBoss] = true
+                    IgnoreBoss._desertBoss = true
                 elseif Value == false then
-                    IgnoreBoss[_desertBoss] = false
+                    IgnoreBoss._desertBoss = false
                 end
             end    
         })
@@ -500,9 +500,9 @@ if game.PlaceId == 11545598432 then
             Default = false,
             Callback = function(Value)
                 if Value == true then
-                    IgnoreBoss[_friezy] = true
+                    IgnoreBoss._friezy = true
                 elseif Value == false then
-                    IgnoreBoss[_friezy] = false
+                    IgnoreBoss._friezy = false
                 end
             end    
         })
@@ -512,9 +512,9 @@ if game.PlaceId == 11545598432 then
             Default = false,
             Callback = function(Value)
                 if Value == true then
-                    IgnoreBoss[_ape] = true
+                    IgnoreBoss._ape = true
                 elseif Value == false then
-                    IgnoreBoss[_ape] = false
+                    IgnoreBoss._ape = false
                 end
             end    
         })
