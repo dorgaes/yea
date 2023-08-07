@@ -18,6 +18,7 @@ if game.PlaceId == 11545598432 then
         local _farmstatchose = nil
         local _farmstat = true
         local _farmjump = true
+        local _farmworldboss = true
         local _farmpain = true
         --Setting
         local _equipsword = false
@@ -25,6 +26,8 @@ if game.PlaceId == 11545598432 then
         --Main
         local Skilltable = {A = false, B = false, C = false, D = false, E = false, F = false, G = false, H = false, I = false, J = false, K = false, L = false, M = false, N = false, O = false, P = false, Q = false, R = false, S = false, T = false, U = false, V = false, W = false, X = false, Y = false, Z = false}
         --Farm
+        --Setting
+        local IgnoreBoss = {_ape = false, _arlongo = false, _armoredTitan = false, _desertBoss = false, _friezy = false, _handDemon = false}
     --Functions
         --Main
         function autoskill() --done
@@ -172,6 +175,32 @@ if game.PlaceId == 11545598432 then
             end
         end
 
+        function farmworldboss()
+            while _farmworldboss == true do
+                wait(0.1)
+                if _Bossfile:FindFirstChildOfClass("Model") and IgnoreBoss[_Bossfile:FindFirstChildOfClass("Model").Name] ~= nil and IgnoreBoss[_Bossfile:FindFirstChildOfClass("Model").Name] == false then
+                    local _PlayerStayingPlace = workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame
+                    local _Boss = _Bossfile:FindFirstChildOfClass("Model")
+                    local _BossName = _Boss.Name
+                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _Boss.WorldPivot + Vector3.new(0,110,0)
+                    repeat
+                        wait(0.01)
+                    until _Boss:FindFirstChild("HumanoidRootPart")
+                    local _BossHumanoidRootPart = _Boss:FindFirstChild("HumanoidRootPart")
+                    repeat
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _BossHumanoidRootPart.CFrame + Vector3.new(0,100,0)
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position, _BossHumanoidRootPart.Position)
+                        wait(0.01)
+                        autoskill()
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                    until not _Bossfile:FindFirstChild(_BossName) or not _Bossfile._BossName:FindFirstChild("HumanoidRootPart")
+                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _PlayerStayingPlace
+                end
+            end
+        end
+
         function farmpain() --done
             while _farmpain == true do
                 if not _Bossfile:FindFirstChild("_pain") then
@@ -298,7 +327,7 @@ if game.PlaceId == 11545598432 then
                 local Http = game:GetService("HttpService")
                 local Api = "https://games.roblox.com/v1/games/"
                 local _place = game.PlaceId
-                local _servers = Api.._place.."/servers/Public?/sortOrder=Asc&limit=100"
+                local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
                 function ListServers(cursor)
                     local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
                     return Http:JSONDecode(Raw)
@@ -346,15 +375,6 @@ if game.PlaceId == 11545598432 then
         })
 
         FarmTab:AddToggle({ --value added --function added
-            Name = "Farm jump",
-            Default = false,
-            Callback = function(Value)
-                _farmjump = Value
-                farmjump()
-            end    
-        })
-
-        FarmTab:AddToggle({ --value added --function added
             Name = "Farm stat",
             Default = false,
             Callback = function(Value)
@@ -363,7 +383,25 @@ if game.PlaceId == 11545598432 then
             end    
         })
 
+        FarmTab:AddToggle({ --value added --function added
+            Name = "Farm jump",
+            Default = false,
+            Callback = function(Value)
+                _farmjump = Value
+                farmjump()
+            end    
+        })
+
         FarmTab:AddToggle({ --value added
+            Name = "Auto world boss",
+            Default = false,
+            Callback = function(Value)
+                _farmworldboss = Value
+                farmworldboss()
+            end    
+        })
+
+        FarmTab:AddToggle({ --value added --function added
             Name = "Auto pain",
             Default = false,
             Callback = function(Value)
@@ -390,4 +428,81 @@ if game.PlaceId == 11545598432 then
                 equipsword()
             end    
         })
+
+        local Section = SettingTab:AddSection({
+            Name = "Ignore Boss"
+        })
+
+        SettingTab:AddToggle({
+            Name = "Arlongo",
+            Default = false,
+            Callback = function(Value)
+                if Value == true then
+                    IgnoreBoss[_arlongo] = true
+                elseif Value == false then
+                    IgnoreBoss[_arlongo] = false
+                end
+            end    
+        })
+
+        SettingTab:AddToggle({
+            Name = "Hand Demon",
+            Default = false,
+            Callback = function(Value)
+                if Value == true then
+                    IgnoreBoss[_handDemon] = true
+                elseif Value == false then
+                    IgnoreBoss[_handDemon] = false
+                end
+            end    
+        })
+
+        SettingTab:AddToggle({
+            Name = "Armored Titan",
+            Default = false,
+            Callback = function(Value)
+                if Value == true then
+                    IgnoreBoss[_armoredTitan] = true
+                elseif Value == false then
+                    IgnoreBoss[_armoredTitan] = false
+                end
+            end    
+        })
+
+        SettingTab:AddToggle({
+            Name = "Shukaku",
+            Default = false,
+            Callback = function(Value)
+                if Value == true then
+                    IgnoreBoss[_desertBoss] = true
+                elseif Value == false then
+                    IgnoreBoss[_desertBoss] = false
+                end
+            end    
+        })
+
+        SettingTab:AddToggle({
+            Name = "Friezy",
+            Default = false,
+            Callback = function(Value)
+                if Value == true then
+                    IgnoreBoss[_friezy] = true
+                elseif Value == false then
+                    IgnoreBoss[_friezy] = false
+                end
+            end    
+        })
+
+        SettingTab:AddToggle({
+            Name = "Monkey",
+            Default = false,
+            Callback = function(Value)
+                if Value == true then
+                    IgnoreBoss[_ape] = true
+                elseif Value == false then
+                    IgnoreBoss[_ape] = false
+                end
+            end    
+        })
+    --end
 end
