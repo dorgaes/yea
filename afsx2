@@ -346,13 +346,15 @@ if game.PlaceId == 11545598432 then
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.NPC.Quests[_questname].WorldPivot + Vector3.new(0,20,0)
                         wait(1)
-                        local args = {
-                            [1] = "Prompt",
-                            [2] = workspace.Scriptable.NPC.Quests[_questname].HumanoidRootPart.PromptAttachment:GetAttribute("ID")
-                        }
+                        repeat
+                            wait(0.1)
+                            local args = {
+                                [1] = "Prompt",
+                                [2] = workspace.Scriptable.NPC.Quests[_questname].HumanoidRootPart.PromptAttachment:GetAttribute("ID")
+                            }
                         
-                        game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
-                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                            game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
+                        until not game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest")
                         wait(3)
                     end
                 else
