@@ -279,11 +279,11 @@ if game.PlaceId == 11545598432 then
                         _questname = "BanditQuest7"
                     end
                     if _ChoseMob == "Thug" or _ChoseMob == "sandChunin" or _ChoseMob == "pirate" or _ChoseMob == "Demon" or _ChoseMob == "evilSaiyan" or _ChoseMob == "freezaTroop" or _ChoseMob == "yakuza" then
-                        _questnumber = "1"
+                        _questnumber = 1
                     elseif _ChoseMob == "cyclop" or _ChoseMob == "sandJonin" or _ChoseMob == "brute" or _ChoseMob == "strongDemon" or _ChoseMob == "strongSaiyan" or _ChoseMob == "jinyuSquad" or _ChoseMob == "yakuzacommander" then
-                        _questnumber = "2"
+                        _questnumber = 2
                     elseif _ChoseMob == "nomu" or _ChoseMob == "yeti" or _ChoseMob == "arrowDemon" or _ChoseMob == "saiyanCaptain" or _ChoseMob == "stain" then
-                        _questnumber = "3"
+                        _questnumber = 3
                     end
                     if _questname ~= nil and _questnumber ~= nil then
                         print(_questname)
@@ -304,6 +304,7 @@ if game.PlaceId == 11545598432 then
                         
                         game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
                         repeat 
+                            wait(1)
                             for _, mob in pairs(_Mobfile:GetChildren()) do
                                 if mob.Name == _ChoseMob or mob.Name == _ChoseMob.."1" or mob.Name == _ChoseMob.."2" or mob.Name == _ChoseMob.."3" then
                                     _MonInFileName = mob
@@ -336,6 +337,7 @@ if game.PlaceId == 11545598432 then
                                 }
                                 
                                 game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
+                                wait(0.5)
                             end
                         until game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest").progress["1"].Percentage.Text == "100%"
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.NPC.Quests[_questname].WorldPivot
@@ -346,6 +348,7 @@ if game.PlaceId == 11545598432 then
                         }
                         
                         game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                     end
                 else
                     print("not chose mob")
