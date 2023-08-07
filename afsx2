@@ -194,7 +194,10 @@ if game.PlaceId == 11545598432 then
                         wait(0.01)
                         autoskill()
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
-                    until not _Bossfile:FindFirstChild(_BossName) or not _Bossfile._BossName:FindFirstChild("HumanoidRootPart")
+                        if _farmworldboss == false then
+                            break
+                        end
+                    until not _Bossfile:FindFirstChild(_BossName) or not _Bossfile[_BossName]:FindFirstChild("HumanoidRootPart")
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _PlayerStayingPlace
                 end
@@ -228,6 +231,9 @@ if game.PlaceId == 11545598432 then
                         wait(0.01)
                         autoskill()
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                        if _farmpain == false then
+                            workspace[_PlayerName]:FindFirstChild("Humanoid").Health = 0
+                        end
                     until workspace[_PlayerName]:FindFirstChild("Humanoid").Health == 0
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                     repeat 
@@ -392,6 +398,12 @@ if game.PlaceId == 11545598432 then
             end    
         })
 
+        local Section = FarmTab:AddSection({
+            Name = "Auto farm bosses"
+        })
+
+        FarmTab:AddLabel("You can go setting to ignore bosses")
+
         FarmTab:AddToggle({ --value added
             Name = "Auto world boss",
             Default = false,
@@ -437,9 +449,9 @@ if game.PlaceId == 11545598432 then
             Name = "Arlongo",
             Default = false,
             Callback = function(Value)
-                if Value = true then
+                if Value == true then
                     IgnoreBoss[_arlongo] = true
-                elseif Value = false then
+                elseif Value == false then
                     IgnoreBoss[_arlongo] = false
                 end
             end    
@@ -449,9 +461,9 @@ if game.PlaceId == 11545598432 then
             Name = "Hand Demon",
             Default = false,
             Callback = function(Value)
-                if Value = true then
+                if Value == true then
                     IgnoreBoss[_handDemon] = true
-                elseif Value = false then
+                elseif Value == false then
                     IgnoreBoss[_handDemon] = false
                 end
             end    
@@ -461,9 +473,9 @@ if game.PlaceId == 11545598432 then
             Name = "Armored Titan",
             Default = false,
             Callback = function(Value)
-                if Value = true then
+                if Value == true then
                     IgnoreBoss[_armoredTitan] = true
-                elseif Value = false then
+                elseif Value == false then
                     IgnoreBoss[_armoredTitan] = false
                 end
             end    
@@ -473,9 +485,9 @@ if game.PlaceId == 11545598432 then
             Name = "Shukaku",
             Default = false,
             Callback = function(Value)
-                if Value = true then
+                if Value == true then
                     IgnoreBoss[_desertBoss] = true
-                elseif Value = false then
+                elseif Value == false then
                     IgnoreBoss[_desertBoss] = false
                 end
             end    
@@ -485,9 +497,9 @@ if game.PlaceId == 11545598432 then
             Name = "Friezy",
             Default = false,
             Callback = function(Value)
-                if Value = true then
+                if Value == true then
                     IgnoreBoss[_friezy] = true
-                elseif Value = false then
+                elseif Value == false then
                     IgnoreBoss[_friezy] = false
                 end
             end    
@@ -497,9 +509,9 @@ if game.PlaceId == 11545598432 then
             Name = "Monkey",
             Default = false,
             Callback = function(Value)
-                if Value = true then
+                if Value == true then
                     IgnoreBoss[_ape] = true
-                elseif Value = false then
+                elseif Value == false then
                     IgnoreBoss[_ape] = false
                 end
             end    
