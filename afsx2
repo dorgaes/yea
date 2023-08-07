@@ -4,7 +4,7 @@ if game.PlaceId == 11545598432 then
         wait(1)
     until game:IsLoaded()
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-    local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+    local Window = OrionLib:MakeWindow({Name = "afsx hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
     --Values
     local _Player = game:GetService("Players").LocalPlayer
     local _PlayerName = _Player.Name
@@ -20,6 +20,7 @@ if game.PlaceId == 11545598432 then
         local _farmjump = true
         local _farmworldboss = true
         local _farmpain = true
+        local _Bossdistance = 100
         --Setting
         local _equipsword = true
     --Tables
@@ -29,6 +30,15 @@ if game.PlaceId == 11545598432 then
         --Setting
         local IgnoreBoss = {_ape = false, _arlongo = false, _armoredTitan = false, _desertBoss = false, _friezy = false, _handDemon = false}
     --Functions
+    function moveto(position)
+        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0,500,0)
+        while (position - workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position).magnitude > 10 do
+            local direction = (position - workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position).unit
+            workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Velocity = direction * 300
+            wait()
+        end
+        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Velocity = Vector3.new(0, 0, 0)
+    end
         --Main
         function autoskill() --done
             if _autoskill == true then
@@ -182,7 +192,8 @@ if game.PlaceId == 11545598432 then
                     local _PlayerStayingPlace = workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame
                     local _Boss = _Bossfile:FindFirstChildOfClass("Model")
                     local _BossName = _Boss.Name
-                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _Boss.WorldPivot + Vector3.new(0,110,0)
+                    moveto(_Boss.WorldPivot.Position + Vector3.new(0,_Bossdistance,0))
+                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
                     repeat
                         wait(0.01)
                     until _Boss:FindFirstChild("HumanoidRootPart")
@@ -191,7 +202,7 @@ if game.PlaceId == 11545598432 then
                     wait(0.5)
                     repeat
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
-                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _BossHumanoidRootPart.CFrame + Vector3.new(0,100,0)
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _BossHumanoidRootPart.CFrame + Vector3.new(0,_Bossdistance,0)
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position, _BossHumanoidRootPart.Position)
                         wait(0.01)
                         autoskill()
@@ -210,13 +221,13 @@ if game.PlaceId == 11545598432 then
             while _farmpain == true do
                 if not _Bossfile:FindFirstChild("_pain") then
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.BossBattle.PP.CFrame + Vector3.new(0,0,-10)
-                    wait(0.5)
+                    wait(1)
                     local args = {
                         [1] = "Prompt",
-                        [2] = "0865d553-91be-4633-b690-daceaa68f91f"
+                        [2] = workspace.Scriptable.BossBattle.PP.PromptAttachment:GetAttribute("ID")
                     }
                     
-                    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Prompt/RemoteFunction"):InvokeServer(unpack(args))
+                    game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
                     print("in boss area")
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0,300,0)
                     repeat
@@ -252,8 +263,8 @@ if game.PlaceId == 11545598432 then
                 if workspace[_PlayerName].Humanoid.Health == 0 then
                     repeat
                         wait(0.01)
-                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth and workspace[_PlayerName]:FindFirstChild("SWORD")
-                    wait(1)
+                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth
+                    wait(3)
                     keypress(0x34)
                 end
             end
@@ -421,6 +432,19 @@ if game.PlaceId == 11545598432 then
             Callback = function(Value)
                 _farmpain = Value
                 farmpain()
+            end    
+        })
+
+        FarmTab:AddSlider({
+            Name = "Distance",
+            Min = 0,
+            Max = 150,
+            Default = 100,
+            Color = Color3.fromRGB(255,255,255),
+            Increment = 1,
+            ValueName = "distance",
+            Callback = function(Value)
+                _Bossdistance = Value
             end    
         })
         --Setting
