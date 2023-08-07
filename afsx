@@ -21,7 +21,7 @@ if game.PlaceId == 11545598432 then
         local _farmworldboss = true
         local _farmpain = true
         --Setting
-        local _equipsword = false
+        local _equipsword = true
     --Tables
         --Main
         local Skilltable = {A = false, B = false, C = false, D = false, E = false, F = false, G = false, H = false, I = false, J = false, K = false, L = false, M = false, N = false, O = false, P = false, Q = false, R = false, S = false, T = false, U = false, V = false, W = false, X = false, Y = false, Z = false}
@@ -187,6 +187,8 @@ if game.PlaceId == 11545598432 then
                         wait(0.01)
                     until _Boss:FindFirstChild("HumanoidRootPart")
                     local _BossHumanoidRootPart = _Boss:FindFirstChild("HumanoidRootPart")
+                    workspace.Camera.CFrame = CFrame.new(-33.9159927, 105.433418, -193.31192, -0.97657299, 0.211917371, -0.037366841, 0, 0.173648596, 0.98480767, 0.215186551, 0.96173656, -0.169580519)
+                    wait(0.5)
                     repeat
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _BossHumanoidRootPart.CFrame + Vector3.new(0,100,0)
@@ -194,6 +196,9 @@ if game.PlaceId == 11545598432 then
                         wait(0.01)
                         autoskill()
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                        if _farmworldboss == false then
+                            break
+                        end
                     until not _Bossfile:FindFirstChild(_BossName) or not _Bossfile[_BossName]:FindFirstChild("HumanoidRootPart")
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _PlayerStayingPlace
@@ -228,6 +233,9 @@ if game.PlaceId == 11545598432 then
                         wait(0.01)
                         autoskill()
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                        if _farmpain == false then
+                            workspace[_PlayerName]:FindFirstChild("Humanoid").Health = 0
+                        end
                     until workspace[_PlayerName]:FindFirstChild("Humanoid").Health == 0
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                     repeat 
@@ -392,6 +400,12 @@ if game.PlaceId == 11545598432 then
             end    
         })
 
+        local Section = FarmTab:AddSection({
+            Name = "Auto farm bosses"
+        })
+
+        FarmTab:AddLabel("You can go setting to ignore bosses")
+
         FarmTab:AddToggle({ --value added
             Name = "Auto world boss",
             Default = false,
@@ -422,7 +436,7 @@ if game.PlaceId == 11545598432 then
 
         SettingTab:AddToggle({ --value added
             Name = "Auto equip sword after die",
-            Default = true,
+            Default = false,
             Callback = function(Value)
                 _equipsword = Value
                 equipsword()
