@@ -325,15 +325,14 @@ if game.PlaceId == 11545598432 then
                             repeat
                                 wait()
                             until _MonInFileName:FindFirstChild("HumanoidRootPart")
-                            wait(0.5)
                             local _MobHumanoidRootPart = _MonInFileName:FindFirstChild("HumanoidRootPart")
                             repeat
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
-                                wait(0.001)
+                                wait()
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _MobHumanoidRootPart.CFrame + Vector3.new(0,_QuestMobdistance,0)
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position, _MobHumanoidRootPart.Position)
-                                wait(0.01)
+                                wait(0.5)
                                 autoskill()
                                 if _autoquest == false then
                                     break
@@ -345,7 +344,6 @@ if game.PlaceId == 11545598432 then
                             end
                         until game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest").progress["1"].Percentage.Text == "100%"
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.NPC.Quests[_questname].WorldPivot
-                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
                         wait(1)
                         local args = {
                             [1] = "Prompt",
