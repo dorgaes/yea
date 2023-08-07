@@ -221,26 +221,25 @@ if game.PlaceId == 11545598432 then
             while _farmpain == true do
                 if not _Bossfile:FindFirstChild("_pain") then
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.BossBattle.PP.CFrame + Vector3.new(0,0,-10)
-                    wait(0.5)
+                    wait(1)
                     local args = {
                         [1] = "Prompt",
-                        [2] = "0865d553-91be-4633-b690-daceaa68f91f"
+                        [2] = workspace.Scriptable.BossBattle.PP.PromptAttachment:GetAttribute("ID")
                     }
                     
-                    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Prompt/RemoteFunction"):InvokeServer(unpack(args))
+                    game:GetService("ReplicatedStorage").Events[Prompt/RemoteFunction]:InvokeServer(unpack(args))
                     print("in boss area")
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0,300,0)
                     repeat
                         wait(0.1)
                     until _Bossfile:FindFirstChild("_pain") and _Bossfile._pain:FindFirstChild("HumanoidRootPart")
                     local _painHumanoidRootPart = _Bossfile._pain:FindFirstChild("HumanoidRootPart")
-                    moveto(_painHumanoidRootPart.Position + Vector3.new(0,_Bossdistance,0))
-                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
+                    workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,110,0)
                     workspace.Camera.CFrame = CFrame.new(-33.9159927, 105.433418, -193.31192, -0.97657299, 0.211917371, -0.037366841, 0, 0.173648596, 0.98480767, 0.215186551, 0.96173656, -0.169580519)
                     wait(0.1)
                     repeat
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
-                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,_Bossdistance,0)
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _painHumanoidRootPart.CFrame + Vector3.new(0,100,0)
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position, _painHumanoidRootPart.Position)
                         wait(0.01)
                         autoskill()
