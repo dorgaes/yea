@@ -332,7 +332,7 @@ if game.PlaceId == 11545598432 then
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = true
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = _MobHumanoidRootPart.CFrame + Vector3.new(0,_QuestMobdistance,0)
                                 workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Position, _MobHumanoidRootPart.Position)
-                                wait(0.5)
+                                wait(0.3)
                                 autoskill()
                                 if _autoquest == false then
                                     break
@@ -343,15 +343,19 @@ if game.PlaceId == 11545598432 then
                                 break
                             end
                         until game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest").progress["1"].Percentage.Text == "100%"
-                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.NPC.Quests[_questname].WorldPivot
-                        wait(1)
-                        local args = {
-                            [1] = "Prompt",
-                            [2] = workspace.Scriptable.NPC.Quests[_questname].HumanoidRootPart.PromptAttachment:GetAttribute("ID")
-                        }
-                        
-                        game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.NPC.Quests[_questname].WorldPivot + Vector3.new(0,20,0)
+                        wait(1)
+                        local countquest = 0
+                        repeat
+                            wait(0.1)
+                            local args = {
+                                [1] = "Prompt",
+                                [2] = workspace.Scriptable.NPC.Quests[_questname].HumanoidRootPart.PromptAttachment:GetAttribute("ID")
+                            }
+                        
+                            game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
+                        until countquest == 30
                         wait(3)
                     end
                 else
