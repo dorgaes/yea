@@ -19,6 +19,8 @@ if game.PlaceId == 11545598432 then
         local _farmstat = true
         local _farmjump = true
         local _farmpain = true
+        --Setting
+        local _equipsword = false
     --Tables
         --Main
         local Skilltable = {A = false, B = false, C = false, D = false, E = false, F = false, G = false, H = false, I = false, J = false, K = false, L = false, M = false, N = false, O = false, P = false, Q = false, R = false, S = false, T = false, U = false, V = false, W = false, X = false, Y = false, Z = false}
@@ -199,6 +201,20 @@ if game.PlaceId == 11545598432 then
                 end
             end
         end
+
+        --Setting
+        function equipsword()
+            while _equipsword == true do
+                wait(0.01)
+                if workspace[_PlayerName].Humanoid.Health == 0 then
+                    repeat
+                        wait(0.01)
+                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth
+                    wait(1)
+                    keypress(0x34)
+                end
+            end
+        end
     --Tab
         --Main
         local MainTab = Window:MakeTab({
@@ -303,6 +319,25 @@ if game.PlaceId == 11545598432 then
             Callback = function(Value)
                 _farmpain = Value
                 farmpain()
+            end    
+        })
+        --Setting
+        local SettingTab = Window:MakeTab({
+            Name = "Setting",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+        local Section = SettingTab:AddSection({
+            Name = "Setting"
+        })
+
+        SettingTab:AddToggle({ --value added
+            Name = "Auto equip sword after die",
+            Default = true,
+            Callback = function(Value)
+                _equipsword = Value
+                equipsword()
             end    
         })
 end
