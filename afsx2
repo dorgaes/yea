@@ -336,7 +336,7 @@ if game.PlaceId == 11545598432 then
                                 if _autoquest == false then
                                     break
                                 end
-                            until not _MonInFileName or not _MobHumanoidRootPart
+                            until not _MonInFileName and not _MonInFileName:FindFirstChild("HumanoidRootPart") and workspace[_PlayerName]:FindFirstChild("HumanoidRootPart")
                             print("mob died")
                             if _autoquest == false then
                                 break
@@ -351,6 +351,7 @@ if game.PlaceId == 11545598432 then
                         
                         game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                        wait(3)
                     end
                 else
                     print("not chose mob")
