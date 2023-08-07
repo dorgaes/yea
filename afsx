@@ -305,6 +305,16 @@ if game.PlaceId == 11545598432 then
                         game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
                         repeat 
                             wait(1)
+                            if not game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest") then
+                                local args = {
+                                    [1] = "Follow",
+                                    [2] = _questname
+                                }
+                                
+                                game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
+                                print("quest not show")
+                                wait(0.5)
+                            end
                             for _, mob in pairs(_Mobfile:GetChildren()) do
                                 if mob.Name == _ChoseMob or mob.Name == _ChoseMob.."1" or mob.Name == _ChoseMob.."2" or mob.Name == _ChoseMob.."3" then
                                     _MonInFileName = mob
@@ -326,18 +336,10 @@ if game.PlaceId == 11545598432 then
                                 if _autoquest == false then
                                     break
                                 end
-                            until not _MonInFileName or not _MobHumanoidRootPart
+                            until not _MonInFileName and not _MonInFileName:FindFirstChild("HumanoidRootPart") and workspace[_PlayerName]:FindFirstChild("HumanoidRootPart")
+                            print("mob died")
                             if _autoquest == false then
                                 break
-                            end
-                            if not game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest") then
-                                local args = {
-                                    [1] = "Follow",
-                                    [2] = _questname
-                                }
-                                
-                                game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
-                                wait(0.5)
                             end
                         until game:GetService("Players").LocalPlayer.PlayerGui.Menu:FindFirstChild("FollowingQuest").progress["1"].Percentage.Text == "100%"
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.NPC.Quests[_questname].WorldPivot
@@ -349,6 +351,7 @@ if game.PlaceId == 11545598432 then
                         
                         game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
                         workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
+                        wait(3)
                     end
                 else
                     print("not chose mob")
