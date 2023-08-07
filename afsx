@@ -27,7 +27,7 @@ if game.PlaceId == 11545598432 then
         --Farm
     --Functions
         --Main
-        function autoskill()
+        function autoskill() --done
             if _autoskill == true then
                 for _word, _tf in pairs(Skilltable) do
                     if _tf == true then
@@ -139,6 +139,12 @@ if game.PlaceId == 11545598432 then
                 end
             end
         end
+
+        function hopserver(_jobid) --done
+            local _TPS = game:GetService("TeleportService")
+            local _place = game.PlaceId
+            _TPS:TeleportToPlaceInstance(_place,_jobid,_Player)
+        end
         --Farm
         function farmstat() --done
             while _farmstat == true do
@@ -166,7 +172,7 @@ if game.PlaceId == 11545598432 then
             end
         end
 
-        function farmpain()
+        function farmpain() --done
             while _farmpain == true do
                 if not _Bossfile:FindFirstChild("_pain") then
                     workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").CFrame = workspace.Scriptable.BossBattle.PP.CFrame + Vector3.new(0,0,-10)
@@ -203,13 +209,13 @@ if game.PlaceId == 11545598432 then
         end
 
         --Setting
-        function equipsword()
+        function equipsword() --done
             while _equipsword == true do
                 wait(0.01)
                 if workspace[_PlayerName].Humanoid.Health == 0 then
                     repeat
                         wait(0.01)
-                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth
+                    until workspace[_PlayerName].Humanoid.Health == workspace[_PlayerName].Humanoid.MaxHealth and workspace[_PlayerName]:FindFirstChild("SWORD")
                     wait(1)
                     keypress(0x34)
                 end
@@ -275,6 +281,50 @@ if game.PlaceId == 11545598432 then
             end	  
         })
 
+        local Section = MainTab:AddSection({
+            Name = "Hop server"
+        })
+
+        MainTab:AddButton({ --done
+            Name = "Rejoin server",
+            Callback = function()
+                hopserver(game.JobId)
+            end    
+        })
+
+        MainTab:AddButton({ --done
+            Name = "Hop low player server",
+            Callback = function()
+                local Http = game:GetService("HttpService")
+                local Api = "https://games.roblox.com/v1/games/"
+                local _place = game.PlaceId
+                local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+                function ListServers(cursor)
+                    local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+                    return Http:JSONDecode(Raw)
+                end
+ 
+                local Server, Next; repeat
+                    local Servers = ListServers(Next)
+                    Server = Servers.data[1]
+                    Next = Servers.nextPageCursor
+                until Server
+                if Server.id ~= game.JobId then
+                    hopserver(Server.id)
+                else
+                    local _hopnumber = 1 
+                    repeat
+                        local Server, Next; repeat
+                            local Servers = ListServers(Next)
+                            Server = Servers.data[_hopnumber + 1]
+                            Next = Servers.nextPageCursor
+                        until Server
+                    until Server.id ~= game.JobId
+                    hopserver(Server.id)
+                end
+            end    
+        })
+
         --Farm
         local FarmTab = Window:MakeTab({
             Name = "Farm",
@@ -332,7 +382,7 @@ if game.PlaceId == 11545598432 then
             Name = "Setting"
         })
 
-        Tab:AddToggle({ --value added
+        SettingTab:AddToggle({ --value added
             Name = "Auto equip sword after die",
             Default = true,
             Callback = function(Value)
