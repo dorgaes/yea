@@ -263,27 +263,27 @@ if game.PlaceId == 11545598432 then
             while _autoquest == true do
                 wait(0.1)
                 if _ChoseMob ~= nil then
-                    if _ChoseMob == "Thugs" or _ChoseMob == "Cyclops" or _ChoseMob == "Nomu" then
+                    if _ChoseMob == "Thug" or _ChoseMob == "cyclop" or _ChoseMob == "nomu" then
                         _questname = "BanditQuest"
-                    elseif _ChoseMob == "Sand Chunin" or _ChoseMob == "Sand Jonin" then
+                    elseif _ChoseMob == "sandChunin" or _ChoseMob == "sandJonin" then
                         _questname = "BanditQuest2"
-                    elseif _ChoseMob == "Pirate" or _ChoseMob == "Brute" or _ChoseMob == "Yeti" then
+                    elseif _ChoseMob == "pirate" or _ChoseMob == "brute" or _ChoseMob == "yeti" then
                         _questname = "BanditQuest3"
-                    elseif _ChoseMob == "Demons" or _ChoseMob == "Strong Demons" or _ChoseMob == "Arrow Demon" then
+                    elseif _ChoseMob == "Demon" or _ChoseMob == "strongDemon" or _ChoseMob == "arrowDemon" then
                         _questname = "BanditQuest4"
-                    elseif _ChoseMob == "Evil Saiyans" or _ChoseMob == "Strong Saiyans" or _ChoseMob == "Saiyan Captain" then
+                    elseif _ChoseMob == "evilSaiyan" or _ChoseMob == "strongSaiyan" or _ChoseMob == "saiyanCaptain" then
                         _questname = "BanditQuest5"
-                    elseif _ChoseMob == "Freeza Troops" or _ChoseMob == "Jinyu Squad"then
+                    elseif _ChoseMob == "freezaTroop" or _ChoseMob == "jinyuSquad"then
                         _questname = "BanditQuest6"
-                    elseif _ChoseMob == "Yakuza" or _ChoseMob == "Yakuza Commander" or _ChoseMob == "Hero Killer" then
+                    elseif _ChoseMob == "yakuza" or _ChoseMob == "yakuzacommander" or _ChoseMob == "stain" then
                         _questname = "BanditQuest7"
                     end
-                    if _ChoseMob == "Thugs" or _ChoseMob == "Sand Chunin" or _ChoseMob == "Pirate" or _ChoseMob == "Demons" or _ChoseMob == "Evil Saiyans" or _ChoseMob == "Freeza Troops" or _ChoseMob == "Yakuza" then
-                        _questnumber = "1"
-                    elseif _ChoseMob == "Cyclops" or _ChoseMob == "Sand Jonin" or _ChoseMob == "Brute" or _ChoseMob == "Strong Demons" or _ChoseMob == "Strong Saiyans" or _ChoseMob == "Jinyu Squad" or _ChoseMob == "Yakuza Commander" then
-                        _questnumber = "2"
-                    elseif _ChoseMob == "Nomu" or _ChoseMob == "Yeti" or _ChoseMob == "Arrow Demon" or _ChoseMob == "Saiyan Captain" or _ChoseMob == "Hero Killer" then
-                        _questnumber = "3"
+                    if _ChoseMob == "Thug" or _ChoseMob == "sandChunin" or _ChoseMob == "pirate" or _ChoseMob == "Demon" or _ChoseMob == "evilSaiyan" or _ChoseMob == "freezaTroop" or _ChoseMob == "yakuza" then
+                        _questnumber = 1
+                    elseif _ChoseMob == "cyclop" or _ChoseMob == "sandJonin" or _ChoseMob == "brute" or _ChoseMob == "strongDemon" or _ChoseMob == "strongSaiyan" or _ChoseMob == "jinyuSquad" or _ChoseMob == "yakuzacommander" then
+                        _questnumber = 2
+                    elseif _ChoseMob == "nomu" or _ChoseMob == "yeti" or _ChoseMob == "arrowDemon" or _ChoseMob == "saiyanCaptain" or _ChoseMob == "stain" then
+                        _questnumber = 3
                     end
                     if _questname ~= nil and _questnumber ~= nil then
                         print(_questname)
@@ -304,6 +304,7 @@ if game.PlaceId == 11545598432 then
                         
                         game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(unpack(args))
                         repeat 
+                            wait(1)
                             for _, mob in pairs(_Mobfile:GetChildren()) do
                                 if mob.Name == _ChoseMob or mob.Name == _ChoseMob.."1" or mob.Name == _ChoseMob.."2" or mob.Name == _ChoseMob.."3" then
                                     _MonInFileName = mob
@@ -346,6 +347,7 @@ if game.PlaceId == 11545598432 then
                         }
                         
                         game:GetService("ReplicatedStorage").Events["Prompt/RemoteFunction"]:InvokeServer(unpack(args))
+                        workspace[_PlayerName]:FindFirstChild("HumanoidRootPart").Anchored = false
                     end
                 else
                     print("not chose mob")
@@ -553,13 +555,13 @@ if game.PlaceId == 11545598432 then
         FarmTab:AddDropdown({ --value added
             Name = "Chose quest",
             Default = "",
-            Options = {"Thugs", "Cyclops", "Nomu",
-            "Sand Chunin", "Sand Jonin", 
-            "Pirate", "Brute", "Yeti", 
-            "Demons", "Strong Demons", "Arrow Demon", 
-            "Evil Saiyans", "Strong Saiyans", "Saiyan Captain", 
-            "Freeza Troops", "Jinyu Squad", 
-            "Yakuza", "Yakuza Commander", "Hero Killer"},
+            Options = {"Thug", "cyclop", "nomu",
+            "sandChunin", "sandJonin", 
+            "pirate", "brute", "yeti", 
+            "Demon", "strongDemon", "arrowDemon", 
+            "evilSaiyan", "strongSaiyan", "saiyanCaptain", 
+            "freezaTroop", "jinyuSquad", 
+            "yakuza", "yakuzacommander", "stain"},
             Callback = function(Value)
                 _ChoseMob = Value
             end    
